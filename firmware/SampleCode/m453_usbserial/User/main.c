@@ -301,8 +301,9 @@ int32_t main(void)
 {
     /* Unlock protected registers */
     SYS_UnlockReg();
-
     SYS_Init();
+    SYS_LockReg();
+    
     UART3_Init();
 
     USBD_Open(&gsInfo, VCOM_ClassRequest, NULL);
