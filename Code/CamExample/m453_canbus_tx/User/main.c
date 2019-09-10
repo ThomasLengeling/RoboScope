@@ -173,11 +173,11 @@ int main()
 
     /* Send a 11-bit Standard Identifier message */
     tMsg.FrameType = CAN_DATA_FRAME;
-    tMsg.IdType   = CAN_STD_ID;
-    tMsg.Id       = 0x7FF;
-    tMsg.DLC      = 2;
-    tMsg.Data[0]  = 0x07;
-    tMsg.Data[1]  = 0xFF;
+    tMsg.IdType   = CAN_STD_ID;  //identifier which also represents the message priority
+    tMsg.Id       = 0x7FF;       //Node
+    tMsg.DLC      = 2;           //8 bytes max
+    tMsg.Data[0]  = 0x07;        //byte
+    tMsg.Data[1]  = 0xFF;        //byte
 
     /* Configure Msg RAM and send the Msg in the RAM */
     if(CAN_Transmit(CAN0, MSG(0), &tMsg) == FALSE)
