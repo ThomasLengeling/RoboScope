@@ -9,25 +9,25 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="no" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="no" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="no" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="no" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="no" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="no" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
@@ -1005,6 +1005,46 @@ chip</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="switch-omron">
+<description>&lt;b&gt;Omron Switches&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="D-TS">
+<wire x1="0" y1="-3.175" x2="0" y2="-2.54" width="0.254" layer="95"/>
+<wire x1="0" y1="2.54" x2="0" y2="3.175" width="0.254" layer="95"/>
+<wire x1="0" y1="-2.54" x2="-0.635" y2="0" width="0.254" layer="95"/>
+<wire x1="-4.445" y1="1.905" x2="-3.175" y2="1.905" width="0.254" layer="95"/>
+<wire x1="-4.445" y1="1.905" x2="-4.445" y2="0" width="0.254" layer="95"/>
+<wire x1="-4.445" y1="-1.905" x2="-3.175" y2="-1.905" width="0.254" layer="95"/>
+<wire x1="-4.445" y1="0" x2="-3.175" y2="0" width="0.1524" layer="95"/>
+<wire x1="-4.445" y1="0" x2="-4.445" y2="-1.905" width="0.254" layer="95"/>
+<wire x1="-2.54" y1="0" x2="-1.905" y2="0" width="0.1524" layer="95"/>
+<wire x1="-1.27" y1="0" x2="-0.635" y2="0" width="0.1524" layer="95"/>
+<wire x1="-0.635" y1="0" x2="-1.27" y2="2.54" width="0.254" layer="95"/>
+<wire x1="0" y1="-3.175" x2="0" y2="-5.08" width="0.1524" layer="95"/>
+<wire x1="0" y1="3.175" x2="0" y2="5.08" width="0.1524" layer="95"/>
+<text x="-6.35" y="-1.905" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="-3.81" y="3.175" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="D-TS" prefix="S" uservalue="yes">
+<description>&lt;b&gt;SWITCH&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="D-TS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1027,11 +1067,13 @@ chip</description>
 <part name="SUPPLY6" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device=""/>
 <part name="SUPPLY7" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device=""/>
 <part name="SUPPLY8" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device=""/>
-<part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="QWIIC_CONNECTOR" device="SR" package3d_urn="urn:adsk.eagle:package:38303/1"/>
+<part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="QWIIC_CONNECTOR" device="JS-1MM" package3d_urn="urn:adsk.eagle:package:38096/1"/>
 <part name="C1" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
 <part name="C2" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
 <part name="C3" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
 <part name="C4" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
+<part name="S1" library="switch-omron" deviceset="D-TS" device=""/>
+<part name="S2" library="switch-omron" deviceset="D-TS" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1050,11 +1092,16 @@ chip</description>
 <instance part="SUPPLY6" gate="G$1" x="66.04" y="76.2"/>
 <instance part="SUPPLY7" gate="G$1" x="109.22" y="73.66"/>
 <instance part="SUPPLY8" gate="G$1" x="149.86" y="76.2"/>
-<instance part="J1" gate="J1" x="-10.16" y="15.24"/>
+<instance part="J1" gate="J1" x="-10.16" y="15.24" smashed="yes">
+<attribute name="VALUE" x="-15.24" y="9.906" size="1.778" layer="96" font="vector" align="top-left"/>
+<attribute name="NAME" x="-15.24" y="23.114" size="1.778" layer="95" font="vector"/>
+</instance>
 <instance part="C1" gate="G$1" x="40.64" y="66.04"/>
 <instance part="C2" gate="G$1" x="78.74" y="68.58"/>
 <instance part="C3" gate="G$1" x="121.92" y="66.04"/>
 <instance part="C4" gate="G$1" x="165.1" y="66.04"/>
+<instance part="S1" gate="G$1" x="45.72" y="12.7"/>
+<instance part="S2" gate="G$1" x="45.72" y="12.7"/>
 </instances>
 <busses>
 </busses>

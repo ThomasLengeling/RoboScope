@@ -1188,6 +1188,21 @@ chip</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,25.4,66.04,LED1,VDD,VCC,,,"/>
+<approved hash="104,1,66.04,66.04,LED2,VDD,VCC,,,"/>
+<approved hash="104,1,109.22,66.04,LED3,VDD,VCC,,,"/>
+<approved hash="104,1,149.86,66.04,LED5,VDD,VCC,,,"/>
+<approved hash="110,1,78.74,48.26,GND,N$2,,,,"/>
+<approved hash="110,1,121.92,48.26,GND,N$3,,,,"/>
+<approved hash="111,1,78.74,48.26,GND,,,,,"/>
+<approved hash="111,1,121.92,48.26,GND,,,,,"/>
+<approved hash="113,1,25.9217,53.34,LED1,,,,,"/>
+<approved hash="113,1,66.5617,53.34,LED2,,,,,"/>
+<approved hash="113,1,109.742,53.34,LED3,,,,,"/>
+<approved hash="113,1,150.382,53.34,LED5,,,,,"/>
+<approved hash="113,1,-7.02733,17.8156,J1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
