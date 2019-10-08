@@ -1,11 +1,30 @@
 #  PCB design
 
+## Boards
 
-# v0.1
+### Power
+
+  Circuit that manages power regulation
+
+### Motor
+
+  Circuit that Controls the different motors
+
+### Interface
+  Interface Board that manages the mechanical activation of the motors
+
+### Display (LED Box)
+  Circuit the has the interaction for each road
+
+### USB Bus
+  Input Circuit for the boards.
+
+
+## v0.1
+
+### Modifications needed
 
 ### Motors driver controller.
-
-Modifications needed:
 
 - Connector between two boards.
 - Add more though holes.
