@@ -5103,8 +5103,8 @@ chip</description>
 <part name="C3" library="adafruit" deviceset="C-US" device="C1206" value="0.1uF"/>
 <part name="CAN_LED" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="CAN_LED_R" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
-<part name="CAN_LED1" library="fab" deviceset="LED" device="FAB1206"/>
-<part name="CAN_LED_R1" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
+<part name="OUT_LED_2" library="fab" deviceset="LED" device="FAB1206"/>
+<part name="OUT_LED_R2" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 <part name="S1" library="cherry-temp" deviceset="CHERRY-MX-LED" device=""/>
 <part name="S2" library="cherry-temp" deviceset="CHERRY-MX-LED" device=""/>
 <part name="S3" library="cherry-temp" deviceset="CHERRY-MX-LED" device=""/>
@@ -5113,8 +5113,8 @@ chip</description>
 <part name="R2" library="microbuilder" deviceset="RESISTOR" device="1206"/>
 <part name="R3" library="microbuilder" deviceset="RESISTOR" device="1206"/>
 <part name="R4" library="microbuilder" deviceset="RESISTOR" device="1206"/>
-<part name="CAN_LED2" library="fab" deviceset="LED" device="FAB1206"/>
-<part name="CAN_LED_R2" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
+<part name="OUT_LED_1" library="fab" deviceset="LED" device="FAB1206"/>
+<part name="OUT_LED_R1" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 </parts>
 <sheets>
 <sheet>
@@ -5147,8 +5147,8 @@ chip</description>
 <instance part="C3" gate="G$1" x="312.42" y="40.64"/>
 <instance part="CAN_LED" gate="G$1" x="279.4" y="91.44" rot="R90"/>
 <instance part="CAN_LED_R" gate="G$1" x="261.62" y="91.44" rot="R180"/>
-<instance part="CAN_LED1" gate="G$1" x="208.28" y="165.1" rot="R90"/>
-<instance part="CAN_LED_R1" gate="G$1" x="190.5" y="165.1" rot="R180"/>
+<instance part="OUT_LED_2" gate="G$1" x="208.28" y="165.1" rot="R90"/>
+<instance part="OUT_LED_R2" gate="G$1" x="190.5" y="165.1" rot="R180"/>
 <instance part="S1" gate="G$1" x="50.8" y="170.18"/>
 <instance part="S2" gate="G$1" x="119.38" y="170.18"/>
 <instance part="S3" gate="G$1" x="50.8" y="142.24"/>
@@ -5157,8 +5157,8 @@ chip</description>
 <instance part="R2" gate="G$1" x="101.6" y="180.34" rot="R90"/>
 <instance part="R3" gate="G$1" x="101.6" y="152.4" rot="R90"/>
 <instance part="R4" gate="G$1" x="33.02" y="152.4" rot="R90"/>
-<instance part="CAN_LED2" gate="G$1" x="208.28" y="149.86" rot="R90"/>
-<instance part="CAN_LED_R2" gate="G$1" x="190.5" y="149.86" rot="R180"/>
+<instance part="OUT_LED_1" gate="G$1" x="208.28" y="149.86" rot="R90"/>
+<instance part="OUT_LED_R1" gate="G$1" x="190.5" y="149.86" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5297,7 +5297,7 @@ chip</description>
 <label x="71.12" y="83.82" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="CAN_LED1" gate="G$1" pin="C"/>
+<pinref part="OUT_LED_2" gate="G$1" pin="C"/>
 <wire x1="210.82" y1="165.1" x2="215.9" y2="165.1" width="0.1524" layer="91"/>
 <label x="215.9" y="165.1" size="1.016" layer="95" xref="yes"/>
 </segment>
@@ -5322,7 +5322,7 @@ chip</description>
 <label x="134.62" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="CAN_LED2" gate="G$1" pin="C"/>
+<pinref part="OUT_LED_1" gate="G$1" pin="C"/>
 <wire x1="210.82" y1="149.86" x2="215.9" y2="149.86" width="0.1524" layer="91"/>
 <label x="215.9" y="149.86" size="1.778" layer="95"/>
 </segment>
@@ -5360,7 +5360,7 @@ chip</description>
 </net>
 <net name="LED_16" class="0">
 <segment>
-<pinref part="CAN_LED_R1" gate="G$1" pin="2"/>
+<pinref part="OUT_LED_R2" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="165.1" x2="185.42" y2="165.1" width="0.1524" layer="91"/>
 <label x="170.18" y="165.1" size="1.778" layer="95"/>
 </segment>
@@ -5373,8 +5373,8 @@ chip</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="CAN_LED_R1" gate="G$1" pin="1"/>
-<pinref part="CAN_LED1" gate="G$1" pin="A"/>
+<pinref part="OUT_LED_R2" gate="G$1" pin="1"/>
+<pinref part="OUT_LED_2" gate="G$1" pin="A"/>
 <wire x1="195.58" y1="165.1" x2="203.2" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -5471,14 +5471,14 @@ chip</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="CAN_LED_R2" gate="G$1" pin="1"/>
-<pinref part="CAN_LED2" gate="G$1" pin="A"/>
+<pinref part="OUT_LED_R1" gate="G$1" pin="1"/>
+<pinref part="OUT_LED_1" gate="G$1" pin="A"/>
 <wire x1="195.58" y1="149.86" x2="203.2" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_15" class="0">
 <segment>
-<pinref part="CAN_LED_R2" gate="G$1" pin="2"/>
+<pinref part="OUT_LED_R1" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="149.86" x2="185.42" y2="149.86" width="0.1524" layer="91"/>
 <label x="170.18" y="149.86" size="1.778" layer="95"/>
 </segment>

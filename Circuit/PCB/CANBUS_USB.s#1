@@ -5147,8 +5147,8 @@ chip</description>
 <instance part="C3" gate="G$1" x="312.42" y="40.64"/>
 <instance part="CAN_LED" gate="G$1" x="279.4" y="91.44" rot="R90"/>
 <instance part="CAN_LED_R" gate="G$1" x="261.62" y="91.44" rot="R180"/>
-<instance part="OUT_LED_2" gate="G$1" x="208.28" y="165.1" rot="R90"/>
-<instance part="OUT_LED_R2" gate="G$1" x="190.5" y="165.1" rot="R180"/>
+<instance part="OUT_LED_2" gate="G$1" x="210.82" y="152.4" rot="R90"/>
+<instance part="OUT_LED_R2" gate="G$1" x="193.04" y="152.4" rot="R180"/>
 <instance part="S1" gate="G$1" x="50.8" y="170.18"/>
 <instance part="S2" gate="G$1" x="119.38" y="170.18"/>
 <instance part="S3" gate="G$1" x="50.8" y="142.24"/>
@@ -5157,8 +5157,8 @@ chip</description>
 <instance part="R2" gate="G$1" x="101.6" y="180.34" rot="R90"/>
 <instance part="R3" gate="G$1" x="101.6" y="152.4" rot="R90"/>
 <instance part="R4" gate="G$1" x="33.02" y="152.4" rot="R90"/>
-<instance part="OUT_LED_1" gate="G$1" x="208.28" y="149.86" rot="R90"/>
-<instance part="OUT_LED_R1" gate="G$1" x="190.5" y="149.86" rot="R180"/>
+<instance part="OUT_LED_1" gate="G$1" x="210.82" y="167.64" rot="R90"/>
+<instance part="OUT_LED_R1" gate="G$1" x="193.04" y="167.64" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5298,8 +5298,8 @@ chip</description>
 </segment>
 <segment>
 <pinref part="OUT_LED_2" gate="G$1" pin="C"/>
-<wire x1="210.82" y1="165.1" x2="215.9" y2="165.1" width="0.1524" layer="91"/>
-<label x="215.9" y="165.1" size="1.016" layer="95" xref="yes"/>
+<wire x1="213.36" y1="152.4" x2="218.44" y2="152.4" width="0.1524" layer="91"/>
+<label x="218.44" y="152.4" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="S1" gate="G$1" pin="S2"/>
@@ -5323,8 +5323,8 @@ chip</description>
 </segment>
 <segment>
 <pinref part="OUT_LED_1" gate="G$1" pin="C"/>
-<wire x1="210.82" y1="149.86" x2="215.9" y2="149.86" width="0.1524" layer="91"/>
-<label x="215.9" y="149.86" size="1.778" layer="95"/>
+<wire x1="213.36" y1="167.64" x2="218.44" y2="167.64" width="0.1524" layer="91"/>
+<label x="218.44" y="167.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC_MCU" class="0">
@@ -5361,8 +5361,8 @@ chip</description>
 <net name="LED_16" class="0">
 <segment>
 <pinref part="OUT_LED_R2" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="165.1" x2="185.42" y2="165.1" width="0.1524" layer="91"/>
-<label x="170.18" y="165.1" size="1.778" layer="95"/>
+<wire x1="180.34" y1="152.4" x2="187.96" y2="152.4" width="0.1524" layer="91"/>
+<label x="172.72" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="16/A2/T"/>
@@ -5375,7 +5375,7 @@ chip</description>
 <segment>
 <pinref part="OUT_LED_R2" gate="G$1" pin="1"/>
 <pinref part="OUT_LED_2" gate="G$1" pin="A"/>
-<wire x1="195.58" y1="165.1" x2="203.2" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="152.4" x2="205.74" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -5473,14 +5473,14 @@ chip</description>
 <segment>
 <pinref part="OUT_LED_R1" gate="G$1" pin="1"/>
 <pinref part="OUT_LED_1" gate="G$1" pin="A"/>
-<wire x1="195.58" y1="149.86" x2="203.2" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="167.64" x2="205.74" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_15" class="0">
 <segment>
 <pinref part="OUT_LED_R1" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="149.86" x2="185.42" y2="149.86" width="0.1524" layer="91"/>
-<label x="170.18" y="149.86" size="1.778" layer="95"/>
+<wire x1="180.34" y1="167.64" x2="187.96" y2="167.64" width="0.1524" layer="91"/>
+<label x="172.72" y="167.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="15/A1/T"/>

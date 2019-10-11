@@ -19,6 +19,7 @@
 ### USB Bus
   Input Circuit for the boards.
 
+## v0.2
 
 ## v0.1
 
@@ -32,11 +33,16 @@
 - smaller in the sides.
 - Cable going add VCC 3.3 connector for sensor MUX
 - Change outputs to the top board so that only one cable has all the signal configurations for the top switches and bottom switches.
+- DIP switch incorrect size.
+- 12 pin connector longer pads
+- pads of motor control longer.
+- Better connection for the power board
 
 ### Power Board
 
 - Possible corner redesign
-- Space for the interface connecting board
+- Space for the interface connecting board.
+- Board is on top of the connectors to goes to the interacting board
 
 ### Box Circuit
 
@@ -52,4 +58,3 @@
 - Add the connection for the 3.3V voltage.
 - Add Space between the cherry keys
 - Remove one of the 120ohm resistors
--
