@@ -37,12 +37,17 @@
 - 12 pin connector longer pads
 - pads of motor control longer.
 - Better connection for the power board
+- Diode for protecting the teensy.
+- Switch the VCC_MCU to VCC_M to have the some orientation as the Power Board.
 
 ### Power Board
 
 - Possible corner redesign
 - Space for the interface connecting board.
 - Board is on top of the connectors to goes to the interacting board
+- diode for protecting incorrect plug-in
+- GND bridge from GND_IN to GND_M
+
 
 ### Box Circuit
 
@@ -53,6 +58,7 @@
 - Design of the Board
 
 ### USB CAN Bus input
+
 
 - Circuit for voltage 3.3 level shifter.
 - Add the connection for the 3.3V voltage.
