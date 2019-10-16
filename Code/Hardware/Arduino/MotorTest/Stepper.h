@@ -13,7 +13,7 @@ class Stepper {
     //step pin
     int STEP_PIN;
 
-    int SLEEP_PIN;
+    int ENABLE_PIN;
 
     //Microstepping control pins
     int M0_PIN;
@@ -33,14 +33,16 @@ class Stepper {
     Stepper(int m_id, int steps, int dir_pin, int step_pin, int sleep_pin, int m0_pin, int m1_pin) {
       id  = m_id;
       motorSteps = steps;
+
+      //pins
       DIR_PIN   = dir_pin;
       STEP_PIN  = step_pin;
-      sleep_pin = SLEEP_PIN;
+      ENABLE_PIN = sleep_pin;
       M0_PIN = m0_pin;
       M1_PIN = m1_pin;
 
       //init motor driver
-      motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN, SLEEP_PIN, M0_PIN, M1_PIN);
+      motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN);//, ENABLE_PIN, M0_PIN, M1_PIN);
 
     }
 
@@ -57,7 +59,8 @@ class Stepper {
       motor->begin(rpm);
 
       // if using enable/disable on ENABLE pin (active LOW) instead of SLEEP uncomment next line
-      // stepper.setEnableActiveState(LOW);
+      
+     // motor->setEnableActiveState(LOW);
 
       motor->enable();
     }
@@ -67,7 +70,7 @@ class Stepper {
     }
 
     void moveBackward() {
-      motor->move(motorSteps);
+      motor->move(-motorSteps);
     }
 
     //print out information
@@ -81,7 +84,7 @@ class Stepper {
       Serial.print("STEP PIN: ");
       Serial.println(DIR_PIN);
       Serial.print("SLEEP PIN: ");
-      Serial.println(SLEEP_PIN);
+      Serial.println(ENABLE_PIN);
       Serial.print("M0 PIN: ");
       Serial.println(M0_PIN);
       Serial.print("M1 PIN: ");

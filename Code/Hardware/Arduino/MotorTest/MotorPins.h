@@ -41,6 +41,6 @@
 #define GRPM          120
 
 //Global pin values
-#define GSLEEP_PIN     33
+#define GENABLE_PIN    33
 #define GM0_PIN        11
 #define GM1_PIN        12
