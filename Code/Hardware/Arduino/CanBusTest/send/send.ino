@@ -6,7 +6,6 @@
 #define LED_PIN_02 16
 
 
-
 #define KEY_PIN_01 20
 #define KEY_PIN_02 21
 #define KEY_PIN_03 22

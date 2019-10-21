@@ -4,11 +4,18 @@ Core
 
 Fusion 360
 
-- LED Box
--
 
 ## v.02
 
-- Adjust spacing of the holes
+### Base
+
+- Adjust spacing of the holes of the base
 - Adjust the base for each motor, opening for each motor, cable pass for each motors
-- 
+
+## Aesthetics
+
+- Box design
+
+### Interface Box
+
+- Redesign the box

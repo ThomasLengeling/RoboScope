@@ -1,0 +1,4 @@
+ofxCv
+ofxDatGui
+ofxOpenCv
+ofxOsc

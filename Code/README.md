@@ -10,7 +10,6 @@ Protocol bidirectional communication between server (USB CAN Bus) and client (Mo
  Motor information
 
  - Message includes dir, step of Motor
- -
 
 ## Client Protocol
 
