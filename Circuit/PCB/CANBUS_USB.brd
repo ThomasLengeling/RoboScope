@@ -785,8 +785,8 @@ design rules under a new name.</description>
 <element name="S4" library="cherry-temp" package="CHERRY-MX-LED" value="CHERRY-MX-LED" x="35.56" y="24.13"/>
 <element name="R1" library="microbuilder" package="1206" value="" x="34.29" y="11.43"/>
 <element name="R2" library="microbuilder" package="1206" value="" x="34.29" y="7.62"/>
-<element name="R3" library="microbuilder" package="1206" value="" x="41.91" y="11.43"/>
-<element name="R4" library="microbuilder" package="1206" value="" x="41.91" y="7.62"/>
+<element name="R4" library="microbuilder" package="1206" value="" x="41.91" y="11.43"/>
+<element name="R3" library="microbuilder" package="1206" value="" x="41.91" y="7.62"/>
 <element name="OUT_LED_1" library="fab" package="LED1206FAB" value="LEDFAB1206" x="29.21" y="67.31" rot="R90"/>
 <element name="OUT_LED_R1" library="fab" package="R1206FAB" value="500" x="49.53" y="7.62"/>
 </elements>
@@ -1037,9 +1037,9 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="3.3V1"/>
 <contactref element="U$1" pad="3.3V2"/>
 <contactref element="R1" pad="2"/>
-<contactref element="R4" pad="2"/>
-<contactref element="R2" pad="2"/>
 <contactref element="R3" pad="2"/>
+<contactref element="R2" pad="2"/>
+<contactref element="R4" pad="2"/>
 <wire x1="35.74" y1="11.2581" x2="35.74" y2="9.4711" width="0.1524" layer="1"/>
 <wire x1="35.74" y1="9.4711" x2="35.74" y2="7.6841" width="0.1524" layer="1"/>
 <wire x1="35.74" y1="7.6841" x2="35.69" y2="7.62" width="0.1524" layer="1"/>
@@ -1116,7 +1116,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="KEY_03">
 <contactref element="S3" pad="S1"/>
-<contactref element="R4" pad="1"/>
+<contactref element="R3" pad="1"/>
 <contactref element="U$1" pad="22/A8"/>
 <wire x1="40.5649" y1="6.7906" x2="40.5649" y2="7.5054" width="0.1524" layer="1"/>
 <wire x1="41.2797" y1="6.0758" x2="40.5649" y2="6.7906" width="0.1524" layer="1"/>
@@ -1184,7 +1184,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="KEY_04">
 <contactref element="S4" pad="S1"/>
-<contactref element="R3" pad="1"/>
+<contactref element="R4" pad="1"/>
 <contactref element="U$1" pad="23/A9"/>
 <wire x1="39.4927" y1="11.4368" x2="40.3862" y2="11.4368" width="0.1524" layer="1"/>
 <wire x1="28.0559" y1="22.8736" x2="39.4927" y2="11.4368" width="0.1524" layer="1"/>

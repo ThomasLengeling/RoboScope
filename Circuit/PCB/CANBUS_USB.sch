@@ -5111,8 +5111,8 @@ chip</description>
 <part name="S4" library="cherry-temp" deviceset="CHERRY-MX-LED" device=""/>
 <part name="R1" library="microbuilder" deviceset="RESISTOR" device="1206"/>
 <part name="R2" library="microbuilder" deviceset="RESISTOR" device="1206"/>
-<part name="R3" library="microbuilder" deviceset="RESISTOR" device="1206"/>
 <part name="R4" library="microbuilder" deviceset="RESISTOR" device="1206"/>
+<part name="R3" library="microbuilder" deviceset="RESISTOR" device="1206"/>
 <part name="OUT_LED_1" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="OUT_LED_R1" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 </parts>
@@ -5155,8 +5155,8 @@ chip</description>
 <instance part="S4" gate="G$1" x="119.38" y="142.24"/>
 <instance part="R1" gate="G$1" x="33.02" y="180.34" rot="R90"/>
 <instance part="R2" gate="G$1" x="101.6" y="180.34" rot="R90"/>
-<instance part="R3" gate="G$1" x="101.6" y="152.4" rot="R90"/>
-<instance part="R4" gate="G$1" x="33.02" y="152.4" rot="R90"/>
+<instance part="R4" gate="G$1" x="101.6" y="152.4" rot="R90"/>
+<instance part="R3" gate="G$1" x="33.02" y="152.4" rot="R90"/>
 <instance part="OUT_LED_1" gate="G$1" x="210.82" y="167.64" rot="R90"/>
 <instance part="OUT_LED_R1" gate="G$1" x="193.04" y="167.64" rot="R180"/>
 </instances>
@@ -5390,7 +5390,7 @@ chip</description>
 <label x="33.02" y="193.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="157.48" x2="33.02" y2="162.56" width="0.1524" layer="91"/>
 <label x="33.02" y="162.56" size="1.778" layer="95"/>
 </segment>
@@ -5400,7 +5400,7 @@ chip</description>
 <label x="104.14" y="190.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="157.48" x2="101.6" y2="160.02" width="0.1524" layer="91"/>
 <label x="101.6" y="162.56" size="1.778" layer="95"/>
 </segment>
@@ -5425,7 +5425,7 @@ chip</description>
 <segment>
 <pinref part="S3" gate="G$1" pin="S1"/>
 <wire x1="22.86" y1="144.78" x2="33.02" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="144.78" x2="43.18" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="147.32" x2="33.02" y2="144.78" width="0.1524" layer="91"/>
 <junction x="33.02" y="144.78"/>
@@ -5457,7 +5457,7 @@ chip</description>
 <segment>
 <pinref part="S4" gate="G$1" pin="S1"/>
 <wire x1="111.76" y1="144.78" x2="101.6" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="144.78" x2="93.98" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="147.32" x2="101.6" y2="144.78" width="0.1524" layer="91"/>
 <junction x="101.6" y="144.78"/>

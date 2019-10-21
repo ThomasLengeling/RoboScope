@@ -5166,8 +5166,8 @@ chip</description>
 <net name="CAN_TX" class="0">
 <segment>
 <pinref part="TCAN1042" gate="A" pin="TXD"/>
-<wire x1="243.84" y1="60.96" x2="236.22" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="60.96" x2="233.68" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="60.96" x2="238.76" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="60.96" x2="233.68" y2="60.96" width="0.1524" layer="91"/>
 <label x="233.68" y="60.96" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>

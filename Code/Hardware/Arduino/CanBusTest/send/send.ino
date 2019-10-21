@@ -34,7 +34,9 @@ static void hexDump(uint8_t dumpLen, uint8_t *bytePtr)
 // -------------------------------------------------------------
 void setup(void)
 {
-
+  Serial.begin(9600);
+  delay(2000);
+  
   pinMode(LED_PIN_01, OUTPUT);
   pinMode(LED_PIN_02, OUTPUT);
 

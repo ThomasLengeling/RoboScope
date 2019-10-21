@@ -30,7 +30,9 @@ static int hexDump(uint8_t dumpLen, uint8_t *bytePtr)
 void setup(void)
 {
   CANbus.begin();
+  Serial.begin(9600);
   Serial.println(F("Starting Reading"));
+  delay(2000);
 
   pinMode(LED_PIN_01, OUTPUT);
   pinMode(LED_PIN_02, OUTPUT);
