@@ -26,7 +26,6 @@ Modifications to the boards
 ### Motors driver controller.
 
 - Connectors on the bottom for the motors
--
 
 ### Interface board
 
@@ -40,26 +39,27 @@ Modifications to the boards
 
 - Connector between two boards.
 - Add more though holes.
-- position of the power source interfere with the interface board.
-- smaller in the sides.
+- Position of the power source interfere with the interface board.
+- Smaller in the sides.
 - Cable going add VCC 3.3 connector for sensor MUX
 - Change outputs to the top board so that only one cable has all the signal configurations for the top switches and bottom switches.
 - DIP switch incorrect size.
 - 12 pin connector longer pads
-- pads of motor control longer.
+- Pads of motor control longer.
 - Better connection for the power board
 - Diode for protecting the teensy.
 - Switch the VCC_MCU to VCC_M to have the some orientation as the Power Board
+- RGB LED for debugging the devices, also for notification if the board is start or end of the CAN Bus Line.
 
 ### Power Board
 
 - Possible corner redesign
 - Space for the interface connecting board.
 - Board is on top of the connectors to goes to the interacting board
-- diode for protecting incorrect plug-in
+- Diode for protecting incorrect plug-in
 - GND bridge from GND_IN to GND_M
-- add switch for on and off.
-- create a better support for the board
+- Add switch for on and off.
+- Create a better support for the board
 
 ### Box Circuit
 
