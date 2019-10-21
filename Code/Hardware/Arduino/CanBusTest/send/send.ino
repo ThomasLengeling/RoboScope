@@ -13,7 +13,7 @@
 #define KEY_PIN_04 23
 
 
-FlexCAN CANbus(500000);
+FlexCAN CANbus(1000000);
 
 static CAN_message_t msg, rxmsg;
 

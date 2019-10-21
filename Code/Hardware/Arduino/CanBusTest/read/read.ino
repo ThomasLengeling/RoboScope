@@ -4,12 +4,12 @@
 #define LED_PIN_02 16
 
 
-
 #define KEY_PIN_01 20
 #define KEY_PIN_02 21
 #define KEY_PIN_03 22
 #define KEY_PIN_04 23
 
+FlexCAN CANbus(1000000);
 
 // -------------------------------------------------------------
 static int hexDump(uint8_t dumpLen, uint8_t *bytePtr)
@@ -29,7 +29,7 @@ static int hexDump(uint8_t dumpLen, uint8_t *bytePtr)
 // -------------------------------------------------------------
 void setup(void)
 {
-  Can0.begin();
+  CANbus.begin();
   Serial.println(F("Starting Reading"));
 
   pinMode(LED_PIN_01, OUTPUT);
@@ -46,15 +46,17 @@ void setup(void)
 void loop(void)
 {
   CAN_message_t rxMsg;
-  while (Can0.available())
-  {
-    Can0.read(rxMsg);
+  while (CANbus.available()){
+    
+    CANbus.read(rxMsg);
     Serial.print("CAN BUS: ");
     hexDump(8, rxMsg.buf);
 
     digitalWrite(LED_PIN_01, int(rxMsg.buf[0]));
     digitalWrite(LED_PIN_01, int(rxMsg.buf[1]));
+    
     digitalWrite(LED_PIN_02, int(rxMsg.buf[2]));
     digitalWrite(LED_PIN_02, int(rxMsg.buf[3]));
+    
   }
 }
