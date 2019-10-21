@@ -8,24 +8,28 @@ https://github.com/collin80/FlexCAN_Library
 
 ### Sever Msg
 
+Messages are bi-directional from server and client.
+
+Server will
+
   - Board id
     - [id] -> uint32_t
     - ````4 bytes -> [0-4294967295] or [0x00000000-0xFFFFFFFF]````
   - Message
     - buf[8] -> uint8_t array length 8
     - ````1 byte -> [0-255] or [0x00-0xFF]````
-      - [0] - Motor id - 0 - 255
+      - [0] - Motor id [0, 255]
+          - Local id depending on the number of motors on the board
       - [1] - Motor dir - up/down
       - [2] - Motor step  - number of steps
-      - [3] - Motor enable/sleep/activation
-      - [4] - Motor limit switches
-          - Limit switch up   (U)   ```[0000000U]```
-             - On  - ```[00000001]```
-             - Off - ```[00000000]```
-          - Limit switch down (D)    ```[000000DU]```
-             - On  - ```[00000010]```
-             - Off - ```[00000000]```
-      - [5] - Motor push/pull
+      - [3] - Motor time activation
+      - [4] - Motor enable/sleep/activation
+      - [5] - Motor limit switches and push and pull
+          - ```[0000LHDU]```
+          - Limit switch up   (U)    ```[0000000U]```
+          - Limit switch down (D)    ```[000000D0]```
+          - Push Interaction (Push)  ```[00000H00]```
+          - Pull Interaction (Pull)  ```[0000L000]```
       - [6] - Motor sensor 0
       - [7] - Motor sensor 1
 

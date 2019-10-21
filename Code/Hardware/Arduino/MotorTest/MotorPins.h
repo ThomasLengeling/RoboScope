@@ -1,6 +1,6 @@
 /*
  * MOTOR PINS
- * 
+ *
  * PREFIX G -> Global
  */
 
@@ -36,7 +36,7 @@
 #define DIR_PIN_08     25
 #define STEP_PIN_08    24
 
-//Global Values 
+//Global Values
 #define GMOTOR_STEPS  200
 #define GRPM          120
 

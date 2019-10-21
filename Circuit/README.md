@@ -21,6 +21,17 @@
 
 ## v0.2
 
+Modifications to the boards
+
+### Motors driver controller.
+
+- Connectors on the bottom for the motors
+-
+
+### Interface board
+
+
+
 ## v0.1
 
 ### Modifications needed
