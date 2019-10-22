@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-#include "Stepper.h"
+#include "StepperMotor.h"
 #include "MotorPins.h"
 
 #include "Interface.h"
@@ -10,13 +10,13 @@
    The individual pixel unit that controls the stepper, the lights, and handles the inputs of the respective pixel
 */
 
-class UrbanPixel : public Stepper, Interface {
+class UrbanPixel : public StepperMotor, Interface {
   public:
     // ID for the pixel (also used for the motor ID)
     int id;
 
     //constructor
-    UrbanPixel(int p_id)  {
+    UrbanPixel(int p_id) {
       id = p_id;
 
       int motor_DIR_PINS[] = DIR_PINS;
@@ -27,10 +27,9 @@ class UrbanPixel : public Stepper, Interface {
       int limit_switch_pins[] = LIMIT_SWITCH_PINS;
       int sensor_pins[] = SENSOR_PINS;
 
-
       // Initialize the stepper motor
-      Stepper motor(id, GMOTOR_STEPS, motor_DIR_PINS[id], motor_STEP_PINS[id], GENABLE_PIN, GM0_PIN, GM1_PIN);
-      Interface ui(new_pixel_pins[id], push_button_pins[id], limit_switch_pins[id]);
+      StepperMotor(id, GMOTOR_STEPS, motor_DIR_PINS[id], motor_STEP_PINS[id], GENABLE_PIN, GM0_PIN, GM1_PIN);
+      Interface(new_pixel_pins[id], push_button_pins[id], limit_switch_pins[id]);
 
     }
 

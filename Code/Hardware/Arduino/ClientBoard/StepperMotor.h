@@ -4,7 +4,7 @@
 /*
    Control for DRV8834 stepper motor driver
 */
-class Stepper {
+class StepperMotor {
   public:
 
     //direction pin
@@ -30,7 +30,7 @@ class Stepper {
     DRV8880  * motor;
 
     //constructor
-    Stepper(int m_id, int steps, int dir_pin, int step_pin, int sleep_pin, int m0_pin, int m1_pin) {
+    StepperMotor(int m_id, int steps, int dir_pin, int step_pin, int sleep_pin, int m0_pin, int m1_pin) {
       id  = m_id;
       motorSteps = steps;
 
@@ -51,7 +51,7 @@ class Stepper {
     }
 
     //delete pointer memory
-    ~Stepper() {
+    ~StepperMotor() {
       //delete motor;
     }
 
