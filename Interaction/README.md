@@ -1,5 +1,8 @@
-# Interaction device
+# Interaction Mode
 
+
+- Included visualization of shape files and simulations.
+- Connected to the CityIO Protocol.
 
 ## v0.2
 
