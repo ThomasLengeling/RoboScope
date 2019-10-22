@@ -7,16 +7,16 @@
 #include "InterfacePins.h"
 
 /*
- * The individual pixel unit that controls the stepper, the lights, and handles the inputs of the respective pixel
- */
+   The individual pixel unit that controls the stepper, the lights, and handles the inputs of the respective pixel
+*/
 
-class UrbanPixel : public Stepper : public Interface{
+class UrbanPixel : public Stepper, Interface {
   public:
     // ID for the pixel (also used for the motor ID)
     int id;
 
     //constructor
-    Pixel(int p_id) {
+    UrbanPixel(int p_id)  {
       id = p_id;
 
       int motor_DIR_PINS[] = DIR_PINS;
@@ -34,20 +34,17 @@ class UrbanPixel : public Stepper : public Interface{
 
     }
 
+
+    // initialize motors
     void setup() {
-      // initialize motors
       motor.init();
       ui.init();
     }
 
-    void printDebugInfo(){
-
-      // Prints the motor info
+    // Prints the motor info
+    void printDebugInfo() {
       motor.printMotorInfo();
     }
 
 
-    
-
 };
-

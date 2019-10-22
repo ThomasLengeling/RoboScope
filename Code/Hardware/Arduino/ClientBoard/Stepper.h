@@ -23,7 +23,7 @@ class Stepper {
     int motorSteps;
     int rpm;
 
-                                                                                                          //driver id;
+    //driver id;
     int id;
 
     //DRV8880 class
@@ -59,8 +59,8 @@ class Stepper {
       motor->begin(rpm);
 
       // if using enable/disable on ENABLE pin (active LOW) instead of SLEEP uncomment next line
-      
-     // motor->setEnableActiveState(LOW);
+
+      // motor->setEnableActiveState(LOW);
 
       motor->enable();
     }

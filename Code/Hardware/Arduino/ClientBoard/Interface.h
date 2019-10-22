@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include <Adafruit_Neopixel.h>
+#include <Adafruit_NeoPixel.h>
 
 #define NUM_PIXELS 1
 
@@ -8,38 +8,43 @@
 class Interface {
   public:
     // led pin
-    int l_pin;
+    int ledPin;
 
     // interface button pin
-    int i_pin;
+    int interfacePin;
 
-    // limit switch pin
-    int l_pin;
+    // limit switch pin high
+    int limitPinH;
 
-    
+    Adafruit_NeoPixel * neopixels;
+
     Interface(int led_pin, int interface_button, int limit_switch) {
-      neopixels = Adafruit_Neopixel(NUM_PIXELS, led_pin, NEO_GRB + NEO_KHZ800);
+      ledPin = led_pin;
+      interfacePin = interface_button;
+      limitPinH = limit_switch;
+
+      neopixels = new Adafruit_NeoPixel(NUM_PIXELS, ledPin, NEO_GRB + NEO_KHZ800);
     }
 
     void init() {
-      neopixels.begin();
-      pinMode(i_pin, INPUT);
-      pinMode(l_pin, INPUT);
+      neopixels->begin();
+      pinMode(interfacePin, INPUT);
+      pinMode(limitPinH, INPUT);
     }
 
     void setColorAll(int r, int g, int b) {
       for (int i = 0; i < NUM_PIXELS; i ++) {
-        neopixels.setPixelColor(i, neopixels.Color(r, g, b));
+        neopixels->setPixelColor(i, neopixels->Color(r, g, b));
       }
-      neopixels.show();
+      neopixels->show();
     }
 
     int getInterfaceButtonState() {
-      return digitalRead(i_pin);
+      return digitalRead(interfacePin);
     }
 
     int getLimitSwitchState() {
-      return digitalRead(l_pin);
+      return digitalRead(limitPinH);
     }
 
-}
+};

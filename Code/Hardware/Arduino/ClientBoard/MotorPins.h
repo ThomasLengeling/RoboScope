@@ -1,8 +1,8 @@
 /*
- * MOTOR PINS
- *
- * PREFIX G -> Global
- */
+   MOTOR PINS
+
+   PREFIX G -> Global
+*/
 
 // TODO: CHANGE THE CODE SO THAT EVERYTHING IS 0 INDEXED
 

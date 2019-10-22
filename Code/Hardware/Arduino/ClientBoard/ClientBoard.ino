@@ -1,11 +1,37 @@
 #include <Arduino.h>
 #include <FlexCAN.h>
-#include "Pixel.h"
+#include "UrbanPixel.h"
+
+//define pins
+#define LED_PIN_01 15
+#define LED_PIN_02 16
+
+#define KEY_PIN_01 20
+#define KEY_PIN_02 21
+#define KEY_PIN_03 22
+#define KEY_PIN_04 23
+
 
 #define NUM_PIXELS 8
 
 FlexCAN CANbus(1000000);
 
+
+//key
+int pinkey01Cur = 0;
+int pinkey01Prev = 0;
+
+int pinkey02Cur = 0;
+int pinkey02Prev = 0;
+
+int pinkey03Cur = 0;
+int pinkey03Prev = 0;
+
+int pinkey04Cur = 0;
+int pinkey04Prev = 0;
+
+
+//message
 static CAN_message_t msg;
 int changeMSg = true;
 
@@ -53,7 +79,7 @@ void interpret_msg(CAN_message_t rxMsg, Pixel pixels[1 + NUM_PIXELS]) {
   int motor_enable = int(rxMsg.buf[4]);
 
   uint8_t interaction = rxMsg.buf[5];
-  
+
   int motor_sensor0 = int(rxMsg.buf[6]);
   int motor_sensor1 = int(rxMsg.buf[7]);
 
@@ -115,7 +141,7 @@ void loop(void)
   // Check buttons to see if we need to move motors
 
 
-  // Change the msg accordingly to send to 
+  // Change the msg accordingly to send to
 
   //change msg
   if (changeMSg) {
@@ -123,7 +149,7 @@ void loop(void)
     Serial.println("Sent");
   }
 
-  
+
   if (!changeMSg) {
     //RX message
     CAN_message_t rxMsg;
