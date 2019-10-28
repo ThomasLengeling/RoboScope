@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <FlexCAN.h>
-#include "UrbanPixel.h"
+#include "UrbanPanel.h"
 
 //define pins
 #define LED_PIN_01 15
@@ -10,9 +10,6 @@
 #define KEY_PIN_02 21
 #define KEY_PIN_03 22
 #define KEY_PIN_04 23
-
-
-#define NUM_PIXELS 8
 
 FlexCAN CANbus(1000000);
 
@@ -35,8 +32,9 @@ int pinkey04Prev = 0;
 static CAN_message_t msg;
 int changeMSg = true;
 
-Pixel pixels[1 + NUM_PIXELS];
-
+// Panel Control
+int panelID = 0;
+UrbanPanel urbanPanel;
 
 // -------------------------------------------------------------
 static void hexDump(uint8_t dumpLen, uint8_t *bytePtr)
@@ -58,19 +56,15 @@ void setup(void)
   Serial.begin(9600);
   delay(2000);
 
-  for (int i = 1; i <= NUM_PIXELS; i ++) {
-    pixels[i] = Pixels(i);
-  }
+  urbanPanel = new UrbanPanel(panelID);
 
-  for (int i = 1; i <= NUM_PIXELS; i++) {
-    pixels[i].setup();
-  }
+  urbanPanel.setup();
 
   CANbus.begin();
   Serial.println(F("Starting Sending"));
 }
 
-void interpret_msg(CAN_message_t rxMsg, Pixel pixels[1 + NUM_PIXELS]) {
+void interpret_msg(CAN_message_t rxMsg) {
 
   int motor_id = int(rxMsg.buf[0]);
   int motor_dir = int(rxMsg.buf[1]);
@@ -83,12 +77,16 @@ void interpret_msg(CAN_message_t rxMsg, Pixel pixels[1 + NUM_PIXELS]) {
   int motor_sensor0 = int(rxMsg.buf[6]);
   int motor_sensor1 = int(rxMsg.buf[7]);
 
-
 }
 
 // -------------------------------------------------------------
 void loop(void)
 {
+  // Check the interface to see if we need to update motors and update the motors accordingly
+  urbanPanel.checkInterfaceInput();
+
+  // Check to see if motors are about to collide with something
+  // Check buttons to see if we need to move motors
 
   pinkey01Prev = pinkey01Cur;
   pinkey02Prev = pinkey02Cur;
@@ -136,9 +134,6 @@ void loop(void)
   }
 
 
-  // Check the interface to see if we need to update motors
-  // Check to see if motors are about to collide with something
-  // Check buttons to see if we need to move motors
 
 
   // Change the msg accordingly to send to
