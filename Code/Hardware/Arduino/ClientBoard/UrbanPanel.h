@@ -77,17 +77,17 @@ class UrbanPanel : public MotorPanel, InterfacePanel {
 
     void moveMotor(motorID, motorDir, motorStep, motorTimeActivation, motorEnable){
       if (motorDir == 1){
-          moveMotorUp(motorID, motorStep, motorTimeActivation, motorEnable);
+          moveMotorUpMicro(motorID, motorStep, motorTimeActivation, motorEnable);
       } else {
-          moveMotorDown(motorID, motorStep, motorTimeActivation, motorEnable);
+          moveMotorDownMicro(motorID, motorStep, motorTimeActivation, motorEnable);
       }
     }
 
-    void moveMotorUp(motorID, motorStep, motorTimeActivation, motorEnable){
+    void moveMotorUpMicro(motorID, motorStep, motorTimeActivation, motorEnable){
       motorPanel.getMotor(motorID).moveForwardMicro(motorStep);
     }
     
-    void moveMotorDown(motorID, motorStep, motorTimeActivation, motorEnable){
+    void moveMotorDownMicro(motorID, motorStep, motorTimeActivation, motorEnable){
       motorPanel.getMotor(motorID).moveBackwardMicro(motorStep);
     }
 

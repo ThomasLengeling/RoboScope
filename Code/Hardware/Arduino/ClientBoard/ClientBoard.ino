@@ -95,7 +95,8 @@ void loop(void)
   //if there is a change send a msg
   if (urbanPanel.stateChanged()){
     changeMSg = true;
-    // TODO: modify message
+    // TODO: modify message better, right now it's just stating that there has been some change
+    msg.buf[0] = 1;
   }
 
   //change msg
