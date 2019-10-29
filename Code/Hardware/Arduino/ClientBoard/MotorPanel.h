@@ -10,11 +10,10 @@
 class MotorPanel : public StepperMotor{
   public:
     int id;
-    int motor_count_per_panel;
 
     //constructor
-    MotorPanel(int p_id) {
-      id = p_id;
+    MotorPanel(int pId) {
+      id = pId;
 
       int motor_DIR_PINS[] = DIR_PINS;
       int motor_STEP_PINS[] = STEP_PINS;

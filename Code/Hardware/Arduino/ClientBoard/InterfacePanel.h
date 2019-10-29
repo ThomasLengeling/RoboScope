@@ -8,8 +8,8 @@ class InterfacePanel {
 
     Adafruit_NeoPixel * neopixels;
 
-    InterfacePanel(int p_id) {
-      id = p_id;
+    InterfacePanel(int pId) {
+      id = pId;
 
       // interface button pins
       int interfacePins[] = PUSH_BUTTON_PINS;
