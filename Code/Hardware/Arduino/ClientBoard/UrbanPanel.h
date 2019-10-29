@@ -84,11 +84,15 @@ class UrbanPanel : public MotorPanel, InterfacePanel {
     }
 
     void moveMotorUpMicro(motorID, motorStep, motorTimeActivation, motorEnable){
-      motorPanel.getMotor(motorID).moveForwardMicro(motorStep);
+      if (!interfacePanel.getInterfaceButtonState(motorID)){
+        motorPanel.getMotor(motorID).moveForwardMicro(motorStep);
+      }
     }
     
     void moveMotorDownMicro(motorID, motorStep, motorTimeActivation, motorEnable){
-      motorPanel.getMotor(motorID).moveBackwardMicro(motorStep);
+      if (!interfacePanel.getLimitSwitchState(i)){
+        motorPanel.getMotor(motorID).moveBackwardMicro(motorStep);
+      }
     }
 
     MotorPanel getMotorPanel(){

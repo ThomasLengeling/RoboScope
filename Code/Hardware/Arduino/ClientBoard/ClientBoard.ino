@@ -79,9 +79,6 @@ void loop(void)
   // Check the interface to see if we need to update motors and update the motors accordingly
   urbanPanel.checkInterfaceInput();
 
-  // Check to see if motors are about to collide with something
-  // Check buttons to see if we need to move motors
-
   //rest
   msg.len = 8;
   msg.id = 0x222;
@@ -114,6 +111,7 @@ void loop(void)
       CANbus.read(rxMsg);
 
       // Check to see if the new msg gained is different from before
+      // Verify this works (might have to use memcpy)
       if (rxMsg == oldRxMsg) {
         break;
       }
