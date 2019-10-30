@@ -15,7 +15,7 @@ class MotorPanel : public StepperMotor{
     MotorPanel(int pId) {
       id = pId;
 
-      int motor_DIR_PINS[] = DIR_PINS;
+      int motor_DIR_PINS[]  = DIR_PINS;
       int motor_STEP_PINS[] = STEP_PINS;
 
       StepperMotor motors[MOTORS_PER_PANEL];
