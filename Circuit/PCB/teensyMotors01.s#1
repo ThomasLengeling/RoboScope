@@ -9408,8 +9408,10 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.2" drill="0">
 <clearance class="0" value="0.205"/>
+</class>
+<class number="1" name="2oz" width="0.2" drill="0">
 </class>
 </classes>
 <parts>
@@ -10089,6 +10091,11 @@ Headers</text>
 <wire x1="289.56" y1="-111.76" x2="289.56" y2="-106.68" width="0.1524" layer="91"/>
 <junction x="289.56" y="-106.68"/>
 <pinref part="C16" gate="G$1" pin="P$1"/>
+</segment>
+<segment>
+<pinref part="CONN02" gate="G$1" pin="11"/>
+<wire x1="-132.08" y1="-149.86" x2="-139.7" y2="-149.86" width="0.1524" layer="91"/>
+<label x="-139.7" y="-149.86" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="I2CM_8" class="0">
@@ -11273,16 +11280,6 @@ Headers</text>
 </net>
 <net name="VCC_MCU" class="0">
 <segment>
-<pinref part="CONN01" gate="G$1" pin="11"/>
-<wire x1="-129.54" y1="-106.68" x2="-137.16" y2="-106.68" width="0.1524" layer="91"/>
-<label x="-137.16" y="-106.68" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="CONN02" gate="G$1" pin="11"/>
-<wire x1="-132.08" y1="-149.86" x2="-139.7" y2="-149.86" width="0.1524" layer="91"/>
-<label x="-139.7" y="-149.86" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <wire x1="408.94" y1="111.76" x2="408.94" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="ANODE"/>
 <wire x1="408.94" y1="66.04" x2="421.64" y2="66.04" width="0.1524" layer="91"/>
@@ -11490,6 +11487,11 @@ Headers</text>
 <wire x1="441.96" y1="-104.14" x2="441.96" y2="-106.68" width="0.1524" layer="91"/>
 <wire x1="441.96" y1="-106.68" x2="457.2" y2="-106.68" width="0.1524" layer="91"/>
 <junction x="441.96" y="-104.14"/>
+</segment>
+<segment>
+<pinref part="CONN01" gate="G$1" pin="11"/>
+<wire x1="-129.54" y1="-106.68" x2="-137.16" y2="-106.68" width="0.1524" layer="91"/>
+<label x="-137.16" y="-106.68" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$9" class="0">

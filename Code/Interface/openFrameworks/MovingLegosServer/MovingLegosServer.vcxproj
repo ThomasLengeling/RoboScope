@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -223,7 +223,8 @@
     <ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Block.h" />
+    <ClInclude Include="src\Block.h" />
+    <ClInclude Include="src\MatrixBlock.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxCv\src\ofxCv.h" />
     <ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxCv\libs\CLD\include\CLD\ETF.h" />
