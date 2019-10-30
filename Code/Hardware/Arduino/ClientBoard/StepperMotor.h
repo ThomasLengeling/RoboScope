@@ -65,6 +65,10 @@ class StepperMotor {
       motor->enable();
     }
 
+    void stop() {
+      motor->stop();
+    }
+
     void moveForward() {
       motor->setMicrostep(1);
       motor->move(motorSteps);
