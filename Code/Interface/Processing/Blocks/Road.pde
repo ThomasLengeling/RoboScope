@@ -1,3 +1,6 @@
+/*
+ Road class
+*/
 class Road{
   int startPosX;
   int startPosY;
