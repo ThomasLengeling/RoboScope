@@ -5,7 +5,7 @@
 // Panel Control
 int panelID = 0;
 
-UrbanPanel urbanPanel = new UrbanPanel(panelID);
+UrbanPanel * urbanPanel = new UrbanPanel(panelID);
 
 void setup(void)
 {
@@ -14,7 +14,7 @@ void setup(void)
 
 
 
-  urbanPanel.setup();
+  urbanPanel->setup();
 
   Serial.println(F("Starting Sending"));
 }
@@ -23,5 +23,5 @@ void setup(void)
 void loop(void)
 {
   // Checks to see if certain buttons are being pressed to move the motor (represents user interaction)
-  urbanPanel.checkInterfaceInput();
+  urbanPanel->checkInterfaceInput();
 }
