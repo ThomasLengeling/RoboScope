@@ -1,3 +1,7 @@
+#ifndef MOTOR_PANEL_H
+#define MOTOR_PANEL_H
+
+
 #include <Arduino.h>
 
 #include "StepperMotor.h"
@@ -42,3 +46,5 @@ class MotorPanel {
       }
     }
 };
+
+#endif

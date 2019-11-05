@@ -1,3 +1,6 @@
+#ifndef URBAN_PANEL_H
+#define URBAN_PANEL_H
+
 #include <Arduino.h>
 
 #include "MotorPanel.h"
@@ -9,7 +12,7 @@
    The individual pixel unit that controls the stepper, the lights, and handles the inputs of the respective pixel
 */
 
-class UrbanPanel : public InterfacePanel, MotorPanel {
+class UrbanPanel {
   public:
     // ID for the pixel (also used for the motor ID)
     int id;
@@ -114,3 +117,5 @@ class UrbanPanel : public InterfacePanel, MotorPanel {
       interfacePanel->init();
     }
 };
+
+#endif

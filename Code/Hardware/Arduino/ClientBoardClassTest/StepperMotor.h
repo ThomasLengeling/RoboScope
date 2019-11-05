@@ -1,3 +1,6 @@
+#ifndef STEPPER_MOTOR_H
+#define STEPPER_MOTOR_H
+
 #include <Arduino.h>
 #include "DRV8880.h"
 
@@ -108,3 +111,5 @@ class StepperMotor {
     }
 
 };
+
+#endif

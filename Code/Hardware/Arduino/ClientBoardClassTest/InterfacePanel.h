@@ -1,3 +1,6 @@
+#ifndef INTERFACE_PANEL_H
+#define INTERFACE_PANEL_H
+
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 #include "InterfacePins.h"
@@ -66,3 +69,5 @@ class InterfacePanel {
     }
 
 };
+
+#endif
