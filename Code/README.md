@@ -23,7 +23,6 @@ Each node is a motor control device which includes:
 
   - 8 or more motor drivers
   - Unique id
-  -
 
 The last node must include 120ohms between CAN HIGH and CAN LOW
 

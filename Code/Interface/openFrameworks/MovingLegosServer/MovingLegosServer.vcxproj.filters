@@ -61,6 +61,21 @@
 		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxDatGui\src\ofxDatGui.cpp">
 			<Filter>addons\ofxDatGui\src</Filter>
 		</ClCompile>
+		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxNetworkUtils.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxTCPClient.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxTCPManager.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxTCPServer.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxUDPManager.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
 		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxOpenCv\src\ofxCvColorImage.cpp">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClCompile>
@@ -117,6 +132,9 @@
 		</ClCompile>
 		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\src\ofxXmlPoco.cpp">
+			<Filter>addons\ofxPoco\src</Filter>
 		</ClCompile>
 	</ItemGroup>
 	<ItemGroup>
@@ -180,6 +198,12 @@
 		<Filter Include="addons\ofxDatGui\src\themes">
 			<UniqueIdentifier>{2646318C-49AB-44C5-70D8-23E6}</UniqueIdentifier>
 		</Filter>
+		<Filter Include="addons\ofxNetwork">
+			<UniqueIdentifier>{01A15744-29A6-108D-08E9-83A7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxNetwork\src">
+			<UniqueIdentifier>{3D1C10C7-8F35-E796-9C70-F5F3}</UniqueIdentifier>
+		</Filter>
 		<Filter Include="addons\ofxOpenCv">
 			<UniqueIdentifier>{FFA81411-43B9-BD99-75AF-1DC3}</UniqueIdentifier>
 		</Filter>
@@ -218,6 +242,24 @@
 		</Filter>
 		<Filter Include="addons\ofxOsc\libs\oscpack\src\osc">
 			<UniqueIdentifier>{EDACB89C-9768-9551-4D41-B590}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPoco">
+			<UniqueIdentifier>{3256AE3E-9B29-EA27-C842-CE6B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPoco\src">
+			<UniqueIdentifier>{C7D4269D-D8A9-A7BB-531B-98DA}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPoco\libs">
+			<UniqueIdentifier>{3E8A9E9C-2DA4-7391-777F-56C5}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPoco\libs\openssl">
+			<UniqueIdentifier>{5947399C-92B2-BAE8-E58F-7024}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPoco\libs\openssl\include">
+			<UniqueIdentifier>{D5DE9DB7-5574-8FBC-7336-5107}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPoco\libs\openssl\include\openssl">
+			<UniqueIdentifier>{C648CDF7-0C1F-4D5B-2490-7010}</UniqueIdentifier>
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>
@@ -338,6 +380,30 @@
 		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxDatGui\src\themes\ofxDatGuiThemes.h">
 			<Filter>addons\ofxDatGui\src\themes</Filter>
 		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxNetwork.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxNetworkUtils.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxTCPClient.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxTCPManager.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxTCPServer.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxTCPSettings.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxUDPManager.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxNetwork\src\ofxUDPSettings.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
 		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxOpenCv\src\ofxCvBlob.h">
 			<Filter>addons\ofxOpenCv\src</Filter>
 		</ClInclude>
@@ -445,6 +511,237 @@
 		</ClInclude>
 		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h">
 			<Filter>addons\ofxOsc\libs\oscpack\src\osc</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\src\ofxXmlPoco.h">
+			<Filter>addons\ofxPoco\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\aes.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\asn1.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\asn1t.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\asn1_mac.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\bio.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\blowfish.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\bn.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\buffer.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\camellia.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\cast.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\cmac.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\cms.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\comp.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\conf.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\conf_api.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\crypto.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\des.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\des_old.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\dh.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\dsa.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\dso.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\dtls1.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ebcdic.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ec.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ecdh.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ecdsa.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\engine.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\err.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\evp.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\e_os2.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\hmac.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\idea.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\krb5_asn.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\kssl.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\lhash.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\md4.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\md5.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\mdc2.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\modes.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\objects.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\obj_mac.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ocsp.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\opensslconf.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\opensslconf_osx.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\opensslv.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ossl_typ.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\pem.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\pem2.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\pkcs12.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\pkcs7.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\pqueue.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\rand.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\rc2.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\rc4.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ripemd.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\rsa.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\safestack.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\seed.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\sha.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\srp.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\srtp.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ssl.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ssl2.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ssl23.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ssl3.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\stack.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\symhacks.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\tls1.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ts.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\txt_db.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ui.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\ui_compat.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\whrlpool.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\x509.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\x509v3.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\..\..\openFrameworks_lib\openFrameworks\addons\ofxPoco\libs\openssl\include\openssl\x509_vfy.h">
+			<Filter>addons\ofxPoco\libs\openssl\include\openssl</Filter>
 		</ClInclude>
 	</ItemGroup>
 	<ItemGroup>

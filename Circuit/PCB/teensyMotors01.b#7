@@ -2306,7 +2306,7 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="31"/>
 <wire x1="50.565" y1="37.946" x2="36.346" y2="68.097" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MUX_S2" class="1">
+<signal name="MUX_S2">
 <contactref element="U$1" pad="28"/>
 <contactref element="U1" pad="14"/>
 <wire x1="49.915" y1="37.946" x2="41.426" y2="73.177" width="0" layer="19" extent="1-1"/>
