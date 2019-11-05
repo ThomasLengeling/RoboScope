@@ -23,8 +23,10 @@ Project{
         of.addons: [
             'ofxCv',
             'ofxDatGui',
+            'ofxNetwork',
             'ofxOpenCv',
             'ofxOsc',
+            'ofxPoco',
         ]
 
         // additional flags for the project. the of module sets some

@@ -1,3 +1,9 @@
+/*
+ * 
+ * 
+ * 
+ */
+ 
 #include <Arduino.h>
 #include <FlexCAN.h>
 #include "UrbanPanel.h"
@@ -58,6 +64,7 @@ void setup(void)
   Serial.println(F("Starting Sending"));
 }
 
+// -------------------------------------------------------------
 void interpretMsg(UrbanPanel urbanPanel, CAN_message_t rxMsg) {
   int motorID = int(rxMsg.buf[0]);
   int motorDir = int(rxMsg.buf[1]);
@@ -84,7 +91,6 @@ void loop(void)
   msg.id = 0x222;
   changeMSg = false;
 
-
   for ( int idx = 0; idx < 8; ++idx ) {
     msg.buf[idx] = 0;
   }
@@ -101,7 +107,6 @@ void loop(void)
     CANbus.write(msg);
     Serial.println("Sent");
   }
-
 
   if (!changeMSg) {
     //RX message
@@ -123,4 +128,5 @@ void loop(void)
       interpretMsg(urbanPanel, rxMsg);
     }
   }
+  
 }

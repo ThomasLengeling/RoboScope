@@ -1,3 +1,6 @@
+/*
+
+*/
 class Map {
   PImage imgColor;
   PImage imgDensity;

@@ -1,3 +1,12 @@
+/*
+  Program the manages the interface, communication and interaction between the physical table and data. 
+  
+ 
+  Thomas Sanchez Lengeling 
+  City Science Group
+  2019
+  
+*/
 import controlP5.*;
 import peasy.*;
 
@@ -7,8 +16,14 @@ CameraState state;
 
 Grid  tableGrid;
 
-int gridX = 50;
-int gridY = 30;
+int bkgColor = 50;
+
+int gridX = 12;
+int gridY = 8;
+
+int blockSize = 32*2;
+
+int gridSpace = 4*2;
 
 int gridStartX = 250;
 int gridStartY = 50;
@@ -29,7 +44,6 @@ boolean enableGrouping = false;
 //group blocks
 int groupCounter = 0;
 int groupMax = 4;
-GroupBlock groupBlockTmp = new GroupBlock();
 
 boolean activeAnimation = false;
 boolean recording = false;
@@ -65,7 +79,7 @@ void setup() {
     .setPosition(10, 10)
     .setSize(75, 75)
     .setMinMax(1, 1, 80, 45)
-    .setValue(50, 30)
+    .setValue(float(gridX)+0.1, float(gridY))
     .moveTo(g1)
     ;
 
@@ -73,14 +87,14 @@ void setup() {
     .setPosition(100, 10)
     .setSize(75, 75)
     .setMinMax(0, 0, 20, 20)
-    .setValue(8, 8)
+    .setValue(gridSpace, gridSpace)
     .moveTo(g1)
     ;
 
   cp5.addSlider("blockSize")
     .setPosition(10, 120)
     .setSize(90, 15)
-    .setValue(28)
+    .setValue(blockSize)
     .setRange(10, 100)
     .setGroup(g1)
     ;
@@ -145,18 +159,24 @@ void setup() {
     float [] gridSpace = cp5.getController("gridSpace").getArrayValue();
     int blockSize = int(cp5.getController("blockSize").getValue());
 
-    tableGrid = new Grid((int)gridSize[0], (int)gridSize[1], (int)gridSpace[0], (int)gridSpace[1], blockSize);
+    tableGrid = new Grid(gridStartX, gridStartY, (int)gridSize[0], (int)gridSize[1], blockSize, (int)gridSize[0]);
   }
 }
 
 
 void draw() {
-  background(0); //190
+  background(bkgColor); //190
 
 
 
   pushMatrix();
-  translate(-850, -550, 0);
+
+ // lights();
+ // ambient(250, 250, 250);
+ // pointLight(255, 255, 255, 0, 0, 200);
+
+  translate(-650, -350, 0);
+  drawTable();
   tableGrid.draw();
   tableGrid.drawContour();
   popMatrix();
@@ -256,11 +276,11 @@ void keyPressed() {
     println("rot");
     printArray(cam.getRotations());
   }
-  
+
   if (key == '2') { 
     cam.setState(state, 18000);
   }
-  
+
   if (key == 'a') {
     enableMap = !enableMap;
   }
@@ -275,6 +295,10 @@ void keyPressed() {
 
   if (key == 'r' || key == 'R') {
     recording = !recording;
+  }
+
+  if ( key == 'p') {
+    saveFrame("line-######.png");
   }
 }
 

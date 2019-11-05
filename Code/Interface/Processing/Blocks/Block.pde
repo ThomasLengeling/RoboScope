@@ -1,3 +1,6 @@
+/*
+  Individual Block or pin
+*/
 class Block {
 
   //corner position
@@ -10,7 +13,7 @@ class Block {
   
 
   //building height
-  int maxheight = 200;
+  int maxheight = 500;
   int midHeight = int(maxheight/2.0);
   float bHeight   = midHeight;
   
@@ -30,9 +33,11 @@ class Block {
 
   //selected
   boolean selected = false;
-
+  
+  //color type 
   color colorMap;
-
+  
+  //constructor for the block
   Block(int posx, int posy, int tam) {
     this.posx = posx;
     this.posy = posy;
@@ -47,12 +52,14 @@ class Block {
     colorMap = color(0);
   }
   
+  //update the hight of the rod
   void updateHeight(int value){
     finalHeight =  (int)map(value, 50, 255, midHeight, 20);
     //finalHeight = bHeight;
   }
-
-  void drawBox() {
+  
+  //draw the Blcok
+  void drawBlock() {
     pushMatrix();
     translate(centerPosX, centerPosY,  -(bHeight - midHeight) ); //max = max_height/2.0
     //println(   bHeight - midHeight);
@@ -64,7 +71,7 @@ class Block {
 
     pushMatrix();
     translate(0, 0, -(bHeight - maxheight)  + 1);
-    lego();
+    drawLego();
     drawContour();
     popMatrix();
 
@@ -72,7 +79,8 @@ class Block {
 
   }
   
-  void animatePins(){
+  //animate the moving block or pin
+  void animateBlock(){
     bHeight = midHeight + (finalHeight - midHeight)*(animCounter);
     
     animCounter+=0.0075;
@@ -80,10 +88,9 @@ class Block {
       animCounter =1.0;
     }
   }
-
-
-
-  void lego() {
+  
+  //draw Lego piece on top
+  void drawLego() {
 
     noStroke();
     fill(0);
@@ -102,7 +109,8 @@ class Block {
     ellipse(posx + (tam/4.0), posy + 3*(tam/4.0), eTam, eTam);
     ellipse(posx + 3*(tam/4.0), posy + 3*(tam/4.0), eTam, eTam);
   }
-
+  
+  //draw the color of the block
   void drawContour() {
     noFill();
     stroke(255);

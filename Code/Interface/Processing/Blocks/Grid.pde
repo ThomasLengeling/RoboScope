@@ -1,6 +1,8 @@
+/*
+  Collection of blocks that form a grid
+*/
 class Grid {
   ArrayList<Block> grid;
-  ArrayList<GroupBlock> groupBlock;
   ArrayList<Road> road;
 
   int gridX;
@@ -27,12 +29,15 @@ class Grid {
 
 
   //build grid
-  Grid(int startPosX, int startPosY, int gridX, int gridY, int bSize) {
+  Grid(int startPosX, int startPosY, int gridX, int gridY, int bSize, int step) {
     this.gridX = gridX;
     this.gridY = gridY;
 
     this.startPosX = startPosX;
     this.startPosY = startPosY;
+
+    this.stepX = step;
+    this.stepY = step;
 
     this.blockSize = bSize;
 
@@ -41,7 +46,6 @@ class Grid {
 
     grid = new ArrayList<Block>();
     road = new ArrayList<Road>();
-    groupBlock = new ArrayList<GroupBlock>();
 
     //create
     createGrid();
@@ -63,9 +67,9 @@ class Grid {
 
       //draw 3d
 
-      bl.drawBox();
+      bl.drawBlock();
       if (activeAnimation) {
-        bl.animatePins();
+        bl.animateBlock();
       }
     }
 
@@ -114,7 +118,7 @@ class Grid {
         int posy = startPosY + blockSize * j + stepY * j;
         Block block  = new Block(posx, posy, blockSize);
         block.setBlockSize(blockSize);
-        block.setId(j + i * gridY);
+        block.setId(i + j * gridX);
         grid.add(block);
       }
     }
@@ -133,11 +137,6 @@ class Grid {
         road.add(rd);
       }
     }
-  }
-
-  //creating block
-  void createGroupBlock(GroupBlock blocks) {
-    groupBlock.add(blocks);
   }
 
   /*
