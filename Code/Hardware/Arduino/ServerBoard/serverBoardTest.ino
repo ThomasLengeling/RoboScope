@@ -1,3 +1,25 @@
+/*
+ * Server code that is meant to test the ClientBoard code 
+*/
+
+#define LED_PIN_01 15
+#define LED_PIN_02 16
+
+#define KEY_PIN_01 20
+#define KEY_PIN_02 21
+#define KEY_PIN_03 22
+#define KEY_PIN_04 23
+
+//key
+int pinkey01Cur = 0;
+int pinkey02Cur = 0;
+int pinkey03Cur = 0;
+int pinkey04Cur = 0;
+
+int pinkey01Prev = 0;
+int pinkey02Prev = 0;
+int pinkey03Prev = 0;
+int pinkey04Prev = 0;
 
 #include <FlexCAN.h>
 
@@ -51,18 +73,47 @@ void loop(void)
     msg.buf[idx] = 0;
   }
 
+  pinkey01Prev = pinkey01Cur;
+  pinkey02Prev = pinkey02Cur;
+  pinkey03Prev = pinkey03Cur;
+  pinkey04Prev = pinkey04Cur;
+
+  pinkey01Cur = digitalRead(KEY_PIN_01);
+  pinkey02Cur = digitalRead(KEY_PIN_02);
+  pinkey03Cur = digitalRead(KEY_PIN_03);
+  pinkey04Cur = digitalRead(KEY_PIN_04);
+  
+  /*
+   * Msg structure
+   * [0] : motorID
+   * [1] : motorDir
+   * [2] : motorStep
+   * [3] : motorTimeActivation
+   * [4] : motorEnable
+   * [5] : interaction
+   * [6] : motorSensor0
+   * [7] : motorSensor1
+  */
+
+  // Always want to affect motor 0
+  msg.buf[0] = 0;
+
   //if thre is a change send a msg
+
+  // pinkey01 affects the motor direction
   if (pinkey01Cur != pinkey01Prev) {
     changeMSg = true;
-    msg.buf[0] = char(pinkey01Cur);
+    msg.buf[1] = char(pinkey01Cur);
     Serial.println("change key 1");
   }
 
+  // pinkey02 affects the motor step
   if (pinkey02Cur != pinkey02Prev) {
     changeMSg = true;
     msg.buf[1] = char(pinkey02Cur);
     Serial.println("change key 2");
   }
+
 
   if (pinkey03Cur != pinkey03Prev) {
     changeMSg = true;
@@ -90,11 +141,6 @@ void loop(void)
       CANbus.read(rxMsg);
       Serial.print("CAN BUS: ");
       hexDump(8, rxMsg.buf);
-
-      digitalWrite(LED_PIN_01, int(rxMsg.buf[0]));
-      digitalWrite(LED_PIN_01, int(rxMsg.buf[1]));
-      digitalWrite(LED_PIN_02, int(rxMsg.buf[2]));
-      digitalWrite(LED_PIN_02, int(rxMsg.buf[3]));
     }
   }
   
