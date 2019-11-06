@@ -1,7 +1,7 @@
 /*
- * 
- * The Motor Panel controls the output for all the motors available to the urban panel
- */
+
+   The Motor Panel controls the output for all the motors available to the urban panel
+*/
 #ifndef MOTOR_PANEL_H
 #define MOTOR_PANEL_H
 
@@ -12,23 +12,25 @@
 
 class MotorPanel {
   public:
-    int id;
-    StepperMotor * motors[MOTORS_PER_PANEL];
+
     //constructor
     MotorPanel(int pId) {
       id = pId;
 
-      int motor_DIR_PINS[]  = {6, 8 ,10, 15, 17, 21, 23, 25};
-      int motor_STEP_PINS[] = {5, 7, 9, 14, 16, 20, 22, 24};
+      motors = new StepperMotor[MOTORS_PER_PANEL];
+
+      int motorDirPins[]  = {DIR_PIN_01, DIR_PIN_02 , DIR_PIN_03, DIR_PIN_04, DIR_PIN_05, DIR_PIN_06, DIR_PIN_07, DIR_PIN_08};
+      int motorStepPins[] = {STEP_PIN_01, STEP_PIN_02, STEP_PIN_03, STEP_PIN_04, STEP_PIN_05, STEP_PIN_06, STEP_PIN_07, STEP_PIN_08};
 
       for (int i = 0; i < MOTORS_PER_PANEL; i++) {
-        motors[i] = new StepperMotor(i, GMOTOR_STEPS, motor_DIR_PINS[i], motor_STEP_PINS[i], GENABLE_PIN, GM0_PIN, GM1_PIN);
+        motors[i] = new StepperMotor(i, GMOTOR_STEPS, motorDirPins[i], motorStepPins[i], GENABLE_PIN, GM0_PIN, GM1_PIN);
       }
+
     }
 
     // initialize motors
     void init() {
-      for (int i = 0; i < MOTORS_PER_PANEL; i++){
+      for (int i = 0; i < MOTORS_PER_PANEL; i++) {
         motors[i]->init();
       }
     }
@@ -40,10 +42,15 @@ class MotorPanel {
 
     // Prints the motor info
     void printDebugInfo() {
-      for (int i = 0; i < MOTORS_PER_PANEL; i++){
+      for (int i = 0; i < MOTORS_PER_PANEL; i++) {
         motors[i]->printMotorInfo();
       }
     }
+
+  private:
+    int id;
+    StepperMotor * motors;
+
 };
 
 #endif

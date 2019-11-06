@@ -3,13 +3,10 @@
 
    PREFIX G -> Global
 */
-//#define DIR_PINS {6}//, 8, 10, 15, 17, 21, 23, 25}
-//#define STEP_PINS {5}//, 7, 9, 14, 16, 20, 22, 24}
 
-#define MOTORS_PER_PANEL 1
 
-//#define DIR_PINS {6, 8, 10, 15, 17, 21, 23, 25}
-//#define STEP_PINS {5, 7, 9, 14, 16, 20, 22, 24}
+#define MOTORS_PER_PANEL 8
+
 //
 //#define MOTORS_PER_PANEL 8
 
