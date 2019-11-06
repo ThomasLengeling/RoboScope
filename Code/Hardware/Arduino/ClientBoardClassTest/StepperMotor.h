@@ -8,6 +8,7 @@
 #include "DRV8880.h"
 
 
+ //------------------------------------------------
 class StepperMotor {
   public:
 
@@ -59,6 +60,8 @@ class StepperMotor {
       //delete motor;
     }
 
+
+    //------------------------------------------------
     void init() {
       motor->begin(rpm);
 
@@ -69,25 +72,33 @@ class StepperMotor {
       motor->enable();
     }
 
+
+    //------------------------------------------------
     void stop() {
       motor->stop();
     }
 
+
+    //------------------------------------------------
     void moveForward() {
       motor->setMicrostep(1);
       motor->move(motorSteps);
     }
 
+    //------------------------------------------------
     void moveBackward() {
       motor->setMicrostep(1);
       motor->move(-motorSteps);
     }
 
+    //------------------------------------------------
     void moveForwardMicro(int step) {
       motor->setMicrostep(step);
       motor->move(step * motorSteps);
     }
 
+
+    //------------------------------------------------
     void moveBackwardMicro(int step) {
       motor->setMicrostep(step);
       motor->move(-step * motorSteps);
