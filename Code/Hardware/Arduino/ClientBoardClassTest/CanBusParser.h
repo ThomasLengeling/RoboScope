@@ -1,6 +1,6 @@
 /*
- * Class that manages CAN Bus Communication protocol 
- */
+   Class that manages CAN Bus Communication protocol
+*/
 #ifndef CAN_BUS_PARSER_H
 #define CAN_BUS_PARSER_H
 
@@ -21,13 +21,13 @@ class CanBusParser {
 
     //dump msg
     int hexDump(uint8_t dumpLen, uint8_t *bytePtr);
-    
+
   private:
 
-  FlexCAN * canBus;
-  
-  CAN_message_t txMsg;
-  CAN_message_t rxMsg;
+    FlexCAN * canBus;
+
+    CAN_message_t txMsg;
+    CAN_message_t rxMsg;
 };
 
 #endif
