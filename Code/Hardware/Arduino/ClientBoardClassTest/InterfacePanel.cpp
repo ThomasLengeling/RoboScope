@@ -12,8 +12,7 @@ InterfacePanel::InterfacePanel(int pId) {
   }
   for (int i = 0; i < NUM_URBAN_PIXELS; i++) {
     limitPinsH[i]  = 2;
-  }
-  
+  } 
 }
 
 

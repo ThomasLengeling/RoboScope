@@ -1,19 +1,14 @@
 /*
  * 
- * 
+ * The Motor Panel controls the output for all the motors available to the urban panel
  */
 #ifndef MOTOR_PANEL_H
 #define MOTOR_PANEL_H
 
 
 #include <Arduino.h>
-
 #include "StepperMotor.h"
 #include "BoardPins.h"
-
-/*
- * The Motor Panel controls the output for all the motors available to the urban panel
-*/
 
 class MotorPanel {
   public:

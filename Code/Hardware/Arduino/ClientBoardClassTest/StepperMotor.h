@@ -8,7 +8,7 @@
 #include "DRV8880.h"
 
 
- //------------------------------------------------
+//------------------------------------------------
 class StepperMotor {
   public:
 
@@ -18,6 +18,7 @@ class StepperMotor {
     //step pin
     int STEP_PIN;
 
+    //eanble pin
     int ENABLE_PIN;
 
     //Microstepping control pins
