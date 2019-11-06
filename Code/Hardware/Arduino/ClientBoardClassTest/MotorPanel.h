@@ -5,8 +5,8 @@
 #ifndef MOTOR_PANEL_H
 #define MOTOR_PANEL_H
 
-
 #include <Arduino.h>
+
 #include "StepperMotor.h"
 #include "BoardPins.h"
 
@@ -17,7 +17,7 @@ class MotorPanel {
     MotorPanel(int pId) {
       id = pId;
 
-      motors = new StepperMotor[MOTORS_PER_PANEL];
+     // motors = new StepperMotor[MOTORS_PER_PANEL];
 
       int motorDirPins[]  = {DIR_PIN_01, DIR_PIN_02 , DIR_PIN_03, DIR_PIN_04, DIR_PIN_05, DIR_PIN_06, DIR_PIN_07, DIR_PIN_08};
       int motorStepPins[] = {STEP_PIN_01, STEP_PIN_02, STEP_PIN_03, STEP_PIN_04, STEP_PIN_05, STEP_PIN_06, STEP_PIN_07, STEP_PIN_08};
@@ -36,7 +36,7 @@ class MotorPanel {
     }
 
     // Returns a motor based on id
-    StepperMotor getMotor(int i) {
+    StepperMotor  getMotor(int i) {
       return *motors[i];
     }
 
@@ -49,7 +49,7 @@ class MotorPanel {
 
   private:
     int id;
-    StepperMotor * motors;
+    StepperMotor * motors[MOTORS_PER_PANEL];
 
 };
 

@@ -5,10 +5,9 @@
 */
 
 
+//Number of motors that each panel has
 #define MOTORS_PER_PANEL 8
 
-//
-//#define MOTORS_PER_PANEL 8
 
 // MOTOR 1
 #define DIR_PIN_01     6

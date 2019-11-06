@@ -5,7 +5,7 @@
 CanBusParser::CanBusParser() {
   canBus = new FlexCAN(SPPED_BUS);
 
-  txMsg.leg = 8;
+  txMsg.len = 8;
 
 }
 
@@ -25,8 +25,8 @@ int CanBusParser::hexDump(uint8_t dumpLen, uint8_t *bytePtr){
 
 //--------------------------------------------------
 void CanBusParser::waitforMsg() {
-  while (canBus.available()) {
-    canBus.read(rxMsg);
+  while (canBus->available()) {
+    canBus->read(rxMsg);
   }
 }
 
