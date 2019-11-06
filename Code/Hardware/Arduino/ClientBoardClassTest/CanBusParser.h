@@ -6,12 +6,22 @@
 
 #include <FlexCAN.h>
 
+#define SPPED_BUS     1000000
+
 class CanBusParser {
   public:
+    //constructor
     CanBusParser();
 
     void sendMsg();
     void updatMsg();
+
+    //update msg
+    void waitforMsg();
+
+    //dump msg
+    int hexDump(uint8_t dumpLen, uint8_t *bytePtr);
+    
   private:
 
   FlexCAN * canBus;
