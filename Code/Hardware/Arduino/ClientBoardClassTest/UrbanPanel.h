@@ -62,6 +62,10 @@ class UrbanPanel {
       }
     }
 
+    void setUrbanPixelColor(int i, int r, int g, int b){
+      interfacePanel->setColorUrbanPixel(i, r, g, b);
+    }
+
 
     // TODO: Check to make sure the specified directions are the directions for the motor
     // TODO: Check to see if the stepper motor stops moving up when button is pressed

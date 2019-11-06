@@ -3,7 +3,12 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+  //serial test
   mSerialTest = CanSerial::create();
+
+  //dynamic grid
+  mDynamicGrid = Grid::create(WIDTH_PINS, HEIGHT_PINS);
+
 }
 
 //--------------------------------------------------------------

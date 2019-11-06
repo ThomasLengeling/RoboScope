@@ -24,4 +24,10 @@ void loop(void)
 {
   // Checks to see if certain buttons are being pressed to move the motor (represents user interaction)
   urbanPanel->checkInterfaceInput();
+  for (int i = 0; i < 255; i++){
+  urbanPanel->setUrbanPixelColor(0, i, i, i); 
+  }
+  for (int i = 255; i > 0; i--){
+  urbanPanel->setUrbanPixelColor(0, i, i, i); 
+  }
 }

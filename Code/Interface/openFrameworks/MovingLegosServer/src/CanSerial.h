@@ -2,6 +2,8 @@
 class that manages serial communication using the Can Bus protocol.
 */
 
+#pragma once
+
 #include "ofMain.h"
 
 //baurate of the serial

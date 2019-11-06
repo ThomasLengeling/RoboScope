@@ -1,3 +1,8 @@
+#pragma once
+
+/*
+
+*/
 #include "ofMain.h"
 
 //block size
@@ -7,7 +12,7 @@
 class Block;
 typedef std::shared_ptr<Block> BlockRef;
 
-
+///////////////////
 class Block{
 public:
   Block(){
@@ -23,22 +28,33 @@ public:
       return std::make_shared<Block>();
   }
 
+
+  //draw
   void draw();
   void update();
+
+  //set Position
+  void setPos(glm::vec2 pos);
+  void setSize(glm::vec3 mSize);
+  void setColor(ofColor col);
 
 private:
   //position
   glm::vec2  mPos;
   glm::vec2  mCenter;
 
+  //rod
+  glm::vec3 mDims;
+
   //unique id
   int mId
 
-  //height
-  float mHeight;
+  //
+  float mWidth;
+  
 
   //color
-  ofColor mColor
+  ofColor mColor;
 
   //animation
 };

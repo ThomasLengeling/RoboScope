@@ -1,7 +1,16 @@
 #pragma once
 
+/*
+
+*/
 #include "ofMain.h"
 #include "CanSerial.h"
+#include "Grid.h"
+#include "Block.h"
+
+//define dimenstions for the grid
+#define WIDTH_PINS  12
+#define HEIGHT_PINS  8
 
 class ofApp : public ofBaseApp{
 
@@ -23,9 +32,13 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		//collection of usb ports
-		std::vecotor<CanSerialRef> mSerials;
+		std::vector<CanSerialRef> mSerials;
 
 		//test port
 		CanSerialRef mSerialTest;
 
+		//camera movement
+		ofEasyCam mCam;
+
+		GridRef mDynamicGrid;
 };

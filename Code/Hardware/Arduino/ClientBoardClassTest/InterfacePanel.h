@@ -20,7 +20,7 @@ class InterfacePanel {
     // constructor
     InterfacePanel(int pId) {
       id = pId;
-      neopixels = new Adafruit_NeoPixel(NUM_URBAN_PIXELS * PIXELS_PER_URBAN_PIXEL, NEO_PIXEL_PIN, NEO_GRB + NEO_KHZ800);
+      neopixels = new Adafruit_NeoPixel(NUM_URBAN_PIXELS * PIXELS_PER_URBAN_PIXEL, NEO_PIXEL_PIN, NEO_GRBW + NEO_KHZ800);
     }
 
     int getUrbanPixelCount() {
