@@ -1,3 +1,13 @@
+/*
+ * Client Code to run on each board. Board controlls up to n type of motors
+ * 
+ * Thomas Sanchez Lengeling
+ * Terry Kang
+ * 
+ * MIT Media Lab
+ * City Science
+ * 
+ */
 #include <Arduino.h>
 #include "UrbanPanel.h"
 

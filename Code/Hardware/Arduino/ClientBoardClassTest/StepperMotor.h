@@ -1,12 +1,13 @@
+/*
+   Control for DRV8880 stepper motor driver
+*/
 #ifndef STEPPER_MOTOR_H
 #define STEPPER_MOTOR_H
 
 #include <Arduino.h>
 #include "DRV8880.h"
 
-/*
-   Control for DRV8834 stepper motor driver
-*/
+
 class StepperMotor {
   public:
 
