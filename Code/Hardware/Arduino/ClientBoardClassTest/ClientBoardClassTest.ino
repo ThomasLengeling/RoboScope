@@ -23,7 +23,6 @@ void setup(void)
   delay(2000);
 
 
-
   urbanPanel->setup();
 
   Serial.println(F("Starting Sending"));

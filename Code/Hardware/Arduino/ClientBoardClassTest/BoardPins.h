@@ -53,3 +53,23 @@
 #define GENABLE_PIN    33
 #define GM0_PIN        11
 #define GM1_PIN        12
+
+//DEBUG LED NEO PIXEL
+#define NEO_DEBUG      32
+
+//LED DEBUG TEENSY
+#define LED_TEENSY     13
+
+//NEO PIXELS
+#define NEO_PIXEL_PIN 7
+
+//DIP SWITCH
+#define MUX_S0         26         
+#define MUX_S1         27
+#define MUX_S2         28
+#define MUX_S3         31
+#define MUX_SIG       A13
+
+//MUX I2C
+#define MUX_SDA       18
+#define MUX_SCL       19

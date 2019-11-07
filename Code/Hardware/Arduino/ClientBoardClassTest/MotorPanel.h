@@ -9,7 +9,7 @@
 #include <Arduino.h>
 
 #include "StepperMotor.h"
-#include "MotorPins.h"
+#include "BoardPins.h"
 
 /*
  * The Motor Panel controls the output for all the motors available to the urban panel

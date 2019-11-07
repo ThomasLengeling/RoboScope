@@ -1,5 +1,5 @@
 /*
- * 
+ * Interface Panel Code
  * 
  */
 #ifndef INTERFACE_PANEL_H
@@ -7,7 +7,8 @@
 
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
-#include "InterfacePins.h"
+#include "InterfaceDefines.h"
+#include "BoardPins.h"
 
 class InterfacePanel {
   public:
