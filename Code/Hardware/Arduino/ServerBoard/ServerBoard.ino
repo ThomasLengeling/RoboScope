@@ -39,6 +39,7 @@ void setup(void)
 // -------------------------------------------------------------
 void loop(void)
 {
+  bool changeMSg = false;
   pinkey01Prev = pinkey01Cur;
   pinkey02Prev = pinkey02Cur;
   pinkey03Prev = pinkey03Cur;
@@ -95,12 +96,7 @@ void loop(void)
 
   if (!changeMSg) {
     //RX message
-    CAN_message_t rxMsg;
-    while (CANbus.available()) {
-
-      CANbus.read(rxMsg);
-      Serial.print("CAN BUS: ");
-      hexDump(8, rxMsg.buf);
-    }
+    canBusParser->waitforMsg();
+    canBusParser->writeMsgToSerial();
   }
 }
