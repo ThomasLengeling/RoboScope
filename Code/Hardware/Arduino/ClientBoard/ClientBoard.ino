@@ -111,7 +111,13 @@ void loop(void)
   if (!changeMSg) {
     //RX message
     CAN_message_t rxMsg;
-    while (CANbus.available()) {
+  for (int i = 0; i < 255; i++){
+  urbanPanel->setUrbanPixelColor(0, i, i, i); 
+  }
+  for (int i = 255; i > 0; i--){
+  urbanPanel->setUrbanPixelColor(0, i, i, i); 
+  }
+  while (CANbus.available()) {
 
       CANbus.read(rxMsg);
 

@@ -14,14 +14,17 @@ class CanBusParser {
     CanBusParser();
 
     void sendMsg();
-    void updatMsg();
+    void updateMsg(uint8_t message[]);
 
     //update msg
     void waitforMsg();
 
-    //dump msg
-    int hexDump(uint8_t dumpLen, uint8_t *bytePtr);
+    void getRxMsg(uint8_t msg[]);
 
+    //dump msg
+    void hexDump(uint8_t dumpLen, uint8_t *bytePtr);
+    void writeMsgToSerial();
+    
   private:
 
     FlexCAN * canBus;

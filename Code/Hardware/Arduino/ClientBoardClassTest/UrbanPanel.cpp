@@ -33,7 +33,7 @@ void UrbanPanel::resetState() {
 
 //------------------------------------------------------------------------------
 // returns true if the interface has been changed
-bool UrbanPanel::getStateChanged() {
+bool UrbanPanel::getStateChange() {
   return stateChanged;
 }
 
@@ -102,6 +102,24 @@ void UrbanPanel::moveMotorDownMicro(int motorID, int motorStep, int motorTimeAct
   if (!interfacePanel->getLimitSwitchState(motorID)) {
     motorPanel->getMotor(motorID).moveBackwardMicro(motorStep);
   }
+}
+
+//------------------------------------------------------------------------------
+// Interprets the message received from the CAN bus as actions
+void UrbanPanel::interpretMsg(uint8_t msg[]) {
+  int motorID = int(msg[0]);
+  int motorDir = int(msg[1]);
+  int motorStep = int(msg[2]);
+  int motorTimeActivation = int(msg[3]);
+  int motorEnable = int(msg[4]);
+
+  moveMotor(motorID, motorDir, motorStep, motorTimeActivation, motorEnable);
+
+  // TODO: Figure out the CAN communcations for LEDs
+  uint8_t interaction = msg[5];
+
+  int motorSensor0 = msg[6];
+  int motorSensor1 = msg[7];
 }
 
 //------------------------------------------------------------------------------

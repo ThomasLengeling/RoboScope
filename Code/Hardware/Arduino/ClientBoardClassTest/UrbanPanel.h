@@ -26,7 +26,7 @@ class UrbanPanel {
     void resetState();
 
     // returns true if the interface has been changed
-    bool getStateChanged();
+    bool getStateChange();
 
     // Iteratively goes through all interface push buttons to see if any are activated
     // Modifies motor output as necessary
@@ -47,6 +47,8 @@ class UrbanPanel {
     void moveMotorUpMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable);
 
     void moveMotorDownMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable);
+
+    void interpretMsg(uint8_t msg[]);
 
     MotorPanel getMotorPanel();
 
