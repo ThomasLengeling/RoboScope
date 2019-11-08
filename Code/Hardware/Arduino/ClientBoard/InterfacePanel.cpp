@@ -8,10 +8,10 @@ InterfacePanel::InterfacePanel(int pId) {
 
   // interface button pins
   for (int i = 0; i < NUM_URBAN_PIXELS; i++) {
-    interfacePins[i]  = 3;
+    interfacePins[i]  = 2;
   }
   for (int i = 0; i < NUM_URBAN_PIXELS; i++) {
-    limitPinsH[i]  = 2;
+    limitPinsH[i]  = 1;
   } 
 }
 
