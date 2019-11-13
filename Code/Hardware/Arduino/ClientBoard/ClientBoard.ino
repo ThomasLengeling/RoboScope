@@ -12,6 +12,8 @@
 #include "UrbanPanel.h"
 #include "CanBusParser.h"
 
+#define SERIAL_BR 96000
+
 
 // Panel Control
 int panelID = 0;
@@ -21,7 +23,7 @@ CanBusParser * canBusParser = new CanBusParser();
 
 void setup(void)
 {
-  Serial.begin(9600);
+  Serial.begin(SERIAL_BR);
   delay(2000);
 
 
@@ -38,10 +40,10 @@ void loop(void)
 
   // if there is a change to the state send a message
   if (urbanPanel->getStateChange()){
-    uint8_t message[8];
+    uint8_t message[MSG_LENGTH];
 
     // Temporary just to emphasize that there was a change to the system
-    for (int i = 0; i < 8; i++){
+    for (int i = 0; i < MSG_LENGTH; i++){
       message[i] = 1;
     }
     canBusParser->updateMsg(message);

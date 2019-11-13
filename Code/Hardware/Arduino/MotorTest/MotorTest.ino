@@ -24,10 +24,10 @@ void setup() {
 
   //start the motors;
   motor01.init();
-  motor02.init();
-  motor03.init();
+  //motor02.init();
+  //motor03.init();
 
-  //delay(2000);
+  delay(2000);
 
   //print the motor info
   //motor01.printMotorInfo();
@@ -38,9 +38,13 @@ void setup() {
 void loop() {
   //timer for moving up and down several motors at once
 
-  motor02.moveForward();
-  motor01.moveForward();
-  motor03.moveForward();
+  //motor02.moveForward();
+  //motor01.moveForward();
+
+  motor01.moveBackward();
+  delay(5);
+  
+  //motor03.moveForward();
 
   /*
     while (Serial.available()) {

@@ -7217,15 +7217,15 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <part name="C9" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="100UF-POLAR" device="-25V-20%(ELEC)" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF"/>
 <part name="C10" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="100UF-POLAR" device="-25V-20%(ELEC)" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF"/>
 <part name="C11" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="100UF-POLAR" device="-25V-20%(ELEC)" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF"/>
-<part name="C12" library="microbuilder" deviceset="CAP_CERAMIC" device="1206"/>
-<part name="C13" library="microbuilder" deviceset="CAP_CERAMIC" device="1206"/>
-<part name="C14" library="microbuilder" deviceset="CAP_CERAMIC" device="1206"/>
+<part name="C12" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
+<part name="C13" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
+<part name="C14" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="2.2uF"/>
 <part name="C15" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="100UF-POLAR" device="-25V-20%(ELEC)" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF"/>
 <part name="U$2" library="1zac" deviceset="LM74610-Q1" device=""/>
 <part name="D1" library="s2x_10" deviceset="S2*" device="" technology="M"/>
 <part name="D2" library="s2x_10" deviceset="S2*" device="" technology="M"/>
 <part name="U$4" library="v-reg-2" deviceset="BUK" device=""/>
-<part name="C16" library="microbuilder" deviceset="CAP_CERAMIC" device="1206"/>
+<part name="C16" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
 <part name="CAN_RST" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="1206" package3d_urn="urn:adsk.eagle:package:39654/1" value="10K"/>
 <part name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="SWITCH-DPDT" device="-SMD-AYZ0202" package3d_urn="urn:adsk.eagle:package:40160/1">
 <attribute name="SPICEPREFIX" value="X"/>
@@ -7233,10 +7233,10 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <part name="POWER_LED_MCU" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="POWER_LED_RES1" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 <part name="LED1" library="SK6812" deviceset="SK6812" device="_5050N"/>
-<part name="C2" library="microbuilder" deviceset="CAP_CERAMIC" device="1206"/>
+<part name="C2" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
 <part name="POWER_M" library="con-JST VH" deviceset="B2P-VH" device="" value="B2P-VH"/>
 <part name="POWER_MCU" library="con-JST VH" deviceset="B2P-VH" device="" value="B2P-VH"/>
-<part name="C1" library="microbuilder" deviceset="CAP_CERAMIC" device="1206"/>
+<part name="C1" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
 </parts>
 <sheets>
 <sheet>

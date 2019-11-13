@@ -7,7 +7,10 @@
 #include <FlexCAN.h>
 
 #define SPPED_BUS     1000000
+#define MSG_LENGTH    8
 
+
+//---------------------------------------------------------
 class CanBusParser {
   public:
     //constructor

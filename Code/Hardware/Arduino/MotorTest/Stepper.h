@@ -70,12 +70,12 @@ class Stepper {
 
     void moveForward() {
       motor->move(motorSteps);
-     // motor.runToPosition();
+//      motor->runToPosition();
     }
 
     void moveBackward() {
       motor->move(-motorSteps);
-      //  motor.runToPosition();
+     // motor->runToPosition();
     }
 
     //print out information

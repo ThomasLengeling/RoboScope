@@ -2,12 +2,22 @@ import processing.serial.*;
 
 Serial canPort01; 
 
-int bauRate = 9600;
-
 /*
-Seril manager
+ * Teensy available speeds:
+ * https://www.pjrc.com/teensy/td_uart.html
+ * 
+ * 2000000
+ * 1000000
+ * 250000 
+ * 115200
+ * 38400
 */
 
+int bauRate = 1000000;
+
+/*
+  Serial manager
+*/
 void setupSerial() {
 
   //print serials
@@ -23,15 +33,21 @@ void sendTestMsg() {
 }
 
 /*
-Matrix with height
-Matrix with color
+*  Matrix with height
+*  Matrix with color
 */
 
-
-
 //send can Msg
-void sendCanMsg(){
+void sendCanMsgTest() {
+
   //write array of bytes[]
-  //
- // canPort01.write();
+  byte [] heights = new byte[ gridX * gridY ];
+
+  //test
+  for (int i = 0; i < gridX * gridY; i++) {
+    heights[i] = (byte) int(random(0, 1024));
+  }
+
+  //heights
+  canPort01.write(heights);
 }

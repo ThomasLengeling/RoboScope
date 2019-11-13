@@ -9411,7 +9411,7 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <class number="0" name="default" width="0" drill="0">
 <clearance class="0" value="0.205"/>
 </class>
-<class number="1" name="2oz" width="0.2" drill="0">
+<class number="1" name="2oz" width="2" drill="0">
 </class>
 </classes>
 <parts>
@@ -9953,7 +9953,7 @@ Headers</text>
 <label x="289.56" y="-20.32" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="MDIR_08" class="0">
+<net name="MDIR_08" class="1">
 <segment>
 <pinref part="U$1" gate="G$1" pin="25/T/PWM"/>
 <wire x1="-50.8" y1="58.42" x2="-43.18" y2="58.42" width="0.1524" layer="91"/>
@@ -9965,14 +9965,14 @@ Headers</text>
 <label x="289.56" y="-25.4" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="MUX_S0" class="0">
+<net name="MUX_S0" class="1">
 <segment>
 <pinref part="U$1" gate="G$1" pin="26/A15"/>
 <wire x1="-50.8" y1="60.96" x2="-43.18" y2="60.96" width="0.1524" layer="91"/>
 <label x="-43.18" y="60.96" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="MUX_S1" class="0">
+<net name="MUX_S1" class="1">
 <segment>
 <pinref part="U$1" gate="G$1" pin="27/A16"/>
 <wire x1="-50.8" y1="63.5" x2="-43.18" y2="63.5" width="0.1524" layer="91"/>
@@ -9991,7 +9991,7 @@ Headers</text>
 <label x="-139.7" y="-144.78" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="S_SDA" class="0">
+<net name="S_SDA" class="1">
 <segment>
 <pinref part="U$1" gate="G$1" pin="30/A19/SDA1"/>
 <wire x1="-50.8" y1="71.12" x2="-43.18" y2="71.12" width="0.1524" layer="91"/>
@@ -10003,7 +10003,7 @@ Headers</text>
 <label x="-139.7" y="-147.32" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="MENABLE" class="0">
+<net name="MENABLE" class="1">
 <segment>
 <pinref part="U$1" gate="G$1" pin="33/T"/>
 <wire x1="-50.8" y1="78.74" x2="-43.18" y2="78.74" width="0.1524" layer="91"/>
@@ -10675,7 +10675,7 @@ Headers</text>
 <label x="-43.18" y="91.44" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="MUX_S3" class="0">
+<net name="MUX_S3" class="1">
 <segment>
 <wire x1="-22.86" y1="-22.86" x2="-20.32" y2="-22.86" width="0.1524" layer="91"/>
 <label x="-20.32" y="-22.86" size="1.016" layer="95" xref="yes"/>
@@ -10689,7 +10689,7 @@ Headers</text>
 <label x="-43.18" y="73.66" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="MUX_S2" class="0">
+<net name="MUX_S2" class="1">
 <segment>
 <wire x1="-22.86" y1="-20.32" x2="-20.32" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-20.32" y="-20.32" size="1.016" layer="95" xref="yes"/>
@@ -11070,7 +11070,7 @@ Headers</text>
 <wire x1="134.62" y1="-127" x2="147.32" y2="-127" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LED_DEBUG" class="0">
+<net name="LED_DEBUG" class="1">
 <segment>
 <pinref part="U$1" gate="G$1" pin="32/T/PWM"/>
 <wire x1="-50.8" y1="76.2" x2="-43.18" y2="76.2" width="0.1524" layer="91"/>
@@ -11339,7 +11339,7 @@ Headers</text>
 <label x="22.86" y="-149.86" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="S_SCL" class="0">
+<net name="S_SCL" class="1">
 <segment>
 <pinref part="U$1" gate="G$1" pin="29/A18/SCL1"/>
 <wire x1="-50.8" y1="68.58" x2="-43.18" y2="68.58" width="0.1524" layer="91"/>

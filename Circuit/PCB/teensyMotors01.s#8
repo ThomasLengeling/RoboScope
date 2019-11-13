@@ -9411,8 +9411,6 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <class number="0" name="default" width="0" drill="0">
 <clearance class="0" value="0.205"/>
 </class>
-<class number="1" name="2oz" width="0.2" drill="0">
-</class>
 </classes>
 <parts>
 <part name="U$1" library="Teensy_3_and_LC_Series_Boards_v1.4" deviceset="TEENSY_3.1-3.2_ALL_PINS&amp;PADS_SMD" device=""/>

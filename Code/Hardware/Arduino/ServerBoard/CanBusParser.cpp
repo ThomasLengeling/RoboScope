@@ -4,13 +4,11 @@
 //--------------------------------------------------
 CanBusParser::CanBusParser() {
   canBus = new FlexCAN(SPPED_BUS);
-
   txMsg.len = 8;
-
 }
 
 //--------------------------------------------------
-void CanBusParser::hexDump(uint8_t dumpLen, uint8_t *bytePtr){
+void CanBusParser::hexDump(uint8_t dumpLen, uint8_t *bytePtr) {
   uint8_t hex[17] = "0123456789abcdef";
   uint8_t working;
   while (dumpLen--) {
@@ -23,16 +21,10 @@ void CanBusParser::hexDump(uint8_t dumpLen, uint8_t *bytePtr){
   Serial.write('\n');
 }
 
-//--------------------------------------------------
-void CanBusParser::waitforMsg() {
-  while (canBus->available()) {
-    canBus->read(rxMsg);
-  }
-}
 
 //--------------------------------------- -----------
 // Prints the CAN bus message received in Serial
-void CanBusParser::writeMsgToSerial(){
+void CanBusParser::writeMsgToSerial() {
   Serial.print("CAN BUS: ");
   hexDump(8, rxMsg.buf);
 }
@@ -40,6 +32,14 @@ void CanBusParser::writeMsgToSerial(){
 //--------------------------------------------------
 void CanBusParser::sendMsg() {
   canBus->write(txMsg);
+}
+
+//--------------------------------------------------
+void CanBusParser::readMsg(){
+    while (canBus->available()) {
+    canBus->read(rxMsg);
+     Serial.println("got MSG");
+  }
 }
 
 //--------------------------------------------------
@@ -56,4 +56,25 @@ void CanBusParser::getRxMsg(uint8_t msg[]) {
   for (int i = 0; i < rxMsg.len; i ++) {
     msg[i] = rxMsg.buf[i];
   }
+}
+
+
+//--------------------------------------------------
+//activate and send msg
+void CanBusParser::blockMsg() {
+
+}
+
+//--------------------------------------------------
+void CanBusParser::activateMsg() {
+  activeMsg = true;
+}
+
+//--------------------------------------------------
+void CanBusParser::deactivateMsg() {
+  activeMsg = false;
+}
+
+boolean CanBusParser::isActiveMsg() {
+  return activeMsg;
 }

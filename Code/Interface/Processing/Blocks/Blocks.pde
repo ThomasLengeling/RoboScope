@@ -21,6 +21,7 @@ int bkgColor = 50;
 int gridX = 12;
 int gridY = 8;
 
+
 int blockSize = 32*2;
 
 int gridSpace = 4*2;
@@ -275,6 +276,11 @@ void keyPressed() {
     printArray(cam.getPosition());
     println("rot");
     printArray(cam.getRotations());
+  }
+  
+  //test can 
+  if(key == '2'){
+   sendCanMsgTest();
   }
 
   if (key == '2') { 
