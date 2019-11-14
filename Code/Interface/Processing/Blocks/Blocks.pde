@@ -1,12 +1,12 @@
 /*
   Program the manages the interface, communication and interaction between the physical table and data. 
-  
  
-  Thomas Sanchez Lengeling 
-  City Science Group
-  2019
-  
-*/
+ 
+ Thomas Sanchez Lengeling 
+ City Science Group
+ 2019
+ 
+ */
 import controlP5.*;
 import peasy.*;
 
@@ -14,31 +14,38 @@ import peasy.*;
 PeasyCam cam;
 CameraState state;
 
-Grid  tableGrid;
 
+//background color
 int bkgColor = 50;
 
+//grid class
+Grid  tableGrid;
+
+//grid size
 int gridX = 12;
 int gridY = 8;
 
-
+//block size  32mm legos
 int blockSize = 32*2;
 
+//sapce between the blocks
 int gridSpace = 4*2;
 
+//location of the grid 
 int gridStartX = 250;
 int gridStartY = 50;
 
+//gui 
 ControlP5 cp5;
-
 Accordion accordionGrid;
 Accordion accordionIds;
 
+// id of the road
 int currentIdRoad = 0;
 
-boolean enableDraw = false;
-
-boolean enableMap =  false;
+//enables
+boolean enableDraw     = false;
+boolean enableMap      =  false;
 boolean enableColorMap = false;
 boolean enableGrouping = false;
 
@@ -46,11 +53,14 @@ boolean enableGrouping = false;
 int groupCounter = 0;
 int groupMax = 4;
 
+//activate camera animation
 boolean activeAnimation = false;
 boolean recording = false;
 
+//map rendering 
 Map map;
 
+//initialization
 void setup() {
   size(1920, 1080, P3D);
   smooth(8);
@@ -168,20 +178,18 @@ void setup() {
 void draw() {
   background(bkgColor); //190
 
-
-
   pushMatrix();
 
- // lights();
- // ambient(250, 250, 250);
- // pointLight(255, 255, 255, 0, 0, 200);
+  // lights();
+  // ambient(250, 250, 250);
+  // pointLight(255, 255, 255, 0, 0, 200);
 
   translate(-650, -350, 0);
   drawTable();
+  drawBase();
   tableGrid.draw();
   tableGrid.drawContour();
   popMatrix();
-
 
   if (!enableDraw) {
     float [] gridSize = cp5.getController("gridSize").getArrayValue();
@@ -226,8 +234,6 @@ void draw() {
 void drawGUI() {
 
   hint(DISABLE_DEPTH_TEST);
-
-
 
   cam.beginHUD();
 
@@ -277,10 +283,10 @@ void keyPressed() {
     println("rot");
     printArray(cam.getRotations());
   }
-  
+
   //test can 
-  if(key == '2'){
-   sendCanMsgTest();
+  if (key == '2') {
+    sendCanMsgTest();
   }
 
   if (key == '2') { 
