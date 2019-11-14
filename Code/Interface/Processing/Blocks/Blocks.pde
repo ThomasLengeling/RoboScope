@@ -205,11 +205,13 @@ void draw() {
   tableGrid.draw();
   //tableGrid.drawContour();
   
-  Block currentRod;
+  Block currBl = null;
   tableGrid.updatePicker(picker3d);
   int idPicker = picker3d.get(mouseX, mouseY);
-  if(idPicker >= 0){
-    //currentRod = tableGrid.get
+  println(idPicker);
+  if(idPicker >= 0 && idPicker < gridX * gridY){
+    currBl = tableGrid.getBlock(idPicker);
+   tableGrid.updateCurrentBlock(currBl);
   }
   
   picker3d.stop();
@@ -223,9 +225,9 @@ void draw() {
     tableGrid.setSetSpace(gridSpace);
   }
 
-  Block bl = tableGrid.getCurrentBlock(mouseX, mouseY);
-  if (bl != null) {
-    cp5.getController("idGrid").setStringValue("id: "+bl.getId());
+  //Block bl = tableGrid.getCurrentBlock(mouseX, mouseY);
+  if (currBl != null) {
+    cp5.getController("idGrid").setStringValue("id: "+currBl.getId());
   }
 
 
@@ -271,7 +273,7 @@ void drawGUI() {
 
 
 void mousePressed() {
-  Block bl = tableGrid.getCurrenBlock(mouseX, mouseY);
+  Block bl = tableGrid.getCurrentBlock(mouseX, mouseY);
 
   int Office = int(cp5.getController("Office").getValue());
   int Residential = int(cp5.getController("Residential").getValue());

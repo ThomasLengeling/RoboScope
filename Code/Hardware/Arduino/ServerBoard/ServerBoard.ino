@@ -113,7 +113,6 @@ void loop(void)
   //RX MSG
   if (!canBusParser->isActiveMsg()) {
     canBusParser->readMsg();
-
   }
 
 }
@@ -129,8 +128,8 @@ void setInitConfig() {
 
     
     canTemp.buf[0] = motorIter;
-    canTemp.buf[1] = 1;
-    canTemp.buf[2] = 100;
+    canTemp.buf[1] = 1;    //dir 
+    canTemp.buf[2] = 100;  //step
     canTemp.buf[3] = 0;
     canTemp.buf[4] = 0;
 
@@ -219,10 +218,7 @@ void serialEvent() {
         }
         Serial.println("updated interaction");
       }
-
-
     }
-
   }
 
   //clean buffer
@@ -248,6 +244,8 @@ void parseInput() {
   if (pinkey01Cur != pinkey01Prev) {
     canBusParser->activateMsg();
     Serial.println("change key 1");
+
+    //send sample can bus
   }
 
   // pinkey02 increases the motor step

@@ -1,6 +1,6 @@
 /*
   Individual Block or pin
-*/
+ */
 class Block {
 
   //corner position
@@ -15,12 +15,12 @@ class Block {
   int maxheight = 500;
   int midHeight = int(maxheight/2.0);
   float bHeight = midHeight;
-  
+
   //animation
   float finalHeight = midHeight;
   boolean stopAnim  = false;
   float animCounter = 0.0;
-  
+
   //size of the block
   int tam = 10; //default size
 
@@ -32,10 +32,10 @@ class Block {
 
   //selected
   boolean selected = false;
-  
+
   //color type 
   color colorMap;
-  
+
   //constructor for the block
   Block(int posx, int posy, int tam) {
     this.posx = posx;
@@ -46,21 +46,22 @@ class Block {
     centerPosX = posx + int((float)tam/2.0);
     centerPosY = posy + int((float)tam/2.0);
 
-    id = int(random(0, 4));
-
     colorMap = color(0);
   }
-  
+
+  Block() {
+  }
+
   //update the hight of the rod
-  void updateHeight(int value){
+  void updateHeight(int value) {
     finalHeight = (int)map(value, 50, 255, midHeight, 20);
     //finalHeight = bHeight;
   }
-  
+
   //draw the Blcok
   void drawBlock() {
     pushMatrix();
-    translate(centerPosX, centerPosY,  -(bHeight - midHeight) ); //max = max_height/2.0
+    translate(centerPosX, centerPosY, -(bHeight - midHeight) ); //max = max_height/2.0
     //println(   bHeight - midHeight);
     noFill();
     stroke(50);
@@ -74,20 +75,19 @@ class Block {
     drawContour();
     popMatrix();
 
-   //animate Pins
-
+    //animate Pins
   }
-  
+
   //animate the moving block or pin
-  void animateBlock(){
+  void animateBlock() {
     bHeight = midHeight + (finalHeight - midHeight)*(animCounter);
-    
+
     animCounter+=0.0075;
-    if(animCounter>= 1.0){
+    if (animCounter>= 1.0) {
       animCounter =1.0;
     }
   }
-  
+
   //draw Lego piece on top
   void drawLego() {
 
@@ -108,7 +108,7 @@ class Block {
     ellipse(posx + (tam/4.0), posy + 3*(tam/4.0), eTam, eTam);
     ellipse(posx + 3*(tam/4.0), posy + 3*(tam/4.0), eTam, eTam);
   }
-  
+
   //draw the color of the block
   void drawContour() {
     noFill();
@@ -152,7 +152,7 @@ class Block {
   int getCenterX() {
     return  centerPosX;
   }
-  
+
   int getCenterY() {
     return centerPosY;
   }
@@ -192,5 +192,4 @@ class Block {
   void setType(int type) {
     typeId = type;
   }
-  
 }

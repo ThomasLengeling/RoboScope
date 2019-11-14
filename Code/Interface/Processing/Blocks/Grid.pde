@@ -180,6 +180,10 @@ class Grid {
   Block getBlock(int id){
     return grid.get(id);
   }
+  
+  void updateCurrentBlock(Block cbl){
+    currentBlock = cbl;
+  }
 
   void updateBlockType(Block cbl) {
     for (Block bl : grid) {
