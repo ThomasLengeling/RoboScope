@@ -1,6 +1,6 @@
 /*
   Collection of blocks that form a grid
-*/
+ */
 class Grid {
   ArrayList<Block> grid;
   ArrayList<Road> road;
@@ -61,11 +61,7 @@ class Grid {
           bl.disableSelection();
         }
       }
-      //2d
-      //bl.lego();
-      //bl.drawContour();
-
-      //draw 3d
+      
 
       bl.drawBlock();
       if (activeAnimation) {
@@ -81,9 +77,14 @@ class Grid {
     }
   }
 
-  void drawLines() {
+  //update 3d picker
+  void updatePicker(Picker picker) {
+    for (Block bl : grid) {
+      picker.start(bl.getId());
+    }
   }
 
+  
   void drawContour() {
     noFill();
     stroke(255);
@@ -163,7 +164,7 @@ class Grid {
     createGrid();
   }
 
-  Block getCurrenBlock(int posx, int posy) {
+  Block getCurrentBlock(int posx, int posy) {
     for (Block bl : grid) {
       float ds = dist(posx, posy, bl.posx, bl.posy);
       if (ds < blockSize) {
@@ -173,6 +174,11 @@ class Grid {
     }
 
     return null;
+  }
+  
+  //get block 
+  Block getBlock(int id){
+    return grid.get(id);
   }
 
   void updateBlockType(Block cbl) {

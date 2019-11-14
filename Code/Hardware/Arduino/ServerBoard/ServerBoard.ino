@@ -15,8 +15,12 @@
 
 //Matrix size
 //The matrix size could change if we parallelize the serial ports.
-
 #define MATRIX_SIZE   12 * 8
+
+//Motors per board
+#define MOTOR_PER_BOARD    8
+
+#define NUM_BOARDS         12
 
 //server id, to ideti
 #define SERVER_ID          0
@@ -72,6 +76,12 @@ void setup(void)
   canBusParser = new CanBusParser();
   delay(5000);
 
+  //use LED blink this state
+  Serial.println("Init Config");
+  setInitConfig();
+  Serial.println("Done Config");
+  delay(2000);
+
   //LED
   pinMode(LED_PIN_01, OUTPUT);
   pinMode(LED_PIN_02, OUTPUT);
@@ -108,6 +118,58 @@ void loop(void)
 
 }
 
+//-------------------------------------------------------------------
+// Configure the Can msg for the motors
+void setInitConfig() {
+  int boardIter = 0;
+  int motorIter = 0;
+  for (int i = 0; i < MATRIX_SIZE; i++) {
+    CAN_message_t  canTemp;
+    canTemp.id = boardIter;
+
+    
+    canTemp.buf[0] = motorIter;
+    canTemp.buf[1] = 1;
+    canTemp.buf[2] = 100;
+    canTemp.buf[3] = 0;
+    canTemp.buf[4] = 0;
+
+    //color  -> uint32_t -> uint8_t [0 - 255]
+    canTemp.buf[5] = 255;
+
+    //sensor values
+    canTemp.buf[6] = 0;
+    canTemp.buf[7] = 0;
+    
+
+    Serial.print("Baord: ");
+    Serial.println(boardIter);
+
+    CanBusParser::printCanMsg(canTemp);
+    msgCanMatrix[i] = canTemp;
+
+    //increase number of boards based on the number of motors per board
+    //reset the motor iteration based on the nuber of motors per board
+    if (i % MOTOR_PER_BOARD == 0) {
+      boardIter++;
+      motorIter = 0;
+    }
+
+    // number of current boards
+    if (boardIter == NUM_BOARDS) {
+      Serial.println("Num boards: ");
+      Serial.print(boardIter);
+    }
+
+    //increase the num of motors
+    motorIter++;
+
+  }
+
+
+
+}
+
 /*
   SerialEvent occurs whenever a new data comes in the hardware serial RX. This
   routine is run between each time loop() runs, so using delay inside loop can
@@ -134,7 +196,6 @@ void serialEvent() {
         for (int i = 0; i < MATRIX_SIZE; i++) {
           uint8_t dirValue =  msgSerial[i + 1];
           msgCanMatrix[i].buf[0] = dirValue;
-          msgCanMatrix[i].buf[1] = stepValue;
         }
         Serial.println("updated heights");
       }

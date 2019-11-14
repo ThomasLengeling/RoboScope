@@ -35,10 +35,10 @@ void CanBusParser::sendMsg() {
 }
 
 //--------------------------------------------------
-void CanBusParser::readMsg(){
-    while (canBus->available()) {
+void CanBusParser::readMsg() {
+  while (canBus->available()) {
     canBus->read(rxMsg);
-     Serial.println("got MSG");
+    Serial.println("got MSG");
   }
 }
 
@@ -75,6 +75,16 @@ void CanBusParser::deactivateMsg() {
   activeMsg = false;
 }
 
+//--------------------------------------------------
 boolean CanBusParser::isActiveMsg() {
   return activeMsg;
+}
+
+//--------------------------------------------------
+void CanBusParser::printCanMsg(CAN_message_t msg) {
+  Serial.print("msg: ");
+  Serial.println(msg.id);
+  for (int i = 0; i < 8; i++) {
+    Serial.println(msg.buf[i]);
+  }
 }

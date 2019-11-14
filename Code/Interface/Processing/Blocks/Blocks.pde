@@ -9,6 +9,10 @@
  */
 import controlP5.*;
 import peasy.*;
+import picking.*;
+
+//picker
+Picker picker3d;
 
 //cam
 PeasyCam cam;
@@ -64,10 +68,15 @@ Map map;
 void setup() {
   size(1920, 1080, P3D);
   smooth(8);
-
+  
+  //picking 3d objects
+ picker3d = new Picker(this);
+ 
+  //camera 
   cam = new PeasyCam(this, 500);
   state = cam.getState();
 
+  //gui
   cp5 = new ControlP5(this);
   cp5.setAutoDraw(false);
 
@@ -176,6 +185,8 @@ void setup() {
 
 
 void draw() {
+  picker3d.stop();
+  
   background(bkgColor); //190
 
   pushMatrix();
@@ -185,10 +196,23 @@ void draw() {
   // pointLight(255, 255, 255, 0, 0, 200);
 
   translate(-650, -350, 0);
+  
+  //draw table
   drawTable();
   drawBase();
+  
+  //draw grid and rods
   tableGrid.draw();
-  tableGrid.drawContour();
+  //tableGrid.drawContour();
+  
+  Block currentRod;
+  tableGrid.updatePicker(picker3d);
+  int idPicker = picker3d.get(mouseX, mouseY);
+  if(idPicker >= 0){
+    //currentRod = tableGrid.get
+  }
+  
+  picker3d.stop();
   popMatrix();
 
   if (!enableDraw) {
@@ -199,7 +223,7 @@ void draw() {
     tableGrid.setSetSpace(gridSpace);
   }
 
-  Block bl = tableGrid.getCurrenBlock(mouseX, mouseY);
+  Block bl = tableGrid.getCurrentBlock(mouseX, mouseY);
   if (bl != null) {
     cp5.getController("idGrid").setStringValue("id: "+bl.getId());
   }
@@ -244,6 +268,7 @@ void drawGUI() {
   cam.endHUD();
   hint(ENABLE_DEPTH_TEST);
 }
+
 
 void mousePressed() {
   Block bl = tableGrid.getCurrenBlock(mouseX, mouseY);

@@ -10,16 +10,15 @@ class Block {
   //center position
   int centerPosX;
   int centerPosY;
-  
 
   //building height
   int maxheight = 500;
   int midHeight = int(maxheight/2.0);
-  float bHeight   = midHeight;
+  float bHeight = midHeight;
   
   //animation
-  float finalHeight= midHeight;
-  boolean stopAnim = false;
+  float finalHeight = midHeight;
+  boolean stopAnim  = false;
   float animCounter = 0.0;
   
   //size of the block
@@ -29,7 +28,7 @@ class Block {
   int id;
 
   //modfied type of block
-  int typeId =-1;
+  int typeId = -1;
 
   //selected
   boolean selected = false;
@@ -41,7 +40,7 @@ class Block {
   Block(int posx, int posy, int tam) {
     this.posx = posx;
     this.posy = posy;
-    this.tam = tam;
+    this.tam  = tam;
 
     //update center
     centerPosX = posx + int((float)tam/2.0);
@@ -54,7 +53,7 @@ class Block {
   
   //update the hight of the rod
   void updateHeight(int value){
-    finalHeight =  (int)map(value, 50, 255, midHeight, 20);
+    finalHeight = (int)map(value, 50, 255, midHeight, 20);
     //finalHeight = bHeight;
   }
   
@@ -153,6 +152,7 @@ class Block {
   int getCenterX() {
     return  centerPosX;
   }
+  
   int getCenterY() {
     return centerPosY;
   }
@@ -192,4 +192,5 @@ class Block {
   void setType(int type) {
     typeId = type;
   }
+  
 }
