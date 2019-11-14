@@ -13,7 +13,13 @@
 #define KEY_PIN_03    22
 #define KEY_PIN_04    23
 
+//Matrix size
+//The matrix size could change if we parallelize the serial ports.
+
 #define MATRIX_SIZE   12 * 8
+
+//server id, to ideti
+#define SERVER_ID          0
 
 CanBusParser * canBusParser;
 
@@ -31,26 +37,30 @@ int pinkey04Prev = 0;
 uint8_t msg[] = {0, 1, 0, 0, 0, 0, 0, 0};
 
 /*
- * Input msg : uint8_t -> [0 - 255]
- * 
- *             uint8_t -> 0 0 0 0 0 0 0 0 0
- *        
- *             Additional uint8_t for the type of information
- *             
- *             1 -> heights
- *             2 -> color
- *             3 -> sensor values
- *             
- *            [0] : motorID
- *            [1] : motorDir
- *            [2] : motorStep
- *            [3] : motorTimeActivation
- *            [4] : motorEnable
- *            [5] : color
- *            [6] : motorSensor0
- *            [7] : motorSensor1
- */
+   Input msg : uint8_t -> [0 - 255]
+
+               uint8_t -> 0 0 0 0 0 0 0 0 0
+
+               Additional uint8_t for the type of information
+
+               1 -> heights
+               2 -> color
+               3 -> sensor values
+
+              [0] : motorID
+              [1] : motorDir
+              [2] : motorStep
+              [3] : motorTimeActivation
+              [4] : motorEnable
+              [5] : color
+              [6] : motorSensor0
+              [7] : motorSensor1
+*/
+
 uint8_t msgSerial[MATRIX_SIZE + 1];
+uint8_t msgCan[MATRIX_SIZE];
+
+CAN_message_t msgCanMatrix[MATRIX_SIZE];
 
 // -------------------------------------------------------------
 void setup(void)
@@ -111,10 +121,54 @@ void loop(void)
 void serialEvent() {
   while (Serial.available()) {
     //copy input msg,
-    Serial.readBytes(msgSerial, MATRIX_SIZE);
-    
+    int valid  = Serial.readBytes((char *)msgSerial, MATRIX_SIZE + 1);
+
+    //found data
+    if (valid != 0 ) {
+
+      //msg types heights
+      if (msgSerial[0] == 1) {
+
+        //Translate height into dir and step values
+        //update the current Can Matrix Values;
+        for (int i = 0; i < MATRIX_SIZE; i++) {
+          uint8_t dirValue =  msgSerial[i + 1];
+          msgCanMatrix[i].buf[0] = dirValue;
+          msgCanMatrix[i].buf[1] = stepValue;
+        }
+        Serial.println("updated heights");
+      }
+
+      //color values
+      //transalte input values to color values for the motor
+      if (msgSerial[0] == 2) {
+        for (int i = 0; i < MATRIX_SIZE; i++) {
+          uint8_t colorValue =  msgSerial[i + 1];
+          msgCanMatrix[i].buf[2] = colorValue;
+        }
+        Serial.println("updated color");
+      }
+
+      //interaction values
+      //transalte input values to color values for the motor
+      if (msgSerial[0] == 3) {
+        for (int i = 0; i < MATRIX_SIZE; i++) {
+          uint8_t colorValue =  msgSerial[i + 1];
+          msgCanMatrix[i].buf[2] = colorValue;
+        }
+        Serial.println("updated interaction");
+      }
+
+
+    }
 
   }
+
+  //clean buffer
+  while (Serial.available()) {
+    Serial.read();
+  }
+
 }
 
 // -------------------------------------------------------------
