@@ -71,13 +71,29 @@ class Stepper {
     }
 
     void moveForward() {
-      motor->move(motorSteps);
+      motor->move(-motorSteps);
      // motor->rotate(360);
 //      motor->runToPosition();
     }
 
+    void startMoveForward(int steps) {
+      motor->startMove(steps * -motorSteps);
+    }
+
+    void startMoveBackward(int steps){
+      motor->startMove(steps * motorSteps);
+    }
+
+    unsigned getNextAction(){
+      return motor->nextAction();
+    }
+
+    void stop() {
+      motor->disable();
+    }
+
     void moveBackward() {
-      motor->move(-motorSteps);
+      motor->move(motorSteps);
      //  motor->rotate(-360);
      // motor->runToPosition();
     }
