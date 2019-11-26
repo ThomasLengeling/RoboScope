@@ -7233,7 +7233,7 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <part name="POWER_LED_MCU" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="POWER_LED_RES1" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 <part name="LED1" library="SK6812" deviceset="SK6812" device="_5050N"/>
-<part name="C2" library="microbuilder" deviceset="CAP_CERAMIC" device="1206"/>
+<part name="C2" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
 <part name="POWER_M" library="con-JST VH" deviceset="B2P-VH" device="" value="B2P-VH"/>
 <part name="POWER_MCU" library="con-JST VH" deviceset="B2P-VH" device="" value="B2P-VH"/>
 <part name="C1" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>

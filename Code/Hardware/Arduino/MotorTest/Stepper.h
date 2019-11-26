@@ -45,7 +45,7 @@ class Stepper {
       digitalWrite(ENABLE_PIN, HIGH);
 
       //init motor driver
-      motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN);//, ENABLE_PIN, M0_PIN, M1_PIN);
+      motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN);;//, ENABLE_PIN, M0_PIN, M1_PIN);
 
     }
 
@@ -66,15 +66,19 @@ class Stepper {
      // motor->setEnableActiveState(LOW);
 
       motor->enable();
+
+     // motor->setMicrostep(16); 
     }
 
     void moveForward() {
       motor->move(motorSteps);
+     // motor->rotate(360);
 //      motor->runToPosition();
     }
 
     void moveBackward() {
       motor->move(-motorSteps);
+     //  motor->rotate(-360);
      // motor->runToPosition();
     }
 

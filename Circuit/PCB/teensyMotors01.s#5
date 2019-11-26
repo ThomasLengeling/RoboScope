@@ -9408,7 +9408,7 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.2" drill="0">
 <clearance class="0" value="0.205"/>
 </class>
 <class number="1" name="2oz" width="0.2" drill="0">
