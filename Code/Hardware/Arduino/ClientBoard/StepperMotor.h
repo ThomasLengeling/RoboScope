@@ -56,23 +56,37 @@ class StepperMotor {
       motor->stop();
     }
 
-
     //------------------------------------------------
-    void moveForward() {
-      motor->setMicrostep(1);
-      motor->move(motorSteps);
+    void startMoveForward(int steps) {
+      motor->startMove(steps * -motorSteps);
     }
 
     //------------------------------------------------
-    void moveBackward() {
+    void startMoveBackward(int steps) {
+      motor->startMove(steps * motorSteps);
+    }
+
+    //------------------------------------------------
+    unsigned getNextAction() {
+      return motor->nextAction();
+    }
+
+    //------------------------------------------------
+    void moveForward() {
       motor->setMicrostep(1);
       motor->move(-motorSteps);
     }
 
     //------------------------------------------------
+    void moveBackward() {
+      motor->setMicrostep(1);
+      motor->move(motorSteps);
+    }
+
+    //------------------------------------------------
     void moveForwardMicro(int step) {
       motor->setMicrostep(step);
-      motor->move(step * motorSteps);
+      motor->move(step * -motorSteps);
     }
 
 
