@@ -14,11 +14,10 @@
 
 #define SERIAL_BR 96000
 
-int motorsPerPanel = 4;
+int motorsPerPanel = 8;
 
-int loopCount = 0;
-int dir[] = {-1, 1, -1, 1};
-int motorIDs[] = {0, 2, 4, 6};
+int dir[] = {-1, 1, -1, 1, -1, 1, -1, 1};
+int motorIDs[] = {0, 2, 4, 6, 1, 3, 5, 7};
 
 // Panel Control
 int panelID = 0;
@@ -40,6 +39,12 @@ void setup(void)
   urbanPanel->moveMotorUpMicro(2, 5, 0, 0);
   urbanPanel->moveMotorDownMicro(4, 5, 0, 0);
   urbanPanel->moveMotorUpMicro(6, 5, 0, 0);
+
+
+  urbanPanel->moveMotorDownMicro(1, 5, 0, 0);
+  urbanPanel->moveMotorUpMicro(3, 5, 0, 0);
+  urbanPanel->moveMotorDownMicro(5, 5, 0, 0);
+  urbanPanel->moveMotorUpMicro(7, 5, 0, 0);
 }
 
 void wave() {
