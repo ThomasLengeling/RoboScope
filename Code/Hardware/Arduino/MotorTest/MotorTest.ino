@@ -75,7 +75,7 @@ void loop() {
 
  motor02.moveForward();
 
-  motor04.moveForward();
+  //motor04.moveForward();
 
 /*
   if (enableMotor) {
