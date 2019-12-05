@@ -26,6 +26,8 @@ Stepper motor07(6, GMOTOR_STEPS, DIR_PIN_07, STEP_PIN_07, GENABLE_PIN, GM0_PIN, 
 //Motor 8
 Stepper motor08(7, GMOTOR_STEPS, DIR_PIN_08, STEP_PIN_08, GENABLE_PIN, GM0_PIN, GM1_PIN);
 
+
+
 //false -> backwards
 //true  -> forwards
 boolean dirMotor = false;
@@ -68,14 +70,31 @@ void setup() {
   //motor01.printMotorInfo();
   // motor02.printMotorInfo();
   //motor03.printMotorInfo();
+
+  motor02.startMoveBackward(5);
+  motor04.startMoveBackward(5);
 }
+
 
 void loop() {
   //timer for moving up and down several motors at once
 
- motor02.moveForward();
+  unsigned waitTimeMicros02 = motor02.getNextAction();
+  unsigned waitTimeMicros04 = motor04.getNextAction();
+  
 
+  if (waitTimeMicros02 <= 0) {
+    motor02.stop();
+  }
+
+  if (waitTimeMicros04 <= 0) {
+    motor04.stop();
+  }
+
+<<<<<<< HEAD
   //motor04.moveForward();
+=======
+>>>>>>> 19909735bba446a8e4ddd8f5cb155ece66c35d70
 
 /*
   if (enableMotor) {

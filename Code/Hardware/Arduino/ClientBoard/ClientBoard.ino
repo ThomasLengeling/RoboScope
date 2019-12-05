@@ -14,6 +14,10 @@
 
 #define SERIAL_BR 96000
 
+int motorsPerPanel = 8;
+
+int dir[] = {-1, 1, -1, 1, -1, 1, -1, 1};
+int motorIDs[] = {0, 2, 4, 6, 1, 3, 5, 7};
 
 // Panel Control
 int panelID = 0;
@@ -30,30 +34,60 @@ void setup(void)
   urbanPanel->setup();
 
   Serial.println(F("Starting Sending"));
+
+  urbanPanel->moveMotorDownMicro(0, 5, 0, 0);
+  urbanPanel->moveMotorUpMicro(2, 5, 0, 0);
+  urbanPanel->moveMotorDownMicro(4, 5, 0, 0);
+  urbanPanel->moveMotorUpMicro(6, 5, 0, 0);
+
+
+  urbanPanel->moveMotorDownMicro(1, 5, 0, 0);
+  urbanPanel->moveMotorUpMicro(3, 5, 0, 0);
+  urbanPanel->moveMotorDownMicro(5, 5, 0, 0);
+  urbanPanel->moveMotorUpMicro(7, 5, 0, 0);
+}
+
+void wave() {
+  for (int i = 0; i < motorsPerPanel; i++) {
+    unsigned waitTime = urbanPanel->checkMotorState(motorIDs[i]);
+
+    if (waitTime <= 0) {
+      if (dir[i] < 0) {
+        urbanPanel->moveMotorUpMicro(motorIDs[i], 5, 0, 0);
+      } else {
+        urbanPanel->moveMotorDownMicro(motorIDs[i], 5, 0, 0);
+      }
+
+      dir[i] *= -1;
+    }
+  }
 }
 
 // -------------------------------------------------------------
 void loop(void)
 {
-  // Checks to see if certain buttons are being pressed to move the motor (represents user interaction)
-  urbanPanel->checkInterfaceInput();
+  wave();
 
-  // if there is a change to the state send a message
-  if (urbanPanel->getStateChange()){
-    uint8_t message[MSG_LENGTH];
 
-    // Temporary just to emphasize that there was a change to the system
-    for (int i = 0; i < MSG_LENGTH; i++){
-      message[i] = 1;
-    }
-    canBusParser->updateMsg(message);
-    canBusParser->sendMsg();
-  }
+  // // Checks to see if certain buttons are being pressed to move the motor (represents user interaction)
+  // urbanPanel->checkInterfaceInput();
 
-  canBusParser->waitforMsg();
+  // // if there is a change to the state send a message
+  // if (urbanPanel->getStateChange()){
+  //   uint8_t message[MSG_LENGTH];
 
-  uint8_t msg[8];
-  canBusParser->getRxMsg(msg);
+  //   // Temporary just to emphasize that there was a change to the system
+  //   for (int i = 0; i < MSG_LENGTH; i++){
+  //     message[i] = 1;
+  //   }
+  //   canBusParser->updateMsg(message);
+  //   canBusParser->sendMsg();
+  // }
 
-  urbanPanel->interpretMsg(msg);
+  // canBusParser->waitforMsg();
+
+  // uint8_t msg[8];
+  // canBusParser->getRxMsg(msg);
+
+  // urbanPanel->interpretMsg(msg);
 }

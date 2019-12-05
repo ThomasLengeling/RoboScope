@@ -31,8 +31,14 @@ class MotorPanel {
     // initialize motors
     void init() {
       for (int i = 0; i < MOTORS_PER_PANEL; i++) {
+
+        motors[i]->setRPM(GRPM);
         motors[i]->init();
       }
+    }
+
+    int getNumberOfMotors() {
+      return MOTORS_PER_PANEL;
     }
 
     // Returns a motor based on id

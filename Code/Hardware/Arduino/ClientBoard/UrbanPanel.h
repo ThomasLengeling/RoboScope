@@ -39,8 +39,14 @@ class UrbanPanel {
     // Moves the specified urban pixel up
     void moveMotorUp(int i);
 
+    unsigned checkMotorState(int motorID);
+
+    void stopMotor(int i);
+
     // Moves the specified urban pixel down
     void moveMotorDown(int i);
+
+    void stopMotorsToPosition();
 
     void moveMotor(int motorID, int motorDir, int motorStep, int motorTimeActivation, int motorEnable);
 

@@ -42,7 +42,7 @@
 #define STEP_PIN_08    24
 
 //Global Values
-#define GMOTOR_STEPS  200
+#define GMOTOR_STEPS  200 * 16 // 200
 #define GRPM          120
 
 //Global pin values

@@ -60,6 +60,24 @@ void UrbanPanel::setUrbanPixelColor(int i, int r, int g, int b) {
 // TODO: Check to make sure the specified directions are the directions for the motor
 // TODO: Check to see if the stepper motor stops moving up when button is pressed
 // Moves the specified urban pixel up
+
+void UrbanPanel::stopMotor(int i) {
+  motorPanel->getMotor(i).stop();
+}
+
+//------------------------------------------------------------------------------
+// Itreatively goes through all the motors and checks if their next action is null
+// If it is then the motor is stopped.
+// Meant to be placed in the void loop of the main function
+void UrbanPanel::stopMotorsToPosition() {
+  for (int i = 0; i < motorPanel->getNumberOfMotors(); i++){
+    unsigned waitTimeMicro = checkMotorState(i);
+    if (waitTimeMicro <= 0){
+      stopMotor(i);
+    }
+  }
+}
+
 void UrbanPanel::moveMotorUp(int i) {
   if (!interfacePanel->getInterfaceButtonState(i)) {
     motorPanel->getMotor(i).moveForward();
@@ -88,20 +106,37 @@ void UrbanPanel::moveMotor(int motorID, int motorDir, int motorStep, int motorTi
   }
 }
 
-
+// TODO: RECOMMENT THE CODE IN TO CHECK FOR INTERFACE BUTTONS I.E. LIMIT SWITCHES
 //------------------------------------------------------------------------------
 void UrbanPanel::moveMotorUpMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable) {
+  
+    motorPanel->getMotor(motorID).startMoveForward(motorStep);
+  
+  /*
+  
   if (!interfacePanel->getInterfaceButtonState(motorID)) {
-    motorPanel->getMotor(motorID).moveForwardMicro(motorStep);
-  }
+    //motorPanel->getMotor(motorID).moveForwardMicro(motorStep);
+    motorPanel->getMotor(motorID).startMoveForward(motorStep);
+  }*/
 }
 
 
+// TODO: RECOMMENT THE CODE IN TO CHECK FOR INTERFACE BUTTONS I.E. LIMIT SWITCHES
 //------------------------------------------------------------------------------
 void UrbanPanel::moveMotorDownMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable) {
+  
+    motorPanel->getMotor(motorID).startMoveBackward(motorStep);
+  /*
   if (!interfacePanel->getLimitSwitchState(motorID)) {
-    motorPanel->getMotor(motorID).moveBackwardMicro(motorStep);
-  }
+    //motorPanel->getMotor(motorID).moveBackwardMicro(motorStep);
+    motorPanel->getMotor(motorID).startMoveBackward(motorStep);
+  }*/
+}
+
+//------------------------------------------------------------------------------
+unsigned UrbanPanel::checkMotorState(int motorID) {
+    return motorPanel->getMotor(motorID).getNextAction();
+  
 }
 
 //------------------------------------------------------------------------------
