@@ -15,7 +15,6 @@ InterfacePanel::InterfacePanel(int pId) {
   } 
 }
 
-
 //---------------------------------------------------------------------------
 int InterfacePanel::getUrbanPixelCount() {
   return NUM_URBAN_PIXELS;

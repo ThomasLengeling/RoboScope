@@ -70,9 +70,9 @@ void UrbanPanel::stopMotor(int i) {
 // If it is then the motor is stopped.
 // Meant to be placed in the void loop of the main function
 void UrbanPanel::stopMotorsToPosition() {
-  for (int i = 0; i < motorPanel->getNumberOfMotors(); i++){
+  for (int i = 0; i < motorPanel->getNumberOfMotors(); i++) {
     unsigned waitTimeMicro = checkMotorState(i);
-    if (waitTimeMicro <= 0){
+    if (waitTimeMicro <= 0) {
       stopMotor(i);
     }
   }
@@ -109,34 +109,38 @@ void UrbanPanel::moveMotor(int motorID, int motorDir, int motorStep, int motorTi
 // TODO: RECOMMENT THE CODE IN TO CHECK FOR INTERFACE BUTTONS I.E. LIMIT SWITCHES
 //------------------------------------------------------------------------------
 void UrbanPanel::moveMotorUpMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable) {
-  
-    motorPanel->getMotor(motorID).startMoveForward(motorStep);
-  
+
+  motorPanel->getMotor(motorID).startMoveForward(motorStep);
+
   /*
-  
-  if (!interfacePanel->getInterfaceButtonState(motorID)) {
+
+    if (!interfacePanel->getInterfaceButtonState(motorID)) {
     //motorPanel->getMotor(motorID).moveForwardMicro(motorStep);
     motorPanel->getMotor(motorID).startMoveForward(motorStep);
-  }*/
+    }*/
+}
+
+void UrbanPanel::moveMotor(int motorID, int motorStep) {
+    motorPanel->getMotor(motorID).startMoveForwardSteps(motorStep);
 }
 
 
 // TODO: RECOMMENT THE CODE IN TO CHECK FOR INTERFACE BUTTONS I.E. LIMIT SWITCHES
 //------------------------------------------------------------------------------
 void UrbanPanel::moveMotorDownMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable) {
-  
-    motorPanel->getMotor(motorID).startMoveBackward(motorStep);
+
+  motorPanel->getMotor(motorID).startMoveBackward(motorStep);
   /*
-  if (!interfacePanel->getLimitSwitchState(motorID)) {
+    if (!interfacePanel->getLimitSwitchState(motorID)) {
     //motorPanel->getMotor(motorID).moveBackwardMicro(motorStep);
     motorPanel->getMotor(motorID).startMoveBackward(motorStep);
-  }*/
+    }*/
 }
 
 //------------------------------------------------------------------------------
 unsigned UrbanPanel::checkMotorState(int motorID) {
-    return motorPanel->getMotor(motorID).getNextAction();
-  
+  return motorPanel->getMotor(motorID).getNextAction();
+
 }
 
 //------------------------------------------------------------------------------

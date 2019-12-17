@@ -54,6 +54,10 @@ class UrbanPanel {
 
     void moveMotorDownMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable);
 
+
+    void moveMotor(int motorID, int motorStep);
+    
+
     void interpretMsg(uint8_t msg[]);
 
     MotorPanel getMotorPanel();

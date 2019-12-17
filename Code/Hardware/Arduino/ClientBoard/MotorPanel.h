@@ -25,7 +25,6 @@ class MotorPanel {
       for (int i = 0; i < MOTORS_PER_PANEL; i++) {
         motors[i] = new StepperMotor(i, GMOTOR_STEPS, motorDirPins[i], motorStepPins[i], GENABLE_PIN, GM0_PIN, GM1_PIN);
       }
-
     }
 
     // initialize motors

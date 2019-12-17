@@ -71,8 +71,6 @@ void setup() {
   // motor02.printMotorInfo();
   //motor03.printMotorInfo();
 
-  motor02.startMoveBackward(5);
-  motor04.startMoveBackward(5);
 }
 
 
@@ -91,10 +89,6 @@ void loop() {
     motor04.stop();
   }
 
-<<<<<<< HEAD
-  //motor04.moveForward();
-=======
->>>>>>> 19909735bba446a8e4ddd8f5cb155ece66c35d70
 
 /*
   if (enableMotor) {

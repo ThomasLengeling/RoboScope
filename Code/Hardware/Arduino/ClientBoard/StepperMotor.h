@@ -8,7 +8,7 @@
 #include "DRV8880.h"
 
 
-//------------------------------------------------
+//---------------------------------------------------------------------------------
 class StepperMotor {
   public:
 
@@ -25,7 +25,7 @@ class StepperMotor {
       M1_PIN = m1_pin;
 
       //init motor driver
-      motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN);//, ENABLE_PIN, M0_PIN, M1_PIN);
+      motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN);// ENABLE_PIN, M0_PIN, M1_PIN);
 
     }
 
@@ -38,59 +38,87 @@ class StepperMotor {
       //delete motor;
     }
 
-
-    //------------------------------------------------
+    //-----------------------------------------------------------
     void init() {
       motor->begin(rpm);
 
       // if using enable/disable on ENABLE pin (active LOW) instead of SLEEP uncomment next line
-
-      // motor->setEnableActiveState(LOW);
-
+    //  motor->setEnableActiveState(LOW);
       motor->enable();
     }
 
 
-    //------------------------------------------------
+   //-----------------------------------------------------------
     void stop() {
       motor->stop();
     }
 
-    //------------------------------------------------
+    //-----------------------------------------------------------
     void startMoveForward(int steps) {
-      motor->startMove(steps * -motorSteps);
+      motor->startMove( -1 * (steps * motorSteps) );
     }
 
-    //------------------------------------------------
+    //-----------------------------------------------------------
     void startMoveBackward(int steps) {
       motor->startMove(steps * motorSteps);
     }
 
-    //------------------------------------------------
+    //-----------------------------------------------------------
+    void startMoveForwardSteps(int steps) {
+      motor->startMove( -1 * steps);
+    }
+
+    //-----------------------------------------------------------
+    void startMoveBackwardSteps(int steps) {
+      motor->startMove(steps);
+    }
+
+    //-----------------------------------------------------------
     unsigned getNextAction() {
       return motor->nextAction();
     }
 
-    //------------------------------------------------
+   //-----------------------------------------------------------
     void moveForward() {
       motor->setMicrostep(1);
       motor->move(-motorSteps);
     }
 
-    //------------------------------------------------
+   //-----------------------------------------------------------
     void moveBackward() {
       motor->setMicrostep(1);
       motor->move(motorSteps);
     }
 
-    //------------------------------------------------
+   //-----------------------------------------------------------
     void moveForwardMicro(int step) {
       motor->setMicrostep(step);
       motor->move(step * -motorSteps);
     }
 
+    /*
+     * Logic high to enable device outputs and internal indexer
+     * Enable driver input logic low to disable; internal pulldown
+     */
+    void enable(){
+      motor->enable();
+    }
 
-    //------------------------------------------------
+    void disable(){
+      motor->disable();
+    }
+
+    /*
+     * 
+     * 
+     */
+    void sleep(){
+
+      
+    }
+
+
+    //-----------------------------------------------------------
     void moveBackwardMicro(int step) {
       motor->setMicrostep(step);
       motor->move(-step * motorSteps);

@@ -57,7 +57,7 @@
 #define LED_TEENSY     13
 
 //NEO PIXELS
-#define NEO_PIXEL_PIN 7
+#define NEO_PIXEL_PIN   7
 
 //DIP SWITCH
 #define MUX_S0         26         
