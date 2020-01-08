@@ -3685,7 +3685,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="SDA_SX0">
 <contactref element="CONN02" pad="9"/>
-<contactref element="CONN03" pad="9"/>
 <contactref element="J1" pad="5"/>
 <contactref element="J2" pad="5"/>
 <wire x1="40.77" y1="91.8684" x2="38.958" y2="91.8684" width="0.21" layer="16"/>
@@ -3713,7 +3712,6 @@ design rules under a new name.</description>
 <wire x1="36.4212" y1="90.9624" x2="36.4212" y2="88.9692" width="0.21" layer="16"/>
 <wire x1="37.3272" y1="91.8684" x2="36.4212" y2="90.9624" width="0.21" layer="16"/>
 <wire x1="38.7768" y1="91.8684" x2="37.3272" y2="91.8684" width="0.21" layer="16"/>
-<wire x1="39.3204" y1="71.9364" x2="39.2811" y2="71.819" width="0.21" layer="16"/>
 <wire x1="38.7768" y1="91.8684" x2="38.9001" y2="91.758" width="0.21" layer="16"/>
 <wire x1="23.9184" y1="112.5252" x2="20.4756" y2="112.5252" width="0.21" layer="16"/>
 <wire x1="33.1596" y1="112.5252" x2="23.9184" y2="112.5252" width="0.21" layer="1"/>
@@ -3731,7 +3729,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="SCL_SX0">
 <contactref element="CONN02" pad="10"/>
-<contactref element="CONN03" pad="10"/>
 <contactref element="J1" pad="6"/>
 <contactref element="J2" pad="6"/>
 <wire x1="28.4484" y1="91.8684" x2="32.616" y2="91.8684" width="0.21" layer="16"/>
@@ -3759,7 +3756,6 @@ design rules under a new name.</description>
 <wire x1="24.462" y1="87.882" x2="24.462" y2="76.104" width="0.21" layer="1"/>
 <wire x1="26.6364" y1="90.0564" x2="24.462" y2="87.882" width="0.21" layer="1"/>
 <wire x1="26.6364" y1="90.4188" x2="26.6364" y2="90.0564" width="0.21" layer="16"/>
-<wire x1="32.9784" y1="71.9364" x2="33.1089" y2="71.819" width="0.21" layer="16"/>
 <wire x1="50.3736" y1="109.9884" x2="52.0044" y2="109.9884" width="0.21" layer="16"/>
 <wire x1="49.1052" y1="111.2568" x2="50.3736" y2="109.9884" width="0.21" layer="16"/>
 <wire x1="49.1052" y1="112.1628" x2="49.1052" y2="111.2568" width="0.21" layer="1"/>
@@ -4239,12 +4235,43 @@ design rules under a new name.</description>
 </signal>
 <signal name="LED_DEBUG">
 <contactref element="LED1" pad="4-DIN"/>
+<contactref element="CONN03" pad="10"/>
+<wire x1="59.055" y1="76.835" x2="61.595" y2="79.375" width="0.21" layer="1"/>
+<wire x1="59.055" y1="74.93" x2="59.055" y2="76.835" width="0.21" layer="1"/>
+<wire x1="57.15" y1="73.025" x2="59.055" y2="74.93" width="0.21" layer="1"/>
+<wire x1="48.26" y1="73.025" x2="57.15" y2="73.025" width="0.21" layer="1"/>
+<wire x1="46.355" y1="71.12" x2="48.26" y2="73.025" width="0.21" layer="16"/>
+<wire x1="43.18" y1="71.12" x2="46.355" y2="71.12" width="0.21" layer="1"/>
+<wire x1="41.91" y1="69.85" x2="43.18" y2="71.12" width="0.21" layer="1"/>
+<wire x1="41.275" y1="70.485" x2="41.91" y2="69.85" width="0.21" layer="1"/>
+<wire x1="30.48" y1="70.485" x2="41.275" y2="70.485" width="0.21" layer="1"/>
+<wire x1="31.115" y1="71.12" x2="30.48" y2="70.485" width="0.21" layer="16"/>
+<wire x1="33.02" y1="71.12" x2="31.115" y2="71.12" width="0.21" layer="16"/>
+<wire x1="33.655" y1="71.755" x2="33.02" y2="71.12" width="0.21" layer="16"/>
+<wire x1="61.595" y1="79.375" x2="61.785" y2="79.63" width="0.21" layer="1"/>
+<wire x1="33.655" y1="71.755" x2="33.1089" y2="71.819" width="0.21" layer="16"/>
+<via x="48.26" y="73.025" extent="1-16" drill="0.35"/>
+<via x="46.355" y="71.12" extent="1-16" drill="0.35"/>
+<via x="30.48" y="70.485" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$13">
 <contactref element="LED1" pad="2-DOUT"/>
 </signal>
 <signal name="LED_ST">
 <contactref element="POWER_LED_RES1" pad="2"/>
+<contactref element="CONN03" pad="9"/>
+<wire x1="22.86" y1="81.915" x2="22.225" y2="82.55" width="0.21" layer="1"/>
+<wire x1="22.86" y1="74.93" x2="22.86" y2="81.915" width="0.21" layer="1"/>
+<wire x1="26.035" y1="71.755" x2="22.86" y2="74.93" width="0.21" layer="1"/>
+<wire x1="41.91" y1="71.755" x2="26.035" y2="71.755" width="0.21" layer="1"/>
+<wire x1="41.91" y1="71.12" x2="41.91" y2="71.755" width="0.21" layer="1"/>
+<wire x1="41.275" y1="70.485" x2="41.91" y2="71.12" width="0.21" layer="16"/>
+<wire x1="40.64" y1="71.12" x2="41.275" y2="70.485" width="0.21" layer="16"/>
+<wire x1="39.37" y1="71.12" x2="40.64" y2="71.12" width="0.21" layer="16"/>
+<wire x1="38.735" y1="71.755" x2="39.37" y2="71.12" width="0.21" layer="16"/>
+<wire x1="22.225" y1="82.55" x2="21.905" y2="82.55" width="0.21" layer="1"/>
+<wire x1="38.735" y1="71.755" x2="39.2811" y2="71.819" width="0.21" layer="16"/>
+<via x="41.91" y="71.12" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$1">
 <contactref element="POWER_LED_RES1" pad="1"/>

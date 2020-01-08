@@ -2,7 +2,7 @@
 #include <FlexCAN.h>
 
 Metro sysTimer = Metro(1);// milliseconds
-FlexCAN CANbus(500000);
+FlexCAN CANbus(1000000);
 
 CAN_message_t rxmsg;
 static uint8_t hex[17] = "0123456789abcdef";
@@ -19,7 +19,11 @@ static uint8_t hex[17] = "0123456789abcdef";
 
 void setup() {
   CANbus.begin();
+  delay(2000);
+
   Serial.begin(9600);
+  Serial.println(F("Starting Reading"));
+  delay(2000);
 
   //LED
   pinMode(LED_PIN_01, OUTPUT);

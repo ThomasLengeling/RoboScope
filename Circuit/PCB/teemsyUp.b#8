@@ -1999,7 +1999,7 @@ MELF 0.10 W</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.2" drill="0">
+<class number="0" name="default" width="0.21" drill="0">
 <clearance class="0" value="0.12"/>
 </class>
 </classes>
@@ -2279,7 +2279,7 @@ design rules under a new name.</description>
 <element name="LED1" library="SK6812" package="LED5050_N" value="" x="64.135" y="81.28"/>
 <element name="POWER_LED_M1" library="fab" package="LED1206FAB" value="LEDFAB1206" x="4.445" y="68.58"/>
 <element name="POWER_LED_RES1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="500" x="20.955" y="82.55"/>
-<element name="C3" library="rc-master-smd" package="C0805" value="0.1uf" x="-21.59" y="-18.415"/>
+<element name="C3" library="rc-master-smd" package="C0805" value="0.1uf" x="57.785" y="81.28" rot="R90"/>
 </elements>
 <signals>
 <signal name="NEO_PIXEL">
@@ -2292,10 +2292,10 @@ design rules under a new name.</description>
 <contactref element="M_04" pad="3"/>
 <contactref element="M_02" pad="3"/>
 <contactref element="M_03" pad="3"/>
-<wire x1="26.924" y1="134.9685" x2="67.16605" y2="134.9685" width="0" layer="19" extent="1-1"/>
-<wire x1="26.924" y1="95.2655" x2="26.924" y2="134.9685" width="0" layer="19" extent="1-1"/>
-<wire x1="38.9001" y1="93.758" x2="26.924" y2="95.2655" width="0" layer="19" extent="1-16"/>
-<wire x1="67.45395" y1="95.2655" x2="38.9001" y2="93.758" width="0" layer="19" extent="1-16"/>
+<wire x1="67.45395" y1="95.2655" x2="67.16605" y2="134.9685" width="0" layer="19" extent="1-1"/>
+<wire x1="38.9001" y1="93.758" x2="67.45395" y2="95.2655" width="0" layer="19" extent="1-16"/>
+<wire x1="26.924" y1="95.2655" x2="38.9001" y2="93.758" width="0" layer="19" extent="1-16"/>
+<wire x1="26.924" y1="134.9685" x2="26.924" y2="95.2655" width="0" layer="19" extent="1-1"/>
 <wire x1="67.45395" y1="55.197" x2="67.45395" y2="95.2655" width="0" layer="19" extent="1-1"/>
 <wire x1="26.924" y1="55.197" x2="26.924" y2="95.2655" width="0" layer="19" extent="1-1"/>
 <wire x1="67.45395" y1="14.938" x2="67.45395" y2="55.197" width="0" layer="19" extent="1-1"/>
@@ -2557,7 +2557,8 @@ design rules under a new name.</description>
 <wire x1="29.24155" y1="90.016" x2="32.62" y2="90.016" width="0.2" layer="1"/>
 <wire x1="67.45395" y1="93.2655" x2="65.843478125" y2="91.655028125" width="0.2" layer="1"/>
 <wire x1="65.843478125" y1="91.655028125" x2="65.843478125" y2="91.285553125" width="0.2" layer="1"/>
-<wire x1="65.843478125" y1="91.285553125" x2="60.276925" y2="85.719" width="0.2" layer="1"/>
+<wire x1="65.843478125" y1="91.285553125" x2="60.3039625" y2="85.7460375" width="0.2" layer="1"/>
+<wire x1="60.3039625" y1="85.7460375" x2="60.276925" y2="85.719" width="0.2" layer="1"/>
 <wire x1="47.304" y1="85.719" x2="46.99" y2="85.405" width="0.2" layer="1"/>
 <wire x1="60.276925" y1="85.719" x2="47.304" y2="85.719" width="0.2" layer="1"/>
 <wire x1="46.99" y1="85.405" x2="46.04" y2="85.405" width="0.2" layer="1"/>
@@ -2627,7 +2628,8 @@ design rules under a new name.</description>
 <wire x1="21.59" y1="68.725" x2="16.87195" y2="68.725" width="0.2" layer="1"/>
 <wire x1="16.87195" y1="68.725" x2="16.30955" y2="68.1626" width="0.2" layer="1"/>
 <wire x1="16.30955" y1="68.1626" x2="13.5526" y2="68.1626" width="0.2" layer="1"/>
-<wire x1="9.017" y1="63.627" x2="4.887" y2="63.627" width="0.2" layer="1"/>
+<wire x1="9.017" y1="63.627" x2="5.08" y2="63.627" width="0.2" layer="1"/>
+<wire x1="5.08" y1="63.627" x2="4.887" y2="63.627" width="0.2" layer="1"/>
 <wire x1="13.5526" y1="68.1626" x2="9.017" y2="63.627" width="0.2" layer="1"/>
 <wire x1="26.924" y1="53.197" x2="32.562" y2="53.197" width="0.2" layer="1"/>
 <wire x1="32.562" y1="53.197" x2="43.373" y2="64.008" width="0.2" layer="1"/>
@@ -2641,9 +2643,12 @@ design rules under a new name.</description>
 <contactref element="LED1" pad="3-GND"/>
 <contactref element="POWER_LED_M1" pad="2"/>
 <contactref element="C3" pad="2"/>
-<wire x1="60.276925" y1="85.719" x2="61.785" y2="82.93" width="0" layer="19" extent="1-1"/>
-<wire x1="6.096" y1="68.58" x2="4.887" y2="63.627" width="0" layer="19" extent="1-1"/>
-<wire x1="-20.574" y1="-18.415" x2="5.909" y2="11.593075" width="0" layer="19" extent="1-1"/>
+<wire x1="61.785" y1="82.93" x2="61.785" y2="84.265" width="0.2" layer="1"/>
+<wire x1="61.785" y1="84.265" x2="60.3039625" y2="85.7460375" width="0.2" layer="1"/>
+<wire x1="57.785" y1="82.296" x2="58.419" y2="82.93" width="0.2" layer="1"/>
+<wire x1="58.419" y1="82.93" x2="61.785" y2="82.93" width="0.2" layer="1"/>
+<wire x1="6.096" y1="68.58" x2="6.096" y2="64.643" width="0.2" layer="1"/>
+<wire x1="6.096" y1="64.643" x2="5.08" y2="63.627" width="0.2" layer="1"/>
 </signal>
 <signal name="VCC_MCU">
 <contactref element="CONN01" pad="11"/>
@@ -2675,6 +2680,8 @@ design rules under a new name.</description>
 <wire x1="3.6195" y1="132.5085" x2="26.924" y2="133.9685" width="0" layer="19" extent="1-1"/>
 <wire x1="67.45395" y1="94.2655" x2="67.16605" y2="133.9685" width="0" layer="19" extent="1-1"/>
 <wire x1="66.485" y1="79.63" x2="67.45395" y2="94.2655" width="0" layer="19" extent="1-1"/>
+<wire x1="57.785" y1="80.264" x2="66.485" y2="79.63" width="0" layer="19" extent="1-1"/>
+<wire x1="67.45395" y1="54.197" x2="57.785" y2="80.264" width="0" layer="19" extent="1-1"/>
 <wire x1="43.561" y1="92.3605" x2="67.45395" y2="94.2655" width="0" layer="19" extent="1-1"/>
 <wire x1="32.7279" y1="89.758" x2="43.561" y2="92.3605" width="0" layer="19" extent="1-16"/>
 <wire x1="26.924" y1="94.2655" x2="32.7279" y2="89.758" width="0" layer="19" extent="1-16"/>
@@ -2687,12 +2694,10 @@ design rules under a new name.</description>
 <wire x1="3.7799" y1="74.61" x2="3.07" y2="80.645" width="0" layer="19" extent="16-16"/>
 <wire x1="3.7799" y1="72.71" x2="3.7799" y2="74.61" width="0" layer="19" extent="16-16"/>
 <wire x1="3.6195" y1="52.292" x2="3.7799" y2="72.71" width="0" layer="19" extent="1-16"/>
-<wire x1="67.45395" y1="54.197" x2="43.561" y2="52.292" width="0" layer="19" extent="1-1"/>
 <wire x1="3.6195" y1="18.033" x2="3.6195" y2="52.292" width="0" layer="19" extent="1-1"/>
 <wire x1="26.924" y1="13.938" x2="3.6195" y2="18.033" width="0" layer="19" extent="1-1"/>
 <wire x1="43.561" y1="12.033" x2="26.924" y2="13.938" width="0" layer="19" extent="1-1"/>
 <wire x1="67.45395" y1="13.938" x2="43.561" y2="12.033" width="0" layer="19" extent="1-1"/>
-<wire x1="-22.606" y1="-18.415" x2="3.6195" y2="18.033" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IC2M_14">
 <contactref element="CONN02" pad="5"/>
@@ -2988,7 +2993,7 @@ design rules under a new name.</description>
 <signal name="N$1">
 <contactref element="POWER_LED_RES1" pad="1"/>
 <contactref element="POWER_LED_M1" pad="1"/>
-<wire x1="20.005" y1="82.55" x2="2.794" y2="68.58" width="0" layer="19" extent="1-1"/>
+<wire x1="2.794" y1="68.58" x2="20.005" y2="82.55" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

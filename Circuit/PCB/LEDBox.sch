@@ -9195,11 +9195,6 @@ Metric Code Size 5664</description>
 <label x="12.7" y="20.32" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="5.08" x2="109.22" y2="2.54" width="0.1524" layer="91"/>
-<label x="109.22" y="2.54" size="1.016" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <pinref part="J2" gate="G$1" pin="1"/>
 <wire x1="10.16" y1="35.56" x2="17.78" y2="35.56" width="0.1524" layer="91"/>
 <label x="17.78" y="35.56" size="1.016" layer="95" xref="yes"/>
@@ -9226,9 +9221,14 @@ Metric Code Size 5664</description>
 <wire x1="127" y1="58.42" x2="121.92" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="-20.32" x2="71.12" y2="-22.86" width="0.1524" layer="91"/>
-<label x="71.12" y="-22.86" size="1.016" layer="95" rot="R270" xref="yes"/>
+<pinref part="SWITCH_M4" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="17.78" x2="78.74" y2="17.78" width="0.1524" layer="91"/>
+<label x="76.2" y="17.78" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="SWITCH_M1" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="-7.62" x2="40.64" y2="-7.62" width="0.1524" layer="91"/>
+<label x="38.1" y="-7.62" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -9241,11 +9241,6 @@ Metric Code Size 5664</description>
 <pinref part="J2" gate="G$1" pin="2"/>
 <wire x1="10.16" y1="38.1" x2="17.78" y2="38.1" width="0.1524" layer="91"/>
 <label x="17.78" y="38.1" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="SWITCH_M4" gate="G$1" pin="1"/>
-<wire x1="88.9" y1="17.78" x2="78.74" y2="17.78" width="0.1524" layer="91"/>
-<label x="76.2" y="17.78" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="VDD"/>
@@ -9269,9 +9264,14 @@ Metric Code Size 5664</description>
 <junction x="109.22" y="99.06"/>
 </segment>
 <segment>
-<pinref part="SWITCH_M1" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="-7.62" x2="40.64" y2="-7.62" width="0.1524" layer="91"/>
-<label x="38.1" y="-7.62" size="1.016" layer="95" rot="R180" xref="yes"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="5.08" x2="109.22" y2="2.54" width="0.1524" layer="91"/>
+<label x="109.22" y="2.54" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="71.12" y1="-20.32" x2="71.12" y2="-22.86" width="0.1524" layer="91"/>
+<label x="71.12" y="-22.86" size="1.016" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">

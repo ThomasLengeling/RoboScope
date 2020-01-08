@@ -3468,6 +3468,49 @@ Output Voltage Range: 0.8V-5.0V
 <text x="3.175" y="0.5334" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="3.2004" y="-1.8034" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="R1206">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
+<wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
+<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
+<rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
+</package>
+<package name="R1206W">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+wave soldering</description>
+<wire x1="-0.913" y1="0.8" x2="0.888" y2="0.8" width="0.1524" layer="51"/>
+<wire x1="-0.913" y1="-0.8" x2="0.888" y2="-0.8" width="0.1524" layer="51"/>
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-1.499" y="0" dx="1.8" dy="1.2" layer="1"/>
+<smd name="2" x="1.499" y="0" dx="1.8" dy="1.2" layer="1"/>
+<text x="-1.905" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.651" y1="-0.8763" x2="-0.9009" y2="0.8738" layer="51"/>
+<rectangle x1="0.889" y1="-0.8763" x2="1.6391" y2="0.8738" layer="51"/>
+<rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
+</package>
+<package name="R1206FAB">
+<wire x1="-2.032" y1="1.016" x2="2.032" y2="1.016" width="0.127" layer="21"/>
+<wire x1="2.032" y1="1.016" x2="2.032" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="2.032" y1="-1.016" x2="-2.032" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-2.032" y1="-1.016" x2="-2.032" y2="1.016" width="0.127" layer="21"/>
+<smd name="1" x="-1.651" y="0" dx="1.27" dy="1.905" layer="1"/>
+<smd name="2" x="1.651" y="0" dx="1.27" dy="1.905" layer="1"/>
+<text x="-1.778" y="1.27" size="1.016" layer="25" ratio="15">&gt;NAME</text>
+<text x="-1.778" y="-2.286" size="1.016" layer="27" ratio="15">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="LED">
@@ -3495,6 +3538,21 @@ Output Voltage Range: 0.8V-5.0V
 <vertex x="-2.921" y="0.127"/>
 <vertex x="-2.413" y="-0.381"/>
 </polygon>
+</symbol>
+<symbol name="R-US">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3526,6 +3584,43 @@ Output Voltage Range: 0.8V-5.0V
 <connects>
 <connect gate="G$1" pin="A" pad="IN"/>
 <connect gate="G$1" pin="C" pad="OUT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RES-US" prefix="R" uservalue="yes">
+<description>&lt;b&gt;Resistor (US Symbol)&lt;/b&gt;
+&lt;p&gt;
+Variants with postfix FAB are widened to allow the routing of internal traces</description>
+<gates>
+<gate name="G$1" symbol="R-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1206" package="R1206">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1206W" package="R1206W">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1206FAB" package="R1206FAB">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -8729,6 +8824,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="STANDOFF8" library="SparkFun-Electromechanical" library_urn="urn:adsk.eagle:library:516" deviceset="STAND-OFF" device=""/>
 <part name="LED1" library="SK6812" deviceset="SK6812" device="_5050N"/>
 <part name="C3" library="microbuilder" deviceset="CAP_CERAMIC" device="1206" value="0.1uf"/>
+<part name="POWER_LED_M1" library="fab" deviceset="LED" device="FAB1206"/>
+<part name="POWER_LED_RES1" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 </parts>
 <sheets>
 <sheet>
@@ -8794,7 +8891,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <instance part="SWITCH_M6" gate="G$1" x="307.34" y="215.9" rot="R270"/>
 <instance part="SWITCH_M7" gate="G$1" x="304.8" y="172.72" rot="R270"/>
 <instance part="SWITCH_M8" gate="G$1" x="304.8" y="134.62" rot="R270"/>
-<instance part="CONN03" gate="G$1" x="261.62" y="48.26"/>
+<instance part="CONN03" gate="G$1" x="210.82" y="48.26"/>
 <instance part="R1" gate="G$1" x="254" y="246.38" rot="R90"/>
 <instance part="R2" gate="G$1" x="256.54" y="203.2" rot="R90"/>
 <instance part="R3" gate="G$1" x="256.54" y="162.56" rot="R90"/>
@@ -8830,6 +8927,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <instance part="STANDOFF8" gate="G$1" x="398.78" y="60.96"/>
 <instance part="LED1" gate="G$1" x="419.1" y="43.18"/>
 <instance part="C3" gate="G$1" x="434.34" y="53.34"/>
+<instance part="POWER_LED_M1" gate="G$1" x="314.96" y="17.78" rot="R90"/>
+<instance part="POWER_LED_RES1" gate="G$1" x="292.1" y="17.78" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -9254,8 +9353,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="12"/>
-<wire x1="274.32" y1="40.64" x2="279.4" y2="40.64" width="0.1524" layer="91"/>
-<label x="279.4" y="40.64" size="1.016" layer="95" xref="yes"/>
+<wire x1="223.52" y1="40.64" x2="228.6" y2="40.64" width="0.1524" layer="91"/>
+<label x="228.6" y="40.64" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
@@ -9383,6 +9482,11 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="434.34" y1="30.48" x2="419.1" y2="30.48" width="0.1524" layer="91"/>
 <junction x="419.1" y="30.48"/>
 </segment>
+<segment>
+<pinref part="POWER_LED_M1" gate="G$1" pin="C"/>
+<wire x1="317.5" y1="17.78" x2="327.66" y2="17.78" width="0.1524" layer="91"/>
+<label x="327.66" y="17.78" size="1.016" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="VCC_MCU" class="0">
 <segment>
@@ -9490,8 +9594,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="11"/>
-<wire x1="251.46" y1="40.64" x2="243.84" y2="40.64" width="0.1524" layer="91"/>
-<label x="243.84" y="40.64" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="200.66" y1="40.64" x2="193.04" y2="40.64" width="0.1524" layer="91"/>
+<label x="193.04" y="40.64" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="VDD"/>
@@ -9718,8 +9822,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="9"/>
-<wire x1="251.46" y1="43.18" x2="243.84" y2="43.18" width="0.1524" layer="91"/>
-<label x="243.84" y="43.18" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="200.66" y1="43.18" x2="193.04" y2="43.18" width="0.1524" layer="91"/>
+<label x="193.04" y="43.18" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="5"/>
@@ -9740,8 +9844,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="10"/>
-<wire x1="274.32" y1="43.18" x2="279.4" y2="43.18" width="0.1524" layer="91"/>
-<label x="279.4" y="43.18" size="1.016" layer="95" xref="yes"/>
+<wire x1="223.52" y1="43.18" x2="228.6" y2="43.18" width="0.1524" layer="91"/>
+<label x="228.6" y="43.18" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="6"/>
@@ -9794,8 +9898,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="5"/>
-<wire x1="251.46" y1="48.26" x2="243.84" y2="48.26" width="0.1524" layer="91"/>
-<label x="243.84" y="48.26" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="200.66" y1="48.26" x2="193.04" y2="48.26" width="0.1524" layer="91"/>
+<label x="193.04" y="48.26" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MUX_S3" class="0">
@@ -9808,8 +9912,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="4"/>
-<wire x1="274.32" y1="50.8" x2="279.4" y2="50.8" width="0.1524" layer="91"/>
-<label x="279.4" y="50.8" size="1.016" layer="95" xref="yes"/>
+<wire x1="223.52" y1="50.8" x2="228.6" y2="50.8" width="0.1524" layer="91"/>
+<label x="228.6" y="50.8" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MUX_S2" class="0">
@@ -9822,8 +9926,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="3"/>
-<wire x1="243.84" y1="50.8" x2="251.46" y2="50.8" width="0.1524" layer="91"/>
-<label x="243.84" y="50.8" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="193.04" y1="50.8" x2="200.66" y2="50.8" width="0.1524" layer="91"/>
+<label x="193.04" y="50.8" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="C0" class="0">
@@ -9899,8 +10003,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <net name="MUX_S0" class="0">
 <segment>
 <pinref part="CONN03" gate="G$1" pin="1"/>
-<wire x1="251.46" y1="53.34" x2="243.84" y2="53.34" width="0.1524" layer="91"/>
-<label x="243.84" y="53.34" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="200.66" y1="53.34" x2="193.04" y2="53.34" width="0.1524" layer="91"/>
+<label x="193.04" y="53.34" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="137.16" y1="45.72" x2="139.7" y2="45.72" width="0.1524" layer="91"/>
@@ -9919,15 +10023,15 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="2"/>
-<wire x1="274.32" y1="53.34" x2="279.4" y2="53.34" width="0.1524" layer="91"/>
-<label x="279.4" y="53.34" size="1.016" layer="95" xref="yes"/>
+<wire x1="223.52" y1="53.34" x2="228.6" y2="53.34" width="0.1524" layer="91"/>
+<label x="228.6" y="53.34" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SDA_SX1" class="0">
 <segment>
 <pinref part="CONN03" gate="G$1" pin="7"/>
-<wire x1="251.46" y1="45.72" x2="243.84" y2="45.72" width="0.1524" layer="91"/>
-<label x="243.84" y="45.72" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="200.66" y1="45.72" x2="193.04" y2="45.72" width="0.1524" layer="91"/>
+<label x="193.04" y="45.72" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="5"/>
@@ -9943,8 +10047,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <net name="SCL_SX1" class="0">
 <segment>
 <pinref part="CONN03" gate="G$1" pin="8"/>
-<wire x1="274.32" y1="45.72" x2="279.4" y2="45.72" width="0.1524" layer="91"/>
-<label x="279.4" y="45.72" size="1.016" layer="95" xref="yes"/>
+<wire x1="223.52" y1="45.72" x2="228.6" y2="45.72" width="0.1524" layer="91"/>
+<label x="228.6" y="45.72" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J3" gate="G$1" pin="6"/>
@@ -9972,8 +10076,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <net name="!INT_SX1" class="0">
 <segment>
 <pinref part="CONN03" gate="G$1" pin="6"/>
-<wire x1="274.32" y1="48.26" x2="279.4" y2="48.26" width="0.1524" layer="91"/>
-<label x="279.4" y="48.26" size="1.016" layer="95" xref="yes"/>
+<wire x1="223.52" y1="48.26" x2="228.6" y2="48.26" width="0.1524" layer="91"/>
+<label x="228.6" y="48.26" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J3" gate="G$1" pin="1"/>
@@ -10140,6 +10244,20 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <segment>
 <pinref part="LED1" gate="G$1" pin="DO"/>
 <wire x1="431.8" y1="40.64" x2="439.42" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LED_ST" class="0">
+<segment>
+<pinref part="POWER_LED_RES1" gate="G$1" pin="2"/>
+<wire x1="274.32" y1="17.78" x2="287.02" y2="17.78" width="0.1524" layer="91"/>
+<label x="274.32" y="17.78" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="POWER_LED_RES1" gate="G$1" pin="1"/>
+<pinref part="POWER_LED_M1" gate="G$1" pin="A"/>
+<wire x1="297.18" y1="17.78" x2="309.88" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

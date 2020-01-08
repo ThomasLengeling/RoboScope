@@ -10284,11 +10284,6 @@ Metric Code Size 5664</description>
 <label x="22.86" y="115.57" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="CONN03" gate="G$1" pin="9"/>
-<wire x1="200.66" y1="43.18" x2="193.04" y2="43.18" width="0.1524" layer="91"/>
-<label x="193.04" y="43.18" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="J1" gate="G$1" pin="5"/>
 <wire x1="386.08" y1="259.08" x2="391.16" y2="259.08" width="0.1524" layer="91"/>
 <label x="391.16" y="259.08" size="1.016" layer="95" xref="yes"/>
@@ -10304,11 +10299,6 @@ Metric Code Size 5664</description>
 <pinref part="CONN02" gate="G$1" pin="10"/>
 <wire x1="53.34" y1="115.57" x2="63.5" y2="115.57" width="0.1524" layer="91"/>
 <label x="63.5" y="115.57" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="CONN03" gate="G$1" pin="10"/>
-<wire x1="223.52" y1="43.18" x2="228.6" y2="43.18" width="0.1524" layer="91"/>
-<label x="228.6" y="43.18" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="6"/>
@@ -10702,6 +10692,11 @@ Metric Code Size 5664</description>
 <wire x1="406.4" y1="40.64" x2="398.78" y2="40.64" width="0.1524" layer="91"/>
 <label x="398.78" y="40.64" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="CONN03" gate="G$1" pin="10"/>
+<wire x1="223.52" y1="43.18" x2="228.6" y2="43.18" width="0.1524" layer="91"/>
+<label x="228.6" y="43.18" size="1.016" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="N$13" class="0">
 <segment>
@@ -10714,6 +10709,11 @@ Metric Code Size 5664</description>
 <pinref part="POWER_LED_RES1" gate="G$1" pin="2"/>
 <wire x1="274.32" y1="17.78" x2="287.02" y2="17.78" width="0.1524" layer="91"/>
 <label x="274.32" y="17.78" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN03" gate="G$1" pin="9"/>
+<wire x1="200.66" y1="43.18" x2="193.04" y2="43.18" width="0.1524" layer="91"/>
+<label x="193.04" y="43.18" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">

@@ -9324,10 +9324,10 @@ Metric Code Size 5664</description>
 <wire x1="525.78" y1="279.4" x2="408.94" y2="279.4" width="0.1524" layer="97"/>
 <wire x1="365.76" y1="210.82" x2="365.76" y2="279.4" width="0.1524" layer="97"/>
 <text x="7.62" y="81.28" size="6.4516" layer="97">CONNECTORS</text>
-<wire x1="350.52" y1="5.08" x2="5.08" y2="5.08" width="0.1524" layer="97"/>
-<wire x1="350.52" y1="5.08" x2="350.52" y2="83.82" width="0.1524" layer="97"/>
+<wire x1="342.9" y1="5.08" x2="5.08" y2="5.08" width="0.1524" layer="97"/>
+<wire x1="342.9" y1="5.08" x2="342.9" y2="83.82" width="0.1524" layer="97"/>
 <wire x1="5.08" y1="5.08" x2="5.08" y2="78.74" width="0.1524" layer="97"/>
-<wire x1="76.2" y1="83.82" x2="350.52" y2="83.82" width="0.1524" layer="97"/>
+<wire x1="76.2" y1="83.82" x2="342.9" y2="83.82" width="0.1524" layer="97"/>
 <text x="33.02" y="73.66" size="1.905" layer="94" align="top-left">Input power line for the BRD</text>
 <text x="374.65" y="191.77" size="6.4516" layer="97">I2C MUX </text>
 <wire x1="525.78" y1="127" x2="525.78" y2="193.04" width="0.1524" layer="97"/>
@@ -9388,8 +9388,8 @@ Metric Code Size 5664</description>
 <instance part="J7" gate="G$1" x="462.28" y="157.48" rot="R180"/>
 <instance part="J8" gate="G$1" x="492.76" y="157.48" rot="R180"/>
 <instance part="LED1" gate="G$1" x="419.1" y="43.18"/>
-<instance part="POWER_LED_M1" gate="G$1" x="314.96" y="17.78" rot="R90"/>
-<instance part="POWER_LED_RES1" gate="G$1" x="292.1" y="17.78" rot="R180"/>
+<instance part="POWER_LED_M1" gate="G$1" x="312.42" y="45.72" rot="R90"/>
+<instance part="POWER_LED_RES1" gate="G$1" x="289.56" y="45.72" rot="R180"/>
 <instance part="C3" gate="G$1" x="434.34" y="53.34" rot="R270"/>
 </instances>
 <busses>
@@ -9946,8 +9946,8 @@ Metric Code Size 5664</description>
 </segment>
 <segment>
 <pinref part="POWER_LED_M1" gate="G$1" pin="C"/>
-<wire x1="317.5" y1="17.78" x2="327.66" y2="17.78" width="0.1524" layer="91"/>
-<label x="327.66" y="17.78" size="1.016" layer="95" xref="yes"/>
+<wire x1="314.96" y1="45.72" x2="325.12" y2="45.72" width="0.1524" layer="91"/>
+<label x="325.12" y="45.72" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VCC_MCU" class="0">
@@ -10707,8 +10707,8 @@ Metric Code Size 5664</description>
 <net name="LED_ST" class="0">
 <segment>
 <pinref part="POWER_LED_RES1" gate="G$1" pin="2"/>
-<wire x1="274.32" y1="17.78" x2="287.02" y2="17.78" width="0.1524" layer="91"/>
-<label x="274.32" y="17.78" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="271.78" y1="45.72" x2="284.48" y2="45.72" width="0.1524" layer="91"/>
+<label x="271.78" y="45.72" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CONN03" gate="G$1" pin="9"/>
@@ -10720,7 +10720,7 @@ Metric Code Size 5664</description>
 <segment>
 <pinref part="POWER_LED_RES1" gate="G$1" pin="1"/>
 <pinref part="POWER_LED_M1" gate="G$1" pin="A"/>
-<wire x1="297.18" y1="17.78" x2="309.88" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="45.72" x2="307.34" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

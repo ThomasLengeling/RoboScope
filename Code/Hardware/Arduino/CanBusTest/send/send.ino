@@ -34,8 +34,9 @@ static void hexDump(uint8_t dumpLen, uint8_t *bytePtr)
 void setup(void)
 {
   Serial.begin(9600);
+  Serial.println(F("Starting Reading"));
   delay(2000);
-  
+
   pinMode(LED_PIN_01, OUTPUT);
   pinMode(LED_PIN_02, OUTPUT);
 
@@ -51,7 +52,7 @@ void setup(void)
 // -------------------------------------------------------------
 void loop(void)
 {
-  
+
   int pinkey01 = digitalRead(KEY_PIN_01);
   int pinkey02 = digitalRead(KEY_PIN_02);
   int pinkey03 = digitalRead(KEY_PIN_03);
@@ -62,14 +63,14 @@ void loop(void)
 
   digitalWrite(LED_PIN_02, pinkey03);
   digitalWrite(LED_PIN_02, pinkey04);
-  
+
   msg.len = 8;
   msg.id = 0x222;
 
   for ( int idx = 0; idx < 8; ++idx ) {
     msg.buf[idx] = 0;
   }
-  
+
   msg.buf[0] = char(pinkey01);
   msg.buf[1] = char(pinkey02);
   msg.buf[2] = char(pinkey03);

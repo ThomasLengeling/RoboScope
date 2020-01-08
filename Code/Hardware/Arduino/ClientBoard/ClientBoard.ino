@@ -21,9 +21,9 @@ int motorsPerPanel = 8;
 
 //int dir[] = { -1, -1, -1, -1, -1, -1, -1, -1};
 
-int dir[] = {0, -1, 0, 0, 0, 0, 0, 0};
+int dir[] = {1, 1, 0, 0, 1, 1, 0, 0};
 
-//int dir[] = { 1, 1, 1, 1, 1, 1, 1, 1};
+//int dir[] = {1, 1, 0, 0, 1, 1, 0, 0};
 
 int motorIDs[] = {0, 2, 4, 6, 1, 3, 5, 7};
 
@@ -36,6 +36,16 @@ int panelID = 0;
 UrbanPanel * urbanPanel = new UrbanPanel(panelID);
 CanBusParser * canBusParser = new CanBusParser();
 
+//false cycle
+boolean enableReturn = fakse;
+
+int stepTime = ceil(0.8 * GMOTOR_STEPS);
+
+
+int stepTimes[] = {ceil(30 * GMOTOR_STEPS), ceil(30 * GMOTOR_STEPS), ceil(30 * GMOTOR_STEPS), ceil(30 * GMOTOR_STEPS),
+                   ceil(30 * GMOTOR_STEPS), ceil(30 * GMOTOR_STEPS), ceil(30 * GMOTOR_STEPS), ceil(30 * GMOTOR_STEPS)
+                  };
+
 void setup(void)
 {
   Serial.begin(SERIAL_BR);
@@ -46,18 +56,33 @@ void setup(void)
 
   Serial.println(F("Starting Sending"));
 
-  int stepTime = ceil(20.0 * GMOTOR_STEPS);
 
-  urbanPanel->moveMotor(0, stepTime * dir[0]);
-  urbanPanel->moveMotor(2, stepTime * dir[1]);
-  urbanPanel->moveMotor(4, stepTime * dir[2]);
-  urbanPanel->moveMotor(6, stepTime * dir[3]);
+  /*
+    urbanPanel->moveMotor(0, stepTime * dir[0]);
+    urbanPanel->moveMotor(2, stepTime * dir[1]);
+    urbanPanel->moveMotor(4, stepTime * dir[2]);
+    urbanPanel->moveMotor(6, stepTime * dir[3]);
 
 
-  urbanPanel->moveMotor(1, stepTime * dir[4]);
-  urbanPanel->moveMotor(3, stepTime * dir[5]);
-  urbanPanel->moveMotor(5, stepTime * dir[6]);
-  urbanPanel->moveMotor(7, stepTime * dir[7]);
+    urbanPanel->moveMotor(1, stepTime * dir[4]);
+    urbanPanel->moveMotor(3, stepTime * dir[5]);
+    urbanPanel->moveMotor(5, stepTime * dir[6]);
+    urbanPanel->moveMotor(7, stepTime * dir[7]);
+  */
+
+
+  urbanPanel->moveMotor(0, stepTimes[0] * dir[0]);
+  urbanPanel->moveMotor(2, stepTimes[1] * dir[1]);
+  urbanPanel->moveMotor(4, stepTimes[2] * dir[2]);
+  urbanPanel->moveMotor(6, stepTimes[3] * dir[3]);
+
+
+  urbanPanel->moveMotor(1, stepTimes[4] * dir[4]);
+  urbanPanel->moveMotor(3, stepTimes[5] * dir[5]);
+  urbanPanel->moveMotor(5, stepTimes[6] * dir[6]);
+  urbanPanel->moveMotor(7, stepTimes[7] * dir[7]);
+
+
 
 }
 
@@ -96,14 +121,22 @@ void wave() {
 
     if (waitTime <= 0) {
       urbanPanel->stopMotor(motorIDs[i]);
-      /*
-      if (dir[i] < 0) {
-        urbanPanel->moveMotorUpMicro(motorIDs[i], 5, 0, 0);
-      } else {
-        urbanPanel->moveMotorDownMicro(motorIDs[i], 5, 0, 0);
-      }
 
-      dir[i] *= -1;*/
+      if (enableReturn  ==  false) {
+
+        urbanPanel->moveMotor(0, stepTimes[0] * dir[0] * -1);
+        urbanPanel->moveMotor(2, stepTimes[1] * dir[1]* -1);
+        urbanPanel->moveMotor(4, stepTimes[2] * dir[2]* -1);
+        urbanPanel->moveMotor(6, stepTimes[3] * dir[3]* -1);
+
+        urbanPanel->moveMotor(1, stepTimes[4] * dir[4]* -1);
+        urbanPanel->moveMotor(3, stepTimes[5] * dir[5]* -1);
+        urbanPanel->moveMotor(5, stepTimes[6] * dir[6]* -1);
+        urbanPanel->moveMotor(7, stepTimes[7] * dir[7]* -1);
+
+        enableReturn = true;
+      }
+      //reset backwards
     }
   }
 }

@@ -5,7 +5,7 @@
 
 */
 
-FlexCAN CANbus(500000);
+FlexCAN CANbus(1000000);
 static CAN_message_t msg, rxmsg;
 
 #define LED_PIN_01 15
@@ -21,7 +21,14 @@ static CAN_message_t msg, rxmsg;
 
 void setup() {
 
+
   CANbus.begin();
+  delay(2000);
+
+  Serial.begin(9600);
+  Serial.println(F("Starting Sending"));
+  delay(2000);
+
   Serial.begin(9600);
 
   //LED
@@ -70,6 +77,6 @@ void loop() {
   int x = CANbus.write(msg);
   Serial.write(x + 48);
 
-  delay(100);
+  delay(1000);
 
 }
