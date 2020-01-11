@@ -31,10 +31,10 @@
   Distributed as-is; no warranty is given.
 *************************************************************/
 
-#include <Wire.h> // Include the I2C library (required)
+#include <i2c_t3.h> // Include the I2C library (required)
 #include <SparkFunSX1509.h> // Include SX1509 library
 #include <Adafruit_NeoPixel.h>
-
+#include "Type4067Mux.h"
 
 //DEBUG LED NEO PIXEL
 #define NEO_DEBUG      2
@@ -62,8 +62,19 @@ const byte SX1509_06_SWITCH_LED = 2;
 const byte SX1509_07_SWITCH_LED = 1;
 const byte SX1509_08_SWITCH_LED = 0;
 
+const byte SX1509_01_01_SWITCH_LED = 12;
+const byte SX1509_01_02_SWITCH_LED = 14;
+
+const byte SX1509_02_01_SWITCH_LED = 0;
+
+const byte SX1509_03_08_SWITCH_LED = 15;
+const byte SX1509_03_07_SWITCH_LED = 13;
+
+const byte SX1509_03_01_SWITCH_LED = 1;
+
+
 // How many NeoPixels are attached to the Arduino?
-#define NUMPIXELS      2*8
+#define NUMPIXELS      8
 
 //Pixels
 Adafruit_NeoPixel * pixels;
@@ -73,23 +84,42 @@ const byte SX1509_ADDRESS_00 = 0x3E;  // SX1509 I2C address
 SX1509 sx00; // Create an SX1509 object to be used throughout
 
 
-const byte SX1509_ADDRESS_01 = 0x3E;  // SX1509 I2C address
+const byte SX1509_ADDRESS_01 = 0x3F;   // SX1509 I2C address
 SX1509 sx01; // Create an SX1509 object to be used throughout
 
 
+const byte SX1509_ADDRESS_11 = 0x71;
+SX1509 sx02;
+
+const byte SX1509_ADDRESS_10 = 0x70;
+SX1509 sx03;
+
+Type4067Mux * mux;
 
 void setup()
 {
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
-  delay(2000);
+  delay(3000);
 
   Serial.begin(9600);
 
+
+
+  if (!sx02.begin(SX1509_ADDRESS_11) )
+  {
+    Serial.println(SX1509_ADDRESS_11);
+    Serial.println("Failed 02");
+    while (1) ; // If we fail to communicate, loop forever.
+  } else {
+    Serial.println("Connected 02");
+  }
+
   // Call io.begin(<address>) to initialize the SX1509. If it
   // successfully communicates, it'll return 1.
-  if (!sx00.begin(SX1509_ADDRESS_00))
+  if (!sx00.begin(SX1509_ADDRESS_00) )
   {
+    Serial.println(SX1509_ADDRESS_00);
     Serial.println("Failed 00");
     while (1) ; // If we fail to communicate, loop forever.
   } else {
@@ -98,13 +128,16 @@ void setup()
 
   if (!sx01.begin(SX1509_ADDRESS_01))
   {
-    Serial.println("Failed 01");
+    Serial.println(SX1509_ADDRESS_01);
+    Serial.println("Failed sx 01");
     while (1) ; // If we fail to communicate, loop forever.
   } else {
     Serial.println("Connected 01");
   }
 
-  delay(5000);
+
+
+  delay(2000);
   digitalWrite(13, LOW);
 
 
@@ -133,24 +166,70 @@ void setup()
   sx00.pinMode(SX1509_08_SWITCH_LED, INPUT);
 
 
-sx01.pinMode(SX1509_01_SWITCH_LED, INPUT);
+  sx01.pinMode(SX1509_01_01_SWITCH_LED, INPUT);
+  sx01.pinMode(SX1509_01_02_SWITCH_LED, INPUT);
+
+  sx02.pinMode(SX1509_02_01_SWITCH_LED, INPUT);
+
+
+  //sx03.pinMode(SX1509_03_08_SWITCH_LED, INPUT);
+  //sx03.pinMode(SX1509_03_07_SWITCH_LED, INPUT);
+  //sx03.pinMode(SX1509_03_01_SWITCH_LED, INPUT);
+
+  //mux = new Type4067Mux(8, INPUT, DIGITAL, 0, 2, 4, 6);
+ // mux->signalPin(3, INPUT, DIGITAL);
+
 
   pixels = new Adafruit_NeoPixel(NUMPIXELS, NEO_DEBUG, NEO_GRBW + NEO_KHZ800);
   pixels->begin();
   pixels->clear();
 
-
-
-
 }
 
 void loop()
 {
+/*
+  byte data;
+  for (byte i = 0; i < 16; ++i) {
+    // Reads from channel i and returns HIGH or LOW.
+    data = mux->read(i);
+    delayMicroseconds(50);
 
-    if (sx01.digitalRead(SX1509_01_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 1 LED sx01");
+    Serial.print("Push button at channel ");
+    Serial.print(i);
+    Serial.print(" is ");
+    if (data == HIGH) {
+      Serial.println("not pressed");
+    } else if (data == LOW) {
+      Serial.println("pressed");
+    }
   }
-  
+  Serial.println();
+
+  if (sx03.digitalRead(SX1509_03_08_SWITCH_LED) == HIGH) {
+    Serial.println("pressed 8 button sx03");
+  }
+
+  if (sx03.digitalRead(SX1509_03_07_SWITCH_LED) == HIGH) {
+    Serial.println("pressed 7 button sx03");
+  }
+  if (sx03.digitalRead(SX1509_03_01_SWITCH_LED) == HIGH) {
+    Serial.println("pressed 1 button sx03");
+  }
+  */
+
+  if (sx02.digitalRead(SX1509_02_01_SWITCH_LED) == HIGH) {
+    Serial.println("pressed 1 button sx02");
+  }
+
+  if (sx01.digitalRead(SX1509_01_01_SWITCH_LED) == HIGH) {
+    Serial.println("pressed 1 button sx01");
+  }
+
+  if (sx01.digitalRead(SX1509_01_02_SWITCH_LED) == HIGH) {
+    Serial.println("pressed 2 LED sx01");
+  }
+
   if (sx00.digitalRead(SX1509_01_SWITCH_LED) == HIGH) {
     Serial.println("pressed 1 LED");
   }
