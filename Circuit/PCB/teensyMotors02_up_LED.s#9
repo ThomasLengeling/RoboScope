@@ -3874,7 +3874,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="1" name="gnd" width="0.2" drill="0">
 <clearance class="1" value="0.2"/>
 </class>
-<class number="3" name="vcc" width="0.45" drill="0">
+<class number="3" name="vcc" width="0.25" drill="0">
 <clearance class="3" value="0.2"/>
 </class>
 </classes>

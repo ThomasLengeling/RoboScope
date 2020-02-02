@@ -32,6 +32,8 @@ class UrbanPanel {
     // Modifies motor output as necessary
     void checkInterfaceInput();
 
+    void stopMotorsToLimitPosition();
+
     void setUrbanPixelColor(int i, int r, int g, int b);
 
     // TODO: Check to make sure the specified directions are the directions for the motor
@@ -66,16 +68,20 @@ class UrbanPanel {
 
     // initialize motors
     void setup();
-    
+
+     InterfacePanel * interfacePanel;
+     
   private:
     // ID for the pixel (also used for the motor ID)
     int id;
 
     MotorPanel * motorPanel;
-    InterfacePanel * interfacePanel;
+   
 
     // variable that keeps track of whether or not elements in the urban panel changed (i.e. motor moved, buttons pressed, etc)
     bool stateChanged;
+
+    bool disableMotor;
 };
 
 #endif

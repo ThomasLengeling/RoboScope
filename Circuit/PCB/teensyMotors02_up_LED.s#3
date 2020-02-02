@@ -4913,11 +4913,6 @@ pins to 3.3V.</text>
 <junction x="73.66" y="12.7"/>
 <label x="78.74" y="12.7" size="1.016" layer="95" xref="yes"/>
 </segment>
-<segment>
-<pinref part="POWER_M" gate="G$1" pin="2"/>
-<wire x1="-33.02" y1="0" x2="-27.94" y2="0" width="0.1524" layer="91"/>
-<label x="-27.94" y="0" size="1.016" layer="95" xref="yes"/>
-</segment>
 </net>
 <net name="VCC_M" class="3">
 <segment>
@@ -5152,11 +5147,6 @@ pins to 3.3V.</text>
 <pinref part="R9" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="POWER_MCU" gate="G$1" pin="2"/>
-<wire x1="-33.02" y1="-27.94" x2="-27.94" y2="-27.94" width="0.1524" layer="91"/>
-<label x="-27.94" y="-27.94" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="GND"/>
 <wire x1="-88.9" y1="132.08" x2="-83.82" y2="132.08" width="0.1524" layer="91"/>
 <label x="-83.82" y="132.08" size="1.016" layer="95" xref="yes"/>
@@ -5220,6 +5210,19 @@ pins to 3.3V.</text>
 <pinref part="ADDR1_SX0" gate="G$1" pin="2"/>
 <wire x1="502.92" y1="0" x2="513.08" y2="0" width="0.1524" layer="91"/>
 <label x="515.62" y="0" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="POWER_M" gate="G$1" pin="2"/>
+<wire x1="-33.02" y1="0" x2="-30.48" y2="0" width="0.1524" layer="91"/>
+<label x="-27.94" y="0" size="1.016" layer="95" xref="yes"/>
+<pinref part="POWER_MCU" gate="G$1" pin="2"/>
+<wire x1="-30.48" y1="0" x2="-27.94" y2="0" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="-27.94" x2="-30.48" y2="-27.94" width="0.1524" layer="91"/>
+<label x="-27.94" y="-27.94" size="1.016" layer="95" xref="yes"/>
+<wire x1="-30.48" y1="-27.94" x2="-27.94" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="0" x2="-30.48" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="-30.48" y="0"/>
+<junction x="-30.48" y="-27.94"/>
 </segment>
 </net>
 <net name="VCC_MCU" class="3">

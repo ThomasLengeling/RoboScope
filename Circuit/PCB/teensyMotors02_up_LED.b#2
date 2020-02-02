@@ -326,7 +326,7 @@
 <text x="68.072" y="27.432" size="1.27" layer="21">1</text>
 <text x="21.336" y="27.178" size="1.27" layer="21">2</text>
 <text x="44.196" y="23.114" size="1.27" layer="21">3</text>
-<text x="44.45" y="48.514" size="1.27" layer="21">4</text>
+<text x="43.942" y="48.514" size="1.27" layer="21">4</text>
 <text x="43.688" y="106.934" size="1.27" layer="21">8</text>
 <text x="66.802" y="130.302" size="1.27" layer="21">5</text>
 <text x="45.212" y="133.604" size="1.27" layer="21">7</text>
@@ -350,10 +350,6 @@
 <text x="60.96" y="75.438" size="0.8128" layer="21">HIGH</text>
 <text x="63.754" y="79.502" size="0.8128" layer="21">LOW</text>
 <text x="60.96" y="73.406" size="0.8128" layer="21">LOW</text>
-<text x="56.896" y="34.29" size="0.8128" layer="21">5V</text>
-<text x="68.834" y="34.544" size="0.8128" layer="21">GND</text>
-<text x="55.88" y="36.322" size="0.8128" layer="21">3.3V</text>
-<text x="68.834" y="36.576" size="0.8128" layer="21">GND</text>
 <text x="25.4" y="13.208" size="0.8128" layer="21">3.3V</text>
 <text x="51.562" y="85.344" size="0.3048" layer="21">GND</text>
 <text x="71.882" y="114.3" size="0.6096" layer="21">GND</text>

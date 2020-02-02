@@ -41,11 +41,11 @@ class Stepper {
       M0_PIN = m0_pin;
       M1_PIN = m1_pin;
 
-      pinMode(ENABLE_PIN, OUTPUT);
-      digitalWrite(ENABLE_PIN, HIGH);
+      //pinMode(ENABLE_PIN, OUTPUT);
+     // digitalWrite(ENABLE_PIN, HIGH);
 
       //init motor driver
-      motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN);;//, ENABLE_PIN, M0_PIN, M1_PIN);
+      motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN);//, ENABLE_PIN, M0_PIN, M1_PIN);
 
     }
 

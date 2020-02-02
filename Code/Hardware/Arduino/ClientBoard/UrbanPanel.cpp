@@ -10,6 +10,8 @@ UrbanPanel::UrbanPanel(int panelId) {
 
   motorPanel = new MotorPanel(id);
   interfacePanel = new InterfacePanel(id);
+
+  disableMotor = false;
 }
 
 
@@ -71,11 +73,44 @@ void UrbanPanel::stopMotor(int i) {
 // Meant to be placed in the void loop of the main function
 void UrbanPanel::stopMotorsToPosition() {
   for (int i = 0; i < motorPanel->getNumberOfMotors(); i++) {
-    unsigned waitTimeMicro = checkMotorState(i);
+    unsigned long waitTimeMicro = checkMotorState(i);
     if (waitTimeMicro <= 0) {
       stopMotor(i);
     }
   }
+}
+
+void UrbanPanel::stopMotorsToLimitPosition() {
+  //update motor values
+  unsigned long ctime = millis();
+
+  //if the motor is unlocked we can move it if not stop it
+  for (int i = 0; i < motorPanel->getNumberOfMotors(); i++) {
+    if (motorPanel->getMotor(i).isLock() == false) {
+      unsigned long waitTimeMicro = checkMotorState(i);
+      if (waitTimeMicro <= 0) {
+        stopMotor(i);
+      }
+
+      //check if the limit switch was pressed
+      if (interfacePanel->getLimitSwitchState(i) == HIGH) {
+        // motorPanel->getMotor(i).resetLock();
+        motorPanel->getMotor(i).stop();
+        //moveMotor(i, ceil(0.1 * GMOTOR_STEPS) * -1);
+
+        //move backwards a bit
+        Serial.print(i);
+        Serial.print(" ");
+        Serial.println("stop motor");
+      }
+
+    }
+  }
+
+  for (int i = 0; i < motorPanel->getNumberOfMotors(); i++) {
+    // motorPanel->getMotor(i).update();
+  }
+
 }
 
 void UrbanPanel::moveMotorUp(int i) {
@@ -111,17 +146,10 @@ void UrbanPanel::moveMotor(int motorID, int motorDir, int motorStep, int motorTi
 void UrbanPanel::moveMotorUpMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable) {
 
   motorPanel->getMotor(motorID).startMoveForward(motorStep);
-
-  /*
-
-    if (!interfacePanel->getInterfaceButtonState(motorID)) {
-    //motorPanel->getMotor(motorID).moveForwardMicro(motorStep);
-    motorPanel->getMotor(motorID).startMoveForward(motorStep);
-    }*/
 }
 
 void UrbanPanel::moveMotor(int motorID, int motorStep) {
-    motorPanel->getMotor(motorID).startMoveForwardSteps(motorStep);
+  motorPanel->getMotor(motorID).startMoveForwardSteps(motorStep);
 }
 
 
@@ -130,18 +158,13 @@ void UrbanPanel::moveMotor(int motorID, int motorStep) {
 void UrbanPanel::moveMotorDownMicro(int motorID, int motorStep, int motorTimeActivation, int motorEnable) {
 
   motorPanel->getMotor(motorID).startMoveBackward(motorStep);
-  /*
-    if (!interfacePanel->getLimitSwitchState(motorID)) {
-    //motorPanel->getMotor(motorID).moveBackwardMicro(motorStep);
-    motorPanel->getMotor(motorID).startMoveBackward(motorStep);
-    }*/
 }
 
 //------------------------------------------------------------------------------
-unsigned UrbanPanel::checkMotorState(int motorID) {
-  return motorPanel->getMotor(motorID).getNextAction();
-
+unsigned  UrbanPanel::checkMotorState(int motorID) {
+  return  motorPanel->getMotor(motorID).getNextAction();
 }
+
 
 //------------------------------------------------------------------------------
 // Interprets the message received from the CAN bus as actions
@@ -175,6 +198,11 @@ InterfacePanel UrbanPanel::getInterfacePanel() {
 //------------------------------------------------------------------------------
 // initialize motors
 void UrbanPanel::setup() {
-  motorPanel->init();
+  Serial.println("Setting Interface");
   interfacePanel->init();
+
+  Serial.println("Setting Motors");
+  motorPanel->init();
+
+
 }

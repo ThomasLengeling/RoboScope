@@ -3877,6 +3877,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="3" name="vcc" width="0.22" drill="0">
 <clearance class="3" value="0.2"/>
 </class>
+<class number="4" name="vcc5" width="0.35" drill="0">
+<clearance class="4" value="0.2"/>
+</class>
 </classes>
 <parts>
 <part name="MOTOR_01" library="STSPIN220" deviceset="DRV8880" device=""/>
@@ -5280,7 +5283,7 @@ pins to 3.3V.</text>
 <pinref part="C9" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="VCC_5V" class="3">
+<net name="VCC_5V" class="4">
 <segment>
 <pinref part="MOTOR_01" gate="G$1" pin="FAULT"/>
 <wire x1="66.04" y1="93.98" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
@@ -5365,7 +5368,7 @@ pins to 3.3V.</text>
 <pinref part="R9" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="REG_5V" class="3">
+<net name="REG_5V" class="4">
 <segment>
 <wire x1="-83.82" y1="12.7" x2="-83.82" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="CATHODE"/>

@@ -42,7 +42,7 @@
 #define STEP_PIN_08    24
 
 //Global Values
-#define GMOTOR_STEPS  200 * 16 // 200
+#define GMOTOR_STEPS  200*8  // 200 200 * 16
 #define GRPM          120 //120
 
 //Global pin values
@@ -57,7 +57,7 @@
 #define LED_TEENSY     13
 
 //NEO PIXELS
-#define NEO_PIXEL_PIN   7
+#define NEO_PIXEL_PIN   2
 
 //DIP SWITCH
 #define MUX_S0         26         
@@ -69,3 +69,24 @@
 //MUX I2C
 #define MUX_SDA       18
 #define MUX_SCL       19
+
+#define INTERRUPT_PIN_SWITCH       13
+
+//MUX SWITH AND LED
+#define SX1509_01_SWITCH_STOP      15 // LED connected to pin 8
+#define SX1509_02_SWITCH_STOP      14 // LED connected to pin 9
+#define SX1509_03_SWITCH_STOP      13 // LED connected to pin 10
+#define SX1509_04_SWITCH_STOP      12 // LED connected to pin 11
+#define SX1509_05_SWITCH_STOP      11 // LED connected to pin 12
+#define SX1509_06_SWITCH_STOP      10 // LED connected to pin 13
+#define SX1509_07_SWITCH_STOP       9 // LED connected to pin 14
+#define SX1509_08_SWITCH_STOP       8 // LED connected to pin 15
+
+#define SX1509_01_SWITCH_LEDBOX       7
+#define SX1509_02_SWITCH_LEDBOX       6
+#define SX1509_03_SWITCH_LEDBOX       5
+#define SX1509_04_SWITCH_LEDBOX       4
+#define SX1509_05_SWITCH_LEDBOX       3
+#define SX1509_06_SWITCH_LEDBOX       2
+#define SX1509_07_SWITCH_LEDBOX       1
+#define SX1509_08_SWITCH_LEDBOX       0

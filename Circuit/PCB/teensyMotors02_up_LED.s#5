@@ -4915,8 +4915,16 @@ pins to 3.3V.</text>
 </segment>
 <segment>
 <pinref part="POWER_M" gate="G$1" pin="2"/>
-<wire x1="-33.02" y1="0" x2="-27.94" y2="0" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="0" x2="-30.48" y2="0" width="0.1524" layer="91"/>
 <label x="-27.94" y="0" size="1.016" layer="95" xref="yes"/>
+<pinref part="POWER_MCU" gate="G$1" pin="2"/>
+<wire x1="-30.48" y1="0" x2="-27.94" y2="0" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="-27.94" x2="-30.48" y2="-27.94" width="0.1524" layer="91"/>
+<label x="-27.94" y="-27.94" size="1.016" layer="95" xref="yes"/>
+<wire x1="-30.48" y1="-27.94" x2="-27.94" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="0" x2="-30.48" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="-30.48" y="0"/>
+<junction x="-30.48" y="-27.94"/>
 </segment>
 </net>
 <net name="VCC_M" class="3">
@@ -5150,11 +5158,6 @@ pins to 3.3V.</text>
 <wire x1="43.18" y1="-121.92" x2="33.02" y2="-121.92" width="0.1524" layer="91"/>
 <label x="33.02" y="-121.92" size="1.016" layer="95" rot="R180" xref="yes"/>
 <pinref part="R9" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="POWER_MCU" gate="G$1" pin="2"/>
-<wire x1="-33.02" y1="-27.94" x2="-27.94" y2="-27.94" width="0.1524" layer="91"/>
-<label x="-27.94" y="-27.94" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="GND"/>
