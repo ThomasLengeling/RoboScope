@@ -4845,75 +4845,6 @@ pins to 3.3V.</text>
 <pinref part="CM_01" gate="G$1" pin="4"/>
 </segment>
 </net>
-<net name="GND_M" class="1">
-<segment>
-<pinref part="MOTOR_02" gate="G$1" pin="GND_1"/>
-<wire x1="149.86" y1="121.92" x2="154.94" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="MC2" gate="G$1" pin="-"/>
-<wire x1="154.94" y1="121.92" x2="162.56" y2="121.92" width="0.1524" layer="91"/>
-<junction x="154.94" y="121.92"/>
-<label x="162.56" y="121.92" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="MOTOR_03" gate="G$1" pin="GND_1"/>
-<wire x1="231.14" y1="121.92" x2="236.22" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="MC3" gate="G$1" pin="-"/>
-<wire x1="236.22" y1="121.92" x2="241.3" y2="121.92" width="0.1524" layer="91"/>
-<junction x="236.22" y="121.92"/>
-<label x="241.3" y="121.92" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="MOTOR_08" gate="G$1" pin="GND_1"/>
-<wire x1="317.5" y1="15.24" x2="312.42" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="MC8" gate="G$1" pin="-"/>
-<wire x1="317.5" y1="15.24" x2="322.58" y2="15.24" width="0.1524" layer="91"/>
-<junction x="317.5" y="15.24"/>
-<label x="322.58" y="15.24" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="MOTOR_01" gate="G$1" pin="GND_1"/>
-<wire x1="66.04" y1="119.38" x2="68.58" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="119.38" x2="73.66" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="MC1" gate="G$1" pin="-"/>
-<wire x1="73.66" y1="119.38" x2="78.74" y2="119.38" width="0.1524" layer="91"/>
-<junction x="73.66" y="119.38"/>
-<label x="78.74" y="119.38" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="MOTOR_04" gate="G$1" pin="GND_1"/>
-<wire x1="312.42" y1="121.92" x2="317.5" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="MC4" gate="G$1" pin="-"/>
-<wire x1="317.5" y1="121.92" x2="322.58" y2="121.92" width="0.1524" layer="91"/>
-<junction x="317.5" y="121.92"/>
-<label x="322.58" y="121.92" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="MOTOR_07" gate="G$1" pin="GND_1"/>
-<wire x1="231.14" y1="15.24" x2="236.22" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="MC7" gate="G$1" pin="-"/>
-<wire x1="236.22" y1="15.24" x2="238.76" y2="15.24" width="0.1524" layer="91"/>
-<junction x="236.22" y="15.24"/>
-<label x="238.76" y="15.24" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="MOTOR_06" gate="G$1" pin="GND_1"/>
-<wire x1="149.86" y1="15.24" x2="152.4" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="MC6" gate="G$1" pin="-"/>
-<wire x1="152.4" y1="15.24" x2="154.94" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="15.24" x2="160.02" y2="15.24" width="0.1524" layer="91"/>
-<junction x="154.94" y="15.24"/>
-<label x="160.02" y="15.24" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="MOTOR_05" gate="G$1" pin="GND_1"/>
-<wire x1="71.12" y1="12.7" x2="68.58" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="MC5" gate="G$1" pin="-"/>
-<wire x1="71.12" y1="12.7" x2="73.66" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="12.7" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
-<junction x="73.66" y="12.7"/>
-<label x="78.74" y="12.7" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="VCC_M" class="3">
 <segment>
 <pinref part="MOTOR_01" gate="G$1" pin="VM"/>
@@ -5223,6 +5154,73 @@ pins to 3.3V.</text>
 <wire x1="-30.48" y1="0" x2="-30.48" y2="-27.94" width="0.1524" layer="91"/>
 <junction x="-30.48" y="0"/>
 <junction x="-30.48" y="-27.94"/>
+</segment>
+<segment>
+<pinref part="MOTOR_05" gate="G$1" pin="GND_1"/>
+<wire x1="71.12" y1="12.7" x2="68.58" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="MC5" gate="G$1" pin="-"/>
+<wire x1="71.12" y1="12.7" x2="73.66" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="12.7" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
+<junction x="73.66" y="12.7"/>
+<label x="78.74" y="12.7" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MOTOR_01" gate="G$1" pin="GND_1"/>
+<wire x1="66.04" y1="119.38" x2="68.58" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="119.38" x2="73.66" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="MC1" gate="G$1" pin="-"/>
+<wire x1="73.66" y1="119.38" x2="78.74" y2="119.38" width="0.1524" layer="91"/>
+<junction x="73.66" y="119.38"/>
+<label x="78.74" y="119.38" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MOTOR_02" gate="G$1" pin="GND_1"/>
+<wire x1="149.86" y1="121.92" x2="154.94" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="MC2" gate="G$1" pin="-"/>
+<wire x1="154.94" y1="121.92" x2="162.56" y2="121.92" width="0.1524" layer="91"/>
+<junction x="154.94" y="121.92"/>
+<label x="162.56" y="121.92" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MOTOR_03" gate="G$1" pin="GND_1"/>
+<wire x1="231.14" y1="121.92" x2="236.22" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="MC3" gate="G$1" pin="-"/>
+<wire x1="236.22" y1="121.92" x2="241.3" y2="121.92" width="0.1524" layer="91"/>
+<junction x="236.22" y="121.92"/>
+<label x="241.3" y="121.92" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MOTOR_04" gate="G$1" pin="GND_1"/>
+<wire x1="312.42" y1="121.92" x2="317.5" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="MC4" gate="G$1" pin="-"/>
+<wire x1="317.5" y1="121.92" x2="322.58" y2="121.92" width="0.1524" layer="91"/>
+<junction x="317.5" y="121.92"/>
+<label x="322.58" y="121.92" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MOTOR_08" gate="G$1" pin="GND_1"/>
+<wire x1="317.5" y1="15.24" x2="312.42" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="MC8" gate="G$1" pin="-"/>
+<wire x1="317.5" y1="15.24" x2="322.58" y2="15.24" width="0.1524" layer="91"/>
+<junction x="317.5" y="15.24"/>
+<label x="322.58" y="15.24" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MOTOR_07" gate="G$1" pin="GND_1"/>
+<wire x1="231.14" y1="15.24" x2="236.22" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="MC7" gate="G$1" pin="-"/>
+<wire x1="236.22" y1="15.24" x2="238.76" y2="15.24" width="0.1524" layer="91"/>
+<junction x="236.22" y="15.24"/>
+<label x="238.76" y="15.24" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="MOTOR_06" gate="G$1" pin="GND_1"/>
+<wire x1="149.86" y1="15.24" x2="152.4" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="MC6" gate="G$1" pin="-"/>
+<wire x1="152.4" y1="15.24" x2="154.94" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="15.24" x2="160.02" y2="15.24" width="0.1524" layer="91"/>
+<junction x="154.94" y="15.24"/>
+<label x="160.02" y="15.24" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VCC_MCU" class="3">

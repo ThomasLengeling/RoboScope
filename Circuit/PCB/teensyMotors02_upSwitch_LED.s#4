@@ -7465,9 +7465,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP10" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39286/1"/>
 <part name="JP11" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39286/1"/>
 <part name="R26" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
-<part name="STATUS_LED" library="fab" deviceset="LED" device="FAB1206"/>
+<part name="POWE_3.3" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="R27" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="500"/>
-<part name="STATUS_LED1" library="fab" deviceset="LED" device="FAB1206"/>
+<part name="STATUS_LED" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="R28" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="500"/>
 <part name="R29" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
 <part name="R31" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
@@ -7672,12 +7672,12 @@ pins to 3.3V.</text>
 <attribute name="NAME" x="963.93" y="95.7326" size="1.778" layer="95"/>
 <attribute name="VALUE" x="969.01" y="95.758" size="1.778" layer="96"/>
 </instance>
-<instance part="STATUS_LED" gate="G$1" x="299.72" y="63.5" rot="R90"/>
+<instance part="POWE_3.3" gate="G$1" x="299.72" y="63.5" rot="R90"/>
 <instance part="R27" gate="G$1" x="279.4" y="63.5" smashed="yes" rot="R180">
 <attribute name="NAME" x="283.21" y="66.8274" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="278.13" y="66.802" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="STATUS_LED1" gate="G$1" x="302.26" y="27.94" rot="R90"/>
+<instance part="STATUS_LED" gate="G$1" x="302.26" y="27.94" rot="R90"/>
 <instance part="R28" gate="G$1" x="281.94" y="27.94" smashed="yes" rot="R180">
 <attribute name="NAME" x="285.75" y="31.2674" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="280.67" y="31.242" size="1.778" layer="96" rot="R180"/>
@@ -8235,12 +8235,12 @@ pins to 3.3V.</text>
 <label x="942.34" y="226.06" size="1.016" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="STATUS_LED" gate="G$1" pin="C"/>
+<pinref part="POWE_3.3" gate="G$1" pin="C"/>
 <wire x1="302.26" y1="63.5" x2="309.88" y2="63.5" width="0.1524" layer="91"/>
 <label x="309.88" y="63.5" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="STATUS_LED1" gate="G$1" pin="C"/>
+<pinref part="STATUS_LED" gate="G$1" pin="C"/>
 <wire x1="304.8" y1="27.94" x2="312.42" y2="27.94" width="0.1524" layer="91"/>
 <label x="312.42" y="27.94" size="1.016" layer="95" xref="yes"/>
 </segment>
@@ -8319,6 +8319,18 @@ pins to 3.3V.</text>
 <wire x1="899.16" y1="220.98" x2="896.62" y2="220.98" width="0.1524" layer="91"/>
 <label x="896.62" y="220.98" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="657.86" y1="81.28" x2="657.86" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="657.86" y1="81.28" x2="657.86" y2="76.2" width="0.1524" layer="91"/>
+<label x="657.86" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="873.76" y1="81.28" x2="873.76" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="873.76" y1="81.28" x2="873.76" y2="76.2" width="0.1524" layer="91"/>
+<label x="873.76" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="SCL_01" class="0">
 <segment>
@@ -8347,21 +8359,17 @@ pins to 3.3V.</text>
 <wire x1="899.16" y1="218.44" x2="896.62" y2="218.44" width="0.1524" layer="91"/>
 <label x="896.62" y="218.44" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="SCL_02" class="0">
 <segment>
 <pinref part="R18" gate="G$1" pin="1"/>
 <wire x1="637.54" y1="81.28" x2="637.54" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="637.54" y1="81.28" x2="637.54" y2="76.2" width="0.1524" layer="91"/>
 <label x="637.54" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
-</net>
-<net name="SDA_02" class="0">
 <segment>
-<pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="657.86" y1="81.28" x2="657.86" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="657.86" y1="81.28" x2="657.86" y2="76.2" width="0.1524" layer="91"/>
-<label x="657.86" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="853.44" y1="81.28" x2="853.44" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="853.44" y1="81.28" x2="853.44" y2="76.2" width="0.1524" layer="91"/>
+<label x="853.44" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="!RESET_SX2" class="0">
@@ -9299,22 +9307,6 @@ pins to 3.3V.</text>
 <label x="853.44" y="213.36" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="SCL_03" class="0">
-<segment>
-<pinref part="R23" gate="G$1" pin="1"/>
-<wire x1="853.44" y1="81.28" x2="853.44" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="853.44" y1="81.28" x2="853.44" y2="76.2" width="0.1524" layer="91"/>
-<label x="853.44" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
-<net name="SDA_03" class="0">
-<segment>
-<pinref part="R20" gate="G$1" pin="1"/>
-<wire x1="873.76" y1="81.28" x2="873.76" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="873.76" y1="81.28" x2="873.76" y2="76.2" width="0.1524" layer="91"/>
-<label x="873.76" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="JP11" gate="G$1" pin="2"/>
@@ -9324,14 +9316,14 @@ pins to 3.3V.</text>
 </net>
 <net name="N$193" class="0">
 <segment>
-<pinref part="STATUS_LED" gate="G$1" pin="A"/>
+<pinref part="POWE_3.3" gate="G$1" pin="A"/>
 <wire x1="284.48" y1="63.5" x2="294.64" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="R27" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="STATUS_LED1" gate="G$1" pin="A"/>
+<pinref part="STATUS_LED" gate="G$1" pin="A"/>
 <wire x1="287.02" y1="27.94" x2="297.18" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R28" gate="G$1" pin="1"/>
 </segment>

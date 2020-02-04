@@ -3862,6 +3862,191 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="SX1509_s">
+<packages>
+<package name="SX1509">
+<wire x1="-12.7" y1="16.51" x2="-12.7" y2="12.7" width="0.2032" layer="21"/>
+<wire x1="-12.7" y1="12.7" x2="-11.43" y2="11.43" width="0.2032" layer="21"/>
+<wire x1="-11.43" y1="11.43" x2="-11.43" y2="-13.97" width="0.2032" layer="21"/>
+<wire x1="-11.43" y1="-13.97" x2="-12.7" y2="-15.24" width="0.2032" layer="21"/>
+<wire x1="-12.7" y1="-15.24" x2="-12.7" y2="-19.05" width="0.2032" layer="21"/>
+<wire x1="-12.7" y1="-19.05" x2="12.7" y2="-19.05" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="-19.05" x2="12.7" y2="-15.24" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="-15.24" x2="11.43" y2="-13.97" width="0.2032" layer="21"/>
+<wire x1="11.43" y1="-13.97" x2="11.43" y2="11.43" width="0.2032" layer="21"/>
+<wire x1="11.43" y1="11.43" x2="12.7" y2="12.7" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="12.7" x2="12.7" y2="16.51" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="16.51" x2="-12.7" y2="16.51" width="0.2032" layer="21"/>
+<text x="-6.5532" y="-2.54" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">VC1</text>
+<text x="-6.5532" y="10.16" size="0.8636" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">GND</text>
+<text x="-6.35" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-right">!INT</text>
+<text x="-3.81" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-right">!RST</text>
+<text x="-1.27" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-right">GND</text>
+<text x="1.27" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-right">3V3</text>
+<text x="3.81" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-right">SDA</text>
+<text x="6.35" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-right">SCL</text>
+<text x="-6.35" y="-16.256" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">OSC</text>
+<text x="-3.81" y="-16.256" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">!RST</text>
+<text x="-1.27" y="-16.256" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">GND</text>
+<text x="1.27" y="-16.256" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">3.3V</text>
+<text x="3.81" y="-16.256" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SDA</text>
+<text x="6.35" y="-16.256" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SCL</text>
+<text x="6.5532" y="10.033" size="0.8636" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">GND</text>
+<text x="6.5532" y="-2.54" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">VC2</text>
+<text x="6.5532" y="-5.08" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">11</text>
+<text x="6.5532" y="-7.62" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">10</text>
+<text x="6.5532" y="0" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">12</text>
+<text x="6.5532" y="2.54" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">13</text>
+<text x="6.5532" y="5.08" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">14</text>
+<text x="6.5532" y="7.62" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">15</text>
+<text x="-6.5532" y="10.16" size="0.8636" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">GND</text>
+<text x="-6.5532" y="-2.54" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">VC1</text>
+<text x="6.5532" y="-12.7" size="0.9144" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">8</text>
+<text x="6.5532" y="-7.62" size="0.9144" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">10</text>
+<text x="6.5532" y="-5.08" size="0.9144" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">11</text>
+<text x="6.5532" y="-2.54" size="0.9144" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">VC2</text>
+<text x="6.5532" y="0" size="0.9144" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">12</text>
+<text x="6.5532" y="2.54" size="0.9144" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">13</text>
+<text x="6.5532" y="5.08" size="0.9144" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">14</text>
+<text x="6.5532" y="7.62" size="0.8636" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">15</text>
+<text x="6.5532" y="10.033" size="0.8636" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">GND</text>
+<text x="-6.5532" y="7.62" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">0</text>
+<text x="-6.5532" y="5.08" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">1</text>
+<text x="-6.5532" y="2.54" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">2</text>
+<text x="-6.5532" y="0" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">3</text>
+<text x="-6.5532" y="-5.08" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">4</text>
+<text x="-6.5532" y="-7.62" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">5</text>
+<text x="-6.5532" y="-10.16" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">6</text>
+<text x="-6.5532" y="-12.7" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">7</text>
+<text x="-6.5532" y="7.62" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">0</text>
+<text x="-6.5532" y="5.08" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">1</text>
+<text x="-6.5532" y="2.54" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">2</text>
+<text x="-6.5532" y="0" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">3</text>
+<text x="-6.5532" y="-5.08" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">4</text>
+<text x="-6.5532" y="-7.62" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">5</text>
+<text x="-6.5532" y="-10.16" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">6</text>
+<text x="-6.5532" y="-12.7" size="0.9144" layer="21" font="vector" ratio="15" rot="R270" align="bottom-center">7</text>
+<text x="6.5532" y="-12.7" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">8</text>
+<text x="6.5532" y="-10.16" size="0.9144" layer="22" font="vector" ratio="15" rot="MR270" align="bottom-center">9</text>
+<text x="6.5532" y="-10.16" size="0.9144" layer="21" font="vector" ratio="15" rot="R90" align="bottom-center">9</text>
+<text x="-6.35" y="13.97" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">!INT</text>
+<text x="-3.81" y="13.97" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">!RST</text>
+<text x="-1.27" y="13.97" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">GND</text>
+<text x="1.27" y="13.97" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">3V3</text>
+<text x="3.81" y="13.97" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">SDA</text>
+<text x="6.35" y="13.97" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">SCL</text>
+<text x="-6.35" y="-16.256" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-left">OSC</text>
+<text x="-3.81" y="-16.256" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-left">!RST</text>
+<text x="6.35" y="-16.256" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-left">SCL</text>
+<text x="-1.27" y="-16.256" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-left">GND</text>
+<text x="1.27" y="-16.256" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-left">3.3V</text>
+<text x="3.81" y="-16.256" size="1.016" layer="22" font="vector" ratio="15" rot="MR90" align="center-left">SDA</text>
+<text x="-8.9535" y="11.1633" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0" align="bottom-center">GND</text>
+<smd name="RST" x="-3.81" y="-17.78" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="GND" x="-1.27" y="-17.78" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="3.3V" x="1.27" y="-17.78" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="SDA" x="3.81" y="-17.78" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="SCL" x="6.35" y="-17.78" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="OSC" x="-6.35" y="-17.78" dx="2.1844" dy="1.0668" layer="1" rot="R90"/>
+<smd name="7" x="-7.62" y="-12.7" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="6" x="-7.62" y="-10.16" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="5" x="-7.62" y="-7.62" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="4" x="-7.62" y="-5.08" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="VCC1" x="-7.62" y="-2.54" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="3" x="-7.62" y="0" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="8" x="7.62" y="-12.7" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="9" x="7.62" y="-10.16" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="10" x="7.62" y="-7.62" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="11" x="7.62" y="-5.08" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="VC2" x="7.62" y="-2.54" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="12" x="7.62" y="0" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="13" x="7.62" y="2.54" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="14" x="7.62" y="5.08" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="15" x="7.62" y="7.62" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="GND_1" x="7.62" y="10.16" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="2" x="-7.62" y="2.54" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="1" x="-7.62" y="5.08" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="0" x="-7.62" y="7.62" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="GND_2" x="-7.62" y="10.16" dx="2.1844" dy="1.0668" layer="1" rot="R180"/>
+<smd name="INT" x="-6.35" y="15.24" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="RST_1" x="-3.81" y="15.24" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="GND_3" x="-1.27" y="15.24" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="3.3V_1" x="1.27" y="15.24" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="SDA_2" x="3.81" y="15.24" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+<smd name="SCL_2" x="6.35" y="15.24" dx="2.1844" dy="1.0668" layer="1" rot="R270"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SX1509">
+<pin name="0" x="-7.62" y="7.62" length="middle"/>
+<pin name="1" x="-7.62" y="2.54" length="middle"/>
+<pin name="2" x="-7.62" y="-2.54" length="middle"/>
+<pin name="3" x="-7.62" y="-7.62" length="middle"/>
+<pin name="4" x="-7.62" y="-12.7" length="middle"/>
+<pin name="5" x="-7.62" y="-17.78" length="middle"/>
+<pin name="6" x="-7.62" y="-22.86" length="middle"/>
+<pin name="7" x="-7.62" y="-27.94" length="middle"/>
+<pin name="8" x="-7.62" y="-33.02" length="middle"/>
+<pin name="9" x="-7.62" y="-38.1" length="middle"/>
+<pin name="10" x="-7.62" y="-43.18" length="middle"/>
+<pin name="11" x="-7.62" y="-48.26" length="middle"/>
+<pin name="12" x="-7.62" y="-53.34" length="middle"/>
+<pin name="13" x="-7.62" y="-58.42" length="middle"/>
+<pin name="14" x="-7.62" y="-63.5" length="middle"/>
+<pin name="15" x="-7.62" y="-68.58" length="middle"/>
+<pin name="OSC" x="22.86" y="-45.72" length="middle" rot="R180"/>
+<pin name="INT" x="22.86" y="-40.64" length="middle" rot="R180"/>
+<pin name="RST" x="22.86" y="-35.56" length="middle" rot="R180"/>
+<pin name="GND" x="22.86" y="-30.48" length="middle" rot="R180"/>
+<pin name="3.3V" x="22.86" y="-25.4" length="middle" rot="R180"/>
+<pin name="SDA" x="22.86" y="-20.32" length="middle" rot="R180"/>
+<pin name="SCL" x="22.86" y="-15.24" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="10.16" x2="17.78" y2="10.16" width="0.254" layer="94"/>
+<wire x1="17.78" y1="10.16" x2="17.78" y2="-71.12" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-71.12" x2="-2.54" y2="-71.12" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-71.12" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SX1509">
+<gates>
+<gate name="G$1" symbol="SX1509" x="-7.62" y="35.56"/>
+</gates>
+<devices>
+<device name="" package="SX1509">
+<connects>
+<connect gate="G$1" pin="0" pad="0"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="15" pad="15"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="3.3V" pad="3.3V 3.3V_1"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+<connect gate="G$1" pin="GND" pad="GND GND_1 GND_2 GND_3"/>
+<connect gate="G$1" pin="INT" pad="INT"/>
+<connect gate="G$1" pin="OSC" pad="OSC"/>
+<connect gate="G$1" pin="RST" pad="RST RST_1"/>
+<connect gate="G$1" pin="SCL" pad="SCL SCL_2"/>
+<connect gate="G$1" pin="SDA" pad="SDA SDA_2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3948,6 +4133,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="JP3_TX7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39287/1"/>
 <part name="JP4_RX7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39287/1"/>
+<part name="U$5" library="SX1509_s" deviceset="SX1509" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4094,6 +4280,7 @@ pins to 3.3V.</text>
 <instance part="J2" gate="G$1" x="170.18" y="-86.36" rot="R270"/>
 <instance part="JP3_TX7" gate="G$1" x="-40.64" y="121.92"/>
 <instance part="JP4_RX7" gate="G$1" x="-40.64" y="86.36"/>
+<instance part="U$5" gate="G$1" x="594.36" y="111.76"/>
 </instances>
 <busses>
 </busses>
@@ -6020,6 +6207,42 @@ pins to 3.3V.</text>
 <pinref part="I2C" gate="G$1" pin="7"/>
 <wire x1="-160.02" y1="-104.14" x2="-165.1" y2="-104.14" width="0.1524" layer="91"/>
 <label x="-165.1" y="-104.14" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="0"/>
+<wire x1="586.74" y1="119.38" x2="576.58" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="1"/>
+<wire x1="586.74" y1="114.3" x2="576.58" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="2"/>
+<wire x1="586.74" y1="109.22" x2="579.12" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="3"/>
+<wire x1="586.74" y1="104.14" x2="576.58" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="4"/>
+<wire x1="586.74" y1="99.06" x2="576.58" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="5"/>
+<wire x1="586.74" y1="93.98" x2="574.04" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
