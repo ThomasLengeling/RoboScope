@@ -23,8 +23,8 @@
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
@@ -32,8 +32,8 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -318,7 +318,7 @@
 <text x="32.512" y="49.53" size="1.27" layer="22" rot="MR0">4</text>
 <text x="32.258" y="23.876" size="1.27" layer="22" rot="MR0">3</text>
 <text x="53.594" y="82.042" size="1.27" layer="22" rot="MR0">MOTOR</text>
-<text x="28.702" y="82.296" size="1.27" layer="22" rot="MR0">MCU</text>
+<text x="29.21" y="81.534" size="1.27" layer="22" rot="MR0">MCU</text>
 <text x="33.02" y="107.442" size="1.27" layer="22" rot="MR0">8</text>
 <text x="8.382" y="129.54" size="1.27" layer="22" rot="MR0">6</text>
 <text x="54.864" y="130.302" size="1.27" layer="22" rot="MR0">5</text>
@@ -334,7 +334,7 @@
 <text x="4.064" y="74.676" size="1.27" layer="21">INPUT</text>
 <text x="66.294" y="62.992" size="1.27" layer="21">OUTPUT</text>
 <text x="64.516" y="74.93" size="1.27" layer="21">CAN BUS</text>
-<text x="26.924" y="73.66" size="1.27" layer="21">MCU</text>
+<text x="26.67" y="73.66" size="1.27" layer="21">MCU</text>
 <text x="45.212" y="73.914" size="1.27" layer="21">MOTOR</text>
 <text x="9.144" y="51.054" size="1.27" layer="21">ON</text>
 <text x="9.398" y="60.452" size="1.27" layer="21">OFF</text>
@@ -346,12 +346,12 @@
 <text x="43.18" y="82.804" size="1.016" layer="21">GND</text>
 <text x="37.592" y="72.136" size="1.016" layer="22" rot="MR0">GND</text>
 <text x="45.974" y="72.136" size="1.016" layer="22" rot="MR0">GND</text>
-<text x="13.716" y="67.564" size="0.8128" layer="21">HIGH</text>
+<text x="13.462" y="67.564" size="0.8128" layer="21">HIGH</text>
 <text x="60.706" y="69.596" size="0.8128" layer="21">HIGH</text>
-<text x="13.208" y="69.596" size="0.8128" layer="21">LOW</text>
+<text x="13.462" y="69.85" size="0.8128" layer="21">LOW</text>
 <text x="60.96" y="67.564" size="0.8128" layer="21">LOW</text>
 <text x="22.606" y="13.208" size="0.8128" layer="21">3.3V</text>
-<text x="51.562" y="85.344" size="0.3048" layer="21">GND</text>
+<text x="50.038" y="86.36" size="0.3048" layer="21">GND</text>
 <text x="71.882" y="114.3" size="0.6096" layer="21">GND</text>
 <text x="14.224" y="114.554" size="0.6096" layer="21">GND</text>
 <text x="60.96" y="114.554" size="0.6096" layer="21">5V</text>
@@ -363,11 +363,11 @@
 <text x="37.338" y="70.358" size="0.6096" layer="21">ADDR1</text>
 <text x="66.548" y="126.746" size="0.6096" layer="21">LED</text>
 <text x="8.382" y="126.8382" size="0.6096" layer="21">I2C</text>
-<text x="67.056" y="6.604" size="0.6096" layer="21">RoboScope v1.0</text>
+<text x="62.738" y="6.858" size="1.016" layer="21">RoboScope v1.0</text>
 <text x="35.56" y="105.156" size="0.6096" layer="21">MMS2</text>
 <text x="39.624" y="105.156" size="0.6096" layer="21">MMS1</text>
-<text x="63.246" y="4.572" size="0.6096" layer="21">Thomas Sanchez Lengeling</text>
-<text x="67.564" y="5.588" size="0.6096" layer="21">MIT Media Lab</text>
+<text x="55.88" y="3.81" size="1.016" layer="21">Thomas Sanchez Lengeling</text>
+<text x="64.008" y="5.334" size="1.016" layer="21">MIT Media Lab</text>
 <text x="2.54" y="124.46" size="0.6096" layer="21">SCL</text>
 <text x="41.148" y="8.89" size="0.8128" layer="21">HIGH</text>
 <text x="41.148" y="6.858" size="0.8128" layer="21">LOW</text>
@@ -3215,13 +3215,10 @@ design rules under a new name.</description>
 <via x="46.99" y="51.054" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="VCC_MCU" class="3">
-<contactref element="U$4" pad="3"/>
 <contactref element="POWER_MCU" pad="1"/>
-<contactref element="C7" pad="1"/>
 <contactref element="Z3120V" pad="A"/>
 <contactref element="U1" pad="4"/>
 <contactref element="U1" pad="2"/>
-<contactref element="SMAT70A" pad="C"/>
 <contactref element="U1" pad="5"/>
 <wire x1="32.056" y1="77.47" x2="30.734" y2="77.47" width="0.3048" layer="1"/>
 <wire x1="27.473" y1="74.209" x2="25.5778" y2="74.209" width="0.3048" layer="1"/>
@@ -3229,13 +3226,10 @@ design rules under a new name.</description>
 <wire x1="21.1582" y1="74.209" x2="25.5778" y2="74.209" width="0.3048" layer="1"/>
 <wire x1="21.1582" y1="75.509" x2="19.812" y2="75.509" width="0.3048" layer="1"/>
 <wire x1="19.812" y1="75.509" x2="18.559" y2="75.509" width="0.3048" layer="1"/>
-<wire x1="18.559" y1="75.509" x2="18.288" y2="75.78" width="0.3048" layer="1"/>
 <wire x1="20.1073" y1="74.49713125" x2="20.1073" y2="75.2137" width="0.3048" layer="1"/>
 <wire x1="20.1073" y1="75.2137" x2="19.812" y2="75.509" width="0.3048" layer="1"/>
 <wire x1="21.1582" y1="74.209" x2="20.39543125" y2="74.209" width="0.3048" layer="1"/>
 <wire x1="20.39543125" y1="74.209" x2="20.1073" y2="74.49713125" width="0.3048" layer="1"/>
-<wire x1="13.085" y1="80.983" x2="10.004" y2="80.983" width="0.3048" layer="1"/>
-<wire x1="18.288" y1="75.78" x2="17.6015375" y2="76.4664625" width="0.3048" layer="1"/>
 <wire x1="15.419909375" y1="78.648090625" x2="15.284" y2="78.784" width="0.3048" layer="1"/>
 <wire x1="15.284" y1="78.784" x2="13.085" y2="80.983" width="0.3048" layer="1"/>
 <wire x1="17.6015375" y1="76.4664625" x2="16.9260375" y2="76.4664625" width="0.3048" layer="1"/>
@@ -3251,12 +3245,18 @@ design rules under a new name.</description>
 <wire x1="19.05" y1="83.058" x2="20.32" y2="83.058" width="0.3048" layer="16"/>
 <via x="20.32" y="83.058" extent="1-16" drill="0.35"/>
 <wire x1="20.32" y1="83.058" x2="20.418" y2="83.156" width="0.3048" layer="1"/>
-<wire x1="20.418" y1="83.156" x2="20.418" y2="85.286" width="0.3048" layer="1"/>
 <wire x1="16.256" y1="89.526" x2="17.39" y2="88.392" width="0.3048" layer="1"/>
 <wire x1="17.39" y1="88.392" x2="18.288" y2="88.392" width="0.3048" layer="1"/>
 <via x="18.288" y="88.392" extent="1-16" drill="0.35"/>
 <wire x1="18.288" y1="88.392" x2="20.32" y2="86.36" width="0.3048" layer="16"/>
 <wire x1="20.32" y1="86.36" x2="20.32" y2="83.058" width="0.3048" layer="16"/>
+<contactref element="U$4" pad="3"/>
+<contactref element="C7" pad="1"/>
+<contactref element="SMAT70A" pad="C"/>
+<wire x1="20.32" y1="86.36" x2="20.418" y2="85.286" width="0" layer="19" extent="1-16"/>
+<wire x1="18.288" y1="75.78" x2="17.6015375" y2="76.4664625" width="0" layer="19" extent="1-1"/>
+<wire x1="18.559" y1="75.509" x2="18.288" y2="75.78" width="0" layer="19" extent="1-1"/>
+<wire x1="10.004" y1="80.983" x2="13.085" y2="80.983" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC_5V" class="4">
 <contactref element="MOTOR_01" pad="FAULT"/>
@@ -4853,7 +4853,12 @@ design rules under a new name.</description>
 <wire x1="5" y1="81" x2="4.924" y2="80.983" width="0.2" layer="1"/>
 <wire x1="16.2" y1="85.2" x2="16.256" y2="85.226" width="0.2" layer="1"/>
 </signal>
-<signal name="N$6">
+<signal name="N$4">
+<contactref element="SMAJ24A" pad="C"/>
+<contactref element="R1" pad="1"/>
+<wire x1="24.7" y1="85.3" x2="24.7" y2="81.6" width="0.2" layer="1"/>
+<wire x1="24.7" y1="81.6" x2="24.726" y2="81.534" width="0.2" layer="1"/>
+<wire x1="24.7" y1="85.3" x2="24.65" y2="85.312" width="0.2" layer="1"/>
 <contactref element="U1" pad="6"/>
 <contactref element="C1" pad="2"/>
 <wire x1="23.1" y1="76.6" x2="23.1" y2="78.7" width="0.2" layer="1"/>
@@ -4861,13 +4866,7 @@ design rules under a new name.</description>
 <wire x1="25.5" y1="74.9" x2="24.8" y2="74.9" width="0.2" layer="1"/>
 <wire x1="23.1" y1="78.7" x2="23.026" y2="78.74" width="0.2" layer="1"/>
 <wire x1="25.5" y1="74.9" x2="25.5778" y2="74.859" width="0.2" layer="1"/>
-</signal>
-<signal name="N$4">
-<contactref element="SMAJ24A" pad="C"/>
-<contactref element="R1" pad="1"/>
-<wire x1="24.7" y1="85.3" x2="24.7" y2="81.6" width="0.2" layer="1"/>
-<wire x1="24.7" y1="81.6" x2="24.726" y2="81.534" width="0.2" layer="1"/>
-<wire x1="24.7" y1="85.3" x2="24.65" y2="85.312" width="0.2" layer="1"/>
+<wire x1="23.026" y1="78.74" x2="24.726" y2="81.534" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -4922,6 +4921,8 @@ design rules under a new name.</description>
 <approved hash="23,1,1287f8940afa0270"/>
 <approved hash="23,1,a31edfe2dee1a21d"/>
 <approved hash="23,16,182de7d1e6b6194a"/>
+<approved hash="19,1,3c33c1a30214270c"/>
+<approved hash="19,1,b8b2e8ad0c1ae871"/>
 </errors>
 </board>
 </drawing>

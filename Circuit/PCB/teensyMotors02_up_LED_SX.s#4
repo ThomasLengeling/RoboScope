@@ -5075,17 +5075,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="VCC_MCU" class="3">
 <segment>
-<wire x1="-167.64" y1="30.48" x2="-180.34" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-180.34" y1="30.48" x2="-180.34" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="-167.64" y1="17.78" x2="-167.64" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-167.64" y="30.48"/>
-<pinref part="U$4" gate="G$1" pin="OUT"/>
-<wire x1="-167.64" y1="30.48" x2="-154.94" y2="30.48" width="0.1524" layer="91"/>
-<label x="-180.34" y="-12.7" size="1.016" layer="95" rot="R270" xref="yes"/>
-<pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="Z3120V" gate="G$1" pin="A"/>
-<wire x1="-154.94" y1="30.48" x2="-147.32" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-147.32" y1="30.48" x2="-86.36" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-116.84" y1="2.54" x2="-147.32" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-147.32" y1="2.54" x2="-147.32" y2="-20.32" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="IN"/>
@@ -5097,14 +5087,25 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-71.12" y1="-38.1" x2="-147.32" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="-147.32" y1="-38.1" x2="-147.32" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="-147.32" y="-25.4"/>
-<wire x1="-147.32" y1="2.54" x2="-147.32" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-147.32" y="2.54"/>
-<pinref part="SMAT70A" gate="G$1" pin="C"/>
-<wire x1="-154.94" y1="30.48" x2="-154.94" y2="15.24" width="0.1524" layer="91"/>
-<junction x="-154.94" y="30.48"/>
 <pinref part="U1" gate="A" pin="*SHDN"/>
 <wire x1="-73.66" y1="-25.4" x2="-71.12" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="-25.4" x2="-71.12" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="OUT"/>
+<pinref part="SMAT70A" gate="G$1" pin="C"/>
+<wire x1="-180.34" y1="30.48" x2="-180.34" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="30.48" x2="-180.34" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="-167.64" y1="17.78" x2="-167.64" y2="30.48" width="0.1524" layer="91"/>
+<junction x="-167.64" y="30.48"/>
+<wire x1="-167.64" y1="30.48" x2="-154.94" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-154.94" y1="30.48" x2="-154.94" y2="15.24" width="0.1524" layer="91"/>
+<junction x="-154.94" y="30.48"/>
+<wire x1="-154.94" y1="30.48" x2="-147.32" y2="30.48" width="0.1524" layer="91"/>
+<label x="-180.34" y="-12.7" size="1.016" layer="95" rot="R270" xref="yes"/>
+<wire x1="-147.32" y1="30.48" x2="-86.36" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="2.54" x2="-147.32" y2="30.48" width="0.1524" layer="91"/>
+<junction x="-147.32" y="2.54"/>
+<junction x="-147.32" y="30.48"/>
 </segment>
 <segment>
 <pinref part="POWER_MCU" gate="G$1" pin="1"/>
@@ -5853,8 +5854,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-142.24" y1="-17.78" x2="-142.24" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="N$4" class="0">
 <segment>
+<pinref part="SMAJ24A" gate="G$1" pin="C"/>
+<wire x1="-154.94" y1="-2.54" x2="-154.94" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="-43.18" x2="-127" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-127" y1="-43.18" x2="-154.94" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-127" y1="-43.18" x2="-127" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="-127" y="-43.18"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="U1" gate="A" pin="VSS"/>
 <wire x1="-73.66" y1="-22.86" x2="-66.04" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -5863,17 +5871,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-66.04" y1="-43.18" x2="-53.34" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="-22.86" x2="-66.04" y2="-43.18" width="0.1524" layer="91"/>
 <junction x="-66.04" y="-43.18"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="SMAJ24A" gate="G$1" pin="C"/>
-<wire x1="-154.94" y1="-2.54" x2="-154.94" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="-43.18" x2="-127" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-127" y1="-43.18" x2="-154.94" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-127" y1="-43.18" x2="-127" y2="-50.8" width="0.1524" layer="91"/>
-<junction x="-127" y="-43.18"/>
-<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
@@ -5889,6 +5886,21 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="204,1,-88.9,124.46,U$3,VBAT,,,,"/>
+<approved hash="110,1,238.76,-121.92,CAN_H,CAN_L,,,,"/>
+<approved hash="110,1,238.76,-121.92,CAN_H,CAN_L,,,,"/>
+<approved hash="110,1,584.2,-121.92,CAN_H2,CAN_L2,,,,"/>
+<approved hash="110,1,584.2,-121.92,CAN_H2,CAN_L2,,,,"/>
+<approved hash="113,1,252.137,-109.383,CAN_INPUT,,,,,"/>
+<approved hash="113,1,-81.7626,22.86,U$4,,,,,"/>
+<approved hash="113,1,-27.94,30.5537,S1,,,,,"/>
+<approved hash="113,1,252.063,-124.623,CAN_INPUT1,,,,,"/>
+<approved hash="113,1,195.743,-93.3027,J1,,,,,"/>
+<approved hash="113,1,597.503,-109.383,CAN_INPUT4,,,,,"/>
+<approved hash="113,1,597.503,-124.623,CAN_INPUT5,,,,,"/>
+<approved hash="113,1,541.183,-93.3027,J2,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>

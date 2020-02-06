@@ -12,7 +12,11 @@
 #include <SparkFunSX1509.h>
 #include "Timer.h"
 
-const byte SX1509_ADDRESS_00 = 0x3E;
+// default
+//const byte SX1509_ADDRESS_00 = 0x3E;
+
+//
+const byte SX1509_ADDRESS_00 = 0x3F;
 
 class InterfacePanel {
   public:

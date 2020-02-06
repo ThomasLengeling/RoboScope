@@ -47,7 +47,7 @@
 
 //Global Values
 #define GMOTOR_STEPS  200*16  // 200 200 * 16
-#define GRPM          120 //120
+#define GRPM          200 //120
 
 //Global pin values
 #define GENABLE_PIN    33
