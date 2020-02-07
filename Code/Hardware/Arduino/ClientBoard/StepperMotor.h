@@ -26,17 +26,19 @@ class StepperMotor {
       M1_PIN = m1_pin;
 
       //enable the motor
-      //pinMode(ENABLE_PIN, OUTPUT);
-      //digitalWrite(ENABLE_PIN, HIGH);
-
-      //limit timer
-      mLimitTimer = new Timer(500);
-
-      //lock the state of the motor
-      lock = false;
+      pinMode(ENABLE_PIN, OUTPUT);
+      digitalWrite(ENABLE_PIN, HIGH);
+      enableMotor = true;
 
       //init motor driver
       motor = new DRV8880(motorSteps, DIR_PIN, STEP_PIN);// ENABLE_PIN, M0_PIN, M1_PIN);
+
+      //limit timer
+      timerBack = new Timer(500);
+
+      //lock the state of the motor
+      motorLock = false;
+      stopMotor = false;
 
     }
 
@@ -58,106 +60,66 @@ class StepperMotor {
       motor->enable();
     }
 
-
-    //-----------------------------------------------------------
-    void stop() {
-      motor->stop();
-    }
-
-    //-----------------------------------------------------------
-    void startMoveForward(int steps) {
-      motor->startMove( -1 * (steps * motorSteps) );
-    }
-
-    //-----------------------------------------------------------
-    void startMoveBackward(int steps) {
-      motor->startMove(steps * motorSteps);
-    }
-
-    //-----------------------------------------------------------
-    void startMoveForwardSteps(int steps) {
-      motor->startMove( -1 * steps);
-    }
-
-    //-----------------------------------------------------------
-    void startMoveBackwardSteps(int steps) {
-      motor->startMove(steps);
-    }
-
-    //-----------------------------------------------------------
-    unsigned  getNextAction() {
-      return motor->nextAction();
-    }
-
-    //-----------------------------------------------------------
-    void moveForward() {
-      motor->setMicrostep(1);
+    void moveUp() {
       motor->move(-motorSteps);
     }
 
-    //-----------------------------------------------------------
-    void moveBackward() {
-      motor->setMicrostep(1);
+    void startMoveUp(int steps) {
+      motor->startMove(steps * -motorSteps);
+    }
+
+    void startMoveDown(int steps) {
+      motor->startMove(steps * motorSteps);
+    }
+
+    unsigned getNextAction() {
+      return motor->nextAction();
+    }
+
+    void stop() {
+      motor->disable();
+    }
+
+    void moveDown() {
       motor->move(motorSteps);
     }
 
-    //-----------------------------------------------------------
-    void moveForwardMicro(int step) {
-      motor->setMicrostep(step);
-      motor->move(step * -motorSteps);
-    }
-
-    /*
-       Logic high to enable device outputs and internal indexer
-       Enable driver input logic low to disable; internal pulldown
-    */
     void enable() {
-     // digitalWrite(ENABLE_PIN, HIGH);
+      digitalWrite(ENABLE_PIN, HIGH);
+      enableMotor = true;
     }
-
     void disable() {
-    //  digitalWrite(ENABLE_PIN, LOW);
+      digitalWrite(ENABLE_PIN, LOW);
+      enableMotor = false;
     }
 
-    //update motor states
-    void update(){
-      mLimitTimer->update(millis());
 
-      if(!mLimitTimer->isDone()){
-        lock = true;
-        Serial.println("lock");
-      }else{
-        lock = false;
+    bool updateLock(unsigned long time) {
+      timerBack->update(time);
+      if (timerBack->isDone()) {
+        timerBack->reset();
+        return true;
       }
+      return false;
     }
 
-    void changeState(){
-      
+    //activate limit
+    void activeLimit() {
+      stopMotor = true;
+      motorLock = false;
     }
 
-    void resetLock(){
-      mLimitTimer->reset();
-      lock = true;
+    void resetlimit() {
+      motorLock = true;
+      stopMotor = false;
     }
 
-    boolean isLock(){
-      return lock;
-    }
-    
-    /*
-
-
-    */
-    void sleep() {
-
-
+    bool isMotorStop() {
+      return stopMotor;
     }
 
-
-    //-----------------------------------------------------------
-    void moveBackwardMicro(int step) {
-      motor->setMicrostep(step);
-      motor->move(-step * motorSteps);
+    bool isMotorLock() {
+      return motorLock;
     }
 
     //print out information
@@ -200,11 +162,15 @@ class StepperMotor {
     //driver id;
     int id;
 
+    boolean enableMotor;
+
     //DRV8880 class
     DRV8880  * motor;
-    Timer    * mLimitTimer;
 
-    boolean   lock;
+    boolean  motorLock;
+    boolean stopMotor;
+
+    Timer    * timerBack;
 };
 
 #endif

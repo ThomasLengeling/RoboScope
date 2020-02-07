@@ -13,7 +13,7 @@
 
 class UrbanPanel {
   public:
-    //constructor
+    // constructor
     UrbanPanel(int panelId);
 
     // returns the state of interface (sensor output, all button states, LEDs)
@@ -58,7 +58,7 @@ class UrbanPanel {
 
 
     void moveMotor(int motorID, int motorStep);
-    
+
 
     void interpretMsg(uint8_t msg[]);
 
@@ -70,13 +70,13 @@ class UrbanPanel {
     void setup();
 
      InterfacePanel * interfacePanel;
-     
+
   private:
     // ID for the pixel (also used for the motor ID)
     int id;
 
     MotorPanel * motorPanel;
-   
+
 
     // variable that keeps track of whether or not elements in the urban panel changed (i.e. motor moved, buttons pressed, etc)
     bool stateChanged;
