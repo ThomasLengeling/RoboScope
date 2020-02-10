@@ -36,6 +36,7 @@ int UrbanPixel::getLimitSwitchState() {
 
 // timer for moving up and down the motor in parallel with others
 // Also checks the limits of the motor to make sure movment is bounded
+// Have this run in the main update loop
 void UrbanPixel::updateMotorPositions(boolean *limitActivated) {
   if (motor->isMotorStop()) {
     motor->disable();
