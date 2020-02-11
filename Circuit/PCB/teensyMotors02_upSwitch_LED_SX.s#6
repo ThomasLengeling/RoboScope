@@ -7280,18 +7280,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <library name="SX1509_s">
 <packages>
 <package name="SX1509">
-<wire x1="-12.7" y1="16.51" x2="-12.7" y2="12.7" width="0.2032" layer="21"/>
-<wire x1="-12.7" y1="12.7" x2="-11.43" y2="11.43" width="0.2032" layer="21"/>
-<wire x1="-11.43" y1="11.43" x2="-11.43" y2="-13.97" width="0.2032" layer="21"/>
-<wire x1="-11.43" y1="-13.97" x2="-12.7" y2="-15.24" width="0.2032" layer="21"/>
-<wire x1="-12.7" y1="-15.24" x2="-12.7" y2="-19.05" width="0.2032" layer="21"/>
-<wire x1="-12.7" y1="-19.05" x2="12.7" y2="-19.05" width="0.2032" layer="21"/>
-<wire x1="12.7" y1="-19.05" x2="12.7" y2="-15.24" width="0.2032" layer="21"/>
-<wire x1="12.7" y1="-15.24" x2="11.43" y2="-13.97" width="0.2032" layer="21"/>
-<wire x1="11.43" y1="-13.97" x2="11.43" y2="11.43" width="0.2032" layer="21"/>
-<wire x1="11.43" y1="11.43" x2="12.7" y2="12.7" width="0.2032" layer="21"/>
-<wire x1="12.7" y1="12.7" x2="12.7" y2="16.51" width="0.2032" layer="21"/>
-<wire x1="12.7" y1="16.51" x2="-12.7" y2="16.51" width="0.2032" layer="21"/>
+<wire x1="-12.7" y1="16.51" x2="-12.7" y2="12.7" width="0.2032" layer="48"/>
+<wire x1="-12.7" y1="12.7" x2="-11.43" y2="11.43" width="0.2032" layer="48"/>
+<wire x1="-11.43" y1="11.43" x2="-11.43" y2="-13.97" width="0.2032" layer="48"/>
+<wire x1="-11.43" y1="-13.97" x2="-12.7" y2="-15.24" width="0.2032" layer="48"/>
+<wire x1="-12.7" y1="-15.24" x2="-12.7" y2="-19.05" width="0.2032" layer="48"/>
+<wire x1="-12.7" y1="-19.05" x2="12.7" y2="-19.05" width="0.2032" layer="48"/>
+<wire x1="12.7" y1="-19.05" x2="12.7" y2="-15.24" width="0.2032" layer="48"/>
+<wire x1="12.7" y1="-15.24" x2="11.43" y2="-13.97" width="0.2032" layer="48"/>
+<wire x1="11.43" y1="-13.97" x2="11.43" y2="11.43" width="0.2032" layer="48"/>
+<wire x1="11.43" y1="11.43" x2="12.7" y2="12.7" width="0.2032" layer="48"/>
+<wire x1="12.7" y1="12.7" x2="12.7" y2="16.51" width="0.2032" layer="48"/>
+<wire x1="12.7" y1="16.51" x2="-12.7" y2="16.51" width="0.2032" layer="48"/>
 <text x="-6.5532" y="-2.54" size="0.9144" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">VC1</text>
 <text x="-6.5532" y="10.16" size="0.8636" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">GND</text>
 <text x="-6.35" y="13.97" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-right">!INT</text>
@@ -7936,8 +7936,8 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="1"/>
-<wire x1="99.06" y1="132.08" x2="101.6" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="132.08" x2="91.44" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="132.08" x2="93.98" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="132.08" x2="91.44" y2="132.08" width="0.1524" layer="91"/>
 <label x="91.44" y="132.08" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
@@ -8187,6 +8187,41 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="294.64" y1="-25.4" x2="294.64" y2="-30.48" width="0.1524" layer="91"/>
 <label x="294.64" y="-30.48" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="299.72" y1="-76.2" x2="299.72" y2="-78.74" width="0.1524" layer="91"/>
+<label x="299.72" y="-78.74" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="299.72" y1="-114.3" x2="299.72" y2="-116.84" width="0.1524" layer="91"/>
+<label x="299.72" y="-119.38" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="302.26" y1="-152.4" x2="302.26" y2="-157.48" width="0.1524" layer="91"/>
+<label x="302.26" y="-157.48" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="381" y1="-149.86" x2="381" y2="-152.4" width="0.1524" layer="91"/>
+<label x="381" y="-152.4" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R16" gate="G$1" pin="1"/>
+<wire x1="381" y1="-116.84" x2="381" y2="-121.92" width="0.1524" layer="91"/>
+<label x="381" y="-121.92" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R14" gate="G$1" pin="1"/>
+<wire x1="381" y1="-76.2" x2="381" y2="-81.28" width="0.1524" layer="91"/>
+<label x="381" y="-81.28" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="375.92" y1="-25.4" x2="375.92" y2="-30.48" width="0.1524" layer="91"/>
+<label x="375.92" y="-30.48" size="1.016" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="VCC_5V" class="4">
@@ -8971,14 +9006,13 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 </net>
 <net name="10_SX3" class="0">
 <segment>
-<pinref part="SW1" gate="G$1" pin="15"/>
-<wire x1="48.26" y1="38.1" x2="45.72" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="38.1" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="38.1" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="38.1" x2="78.74" y2="55.88" width="0.1524" layer="91"/>
-<junction x="78.74" y="38.1"/>
 <pinref part="R33" gate="G$1" pin="1"/>
 <label x="101.6" y="38.1" size="1.016" layer="95" xref="yes"/>
+<pinref part="SW1" gate="G$1" pin="15"/>
+<wire x1="48.26" y1="38.1" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
+<junction x="78.74" y="38.1"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="10"/>
@@ -9100,24 +9134,19 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <pinref part="CONN01" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="SCL"/>
-<wire x1="490.22" y1="190.5" x2="495.3" y2="190.5" width="0.1524" layer="91"/>
-<label x="495.3" y="190.5" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="SDA"/>
-<wire x1="490.22" y1="185.42" x2="495.3" y2="185.42" width="0.1524" layer="91"/>
-<label x="495.3" y="185.42" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="SCL"/>
-<wire x1="723.9" y1="195.58" x2="726.44" y2="195.58" width="0.1524" layer="91"/>
-<label x="726.44" y="195.58" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="SCL"/>
 <wire x1="929.64" y1="198.12" x2="934.72" y2="198.12" width="0.1524" layer="91"/>
 <label x="934.72" y="198.12" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="SCL"/>
+<wire x1="723.9" y1="195.58" x2="728.98" y2="195.58" width="0.1524" layer="91"/>
+<label x="728.98" y="195.58" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="SCL"/>
+<wire x1="490.22" y1="190.5" x2="495.3" y2="190.5" width="0.1524" layer="91"/>
+<label x="495.3" y="190.5" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="CAN_TX2" class="0">
@@ -9144,20 +9173,19 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <pinref part="CONN01" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="SDA"/>
-<wire x1="723.9" y1="190.5" x2="728.98" y2="190.5" width="0.1524" layer="91"/>
-<label x="726.44" y="190.5" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="SDA"/>
 <wire x1="929.64" y1="193.04" x2="934.72" y2="193.04" width="0.1524" layer="91"/>
 <label x="934.72" y="193.04" size="1.016" layer="95" xref="yes"/>
 </segment>
-</net>
-<net name="N$4" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="INT"/>
-<wire x1="490.22" y1="165.1" x2="495.3" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="SDA"/>
+<wire x1="723.9" y1="190.5" x2="728.98" y2="190.5" width="0.1524" layer="91"/>
+<label x="728.98" y="190.5" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="SDA"/>
+<wire x1="490.22" y1="185.42" x2="495.3" y2="185.42" width="0.1524" layer="91"/>
+<label x="495.3" y="185.42" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -9172,6 +9200,11 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <wire x1="33.02" y1="127" x2="27.94" y2="127" width="0.1524" layer="91"/>
 <label x="27.94" y="127" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="INT"/>
+<wire x1="490.22" y1="165.1" x2="495.3" y2="165.1" width="0.1524" layer="91"/>
+<label x="497.84" y="165.1" size="1.016" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="INT_02" class="0">
 <segment>
@@ -9179,19 +9212,19 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <wire x1="55.88" y1="127" x2="60.96" y2="127" width="0.1524" layer="91"/>
 <label x="60.96" y="127" size="1.016" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="INT"/>
+<wire x1="723.9" y1="170.18" x2="728.98" y2="170.18" width="0.1524" layer="91"/>
+<label x="731.52" y="170.18" size="1.016" layer="95" xref="yes"/>
+</segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,287.02,60.96,LED1,VDD,VCC_5V,,,"/>
-<approved hash="104,1,287.02,35.56,LED1,GND,GND_MCU,,,"/>
-<approved hash="106,1,55.88,149.86,CAN_TX2,,,,,"/>
-<approved hash="106,1,63.5,35.56,N$1,,,,,"/>
-<approved hash="106,1,63.5,33.02,N$9,,,,,"/>
-<approved hash="106,1,299.72,43.18,N$13,,,,,"/>
-<approved hash="106,1,462.28,213.36,OSCIO_SX1,,,,,"/>
-<approved hash="106,1,683.26,208.28,OSCIO_SX2,,,,,"/>
+<approved hash="106,1,899.16,220.98,0_SX3,,,,,"/>
+<approved hash="106,1,899.16,215.9,1_SX3,,,,,"/>
+<approved hash="106,1,929.64,172.72,N$25,,,,,"/>
 <approved hash="113,1,32.3427,266.863,M_01,,,,,"/>
 <approved hash="113,1,83.1427,266.863,M_02,,,,,"/>
 <approved hash="113,1,131.403,266.863,M_03,,,,,"/>
@@ -9200,10 +9233,9 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <approved hash="113,1,83.1427,231.303,M_06,,,,,"/>
 <approved hash="113,1,131.403,231.303,M_07,,,,,"/>
 <approved hash="113,1,174.583,231.303,M_08,,,,,"/>
-<approved hash="113,1,287.542,48.26,LED1,,,,,"/>
-<approved hash="113,1,431.8,102.537,SJ1,,,,,"/>
-<approved hash="113,1,647.7,97.4569,SJ6,,,,,"/>
 <approved hash="113,1,134.62,133.563,S2,,,,,"/>
+<approved hash="113,1,88.6629,147.094,JP2,,,,,"/>
+<approved hash="113,1,99.2971,129.766,JP3,,,,,"/>
 </errors>
 </schematic>
 </drawing>

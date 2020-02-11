@@ -5229,9 +5229,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="C1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="6"/>
-<wire x1="-22.86" y1="22.86" x2="-17.78" y2="22.86" width="0.1524" layer="91"/>
-<label x="-17.78" y="22.86" size="1.016" layer="95" xref="yes"/>
+<pinref part="S1" gate="G$1" pin="3"/>
+<wire x1="-22.86" y1="30.48" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
+<label x="-17.78" y="30.48" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="STATUS_PIN" class="0">

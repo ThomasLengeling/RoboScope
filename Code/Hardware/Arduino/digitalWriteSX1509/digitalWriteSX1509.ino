@@ -119,35 +119,35 @@ void setup()
   } else {
     Serial.println("Connected 00");
   }
-/*
-  if (!sx02.begin(SX1509_ADDRESS_11) )
-  {
-    Serial.println(SX1509_ADDRESS_11);
-    Serial.println("Failed 02");
-    while (1) ; // If we fail to communicate, loop forever.
-  } else {
-    Serial.println("Connected 02");
-  }
-/*
-  // Call io.begin(<address>) to initialize the SX1509. If it
-  // successfully communicates, it'll return 1.
+  /*
+    if (!sx02.begin(SX1509_ADDRESS_11) )
+    {
+      Serial.println(SX1509_ADDRESS_11);
+      Serial.println("Failed 02");
+      while (1) ; // If we fail to communicate, loop forever.
+    } else {
+      Serial.println("Connected 02");
+    }
+    /*
+    // Call io.begin(<address>) to initialize the SX1509. If it
+    // successfully communicates, it'll return 1.
 
-  int count = 0;
-  if (!sx01.begin(SX1509_ADDRESS_01))
-  {
-    Serial.println(SX1509_ADDRESS_01);
-    Serial.println("Failed sx 01");
-  } else {
-    Serial.println("Connected 01");
-  }
+    int count = 0;
+    if (!sx01.begin(SX1509_ADDRESS_01))
+    {
+      Serial.println(SX1509_ADDRESS_01);
+      Serial.println("Failed sx 01");
+    } else {
+      Serial.println("Connected 01");
+    }
 
-*/
+  */
   delay(2000);
   digitalWrite(13, LOW);
 
   // Call io.pinMode(<pin>, <mode>) to set an SX1509 pin as
   // an output:
-  
+
   sx00.pinMode(SX1509_01_SWITCH, INPUT);
   sx00.pinMode(SX1509_02_SWITCH, INPUT);
   sx00.pinMode(SX1509_03_SWITCH, INPUT);
@@ -219,58 +219,61 @@ void loop()
     }
   */
 
-  
-/*
-  if (sx02.digitalRead(SX1509_02_01_SWITCH_LED) == HIGH) {
-   // Serial.println("pressed 1 button sx02");
-  }
 
-  if (sx01.digitalRead(SX1509_01_01_SWITCH_LED) == HIGH) {
-  //  Serial.println("pressed 1 button sx01");
-  }
+  /*
+    if (sx02.digitalRead(SX1509_02_01_SWITCH_LED) == HIGH) {
+     // Serial.println("pressed 1 button sx02");
+    }
 
-  if (sx01.digitalRead(SX1509_01_02_SWITCH_LED) == HIGH) {
-  //  Serial.println("pressed 2 LED sx01");
-  }
-*/
+    if (sx01.digitalRead(SX1509_01_01_SWITCH_LED) == HIGH) {
+    //  Serial.println("pressed 1 button sx01");
+    }
+
+    if (sx01.digitalRead(SX1509_01_02_SWITCH_LED) == HIGH) {
+    //  Serial.println("pressed 2 LED sx01");
+    }
+  */
   //update the previous
   prevColorMode = colorMode;
 
   if (sx00.digitalRead(SX1509_01_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 1 LED");
+    Serial.println("pressed 1 LED HIGH");
     colorMode = 1;
     colorEnable = true;
-  } 
-  if (sx00.digitalRead(SX1509_02_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 2 LED");
+  }
+
+
+  if (sx00.digitalRead(SX1509_02_SWITCH_LED) == LOW) {
+    Serial.println("pressed 2 LED LOW");
     colorMode = 2;
     colorEnable = true;
-  } 
+  }
+
   if (sx00.digitalRead(SX1509_03_SWITCH_LED) == HIGH) {
     Serial.println("pressed 3 LED");
     colorMode = 3;
     colorEnable = true;
-  } 
+  }
   if (sx00.digitalRead(SX1509_04_SWITCH_LED) == HIGH) {
     Serial.println("pressed 4 LED");
     colorMode = 4;
     colorEnable = true;
-  } 
+  }
   if (sx00.digitalRead(SX1509_05_SWITCH_LED) == HIGH) {
     Serial.println("pressed 5 LED");
     colorMode = 5;
     colorEnable = true;
-  } 
+  }
   if (sx00.digitalRead(SX1509_06_SWITCH_LED) == HIGH) {
     Serial.println("pressed 6 LED");
     colorMode = 6;
     colorEnable = true;
-  } 
+  }
   if (sx00.digitalRead(SX1509_07_SWITCH_LED) == HIGH) {
     Serial.println("pressed 7 LED");
     colorMode = 7;
     colorEnable = true;
-  } 
+  }
   if (sx00.digitalRead(SX1509_08_SWITCH_LED) == HIGH) {
     Serial.println("pressed 8 LED");
     colorMode = 8;
@@ -304,7 +307,7 @@ void loop()
   }
 
 
-/*
+
   switch (colorMode) {
     case 0:
       for (int i = 0; i < NUMPIXELS; i++) {
@@ -377,5 +380,5 @@ void loop()
       pixels->show();
       break;
   }
-*/
+
 }
