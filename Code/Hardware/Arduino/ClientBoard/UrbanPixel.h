@@ -14,7 +14,11 @@
 class UrbanPixel {
   public:
     // constructor
-    UrbanPixel(int pixelId);
+    UrbanPixel(int pixelId, StepperMotor motor_c, Interface interface_c);
+
+    void setup();
+
+    void updateMotorPosition(boolean limitActivated);
 
     // Moves the pixel up
     void moveUp();
@@ -28,5 +32,9 @@ class UrbanPixel {
 
   private:
     int id;
+    StepperMotor * motor;
+    Interface * interface;
 
-}
+};
+
+#endif

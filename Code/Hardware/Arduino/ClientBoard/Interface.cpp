@@ -2,9 +2,9 @@
 
 //------------------------------------------------------------------------------
 // constructor
-Interface::Interface(int pushPin, int limitPin, SX1509 *sx) {
+Interface::Interface(int pushPin, int limitPin, SX1509 sx) {
 
-  sx00 = *sx;
+  sx00 = &sx;
 
   pushDownPin = pushPin;
   pushSwitchState = false;
@@ -19,28 +19,18 @@ Interface::Interface(int pushPin, int limitPin, SX1509 *sx) {
 void Interface::init() {
   // TODO: neopixels (do this at the urban panel stage?)
 
-  Serial.println("Setting up Mux:");
-
   sx00->pinMode(pushDownPin, INPUT_PULLUP);
   sx00->pinMode(limitSwitchPin, INPUT_PULLUP);
 
   sx00->enableInterrupt(pushDownPin, CHANGE );
-  sx00->enableInterrupt(limitSwithPin, CHANGE );
+  sx00->enableInterrupt(limitSwitchPin, CHANGE );
 
   sx00->debounceTime(4);
 
   sx00->debouncePin(pushDownPin);
-  sx00->debouncePin(limitSwithPin);
+  sx00->debouncePin(limitSwitchPin);
 
   pinMode(INTERRUPT_PIN_SWITCH, INPUT_PULLUP);
-}
-
-void Interface::setColor(int r, int g, int b){
-  // TODO
-}
-
-void Interface::setSubPixelColor(int i, int r, int g, int b) {
-  // TODO
 }
 
 bool Interface::getLimitSwitchState() {
@@ -55,7 +45,7 @@ bool Interface::getLimitState() {
   return false;
 }
 
-void resetLimitSwitch() {
+void resetLimitSwitch(){
   limitSwitchStatePrev = false;
   limitSwitchState = false;
 }
@@ -78,7 +68,7 @@ void resetPushSwitch() {
 }
 
 void Interface::updateLimitState() {
-  unsigned int intStatus = sx00.interruptSource();
+  unsigned int intStatus = sx00->interruptSource();
   // For debugging handiness, print the intStatus variable.
   // Each bit in intStatus represents a single SX1509 IO.
   // Serial.println("intStatus = " + String(intStatus, BIN));
@@ -119,11 +109,11 @@ void Interface::updateLimitState() {
 }
 
 void Interface::updatePushState() {
-  unsigned int intStatus = sx00.interruptSource();
+  unsigned int intStatus = sx00->interruptSource();
 }
 
 int Interface::getPushCurrentState() {
-  return sx00->digitialRead(pushDownPin);
+  return sx00->digitalRead(pushDownPin);
 }
 
 int Interface::getLimitCurrentState() {

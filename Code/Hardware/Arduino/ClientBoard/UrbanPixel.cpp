@@ -1,19 +1,22 @@
 #include "UrbanPixel.h"
-#include "StepperMotor.h"
-#include "Interface.h"
-#include "BoardPins.h"
+
+
 
 //------------------------------------------------------------------------------
 // constructor
-
-UrbanPixel::UrbanPixel(int pixelId) {
+UrbanPixel::UrbanPixel(int pixelId, StepperMotor motor_c, Interface interface_c) {
   id = pixelId;
 
-  int motorDirPins[]  = {DIR_PIN_01, DIR_PIN_02 , DIR_PIN_03, DIR_PIN_04, DIR_PIN_05, DIR_PIN_06, DIR_PIN_07, DIR_PIN_08};
-  int motorStepPins[] = {STEP_PIN_01, STEP_PIN_02, STEP_PIN_03, STEP_PIN_04, STEP_PIN_05, STEP_PIN_06, STEP_PIN_07, STEP_PIN_08};
+  // int motorDirPins[]  = {DIR_PIN_01, DIR_PIN_02 , DIR_PIN_03, DIR_PIN_04, DIR_PIN_05, DIR_PIN_06, DIR_PIN_07, DIR_PIN_08};
+  // int motorStepPins[] = {STEP_PIN_01, STEP_PIN_02, STEP_PIN_03, STEP_PIN_04, STEP_PIN_05, STEP_PIN_06, STEP_PIN_07, STEP_PIN_08};
 
-  motor = new StepperMotor(id, GMOTOR_STEPS, motorDirPins[id], motorStepPins[id], GENABLE_PIN, GM0_PIN, GM1_PIN);
-  interface = new Interface();
+  motor = &motor_c; //new StepperMotor(id, GMOTOR_STEPS, motorDirPins[id], motorStepPins[id], GENABLE_PIN, GM0_PIN, GM1_PIN);
+  interface = &interface_c; //new Interface(pushDownPin, limitSwitchPin, sx);
+}
+
+void UrbanPixel::setup() {
+  interface->init();
+  motor->init();
 }
 
 /*
@@ -37,7 +40,7 @@ int UrbanPixel::getLimitSwitchState() {
 // timer for moving up and down the motor in parallel with others
 // Also checks the limits of the motor to make sure movment is bounded
 // Have this run in the main update loop
-void UrbanPixel::updateMotorPositions(boolean *limitActivated) {
+void UrbanPixel::updateMotorPosition(boolean limitActivated) {
   if (motor->isMotorStop()) {
     motor->disable();
     Serial.println("waiting lock");
@@ -48,7 +51,7 @@ void UrbanPixel::updateMotorPositions(boolean *limitActivated) {
       if (lock) {
         motor->enable();
         motor->startMoveUp( 5 );
-        motor.resetlimit();
+        motor->resetlimit();
 
         Serial.print(id);
         Serial.println(": lock and back");
@@ -75,13 +78,13 @@ void UrbanPixel::updateMotorPositions(boolean *limitActivated) {
       interface->resetLimitSwitch();
     }
 
-    if (interface->getPushButtonState()) {
+    if (interface->getPushSwitchState()) {
       motor->activeLimit();
       Serial.print(id);
       Serial.println(": push down");
     }
 
-    if (interface->getPushButtonState()){
+    if (interface->getPushState()){
       interface->resetPushSwitch();
     }
   }
@@ -89,10 +92,14 @@ void UrbanPixel::updateMotorPositions(boolean *limitActivated) {
 }
 
 
-void UrbanPixel::moveUp(int steps = 10){
-  motor->startMoveUp( steps );
+void UrbanPixel::moveUp(){
+  motor->startMoveUp( 10 );
 }
 
 void UrbanPixel::moveDown(){
-  motor->startMoveDown( steps );
+  motor->startMoveDown( 10 );
+}
+
+void UrbanPixel::stop(){
+  motor->stop();
 }
