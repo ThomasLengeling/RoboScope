@@ -45,7 +45,7 @@ bool Interface::getLimitState() {
   return false;
 }
 
-void resetLimitSwitch(){
+void Interface::resetLimitSwitch(){
   limitSwitchStatePrev = false;
   limitSwitchState = false;
 }
@@ -62,7 +62,7 @@ bool Interface::getPushState() {
   return false;
 }
 
-void resetPushSwitch() {
+void Interface::resetPushSwitch() {
   pushSwitchStatePrev = false;
   pushSwitchState = false;
 }
@@ -77,12 +77,12 @@ void Interface::updateLimitState() {
   // the input:
   Serial.print("limit ");
 
-  unsigned state = intStatus & (1 << limitSwitchPin);
+  unsigned limitState = intStatus & (1 << limitSwitchPin);
 
   limitSwitchStatePrev = limitSwitchState;
-  limitSwitchState = state;
+  limitSwitchState = limitState;
 
-  Serial.print(bool(state));
+  Serial.print(bool(limitState));
   Serial.print("-");
   Serial.print(limitSwitchState);
   Serial.print("-");
@@ -92,12 +92,12 @@ void Interface::updateLimitState() {
   Serial.println();
 
   Serial.print("push ");
-  unsigned state = intStatus & (1 << pushDownPin);
+  unsigned pushDownState = intStatus & (1 << pushDownPin);
 
   pushSwitchStatePrev = pushSwitchState;
-  pushSwitchState = state;
+  pushSwitchState = pushDownState;
 
-  Serial.print(bool(state));
+  Serial.print(bool(pushDownState));
   Serial.print("-");
   Serial.print(pushSwitchState);
   Serial.print("-");

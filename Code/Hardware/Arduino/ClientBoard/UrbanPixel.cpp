@@ -61,13 +61,15 @@ void UrbanPixel::updateMotorPosition(boolean limitActivated) {
 
   unsigned waitTimeMicros = motor->getNextAction();
   if (waitTimeMicros <= 0) {
-    motor->disable();
-    Serial.print(id);
-    Serial.println(": stop motor");
+    //motor->disable();
+    //Serial.print(id);
+    //Serial.println(": stop motor");
   }
 
   if (limitActivated) {
+    
     interface->updateLimitState();
+    
     if (interface->getLimitSwitchState()) {
       motor->activeLimit();
       Serial.println(id);
@@ -93,11 +95,12 @@ void UrbanPixel::updateMotorPosition(boolean limitActivated) {
 
 
 void UrbanPixel::moveUp(){
-  motor->startMoveUp( 10 );
+  motor->enable();
+  motor->startMoveUp( 55 );
 }
 
 void UrbanPixel::moveDown(){
-  motor->startMoveDown( 10 );
+  motor->startMoveDown( 55 );
 }
 
 void UrbanPixel::stop(){

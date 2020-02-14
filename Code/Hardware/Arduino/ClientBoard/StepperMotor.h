@@ -5,6 +5,7 @@
 #define STEPPER_MOTOR_H
 
 #include <Arduino.h>
+#include "BoardPins.h"
 #include "DRV8880.h"
 #include "Timer.h"
 
@@ -53,6 +54,7 @@ class StepperMotor {
 
     //-----------------------------------------------------------
     void init() {
+      motor->setRPM(GRPM);
       motor->begin(rpm);
 
       // if using enable/disable on ENABLE pin (active LOW) instead of SLEEP uncomment next line

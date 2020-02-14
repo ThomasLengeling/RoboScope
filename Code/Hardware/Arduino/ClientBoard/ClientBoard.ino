@@ -25,12 +25,13 @@
 //Interface * interface_c;
 //StepperMotor * motor_c;
 
-UrbanPixel * urbanPixel;
+UrbanPixel * urbanPixel0;
 SX1509 sx;
 
 const byte SX1509_ADDRESS_00 = 0x3E;
 
 volatile boolean limitActivated = false;
+
 
 void setup(void)
 {
@@ -66,26 +67,44 @@ void setup(void)
   
   // The 0th pixel
   Interface interface_c = Interface(SX1509_01_SWITCH_LEDBOX, SX1509_01_SWITCH_STOP, sx);
+  Serial.println("Setting up the Interface");
+  
+  
   StepperMotor motor_c = StepperMotor(0, GMOTOR_STEPS, DIR_PIN_01, STEP_PIN_01, GENABLE_PIN, GM0_PIN, GM1_PIN);
-  urbanPixel = new UrbanPixel(0, motor_c, interface_c);
+  Serial.println("Setting up the motor");
+  
+  urbanPixel0 = new UrbanPixel(0, motor_c, interface_c);
 
   Serial.println(F("Setting up pixel 0:"));
-  urbanPixel->setup();
+  urbanPixel0->setup();
 
   Serial.println(F("Starting Sending"));
 
-  attachInterrupt(digitalPinToInterrupt(INTERRUPT_PIN_SWITCH), limitswitch, CHANGE);
+  attachInterrupt(INTERRUPT_PIN_SWITCH, limitswitch, CHANGE);
+  urbanPixel0->moveUp();
+
 }
 
 // -------------------------------------------------------------
 void loop(void)
 {
+  //urbanPixel0->updateMotorPosition(limitActivated);
 
+
+  if (Serial.available() > 0) {
+    char key = Serial.read();
+    if (key == 'a') {
+      Serial.println("Moving up");
+      urbanPixel0->moveUp();
+    }
+    if (key == 's') {
+      Serial.println("Moving down");
+      urbanPixel0->moveDown();
+    }
+  }
+  
 }
 
-
-//
-//https://arduino.stackexchange.com/questions/20608/pass-classs-public-function-as-an-argument-to-external-command
-void limitswitch() {
+void limitswitch(){
   limitActivated = true;
 }

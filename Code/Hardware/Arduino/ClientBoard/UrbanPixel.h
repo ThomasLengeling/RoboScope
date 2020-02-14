@@ -10,6 +10,7 @@
 
 #include "StepperMotor.h"
 #include "Interface.h"
+#include "BoardPins.h"
 
 class UrbanPixel {
   public:
@@ -29,11 +30,14 @@ class UrbanPixel {
     // Stops the movement of the pixel
     void stop();
 
+    
 
   private:
     int id;
+    
     StepperMotor * motor;
     Interface * interface;
+
 
 };
 
