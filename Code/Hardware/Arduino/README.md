@@ -7,6 +7,11 @@ https://github.com/collin80/FlexCAN_Library
 CAN BUS FD with Teensy 4.0
 https://github.com/tonton81/FlexCAN_T4
 
+CAN Bus FD
+MCP2562FD
+
+https://www.microchip.com/wwwproducts/en/MCP2562FD
+
 ## Message Structure
 
 ### Sever Msg
