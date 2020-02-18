@@ -1,8 +1,19 @@
 # CAN Bus Protocol
 
 Data Structure:
-
+CAN BUS 2
 https://github.com/collin80/FlexCAN_Library
+
+CAN BUS FD with Teensy 4.0
+https://github.com/tonton81/FlexCAN_T4
+
+CAN Bus FD
+MCP2562FD
+
+https://www.microchip.com/wwwproducts/en/MCP2562FD
+
+https://github.com/skpang/Teensy40_triple_CAN_demo/blob/master/Teensy40_triple_CAN_demo.ino
+
 
 ## Message Structure
 
