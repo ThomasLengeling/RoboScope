@@ -1,7 +1,7 @@
 #include <FlexCAN_T4.h>
 
 FlexCAN_T4FD<CAN3, RX_SIZE_256, TX_SIZE_16> FD;
-int local_name = 2;
+int local_name = 0;
 int msg_array[8]= {1,2,3,4,32,6,7,8};
 int state;
 uint32_t timer;
@@ -20,34 +20,25 @@ void setup(void) {
   FD.setBaudRate(config);
   FD.mailboxStatus();
   pinMode(13,OUTPUT);
-  state = LOW;
+  state = HIGH;
+  digitalWrite(13,state);
   timer = millis();
 }
 
 void loop() {
   CANFD_message_t msg;
-  if (FD.read(msg)!=0) { 
+  if (FD.read(msg)) { 
     Serial.println("reading");
-    reading(msg, msg_array);
+    reading(msg);
   }
 }
 
-void writing(CANFD_message_t msg, int des, int msg_array[]) {
-  msg.len = 8; msg.id = des; 
-  for (int i=0; i<9; i++) {
-    msg.buf[i]=msg_array[i];
-  }
-  FD.write(msg);
-}
 
-void reading(CANFD_message_t msg, int msg_array[]) {
-  if (msg.id==local_name) {
-    Serial.print("MB: "); Serial.print(msg.mb);
-    Serial.print("  ID: 0x"); Serial.print(msg.id);
-    Serial.print("  EXT: "); Serial.print(msg.flags.extended );
+void reading(CANFD_message_t msg) {
+  if (msg.id <= local_name && msg.id+16>local_name) {
     Serial.print("  LEN: "); Serial.print(msg.len);
     Serial.print(" DATA: ");
-    for ( uint8_t i = 0; i < 8; i++ ) {
+    for ( uint8_t i = local_name*4; i < local_name*4+4; i++ ) {
       Serial.print(msg.buf[i]); Serial.print(" ");
     }
     Serial.print("  TS: "); Serial.println(msg.timestamp);
