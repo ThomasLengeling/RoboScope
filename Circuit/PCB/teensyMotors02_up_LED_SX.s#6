@@ -5817,8 +5817,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="589.28" y1="-121.92" x2="594.36" y2="-121.92" width="0.1524" layer="91"/>
 <junction x="589.28" y="-121.92"/>
 <wire x1="589.28" y1="-121.92" x2="584.2" y2="-121.92" width="0.1524" layer="91"/>
-<wire x1="584.2" y1="-121.92" x2="574.04" y2="-121.92" width="0.1524" layer="91"/>
-<wire x1="551.18" y1="-121.92" x2="574.04" y2="-121.92" width="0.1524" layer="91"/>
+<wire x1="584.2" y1="-121.92" x2="571.5" y2="-121.92" width="0.1524" layer="91"/>
+<wire x1="551.18" y1="-121.92" x2="571.5" y2="-121.92" width="0.1524" layer="91"/>
 <pinref part="D5" gate="G$1" pin="2"/>
 <wire x1="551.18" y1="-129.54" x2="551.18" y2="-121.92" width="0.1524" layer="91"/>
 <wire x1="502.92" y1="-116.84" x2="502.92" y2="-121.92" width="0.1524" layer="91"/>

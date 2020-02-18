@@ -1307,18 +1307,18 @@
 <text x="2.2352" y="111.6838" size="0.8128" layer="48" font="vector">3.3V</text>
 <text x="10.4394" y="108.966" size="0.8128" layer="48" font="vector">GND</text>
 <text x="6.8072" y="123.8758" size="0.8128" layer="48" font="vector">I2C</text>
-<text x="3.0734" y="129.3368" size="1.27" layer="21">0</text>
-<text x="29.8196" y="129.3368" size="1.27" layer="21">0</text>
-<text x="43.7896" y="129.1844" size="1.27" layer="21">1</text>
-<text x="69.2404" y="128.143" size="1.27" layer="21">1</text>
-<text x="4.6228" y="89.0524" size="1.27" layer="21">2</text>
-<text x="28.5242" y="88.8238" size="1.27" layer="21">2</text>
-<text x="44.1706" y="88.3666" size="1.27" layer="21">3</text>
-<text x="68.453" y="87.4014" size="1.27" layer="21">3</text>
-<text x="2.7178" y="48.9839" size="1.27" layer="21">4</text>
-<text x="31.4452" y="48.9839" size="1.27" layer="21">4</text>
-<text x="42.8498" y="48.9839" size="1.27" layer="21">5</text>
-<text x="67.9958" y="48.9839" size="1.27" layer="21">5</text>
+<text x="3.0734" y="128.7399" size="1.27" layer="21">0</text>
+<text x="29.8196" y="128.7399" size="1.27" layer="21">0</text>
+<text x="43.7896" y="128.7399" size="1.27" layer="21">1</text>
+<text x="69.2404" y="128.7399" size="1.27" layer="21">1</text>
+<text x="4.6228" y="88.2269" size="1.27" layer="21">2</text>
+<text x="28.5242" y="88.2269" size="1.27" layer="21">2</text>
+<text x="44.1706" y="88.2269" size="1.27" layer="21">3</text>
+<text x="68.453" y="88.2269" size="1.27" layer="21">3</text>
+<text x="2.6416" y="50.0253" size="1.27" layer="21">4</text>
+<text x="31.5976" y="50.0253" size="1.27" layer="21">4</text>
+<text x="42.6974" y="50.0253" size="1.27" layer="21">5</text>
+<text x="67.9958" y="50.0253" size="1.27" layer="21">5</text>
 <text x="3.2512" y="8.2931" size="1.27" layer="21">6</text>
 <text x="27.9908" y="8.2931" size="1.27" layer="21">6</text>
 <text x="43.8404" y="8.2931" size="1.27" layer="21">7</text>

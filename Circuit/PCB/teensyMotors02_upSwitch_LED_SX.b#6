@@ -55,7 +55,7 @@
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
@@ -1315,14 +1315,14 @@
 <text x="28.5242" y="88.8238" size="1.27" layer="21">2</text>
 <text x="44.1706" y="88.3666" size="1.27" layer="21">3</text>
 <text x="68.453" y="87.4014" size="1.27" layer="21">3</text>
-<text x="2.7178" y="47.6504" size="1.27" layer="21">4</text>
-<text x="31.4452" y="50.3174" size="1.27" layer="21">4</text>
-<text x="42.8498" y="49.9872" size="1.27" layer="21">5</text>
-<text x="67.9958" y="48.8696" size="1.27" layer="21">5</text>
-<text x="3.2512" y="7.8486" size="1.27" layer="21">6</text>
-<text x="27.9908" y="8.1534" size="1.27" layer="21">6</text>
-<text x="43.8404" y="8.7376" size="1.27" layer="21">7</text>
-<text x="68.8594" y="8.3058" size="1.27" layer="21">7</text>
+<text x="2.7178" y="48.9839" size="1.27" layer="21">4</text>
+<text x="31.4452" y="48.9839" size="1.27" layer="21">4</text>
+<text x="42.8498" y="48.9839" size="1.27" layer="21">5</text>
+<text x="67.9958" y="48.9839" size="1.27" layer="21">5</text>
+<text x="3.2512" y="8.2931" size="1.27" layer="21">6</text>
+<text x="27.9908" y="8.2931" size="1.27" layer="21">6</text>
+<text x="43.8404" y="8.2931" size="1.27" layer="21">7</text>
+<text x="68.8594" y="8.2931" size="1.27" layer="21">7</text>
 <text x="60.198" y="78.0034" size="1.27" layer="21">Power</text>
 <text x="59.1312" y="75.7682" size="1.27" layer="21">-</text>
 <text x="65.1256" y="75.7428" size="1.27" layer="21">-</text>

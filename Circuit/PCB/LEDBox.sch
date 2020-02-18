@@ -8251,9 +8251,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C3" library="rc-master-smd" deviceset="C_" device="0805" value="0.1uf"/>
 <part name="LED4" library="SK6812" deviceset="SK6812" device="_5050W"/>
 <part name="C4" library="rc-master-smd" deviceset="C_" device="0805" value="0.1uf"/>
-<part name="SW6" library="Switch" library_urn="urn:adsk.eagle:library:11396471" deviceset="B3F-1000" device="" package3d_urn="urn:adsk.eagle:package:10899221/2"/>
+<part name="SWU" library="Switch" library_urn="urn:adsk.eagle:library:11396471" deviceset="B3F-1000" device="" package3d_urn="urn:adsk.eagle:package:10899221/2"/>
 <part name="R13_S" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:26079/1" value="10K"/>
 <part name="JP1" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK_ROUND" package3d_urn="urn:adsk.eagle:package:39278/1"/>
+<part name="SWD" library="Switch" library_urn="urn:adsk.eagle:library:11396471" deviceset="B3F-1000" device="" package3d_urn="urn:adsk.eagle:package:10899221/2"/>
+<part name="R13_S1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:26079/1" value="10K"/>
 </parts>
 <sheets>
 <sheet>
@@ -8274,9 +8276,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="C3" gate="G$1" x="215.9" y="93.98" rot="R90"/>
 <instance part="LED4" gate="G$1" x="269.24" y="76.2"/>
 <instance part="C4" gate="G$1" x="287.02" y="93.98" rot="R90"/>
-<instance part="SW6" gate="G$1" x="213.36" y="7.62"/>
+<instance part="SWU" gate="G$1" x="213.36" y="7.62"/>
 <instance part="R13_S" gate="G$1" x="238.76" y="0" rot="R90"/>
 <instance part="JP1" gate="G$1" x="157.48" y="73.66"/>
+<instance part="SWD" gate="G$1" x="218.44" y="-33.02"/>
+<instance part="R13_S1" gate="G$1" x="243.84" y="-40.64" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -8357,6 +8361,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="238.76" y1="-5.08" x2="238.76" y2="-10.16" width="0.1524" layer="91"/>
 <label x="238.76" y="-10.16" size="1.016" layer="95" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R13_S1" gate="G$1" pin="1"/>
+<wire x1="243.84" y1="-45.72" x2="243.84" y2="-50.8" width="0.1524" layer="91"/>
+<label x="243.84" y="-50.8" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -8421,10 +8430,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="269.24" y="99.06"/>
 </segment>
 <segment>
-<pinref part="SW6" gate="G$1" pin="1"/>
+<pinref part="SWU" gate="G$1" pin="1"/>
 <wire x1="223.52" y1="2.54" x2="228.6" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="2.54" x2="228.6" y2="-7.62" width="0.1524" layer="91"/>
 <label x="228.6" y="-10.16" size="1.016" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="SWD" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="-38.1" x2="233.68" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="-38.1" x2="233.68" y2="-48.26" width="0.1524" layer="91"/>
+<label x="233.68" y="-50.8" size="1.016" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -8461,6 +8476,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="139.7" y="20.32"/>
 <label x="154.94" y="20.32" size="1.016" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="SWD" gate="G$1" pin="3"/>
+<wire x1="228.6" y1="-30.48" x2="243.84" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="R13_S1" gate="G$1" pin="2"/>
+<wire x1="243.84" y1="-30.48" x2="264.16" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="-35.56" x2="243.84" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="243.84" y="-30.48"/>
+<label x="264.16" y="-30.48" size="1.016" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SWU_IN" class="0">
 <segment>
@@ -8483,7 +8507,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="154.94" y="-15.24" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SW6" gate="G$1" pin="3"/>
+<pinref part="SWU" gate="G$1" pin="3"/>
 <wire x1="223.52" y1="10.16" x2="238.76" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="R13_S" gate="G$1" pin="2"/>
 <wire x1="238.76" y1="10.16" x2="259.08" y2="10.16" width="0.1524" layer="91"/>
