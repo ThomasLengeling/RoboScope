@@ -4,12 +4,19 @@ uint16_t convertFrom8To16(uint8_t dataFirst, uint8_t dataSecond) {
     return dataBoth;
 }
 
+uint8_t* convertFrom16To8(uint16_t dataAll, uint8_t* rgb) {
+    rgb[0] = dataAll >> 8;
+    rgb[1] = dataAll & 0x00FF;
+    return rgb;
+}
+
 class Motor {
   public:
     Motor(int board_des);
     uint8_t* read_msg(uint8_t* color, CANFD_message_t msg);
     void setLED();
     uint8_t* returnColor(uint8_t* colors);
+    CANFD_message_t write_msg();
   private:
     int local_name;
     int index;
@@ -23,6 +30,8 @@ Motor::Motor(int board_des) {
    this->local_name = board_des;
    this->index = board_des*4;
    pinMode(13,OUTPUT);
+   pinMode(5, INPUT);
+   pinMode(4, INPUT);
    this->state = HIGH;
    digitalWrite(13,state);
 }
@@ -43,6 +52,12 @@ uint8_t* Motor::read_msg(uint8_t* colors, CANFD_message_t msg) {
   }
 }
 
+uint8_t* Motor::update() {
+  int button1 = digitalRead(5);
+  int button2 = digitalRead(4);
+  this->interaction
+}
+
 void Motor::setLED() {
   if (this->state==HIGH) {
     this->state=LOW;
@@ -58,4 +73,18 @@ uint8_t* Motor::returnColor(uint8_t* colors) {
   colors[2] = (((this->color & 0x1F) * 527) + 23) >> 6;
  
   return colors;
+}
+
+CANFD_message_t Motor::write_msg() {
+  CANFD_message_t msg;
+  uint8_t rgb[2]= {0};
+  convertFrom16To8(this->color, rgb);
+  msg.id = 99;
+  msg.len=5;
+  msg.buf[0]=this->local_name;
+  msg.buf[1]=rgb[0];
+  msg.buf[2]=rgb[1];
+  msg.buf[3]=this->steps;
+  msg.buf[4]=this->interaction;
+  return msg;
 }
