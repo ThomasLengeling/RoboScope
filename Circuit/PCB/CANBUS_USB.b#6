@@ -196,6 +196,18 @@
 <hole x="67.31" y="69.85" drill="2.6"/>
 <hole x="3.81" y="1.27" drill="2.6"/>
 <hole x="67.31" y="1.27" drill="2.6"/>
+<text x="19.05" y="60.96" size="0.6096" layer="21" rot="R90">HIGH</text>
+<text x="24.13" y="60.96" size="0.6096" layer="21" rot="R90">LOW</text>
+<text x="35.56" y="60.96" size="0.6096" layer="21" rot="R90">LOW</text>
+<text x="29.21" y="60.96" size="0.6096" layer="21" rot="R90">HIGH</text>
+<text x="11.43" y="68.58" size="0.6096" layer="21">CAN BUS</text>
+<text x="58.42" y="63.5" size="0.6096" layer="21">GND</text>
+<text x="50.8" y="63.5" size="0.6096" layer="21">GND</text>
+<text x="25.4" y="10.16" size="0.6096" layer="21">GND</text>
+<text x="40.64" y="10.16" size="0.6096" layer="21">GND</text>
+<text x="7.62" y="1.27" size="0.6096" layer="21">GND</text>
+<text x="22.86" y="16.51" size="0.6096" layer="21">GND</text>
+<text x="5.08" y="63.5" size="1.27" layer="21">SERVER</text>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors" urn="urn:adsk.eagle:library:513">

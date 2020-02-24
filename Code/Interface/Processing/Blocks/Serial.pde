@@ -51,3 +51,23 @@ void sendCanMsgTest() {
   //heights
   canPort01.write(heights);
 }
+
+///send global heights
+void sendHeights(){
+  
+}
+
+void updateInteractions(){
+  
+}
+
+void sendColors(){
+  
+}
+
+void getMaxHeight(){
+  
+}
+
+
+//send single heights
