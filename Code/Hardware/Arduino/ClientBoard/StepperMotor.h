@@ -54,7 +54,8 @@ class StepperMotor {
 
     //-----------------------------------------------------------
     void init() {
-      motor->setRPM(GRPM);
+      setRPM(GRPM);
+
       motor->begin(rpm);
 
       // if using enable/disable on ENABLE pin (active LOW) instead of SLEEP uncomment next line

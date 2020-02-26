@@ -60,7 +60,7 @@
 #define NEO_PIXEL_PIN   2
 
 //DIP SWITCH
-#define MUX_S0         26         
+#define MUX_S0         26
 #define MUX_S1         27
 #define MUX_S2         28
 #define MUX_S3         31

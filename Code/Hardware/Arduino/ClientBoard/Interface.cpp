@@ -2,17 +2,13 @@
 
 //------------------------------------------------------------------------------
 // constructor
-Interface::Interface(int pushPin, int limitPin, SX1509 sx) {
+Interface::Interface(int pushPin, int limitPin, SX1509 *sx) {
 
-  sx00 = &sx;
+  sx00 = sx;
 
   pushDownPin = pushPin;
-  pushSwitchState = false;
-  pushSwitchStatePrev = false;
 
   limitSwitchPin = limitPin;
-  limitSwitchState = false;
-  limitSwitchStatePrev = false;
 }
 
 //------------------------------------------------------------------------------
@@ -33,83 +29,70 @@ void Interface::init() {
   pinMode(INTERRUPT_PIN_SWITCH, INPUT_PULLUP);
 }
 
-bool Interface::getLimitSwitchState() {
-  if ( !limitSwitchStatePrev && limitSwitchState)
-    return true;
-  return false;
-}
-
-bool Interface::getLimitState() {
-  if ( limitSwitchStatePrev && limitSwitchState)
-    return true;
-  return false;
-}
-
-void Interface::resetLimitSwitch(){
-  limitSwitchStatePrev = false;
-  limitSwitchState = false;
-}
-
-bool Interface::getPushSwitchState() {
-  if ( !pushSwitchStatePrev && pushSwitchState)
-    return true;
-  return false;
-}
-
-bool Interface::getPushState() {
-  if ( pushSwitchStatePrev && pushSwitchState)
-    return true;
-  return false;
-}
-
-void Interface::resetPushSwitch() {
-  pushSwitchStatePrev = false;
-  pushSwitchState = false;
-}
-
 void Interface::updateLimitState() {
   unsigned int intStatus = sx00->interruptSource();
-  // For debugging handiness, print the intStatus variable.
-  // Each bit in intStatus represents a single SX1509 IO.
-  // Serial.println("intStatus = " + String(intStatus, BIN));
 
-  // If the bit corresponding to out button IO generated
-  // the input:
   Serial.print("limit ");
-
-  unsigned limitState = intStatus & (1 << limitSwitchPin);
+  unsigned state = intStatus & (1 << limitSwitchPin);
 
   limitSwitchStatePrev = limitSwitchState;
-  limitSwitchState = limitState;
+  limitSwitchState = state;
 
-  Serial.print(bool(limitState));
+  Serial.print(bool(state));
   Serial.print("-");
   Serial.print(limitSwitchState);
   Serial.print("-");
   Serial.print(limitSwitchStatePrev);
-  Serial.print(" ");
-
-  Serial.println();
+  Serial.println(" ");
 
   Serial.print("push ");
-  unsigned pushDownState = intStatus & (1 << pushDownPin);
 
-  pushSwitchStatePrev = pushSwitchState;
-  pushSwitchState = pushDownState;
+  state = intStatus & (1 << pushDownPin);
 
-  Serial.print(bool(pushDownState));
+  pushDownStatePrev = pushDownState;
+  pushDownState = state;
+
+  Serial.print(bool(state));
   Serial.print("-");
-  Serial.print(pushSwitchState);
+  Serial.print(pushDownState);
   Serial.print("-");
-  Serial.print(pushSwitchStatePrev);
-  Serial.print(" ");
+  Serial.print(pushDownStatePrev);
+  Serial.println(" ");
 
-  Serial.println();
+  Serial.println(" ");
 
+}
+
+bool Interface::getLimitSwitchState() {
+  if ( !limitSwitchStatePrev && limitSwitchState) {
+    return true;
+  }
+  return false;
+}
+
+bool Interface::getLimitState() {
+  if ( limitSwitchStatePrev && limitSwitchState) {
+    return true;
+  }
+  return false;
 }
 
 void Interface::updatePushState() {
   unsigned int intStatus = sx00->interruptSource();
+}
+
+bool Interface::getPushDownState() {
+  if (!pushDownStatePrev && pushDownState) {
+    return true;
+  }
+  return false;
+}
+
+bool Interface::getPushState() {
+  if (pushDownStatePrev && pushDownState) {
+    return true;
+  }
+  return false;
 }
 
 int Interface::getPushCurrentState() {
@@ -118,4 +101,14 @@ int Interface::getPushCurrentState() {
 
 int Interface::getLimitCurrentState() {
   return sx00->digitalRead(limitSwitchPin);
+}
+
+void Interface::resetLimitSwitch() {
+  limitSwitchStatePrev = false;
+  limitSwitchState = false;
+}
+
+void Interface::resetPushDown() {
+  pushDownStatePrev = false;
+  pushDownState = false;
 }

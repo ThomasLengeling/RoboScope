@@ -22,16 +22,11 @@
 
 */
 
-//Interface * interface_c;
-//StepperMotor * motor_c;
-
 UrbanPixel * urbanPixel0;
 SX1509 sx;
 
 const byte SX1509_ADDRESS_00 = 0x3E;
-
 volatile boolean limitActivated = false;
-
 
 void setup(void)
 {
@@ -64,16 +59,16 @@ void setup(void)
   //STEP_PIN_01
   //STEP_PIN_02
 
-  
+
   // The 0th pixel
-  Interface interface_c = Interface(SX1509_01_SWITCH_LEDBOX, SX1509_01_SWITCH_STOP, sx);
+  Interface interface_c = Interface(SX1509_01_SWITCH_LEDBOX, SX1509_01_SWITCH_STOP, &sx);
   Serial.println("Setting up the Interface");
-  
-  
+
+
   StepperMotor motor_c = StepperMotor(0, GMOTOR_STEPS, DIR_PIN_01, STEP_PIN_01, GENABLE_PIN, GM0_PIN, GM1_PIN);
   Serial.println("Setting up the motor");
-  
-  urbanPixel0 = new UrbanPixel(0, motor_c, interface_c);
+
+  urbanPixel0 = new UrbanPixel(0, &motor_c, &interface_c);
 
   Serial.println(F("Setting up pixel 0:"));
   urbanPixel0->setup();
@@ -81,30 +76,31 @@ void setup(void)
   Serial.println(F("Starting Sending"));
 
   attachInterrupt(INTERRUPT_PIN_SWITCH, limitswitch, CHANGE);
-  urbanPixel0->moveUp();
-
 }
 
 // -------------------------------------------------------------
 void loop(void)
 {
-  //urbanPixel0->updateMotorPosition(limitActivated);
-
-
+  urbanPixel0->updateMotorPosition(&limitActivated);
+  /*
+  unsigned long waitTimeMicro = motor_c->getNextAction();
+  if (waitTimeMicro <= 0) {
+    motor_c->stop();
+  }*/
+  /*
   if (Serial.available() > 0) {
     char key = Serial.read();
     if (key == 'a') {
       Serial.println("Moving up");
-      urbanPixel0->moveUp();
+      urbanPixel0->moveUp(55);
     }
     if (key == 's') {
       Serial.println("Moving down");
-      urbanPixel0->moveDown();
+      urbanPixel0->moveDown(55);
     }
-  }
-  
+  }*/
 }
 
-void limitswitch(){
+void limitswitch() {
   limitActivated = true;
 }

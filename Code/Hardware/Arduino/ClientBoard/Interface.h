@@ -13,39 +13,41 @@
 class Interface {
   public:
     // constructor
-    Interface(int pushPin, int limitPin, SX1509 sx);
+    Interface(int pushPin, int limitPin, SX1509 *sx);
 
     void init();
+
+    void updateLimitState();
 
     bool getLimitSwitchState();
 
     bool getLimitState();
 
-    void resetLimitSwitch();
+    void updatePushState();
 
-    bool getPushSwitchState();
+    bool getPushDownState();
 
     bool getPushState();
-
-    void resetPushSwitch();
-
-    void updateLimitState();
-
-    void updatePushState();
 
     int getPushCurrentState();
 
     int getLimitCurrentState();
 
+    void resetLimitSwitch();
+
+    void resetPushDown();
+
   private:
 
     int pushDownPin;
-    bool pushSwitchState;
-    bool pushSwitchStatePrev;
-
     int limitSwitchPin;
-    bool limitSwitchState;
+
     bool limitSwitchStatePrev;
+    bool limitSwitchState;
+
+    bool pushDownStatePrev;
+    bool pushDownState;
+
 
     SX1509 * sx00;
 };
