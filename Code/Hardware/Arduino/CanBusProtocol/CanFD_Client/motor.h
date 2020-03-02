@@ -1,3 +1,5 @@
+#include <Adafruit_NeoPixel.h>
+
 uint16_t convertFrom8To16(uint8_t dataFirst, uint8_t dataSecond) {
     uint16_t dataBoth;
     dataBoth = (dataFirst << 8) | dataSecond;
@@ -22,134 +24,49 @@ uint8_t* toBits(uint8_t input, unsigned char* bit_list) {
 
 class Motor {
   public:
-    int down_initial;
-    int up_initial;
-    const int BUTTON_TIMEOUT=500;
-    Motor(int board_des);
+    Motor(int id, byte neo_pin);
     uint8_t* read_msg(uint8_t* color, CANFD_message_t msg);
     void setLED();
     uint8_t* returnColor(uint8_t* colors);
-    CANFD_message_t write_msg();
-    bool Motor::updateInteraction();
+    void update(uint16_t color, uint8_t steps, uint8_t interaction);
   private:
-    int local_name;
-    int index;
-    int state;
-    uint16_t color;
-    uint8_t steps;
-    uint8_t interaction;
-    bool button_state;
-    int button_count=0;
-    void Motor::setInteraction(uint8_t button1);
+    byte NUMPIXELS;
+    int id;
+    uint8_t colors[3]= {0};
+    uint8_t steps =0;
+    uint8_t interaction=0;
+    void setcolor(uint16_t color);
+    Adafruit_NeoPixel pixel;
 };
 
-Motor::Motor(int board_des) {
-   this->local_name = board_des;
-   this->index = board_des*4;
-   pinMode(13,OUTPUT);
-   pinMode(5, INPUT_PULLUP);
-   pinMode(4, INPUT_PULLUP);
-   this->state = HIGH;
-   this->button_state = 0;
-   digitalWrite(13,state);
+Motor::Motor(int id, byte neo_pin) {
+   this->id = id;
+   this->NUMPIXELS =4;
+   this->pixel = Adafruit_NeoPixel(this->NUMPIXELS, neo_pin, NEO_GRBW + NEO_KHZ800);
+   this->pixel.begin();
+   this->pixel.clear();
+   for (int j = 0; j < this->NUMPIXELS; j++) {
+    this->pixel.setPixelColor(j, this->pixel.Color(255, 0, 0));
+   }
+   this->pixel.show();
 }
 
-uint8_t* Motor::read_msg(uint8_t* colors, CANFD_message_t msg) {
-  if (msg.id-1 <= this->local_name && msg.id+15>this->local_name) {
-    Serial.print("  LEN: "); Serial.print(msg.len);
-    Serial.print("  TS: "); Serial.println(msg.timestamp);
-    for (int i = this->index; i<this->index+4; i++) {
-      Serial.print(msg.buf[i]); Serial.print(" "); 
-    }
-    Serial.println(" ");
-    this->color = convertFrom8To16(msg.buf[this->index],msg.buf[this->index+1]);
-    this->steps = msg.buf[this->index+2];
-    this->interaction = msg.buf[this->index+3];
-    this->setLED();
-    return this->returnColor(colors);
-  }
+
+void Motor::update(uint16_t color, uint8_t steps, uint8_t interaction) {
+  this->setcolor(color);
+  this->steps = steps;
+  this->interaction = interaction;
 }
 
-bool Motor::updateInteraction() {
-  uint8_t button1 = digitalRead(5);
-  bool writeMsg = false;
-  switch(this->button_state){
-    case 0:    
-      if (button_count!=0) {
-        Serial.println(button1);
-        this->setInteraction(button1);
-        writeMsg= true;
-        button_count=0;
-      }
-      if (button1==0){
-        down_initial = millis();
-        this->button_state = 1;
-      }
-      break; //don't forget break statements
-    case 1:
-      Serial.println(this->button_state);
-      if (millis()-down_initial > 10) {
-        if (button1==1) {
-          up_initial = millis();
-          this->button_state = 2;
-        } else {
-          this->setInteraction(button1);
-          writeMsg= true;
-        }
-      }
-      break;
-    case 2:
-      if (millis()-up_initial > 20 && button1==0) {
-        down_initial = millis();
-        this->button_state = 1;
-        button_count+=1;
-      } else {
-        this->button_state = 0;
-        button_count+=1;
-      }
-      break;
+void Motor::setcolor(uint16_t color) {
+  this->colors[0] = ((((color >> 11) & 0x1F) * 527) + 23) >> 6;
+  this->colors[1] = ((((color >> 5) & 0x3F) * 259) + 33) >> 6;
+  this->colors[2] = (((color & 0x1F) * 527) + 23) >> 6;
+  Serial.println(" ");
+  Serial.print("Motor: "); Serial.println(this->id);
+  Serial.println(this->colors[2]);
+  for (int j = 0; j < this->NUMPIXELS; j++) {
+    this->pixel.setPixelColor(j, this->pixel.Color(this->colors[0], this->colors[1], this->colors[2]));
   }
-  return writeMsg;
-}
-void Motor::setInteraction(uint8_t button1) {
-  unsigned char bit_list[8]; 
-  toBits(this->interaction, bit_list);
-  bit_list[6]=button1;
-  byte b = 0;
-  for (int i=0; i<8; i++) {
-    if (bit_list[i]) {
-      b+=pow(2,7-i);
-    }
-  }
-  this->interaction = b;
-}
-void Motor::setLED() {
-  if (this->state==HIGH) {
-    this->state=LOW;
-  } else {
-    this->state=HIGH;
-  }
-  digitalWrite(13,this->state);
-}
-
-uint8_t* Motor::returnColor(uint8_t* colors) {
-  colors[0] = ((((this->color >> 11) & 0x1F) * 527) + 23) >> 6;
-  colors[1] = ((((this->color >> 5) & 0x3F) * 259) + 33) >> 6;
-  colors[2] = (((this->color & 0x1F) * 527) + 23) >> 6;
- 
-  return colors;
-}
-
-CANFD_message_t Motor::write_msg() {
-  CANFD_message_t msg;
-  uint8_t rgb[2]= {0};
-  convertFrom16To8(this->color, rgb);
-  msg.id = 0xFFFFFFFF;
-  msg.len=5;
-  msg.buf[0]=this->local_name;
-  msg.buf[1]=rgb[0];
-  msg.buf[2]=rgb[1];
-  msg.buf[3]=this->steps;
-  msg.buf[4]=this->interaction;
-  return msg;
+  this->pixel.show();
 }

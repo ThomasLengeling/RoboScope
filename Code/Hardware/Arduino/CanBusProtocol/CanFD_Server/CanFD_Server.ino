@@ -8,8 +8,10 @@
 FlexCAN_T4FD<CAN3, RX_SIZE_256, TX_SIZE_64> FD;
 int local_name = 3;
 const int input_pin = 16;
-uint8_t colors[3] = {99, 63, 171};
-uint8_t colors2[3] = {255, 0, 0};
+uint8_t colors0[3] = {99, 63, 171};
+uint8_t colors1[3] = {255, 0, 0};
+uint8_t colors2[3] = {0, 255, 0};
+uint8_t colors3[3] = {0, 0, 255};
 int state;
 int num_count;
 int down_initial;
@@ -54,8 +56,25 @@ void number_fsm(uint8_t input){
       if (num_count!=0) {
         Serial.print("writing: "); Serial.print(millis());
         Serial.println(" ");
-        Message msg = Message(num_count);
-        msg.addMotorMessage(9,colors,255,255);
+        Message msg = Message(9);
+        if (num_count==1){
+          for (int i =0; i<8; i++) {
+            msg.addMotorMessage(i,colors3,255,255);
+          }
+        } else if (num_count==2){
+          for (int i =0; i<8; i++) {
+            msg.addMotorMessage(i,colors2,255,255);
+          }
+        } else if (num_count==3){
+          for (int i =0; i<8; i++) {
+            msg.addMotorMessage(i,colors1,255,255);
+          }
+        } else if (num_count==4){
+          for (int i =0; i<8; i++) {
+            msg.addMotorMessage(i,colors0,255,255);
+          }
+        }
+
         FD.write(msg.returnCANmessage());
         num_count=0;
       }
