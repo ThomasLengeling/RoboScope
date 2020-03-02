@@ -55,11 +55,7 @@ void number_fsm(uint8_t input){
         Serial.print("writing: "); Serial.print(millis());
         Serial.println(" ");
         Message msg = Message(num_count);
-        if (num_count==2){
-          msg.addMotorMessage(2,colors,01000000,00001011);
-        } else {
-          msg.addMotorMessage(2,colors2,01000000,00001011);
-        }
+        msg.addMotorMessage(9,colors,255,255);
         FD.write(msg.returnCANmessage());
         num_count=0;
       }

@@ -6,7 +6,7 @@
 #define NUMPIXELS 2 // Popular NeoPixel ring size
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRBW + NEO_KHZ800);
 FlexCAN_T4FD<CAN3, RX_SIZE_256, TX_SIZE_16> FD;
-Motor motor = Motor(2);
+Motor motor = Motor(9);
 #define DELAYVAL 500 // Time (in milliseconds) to pause between pixels
 uint8_t color[3] = {0}; 
 void setup(void) {
@@ -28,6 +28,10 @@ void setup(void) {
 
 void loop() {
   CANFD_message_t msg;
+  bool writeMsg = motor.updateInteraction();
+  if (writeMsg) {
+    FD.write(motor.write_msg());
+  }
   if (FD.read(msg)) { 
     motor.read_msg(color, msg);
     FD.write(motor.write_msg());
