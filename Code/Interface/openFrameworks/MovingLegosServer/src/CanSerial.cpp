@@ -37,7 +37,7 @@ void CanSerial::sendSimpleMsg(uint16_t boardId, ofColor col, uint8_t step, uint8
     
     mSerial.writeBytes(buffer, 6);
     ofLog(OF_LOG_NOTICE)<<"send MSG";
-    ofLog(OF_LOG_NOTICE)<<"board: "<< boardId<<" color: "<<col16<<" step: "<<step<<" iter: "<<inter;
+    ofLog(OF_LOG_NOTICE)<<"board: "<< boardId<<" color: "<<col16<<" step: "<<unsigned(step)<<" iter: "<<unsigned(inter);
 }
 
 /*

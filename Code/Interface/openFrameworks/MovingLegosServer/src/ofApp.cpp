@@ -372,17 +372,15 @@ void ofApp::keyPressed(int key){
         uint16_t boardId = 5;
         ofColor col(255, 255, 255);
 
-        uint8_t step = 10;
+        uint8_t step = 100;
 
         bool stateIteraction[8] = {false, false, false, false, false, false, false, false};
-        unsigned int charByte = 0;
+        uint8_t iter = 0;
 
         for(int i = 0; i < 8; i++){
-            charByte |= ((unsigned char) stateIteraction[i]) << i;
+            iter |= ((unsigned char) stateIteraction[i]) << i;
         }
-        cout<<charByte<<", "<< uint8_t(charByte)<<", "<<int(charByte)<<std::endl;
-        cout<<step<<std::endl;
-        uint8_t iter = int(charByte);
+        cout<<iter<<", "<< unsigned(iter)<<", "<<int(iter)<<std::endl;
 
         mSerialTest->sendSimpleMsg(boardId, col, step, iter);
     }
