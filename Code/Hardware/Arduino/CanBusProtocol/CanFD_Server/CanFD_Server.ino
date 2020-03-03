@@ -41,9 +41,8 @@ void loop() {
   CANFD_message_t msg2;
   number_fsm(digitalRead(input_pin));
   if (FD.read(msg2)) { 
-      Serial.print("from: "); Serial.print(msg2.buf[0]);  
       Serial.println(" ");
-      for (int i = 1; i<msg2.len; i++) {
+      for (int i = 1; i<64; i++) {
         Serial.print(msg2.buf[i]); Serial.print(" "); 
       }
       Serial.println(" ");
@@ -63,15 +62,15 @@ void number_fsm(uint8_t input){
           }
         } else if (num_count==2){
           for (int i =0; i<8; i++) {
-            msg.addMotorMessage(i,colors2,255,255);
+            msg.addMotorMessage(i,colors2,255,0);
           }
         } else if (num_count==3){
           for (int i =0; i<8; i++) {
-            msg.addMotorMessage(i,colors1,255,255);
+            msg.addMotorMessage(i,colors1,0,255);
           }
         } else if (num_count==4){
           for (int i =0; i<8; i++) {
-            msg.addMotorMessage(i,colors0,255,255);
+            msg.addMotorMessage(i,colors0,255,2);
           }
         }
 

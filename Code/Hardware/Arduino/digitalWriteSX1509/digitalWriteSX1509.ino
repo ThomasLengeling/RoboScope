@@ -350,6 +350,7 @@ void loop() {
     colorChange = true;
     colorId = 7;
   }
+  
   //sx up
   if (sx01.digitalRead(UP_01_SX01) == HIGH) {
     Serial.println("PIN 01 UP");
@@ -409,17 +410,6 @@ void loop() {
     Serial.println("DIP 10 UP");
   }
 
-
-
-
-  /*
-    for (int i = 0; i < 8; i++) {
-      for (int j = 0; j < NUMPIXELS; j++) {
-        pixels[i]->setPixelColor(j, pixels[i]->Color(255, 0, 255)); // Moderately bright green color.
-      }
-       pixels[i]->show();
-    }
-  */
 
   if (colorChange) {
     int randRed    = random(0, 255);
