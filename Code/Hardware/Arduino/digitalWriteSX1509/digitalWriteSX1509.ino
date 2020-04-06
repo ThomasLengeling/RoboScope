@@ -94,6 +94,8 @@ const byte DIP_08_SX03 = 12; // LED connected to pin 15
 const byte DIP_09_SX03 = 13; // LED connected to pin 14
 const byte DIP_10_SX03 = 14; // LED connected to pin 15
 
+const byte STATUS_PIN_SX03 = 3;
+
 //NEO PIXELS PINS
 const  byte NEO_PIN_01 = 16;
 const  byte NEO_PIN_02 = 17;
@@ -229,6 +231,8 @@ void setup()
   sx03.pinMode(DIP_09_SX03, INPUT);
   sx03.pinMode(DIP_10_SX03, INPUT);
 
+  sx03.pinMode(STATUS_PIN_SX03, OUTPUT);
+
 
   for (int i = 0; i < 8; i++) {
     pixels[i] = new Adafruit_NeoPixel(NUMPIXELS, NEO_PIN[i], NEO_GRBW + NEO_KHZ800);
@@ -276,9 +280,16 @@ void setup()
   }
   pixels[7]->show();
 
+  //status pinTest
+  sx03.digitalWrite(STATUS_PIN_SX03, HIGH);
+  delay(2000);
+  sx03.digitalWrite(STATUS_PIN_SX03, LOW);
 }
 
 void loop() {
+
+
+
 
   //SX 01
   if (sx01.digitalRead(SWITCH_01_SX01) == HIGH) {
