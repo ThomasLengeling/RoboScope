@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "DRV8880.h"
+#include <SparkFunSX1509.h> // Include SX1509 library
 
 /*
    Control for DRV8834 stepper motor driver
@@ -14,6 +15,7 @@ class Stepper {
     int STEP_PIN;
 
     int ENABLE_PIN;
+    int SLEEP_PIN;
 
     //Microstepping control pins
     int M0_PIN;
@@ -26,28 +28,33 @@ class Stepper {
     //driver id;
     int id;
 
+    SX1509 * sx;
+
     //DRV8880 class
     DRV8880  * motor;
 
     int enableMotor;
 
     //constructor
-    Stepper(int m_id, int steps, int dir_pin, int step_pin, int sleep_pin, int m0_pin, int m1_pin) {
+    Stepper(int m_id, int steps, int dir_pin, int step_pin, SX1509 *sxx, int enable_pin, int sleep_pin, int m0_pin, int m1_pin) {
       id  = m_id;
       motorSteps = steps;
 
+      sx = sxx;
+      
       //pins
       DIR_PIN   = dir_pin;
       STEP_PIN  = step_pin;
-      ENABLE_PIN = sleep_pin;
+      ENABLE_PIN = enable_pin;
+      SLEEP_PIN = sleep_pin;
       M0_PIN = m0_pin;
       M1_PIN = m1_pin;
 
-      pinMode(ENABLE_PIN, OUTPUT);
-      digitalWrite(ENABLE_PIN, HIGH);
+      //pinMode(ENABLE_PIN, OUTPUT);
+      sx->digitalWrite(ENABLE_PIN, HIGH);
 
-      pinMode(13, OUTPUT);
-      digitalWrite(13, LOW); //sleep on
+      //pinMode(13, OUTPUT);
+      sx->digitalWrite(SLEEP_PIN, LOW); //sleep on
 
       enableMotor = true;
 
@@ -96,11 +103,11 @@ class Stepper {
     }
 
     void start() {
-      digitalWrite(ENABLE_PIN, HIGH);
+      sx->digitalWrite(ENABLE_PIN, HIGH);
       enableMotor = true;
     }
     void stop() {
-      digitalWrite(ENABLE_PIN, LOW);
+      sx->digitalWrite(ENABLE_PIN, LOW);
       enableMotor = false;
     }
 
@@ -109,12 +116,12 @@ class Stepper {
     }
 
     void sleepOn() {
-      digitalWrite(13, LOW);
+      sx->digitalWrite(SLEEP_PIN, LOW);
 
     }
 
     void sleepOff() {
-      digitalWrite(13, HIGH);
+      sx->digitalWrite(SLEEP_PIN, HIGH);
     }
 
 
@@ -135,8 +142,10 @@ class Stepper {
       Serial.println(DIR_PIN);
       Serial.print("STEP PIN: ");
       Serial.println(STEP_PIN);
-      Serial.print("SLEEP PIN: ");
+      Serial.print("ENABLE_PIN: ");
       Serial.println(ENABLE_PIN);
+      Serial.print("SLEEP_PIN: ");
+      Serial.println(SLEEP_PIN);
       Serial.print("M0 PIN: ");
       Serial.println(M0_PIN);
       Serial.print("M1 PIN: ");
