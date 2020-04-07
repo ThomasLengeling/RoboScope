@@ -1,6 +1,6 @@
 /*
- Grid 
-*/
+ Grid
+ */
 
 #include "ofMain.h"
 #include "Block.h"
@@ -10,9 +10,9 @@ class GridTex;
 typedef std::shared_ptr<GridTex> GridTexRef;
 
 class GridTex{
-
+    
 public:
-
+    
 private:
-
+    
 };

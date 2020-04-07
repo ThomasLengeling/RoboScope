@@ -4588,6 +4588,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.2" drill="0">
+<<<<<<< HEAD
 <clearance class="0" value="0.2"/>
 </class>
 <class number="1" name="gnd" width="0.2" drill="0">
@@ -4598,6 +4599,9 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 </class>
 <class number="4" name="vcc5" width="0.35" drill="0">
 <clearance class="4" value="0.2"/>
+=======
+<clearance class="0" value="0.205"/>
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </class>
 </classes>
 <parts>

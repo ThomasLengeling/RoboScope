@@ -34,351 +34,414 @@
 #include <Wire.h> // Include the I2C library (required)
 #include <SparkFunSX1509.h> // Include SX1509 library
 #include <Adafruit_NeoPixel.h>
-#include "Type4067Mux.h"
-
-//DEBUG LED NEO PIXEL
-#define NEO_DEBUG      2
-
-// SX1509 pin definitions:
-const byte SX1509_LED_PIN = 15; // LED connected to pin 15
 
 
-const byte SX1509_01_SWITCH = 15; // LED connected to pin 8
-const byte SX1509_02_SWITCH = 14; // LED connected to pin 9
-const byte SX1509_03_SWITCH = 13; // LED connected to pin 10
-const byte SX1509_04_SWITCH = 12; // LED connected to pin 11
-const byte SX1509_05_SWITCH = 11; // LED connected to pin 12
-const byte SX1509_06_SWITCH = 10; // LED connected to pin 13
-const byte SX1509_07_SWITCH = 9; // LED connected to pin 14
-const byte SX1509_08_SWITCH = 8; // LED connected to pin 15
+//LIMIT BUTTONS
+const byte SWITCH_01_SX01 = 8; // LED connected to pin 8
+const byte SWITCH_02_SX01 = 6; // LED connected to pin 9
+const byte SWITCH_03_SX01 = 9; // LED connected to pin 10
+const byte SWITCH_04_SX01 = 7; // LED connected to pin 11
 
-const byte SX1509_01_SWITCH_LED = 7;
-const byte SX1509_02_SWITCH_LED = 6;
-const byte SX1509_03_SWITCH_LED = 5;
-const byte SX1509_04_SWITCH_LED = 4;
-const byte SX1509_05_SWITCH_LED = 3;
-const byte SX1509_06_SWITCH_LED = 2;
-const byte SX1509_07_SWITCH_LED = 1;
-const byte SX1509_08_SWITCH_LED = 0;
+const byte SWITCH_05_SX02 = 8; // LED connected to pin 12
+const byte SWITCH_06_SX02 = 6; // LED connected to pin 13
+const byte SWITCH_07_SX02 = 9; // LED connected to pin 14
+const byte SWITCH_08_SX02 = 7; // LED connected to pin 15
 
-const byte SX1509_01_01_SWITCH_LED = 12;
-const byte SX1509_01_02_SWITCH_LED = 14;
+//DOWN BUTTONS
+const byte DOWN_01_SX01 = 12; // LED connected to pin 8
+const byte DOWN_02_SX01 = 4; // LED connected to pin 9
+const byte DOWN_03_SX01 = 15; // LED connected to pin 10
+const byte DOWN_04_SX01 = 5; // LED connected to pin 11
 
-const byte SX1509_02_01_SWITCH_LED = 0;
-
-const byte SX1509_03_08_SWITCH_LED = 15;
-const byte SX1509_03_07_SWITCH_LED = 13;
-
-const byte SX1509_03_01_SWITCH_LED = 1;
-
-int colorMode = 0;
-int prevColorMode = 0;
-
-bool  colorEnable = false;
+const byte DOWN_05_SX02 = 12; // LED connected to pin 12
+const byte DOWN_06_SX02 = 4; // LED connected to pin 13
+const byte DOWN_07_SX02 = 15; // LED connected to pin 14
+const byte DOWN_08_SX02 = 5; // LED connected to pin 15
 
 
-// How many NeoPixels are attached to the Arduino?
-#define NUMPIXELS      8
+//UP BUTTONS
+const byte UP_01_SX01 = 11; // LED connected to pin 8
+const byte UP_02_SX01 = 3; // LED connected to pin 9
+const byte UP_03_SX01 = 14; // LED connected to pin 10
+const byte UP_04_SX01 = 1; // LED connected to pin 11
+
+const byte UP_05_SX02 = 11; // LED connected to pin 12
+const byte UP_06_SX02 = 3; // LED connected to pin 13
+const byte UP_07_SX02 = 14; // LED connected to pin 14
+const byte UP_08_SX02 = 1; // LED connected to pin 15
+
+//TOUCH PIN
+const byte TOUCH_01_SX01 = 10; // LED connected to pin 8
+const byte TOUCH_02_SX01 = 2; // LED connected to pin 9
+const byte TOUCH_03_SX01 = 13; // LED connected to pin 10
+const byte TOUCH_04_SX01 = 0; // LED connected to pin 11
+
+const byte TOUCH_05_SX02 = 10; // LED connected to pin 12
+const byte TOUCH_06_SX02 = 2; // LED connected to pin 13
+const byte TOUCH_07_SX02 = 13; // LED connected to pin 14
+const byte TOUCH_08_SX02 = 0; // LED connected to pin 15
+
+
+//MUX
+const byte DIP_01_SX03 = 5; // LED connected to pin 8
+const byte DIP_02_SX03 = 6; // LED connected to pin 9
+const byte DIP_03_SX03 = 7; // LED connected to pin 10
+const byte DIP_04_SX03 = 8; // LED connected to pin 11
+const byte DIP_05_SX03 = 9; // LED connected to pin 12
+const byte DIP_06_SX03 = 10; // LED connected to pin 13
+const byte DIP_07_SX03 = 11; // LED connected to pin 14
+const byte DIP_08_SX03 = 12; // LED connected to pin 15
+const byte DIP_09_SX03 = 13; // LED connected to pin 14
+const byte DIP_10_SX03 = 14; // LED connected to pin 15
+
+const byte STATUS_PIN_SX03 = 3;
+
+//NEO PIXELS PINS
+const  byte NEO_PIN_01 = 16;
+const  byte NEO_PIN_02 = 17;
+const  byte NEO_PIN_03 = 2;
+const  byte NEO_PIN_04 = 3;
+const  byte NEO_PIN_05 = 4;
+const  byte NEO_PIN_06 = 24;
+const  byte NEO_PIN_07 = 25;
+const  byte NEO_PIN_08 = 13;
+
+const byte NEO_PIN[8] = {NEO_PIN_01, NEO_PIN_02, NEO_PIN_03, NEO_PIN_04,
+                         NEO_PIN_05, NEO_PIN_06, NEO_PIN_07, NEO_PIN_08
+                        };
+
+//NUM PIXELS
+boolean colorChange = false;
+int colorId = -1;
+const byte NUMPIXELS = 4;
 
 //Pixels
-Adafruit_NeoPixel * pixels;
+Adafruit_NeoPixel * pixels[8];
 
 // SX1509 I2C address (set by ADDR1 and ADDR0 (00 by default):
+
 const byte SX1509_ADDRESS_00 = 0x3E;  // SX1509 I2C address
-SX1509 sx00; // Create an SX1509 object to be used throughout
+SX1509 sx00;
 
+const byte SX1509_ADDRESS_01 = 0x3F;
+SX1509 sx01;
 
-const byte SX1509_ADDRESS_01 = 0x3F;   // SX1509 I2C address
-SX1509 sx01; // Create an SX1509 object to be used throughout
-
-
-const byte SX1509_ADDRESS_11 = 0x71;
+const byte SX1509_ADDRESS_10 = 0x71;
 SX1509 sx02;
 
-const byte SX1509_ADDRESS_10 = 0x70;
+const byte SX1509_ADDRESS_11 = 0x70;
 SX1509 sx03;
-
-Type4067Mux * mux;
 
 void setup()
 {
+
+  Serial.begin(9600);
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
   delay(3000);
 
-  Serial.begin(9600);
-  //digitalWrite(13, LOW);
+  Serial.println("SX1509: ");
 
-  Serial.println("SX1509:");
-
-  if (!sx00.begin(SX1509_ADDRESS_00) )
-  {
+  if (!sx00.begin(SX1509_ADDRESS_00) ) {
+    Serial.println("Failed 0");
     Serial.println(SX1509_ADDRESS_00);
-    Serial.println("Failed 00");
-    while (1) ; // If we fail to communicate, loop forever.
+    //while (1) ; // If we fail to communicate, loop forever.
   } else {
-    Serial.println("Connected 00");
+    Serial.println("Connected 0");
   }
-  /*
-    if (!sx02.begin(SX1509_ADDRESS_11) )
-    {
-      Serial.println(SX1509_ADDRESS_11);
-      Serial.println("Failed 02");
-      while (1) ; // If we fail to communicate, loop forever.
-    } else {
-      Serial.println("Connected 02");
-    }
-    /*
-    // Call io.begin(<address>) to initialize the SX1509. If it
-    // successfully communicates, it'll return 1.
 
-    int count = 0;
-    if (!sx01.begin(SX1509_ADDRESS_01))
-    {
-      Serial.println(SX1509_ADDRESS_01);
-      Serial.println("Failed sx 01");
-    } else {
-      Serial.println("Connected 01");
-    }
+  if (!sx01.begin(SX1509_ADDRESS_01) ) {
+    Serial.println("Failed 01");
+    Serial.println(SX1509_ADDRESS_01);
+  } else {
+    Serial.println("Connected 1");
+  }
 
-  */
+  int count = 0;
+  if (!sx02.begin(SX1509_ADDRESS_11)) {
+    Serial.println("Failed sx 2");
+    Serial.println(SX1509_ADDRESS_11);
+  } else {
+    Serial.println("Connected 2");
+  }
+
+  if (!sx03.begin(SX1509_ADDRESS_10)) {
+    Serial.println("Failed sx 3");
+    Serial.println(SX1509_ADDRESS_10);
+  } else {
+    Serial.println("Connected 3");
+  }
+
+
   delay(2000);
   digitalWrite(13, LOW);
 
-  // Call io.pinMode(<pin>, <mode>) to set an SX1509 pin as
-  // an output:
+  //sx 00
+  sx01.pinMode(SWITCH_01_SX01, INPUT);
+  sx01.pinMode(SWITCH_02_SX01, INPUT);
+  sx01.pinMode(SWITCH_03_SX01, INPUT);
+  sx01.pinMode(SWITCH_04_SX01, INPUT);
 
-  sx00.pinMode(SX1509_01_SWITCH, INPUT);
-  sx00.pinMode(SX1509_02_SWITCH, INPUT);
-  sx00.pinMode(SX1509_03_SWITCH, INPUT);
-  sx00.pinMode(SX1509_04_SWITCH, INPUT);
+  sx01.pinMode(DOWN_01_SX01, INPUT);
+  sx01.pinMode(DOWN_02_SX01, INPUT);
+  sx01.pinMode(DOWN_03_SX01, INPUT);
+  sx01.pinMode(DOWN_04_SX01, INPUT);
 
-  sx00.pinMode(SX1509_05_SWITCH, INPUT);
-  sx00.pinMode(SX1509_06_SWITCH, INPUT);
-  sx00.pinMode(SX1509_07_SWITCH, INPUT);
-  sx00.pinMode(SX1509_08_SWITCH, INPUT);
+  sx01.pinMode(UP_01_SX01, INPUT);
+  sx01.pinMode(UP_02_SX01, INPUT);
+  sx01.pinMode(UP_03_SX01, INPUT);
+  sx01.pinMode(UP_04_SX01, INPUT);
 
-  sx00.pinMode(SX1509_01_SWITCH_LED, INPUT);
-  sx00.pinMode(SX1509_02_SWITCH_LED, INPUT);
-  sx00.pinMode(SX1509_03_SWITCH_LED, INPUT);
-  sx00.pinMode(SX1509_04_SWITCH_LED, INPUT);
-  sx00.pinMode(SX1509_05_SWITCH_LED, INPUT);
-  sx00.pinMode(SX1509_06_SWITCH_LED, INPUT);
-  sx00.pinMode(SX1509_07_SWITCH_LED, INPUT);
-  sx00.pinMode(SX1509_08_SWITCH_LED, INPUT);
+  sx01.pinMode(TOUCH_01_SX01, INPUT);
+  sx01.pinMode(TOUCH_02_SX01, INPUT);
+  sx01.pinMode(TOUCH_03_SX01, INPUT);
+  sx01.pinMode(TOUCH_04_SX01, INPUT);
+
+  //sx 01
+  sx02.pinMode(SWITCH_05_SX02, INPUT);
+  sx02.pinMode(SWITCH_06_SX02, INPUT);
+  sx02.pinMode(SWITCH_07_SX02, INPUT);
+  sx02.pinMode(SWITCH_08_SX02, INPUT);
+
+  sx02.pinMode(DOWN_05_SX02, INPUT);
+  sx02.pinMode(DOWN_06_SX02, INPUT);
+  sx02.pinMode(DOWN_07_SX02, INPUT);
+  sx02.pinMode(DOWN_08_SX02, INPUT);
+
+  sx02.pinMode(UP_05_SX02, INPUT);
+  sx02.pinMode(UP_06_SX02, INPUT);
+  sx02.pinMode(UP_07_SX02, INPUT);
+  sx02.pinMode(UP_08_SX02, INPUT);
+
+  sx02.pinMode(TOUCH_05_SX02, INPUT);
+  sx02.pinMode(TOUCH_06_SX02, INPUT);
+  sx02.pinMode(TOUCH_07_SX02, INPUT);
+  sx02.pinMode(TOUCH_08_SX02, INPUT);
+
+  //sx 03
+
+  sx03.pinMode(DIP_01_SX03, INPUT);
+  sx03.pinMode(DIP_02_SX03, INPUT);
+  sx03.pinMode(DIP_03_SX03, INPUT);
+  sx03.pinMode(DIP_04_SX03, INPUT);
+  sx03.pinMode(DIP_05_SX03, INPUT);
+  sx03.pinMode(DIP_06_SX03, INPUT);
+  sx03.pinMode(DIP_07_SX03, INPUT);
+  sx03.pinMode(DIP_08_SX03, INPUT);
+  sx03.pinMode(DIP_09_SX03, INPUT);
+  sx03.pinMode(DIP_10_SX03, INPUT);
+
+  sx03.pinMode(STATUS_PIN_SX03, OUTPUT);
 
 
-  //sx01.pinMode(SX1509_01_01_SWITCH_LED, INPUT);
-  //sx01.pinMode(SX1509_01_02_SWITCH_LED, INPUT);
-  //sx02.pinMode(SX1509_02_01_SWITCH_LED, INPUT);
+  for (int i = 0; i < 8; i++) {
+    pixels[i] = new Adafruit_NeoPixel(NUMPIXELS, NEO_PIN[i], NEO_GRBW + NEO_KHZ800);
+    pixels[i]->begin();
+    pixels[i]->clear();
+  }
 
+  for (int j = 0; j < NUMPIXELS; j++) {
+    pixels[0]->setPixelColor(j, pixels[0]->Color(255, 0, 0)); // Moderately bright green color.
+  }
+  pixels[0]->show();
 
-  //sx03.pinMode(SX1509_03_08_SWITCH_LED, INPUT);
-  //sx03.pinMode(SX1509_03_07_SWITCH_LED, INPUT);
-  //sx03.pinMode(SX1509_03_01_SWITCH_LED, INPUT);
+  for (int j = 0; j < NUMPIXELS; j++) {
+    pixels[1]->setPixelColor(j, pixels[1]->Color(255, 255, 0)); // Moderately bright green color.
+  }
+  pixels[1]->show();
 
-  //mux = new Type4067Mux(8, INPUT, DIGITAL, 0, 2, 4, 6);
-  // mux->signalPin(3, INPUT, DIGITAL);
+  for (int j = 0; j < NUMPIXELS; j++) {
+    pixels[2]->setPixelColor(j, pixels[2]->Color(255, 0, 255)); // Moderately bright green color.
+  }
+  pixels[2]->show();
 
+  for (int j = 0; j < NUMPIXELS; j++) {
+    pixels[3]->setPixelColor(j, pixels[3]->Color(0, 255, 255)); // Moderately bright green color.
+  }
+  pixels[3]->show();
 
-  pixels = new Adafruit_NeoPixel(NUMPIXELS, NEO_DEBUG, NEO_GRBW + NEO_KHZ800);
-  pixels->begin();
-  pixels->clear();
+  for (int j = 0; j < NUMPIXELS; j++) {
+    pixels[4]->setPixelColor(j, pixels[4]->Color(0, 255, 0)); // Moderately bright green color.
+  }
+  pixels[4]->show();
 
+  for (int j = 0; j < NUMPIXELS; j++) {
+    pixels[5]->setPixelColor(j, pixels[5]->Color(50, 155, 255)); // Moderately bright green color.
+  }
+  pixels[5]->show();
+
+  for (int j = 0; j < NUMPIXELS; j++) {
+    pixels[6]->setPixelColor(j, pixels[6]->Color(0, 0, 255)); // Moderately bright green color.
+  }
+  pixels[6]->show();
+
+  for (int j = 0; j < NUMPIXELS; j++) {
+    pixels[7]->setPixelColor(j, pixels[7]->Color(255, 255, 255)); // Moderately bright green color.
+  }
+  pixels[7]->show();
+
+  //status pinTest
+  sx03.digitalWrite(STATUS_PIN_SX03, HIGH);
+  delay(2000);
+  sx03.digitalWrite(STATUS_PIN_SX03, LOW);
 }
 
-void loop()
-{
+void loop() {
+
+
+
+
+  //SX 01
+  if (sx01.digitalRead(SWITCH_01_SX01) == HIGH) {
+    Serial.println("PIN 01");
+  }
+  if (sx01.digitalRead(SWITCH_02_SX01) == HIGH) {
+    Serial.println("PIN 02");
+  }
+  if (sx01.digitalRead(SWITCH_03_SX01) == HIGH) {
+    Serial.println("PIN 03");
+  }
+  if (sx01.digitalRead(SWITCH_04_SX01) == HIGH) {
+    Serial.println("PIN 04");
+  }
+
+  if (sx02.digitalRead(SWITCH_05_SX02) == HIGH) {
+    Serial.println("PIN 05");
+  }
+  if (sx02.digitalRead(SWITCH_06_SX02) == HIGH) {
+    Serial.println("PIN 06");
+  }
+  if (sx02.digitalRead(SWITCH_07_SX02) == HIGH) {
+    Serial.println("PIN 07");
+  }
+  if (sx02.digitalRead(SWITCH_08_SX02) == HIGH) {
+    Serial.println("PIN 08");
+  }
+
+
+  //SX 02 down
+  if (sx01.digitalRead(DOWN_01_SX01) == HIGH) {
+    Serial.println("PIN 01 DOWN");
+    colorChange = true;
+    colorId = 0;
+  }
+  if (sx01.digitalRead(DOWN_02_SX01) == HIGH) {
+    Serial.println("PIN 02 DOWN");
+    colorChange = true;
+    colorId = 1;
+  }
+  if (sx01.digitalRead(DOWN_03_SX01) == HIGH) {
+    Serial.println("PIN 03 DOWN");
+    colorChange = true;
+    colorId = 2;
+  }
+  if (sx01.digitalRead(DOWN_04_SX01) == HIGH) {
+    Serial.println("PIN 04 DOWN");
+    colorChange = true;
+    colorId = 3;
+  }
+
+  if (sx02.digitalRead(DOWN_05_SX02) == HIGH) {
+    Serial.println("PIN 05 DOWN");
+    colorChange = true;
+    colorId = 4;
+  }
+  if (sx02.digitalRead(DOWN_06_SX02) == HIGH) {
+    Serial.println("PIN 06 DOWN");
+    colorChange = true;
+    colorId = 5;
+  }
+  if (sx02.digitalRead(DOWN_07_SX02) == HIGH) {
+    Serial.println("PIN 07 DOWN");
+    colorChange = true;
+    colorId = 6;
+  }
+  if (sx02.digitalRead(DOWN_08_SX02) == HIGH) {
+    Serial.println("PIN 08 DOWN");
+    colorChange = true;
+    colorId = 7;
+  }
+  //sx up
+  if (sx01.digitalRead(UP_01_SX01) == HIGH) {
+    Serial.println("PIN 01 UP");
+  }
+  if (sx01.digitalRead(UP_02_SX01) == HIGH) {
+    Serial.println("PIN 02 UP");
+  }
+  if (sx01.digitalRead(UP_03_SX01) == HIGH) {
+    Serial.println("PIN 03 UP");
+  }
+  if (sx01.digitalRead(UP_04_SX01) == HIGH) {
+    Serial.println("PIN 04 UP");
+  }
+
+  if (sx02.digitalRead(UP_05_SX02) == HIGH) {
+    Serial.println("PIN 05 UP");
+  }
+  if (sx02.digitalRead(UP_06_SX02) == HIGH) {
+    Serial.println("PIN 06 UP");
+  }
+  if (sx02.digitalRead(UP_07_SX02) == HIGH) {
+    Serial.println("PIN 07 UP");
+  }
+  if (sx02.digitalRead(UP_08_SX02) == HIGH) {
+    Serial.println("PIN 08 UP");
+  }
+
+  //sx03
+  if (sx03.digitalRead(DIP_01_SX03) == HIGH) {
+    Serial.println("DIP 01 UP");
+  }
+  if (sx03.digitalRead(DIP_02_SX03) == HIGH) {
+    Serial.println("DIP 02 UP");
+  }
+  if (sx03.digitalRead(DIP_03_SX03) == HIGH) {
+    Serial.println("DIP 03 UP");
+  }
+  if (sx03.digitalRead(DIP_04_SX03) == HIGH) {
+    Serial.println("DIP 04 UP");
+  }
+  if (sx03.digitalRead(DIP_05_SX03) == HIGH) {
+    Serial.println("DIP 05 UP");
+  }
+  if (sx03.digitalRead(DIP_06_SX03) == HIGH) {
+    Serial.println("DIP 06 UP");
+  }
+  if (sx03.digitalRead(DIP_07_SX03) == HIGH) {
+    Serial.println("DIP 07 UP");
+  }
+  if (sx03.digitalRead(DIP_08_SX03) == HIGH) {
+    Serial.println("DIP 08 UP");
+  }
+  if (sx03.digitalRead(DIP_09_SX03) == HIGH) {
+    Serial.println("DIP 09 UP");
+  }
+  if (sx03.digitalRead(DIP_10_SX03) == HIGH) {
+    Serial.println("DIP 10 UP");
+  }
+
+
+
+
   /*
-    byte data;
-    for (byte i = 0; i < 16; ++i) {
-      // Reads from channel i and returns HIGH or LOW.
-      data = mux->read(i);
-      delayMicroseconds(50);
-
-      Serial.print("Push button at channel ");
-      Serial.print(i);
-      Serial.print(" is ");
-      if (data == HIGH) {
-        Serial.println("not pressed");
-      } else if (data == LOW) {
-        Serial.println("pressed");
+    for (int i = 0; i < 8; i++) {
+      for (int j = 0; j < NUMPIXELS; j++) {
+        pixels[i]->setPixelColor(j, pixels[i]->Color(255, 0, 255)); // Moderately bright green color.
       }
-    }
-    Serial.println();
-
-    if (sx03.digitalRead(SX1509_03_08_SWITCH_LED) == HIGH) {
-      Serial.println("pressed 8 button sx03");
-    }
-
-    if (sx03.digitalRead(SX1509_03_07_SWITCH_LED) == HIGH) {
-      Serial.println("pressed 7 button sx03");
-    }
-    if (sx03.digitalRead(SX1509_03_01_SWITCH_LED) == HIGH) {
-      Serial.println("pressed 1 button sx03");
+       pixels[i]->show();
     }
   */
 
-
-  /*
-    if (sx02.digitalRead(SX1509_02_01_SWITCH_LED) == HIGH) {
-     // Serial.println("pressed 1 button sx02");
+  if (colorChange) {
+    int randRed    = random(0, 255);
+    int randBlue   = random(0, 255);
+    int randGreen  = random(0, 255);
+    for (int j = 0; j < NUMPIXELS; j++) {
+      pixels[colorId]->setPixelColor(j, pixels[colorId]->Color(randRed, randBlue, randGreen)); // Moderately bright green color.
     }
-
-    if (sx01.digitalRead(SX1509_01_01_SWITCH_LED) == HIGH) {
-    //  Serial.println("pressed 1 button sx01");
-    }
-
-    if (sx01.digitalRead(SX1509_01_02_SWITCH_LED) == HIGH) {
-    //  Serial.println("pressed 2 LED sx01");
-    }
-  */
-  //update the previous
-  prevColorMode = colorMode;
-
-  if (sx00.digitalRead(SX1509_01_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 1 LED HIGH");
-    colorMode = 1;
-    colorEnable = true;
+    pixels[colorId]->show();
+    colorChange = false;
   }
 
-
-  if (sx00.digitalRead(SX1509_02_SWITCH_LED) == LOW) {
-    Serial.println("pressed 2 LED LOW");
-    colorMode = 2;
-    colorEnable = true;
-  }
-
-  if (sx00.digitalRead(SX1509_03_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 3 LED");
-    colorMode = 3;
-    colorEnable = true;
-  }
-  if (sx00.digitalRead(SX1509_04_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 4 LED");
-    colorMode = 4;
-    colorEnable = true;
-  }
-  if (sx00.digitalRead(SX1509_05_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 5 LED");
-    colorMode = 5;
-    colorEnable = true;
-  }
-  if (sx00.digitalRead(SX1509_06_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 6 LED");
-    colorMode = 6;
-    colorEnable = true;
-  }
-  if (sx00.digitalRead(SX1509_07_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 7 LED");
-    colorMode = 7;
-    colorEnable = true;
-  }
-  if (sx00.digitalRead(SX1509_08_SWITCH_LED) == HIGH) {
-    Serial.println("pressed 8 LED");
-    colorMode = 8;
-    colorEnable = true;
-  }
-
-
-  if (sx00.digitalRead(SX1509_01_SWITCH) == HIGH) {
-    Serial.println("pressed 1");
-  }
-  if (sx00.digitalRead(SX1509_02_SWITCH) == HIGH) {
-    Serial.println("pressed 2");
-  }
-  if (sx00.digitalRead(SX1509_03_SWITCH) == HIGH) {
-    Serial.println("pressed 3");
-  }
-  if (sx00.digitalRead(SX1509_04_SWITCH) == HIGH) {
-    Serial.println("pressed 4");
-  }
-  if (sx00.digitalRead(SX1509_05_SWITCH) == HIGH) {
-    Serial.println("pressed 5");
-  }
-  if (sx00.digitalRead(SX1509_06_SWITCH) == HIGH) {
-    Serial.println("pressed 6");
-  }
-  if (sx00.digitalRead(SX1509_07_SWITCH) == HIGH) {
-    Serial.println("pressed 7");
-  }
-  if (sx00.digitalRead(SX1509_08_SWITCH) == HIGH) {
-    Serial.println("pressed 8");
-  }
-
-
-
-  switch (colorMode) {
-    case 0:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(0, 0, 0, 255)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-    case 1:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(255, 0, 0, 0)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-
-    case 2:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(0, 255, 0, 0)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-
-    case 3:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(0, 0, 255, 0)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-
-    case 4:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(0, 255, 255, 0)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-
-    case 5:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(255, 255, 0, 0)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-
-    case 6:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(255, 0, 255, 0)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-
-    case 7:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(0, 0, 0, 0)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-
-    case 8:
-      for (int i = 0; i < NUMPIXELS; i++) {
-        pixels->setPixelColor(i, pixels->Color(0, 0, 0, 255)); // Moderately bright green color.
-      }
-      // This sends the updated pixel color to the hardware.
-      pixels->show();
-      break;
-  }
 
 }

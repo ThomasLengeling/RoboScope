@@ -4893,6 +4893,16 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <junction x="266.7" y="38.1"/>
 <label x="279.4" y="38.1" size="1.016" layer="95" xref="yes"/>
 </segment>
+<<<<<<< HEAD
+=======
+<segment>
+<pinref part="CONN01" gate="G$1" pin="12"/>
+<wire x1="132.08" y1="38.1" x2="137.16" y2="38.1" width="0.1524" layer="91"/>
+<label x="137.16" y="38.1" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="VCC_MCU" class="0">
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <segment>
 <pinref part="MCP2562" gate="G$1" pin="VIO"/>
 <wire x1="541.02" y1="35.56" x2="546.1" y2="35.56" width="0.1524" layer="91"/>
@@ -4911,6 +4921,11 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="CONN03" gate="G$1" pin="9"/>
 <wire x1="116.84" y1="48.26" x2="106.68" y2="48.26" width="0.1524" layer="91"/>
 <label x="106.68" y="48.26" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN01" gate="G$1" pin="11"/>
+<wire x1="109.22" y1="38.1" x2="104.14" y2="38.1" width="0.1524" layer="91"/>
+<label x="104.14" y="38.1" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="KEY_01" class="0">
@@ -5338,6 +5353,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <junction x="332.74" y="38.1"/>
 </segment>
 </net>
+<<<<<<< HEAD
 <net name="VCC_5V" class="4">
 <segment>
 <pinref part="MCP2562FD" gate="G$1" pin="VDD"/>
@@ -5487,6 +5503,86 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="CONN03" gate="G$1" pin="6"/>
 <wire x1="132.08" y1="53.34" x2="139.7" y2="53.34" width="0.1524" layer="91"/>
 <label x="139.7" y="53.34" size="1.016" layer="95" xref="yes"/>
+=======
+<net name="GPIO_15" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="25/T/PWM"/>
+<wire x1="63.5" y1="30.48" x2="71.12" y2="30.48" width="0.1524" layer="91"/>
+<label x="71.12" y="30.48" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN01" gate="G$1" pin="5"/>
+<wire x1="109.22" y1="45.72" x2="104.14" y2="45.72" width="0.1524" layer="91"/>
+<label x="104.14" y="45.72" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="GPIO_16" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="26/A15"/>
+<wire x1="63.5" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
+<label x="71.12" y="33.02" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN01" gate="G$1" pin="6"/>
+<wire x1="132.08" y1="45.72" x2="137.16" y2="45.72" width="0.1524" layer="91"/>
+<label x="137.16" y="45.72" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="GPIO_17" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="27/A16"/>
+<wire x1="63.5" y1="35.56" x2="71.12" y2="35.56" width="0.1524" layer="91"/>
+<label x="71.12" y="35.56" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN01" gate="G$1" pin="7"/>
+<wire x1="104.14" y1="43.18" x2="109.22" y2="43.18" width="0.1524" layer="91"/>
+<label x="104.14" y="43.18" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="GPIO_18" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="28/A17"/>
+<wire x1="63.5" y1="38.1" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
+<label x="71.12" y="38.1" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN01" gate="G$1" pin="8"/>
+<wire x1="132.08" y1="43.18" x2="137.16" y2="43.18" width="0.1524" layer="91"/>
+<label x="137.16" y="43.18" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="GPIO_19" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="29/A18/SCL1"/>
+<wire x1="63.5" y1="40.64" x2="68.58" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="40.64" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
+<label x="71.12" y="40.64" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN01" gate="G$1" pin="9"/>
+<wire x1="109.22" y1="40.64" x2="104.14" y2="40.64" width="0.1524" layer="91"/>
+<label x="104.14" y="40.64" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="GPIO_20" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="30/A19/SDA1"/>
+<wire x1="63.5" y1="43.18" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="43.18" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
+<label x="71.12" y="43.18" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN01" gate="G$1" pin="10"/>
+<wire x1="132.08" y1="40.64" x2="137.16" y2="40.64" width="0.1524" layer="91"/>
+<label x="137.16" y="40.64" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="31/A20"/>
+<wire x1="63.5" y1="45.72" x2="71.12" y2="45.72" width="0.1524" layer="91"/>
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </segment>
 </net>
 </nets>

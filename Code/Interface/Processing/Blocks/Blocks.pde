@@ -9,6 +9,7 @@
  */
 import controlP5.*;
 import peasy.*;
+import peasy.PeasyCam;
 import picking.*;
 
 //picker
@@ -17,6 +18,8 @@ Picker picker3d;
 //cam
 PeasyCam cam;
 CameraState state;
+
+PGraphics pg;
 
 
 //background color

@@ -12,6 +12,12 @@ Project{
         name: { return FileInfo.baseName(sourceDirectory) }
 
         files: [
+            'src/Block.cpp',
+            'src/Block.h',
+            'src/CanSerial.h',
+            'src/Grid.cpp',
+            'src/Grid.h',
+            'src/GridTex.h',
             'src/main.cpp',
             'src/ofApp.cpp',
             'src/ofApp.h',

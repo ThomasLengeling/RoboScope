@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -232,6 +232,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="6.985" y1="1.27" x2="6.35" y2="0.635" width="0.2032" layer="21"/>
 <wire x1="6.35" y1="-0.635" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
 <wire x1="8.255" y1="-1.27" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
+<<<<<<< HEAD
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
 <wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
 <wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
@@ -955,6 +956,8 @@ Alternate pin configuration
 &lt;p&gt;Example device(s):
 &lt;ul&gt;&lt;li&gt;CONN_02&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;</description>
+=======
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
 <wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
 <wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
@@ -1777,6 +1780,7 @@ CONN_06
 </description>
 <packageinstances>
 <packageinstance name="MOLEX_1X6_RA_LOCK"/>
+<<<<<<< HEAD
 </packageinstances>
 </package3d>
 <package3d name="1X06_FEMALE_LOCK.010" urn="urn:adsk.eagle:package:38124/1" type="box" library_version="1">
@@ -2102,6 +2106,8 @@ CONN_02
 </description>
 <packageinstances>
 <packageinstance name="SCREWTERMINAL-3.5MM-2_LOCK"/>
+=======
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </packageinstances>
 </package3d>
 <package3d name="1X02_LONGPADS" urn="urn:adsk.eagle:package:38048/1" type="box" library_version="1">
@@ -2240,6 +2246,7 @@ Pin count:2
 Pin pitch:0.1"
 
 Example device(s):
+<<<<<<< HEAD
 CONN_02
 </description>
 <packageinstances>
@@ -2283,6 +2290,39 @@ CONN_06x2
 </description>
 <packageinstances>
 <packageinstance name="2X6_SMD"/>
+=======
+CONN_06
+EM-406
+</description>
+<packageinstances>
+<packageinstance name="1X06-1MM"/>
+</packageinstances>
+</package3d>
+<package3d name="1X06_NO_SILK" urn="urn:adsk.eagle:package:38130/1" type="box" library_version="1">
+<description>Plated Through Hole - 6 Pin No Silk Outline
+Specifications:
+Pin count:6
+Pin pitch:0.1"
+
+Example device(s):
+CONN_06
+</description>
+<packageinstances>
+<packageinstance name="1X06_NO_SILK"/>
+</packageinstances>
+</package3d>
+<package3d name="1X06_1.27MM" urn="urn:adsk.eagle:package:38131/1" type="box" library_version="1">
+<description>Plated Through Hole - 6 Pin
+Specifications:
+Pin count:6
+Pin pitch:1.27mm
+
+Example device(s):
+CONN_06
+</description>
+<packageinstances>
+<packageinstance name="1X06_1.27MM"/>
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </packageinstances>
 </package3d>
 </packages3d>
@@ -2308,6 +2348,7 @@ CONN_06x2
 <pin name="5" x="5.08" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="6" x="5.08" y="7.62" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 </symbol>
+<<<<<<< HEAD
 <symbol name="CONN_02" urn="urn:adsk.eagle:symbol:37653/1" library_version="1">
 <description>&lt;h3&gt;2 Pin Connection&lt;/h3&gt;</description>
 <wire x1="3.81" y1="-2.54" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
@@ -2750,6 +2791,11 @@ CONN_06x2
 </devices>
 </deviceset>
 <deviceset name="CONN_02" urn="urn:adsk.eagle:component:38323/1" prefix="J" uservalue="yes" library_version="1">
+=======
+</symbols>
+<devicesets>
+<deviceset name="CONN_06" urn="urn:adsk.eagle:component:38332/1" prefix="J" uservalue="yes" library_version="1">
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <description>&lt;h3&gt;Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections&lt;/h3&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -3060,6 +3106,7 @@ CONN_06x2
 <technology name=""/>
 </technologies>
 </device>
+<<<<<<< HEAD
 <device name="SMALL_POKEHOME" package="1X02_POKEHOME">
 <connects>
 <connect gate="G$1" pin="1" pad="P1 P3"/>
@@ -3153,6 +3200,8 @@ CONN_06x2
 </technology>
 </technologies>
 </device>
+=======
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </devices>
 </deviceset>
 </devicesets>
@@ -4213,6 +4262,7 @@ chip</description>
 </deviceset>
 </devicesets>
 </library>
+<<<<<<< HEAD
 <library name="SparkFun-Resistors" urn="urn:adsk.eagle:library:532">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find resistors, capacitors, inductors, test points, jumper pads, etc.&lt;br&gt;&lt;br&gt;
@@ -4576,6 +4626,8 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+=======
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </libraries>
 <attributes>
 </attributes>
@@ -4608,6 +4660,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <part name="CONN01" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_06X2" device="PTH_FEMALE" package3d_urn="urn:adsk.eagle:package:38277/1" value="2X6 FEMALE"/>
 <part name="U$2" library="Teensy4" deviceset="TEENSY_4.0_WITH_SMD_HEADER_PINS" device=""/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_06" device="SMD-1MM" package3d_urn="urn:adsk.eagle:package:38023/1"/>
+<<<<<<< HEAD
 <part name="CAN_FD_O" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="-JST-2MM-SMT" package3d_urn="urn:adsk.eagle:package:38042/1"/>
 <part name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="120Ohms FD"/>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="PESD1CAN" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
@@ -4629,6 +4682,9 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <part name="OUT_LED_4" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="OUT_LED_R4" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 <part name="J4" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_06" device="SMD-1MM" package3d_urn="urn:adsk.eagle:package:38023/1"/>
+=======
+<part name="J6" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_06" device="NO_SILK_NO_POP" package3d_urn="urn:adsk.eagle:package:38130/1"/>
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </parts>
 <sheets>
 <sheet>
@@ -4662,6 +4718,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <wire x1="482.6" y1="83.82" x2="708.66" y2="83.82" width="0.1524" layer="97"/>
 </plain>
 <instances>
+<<<<<<< HEAD
 <instance part="S1" gate="G$1" x="53.34" y="149.86"/>
 <instance part="S2" gate="G$1" x="121.92" y="149.86"/>
 <instance part="S3" gate="G$1" x="53.34" y="121.92"/>
@@ -4701,10 +4758,89 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <instance part="OUT_LED_4" gate="G$1" x="378.46" y="152.4" rot="R90"/>
 <instance part="OUT_LED_R4" gate="G$1" x="360.68" y="152.4" rot="R180"/>
 <instance part="J4" gate="G$1" x="223.52" y="144.78" rot="R180"/>
+=======
+<instance part="OUT_LED_2" gate="G$1" x="203.2" y="132.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="205.232" y="135.636" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="205.232" y="137.795" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="OUT_LED_R2" gate="G$1" x="185.42" y="132.08" smashed="yes" rot="R180">
+<attribute name="NAME" x="189.23" y="130.5814" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="189.23" y="135.382" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="S1" gate="G$1" x="53.34" y="149.86" smashed="yes">
+<attribute name="NAME" x="53.34" y="155.194" size="1.778" layer="95" align="bottom-center"/>
+<attribute name="VALUE" x="53.34" y="144.526" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="S2" gate="G$1" x="121.92" y="149.86" smashed="yes">
+<attribute name="NAME" x="121.92" y="155.194" size="1.778" layer="95" align="bottom-center"/>
+<attribute name="VALUE" x="121.92" y="144.526" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="S3" gate="G$1" x="53.34" y="121.92" smashed="yes">
+<attribute name="NAME" x="53.34" y="127.254" size="1.778" layer="95" align="bottom-center"/>
+<attribute name="VALUE" x="53.34" y="116.586" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="S4" gate="G$1" x="121.92" y="121.92" smashed="yes">
+<attribute name="NAME" x="121.92" y="127.254" size="1.778" layer="95" align="bottom-center"/>
+<attribute name="VALUE" x="121.92" y="116.586" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="R1" gate="G$1" x="35.56" y="160.02" smashed="yes" rot="R90">
+<attribute name="NAME" x="33.528" y="157.48" size="1.27" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="38.735" y="157.48" size="1.27" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="R2" gate="G$1" x="104.14" y="160.02" smashed="yes" rot="R90">
+<attribute name="NAME" x="102.108" y="157.48" size="1.27" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="107.315" y="157.48" size="1.27" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="R4" gate="G$1" x="104.14" y="132.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="102.108" y="129.54" size="1.27" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="107.315" y="129.54" size="1.27" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="R3" gate="G$1" x="35.56" y="132.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="33.528" y="129.54" size="1.27" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="38.735" y="129.54" size="1.27" layer="96" font="vector" rot="R90"/>
+</instance>
+<instance part="OUT_LED_1" gate="G$1" x="203.2" y="147.32" smashed="yes" rot="R90">
+<attribute name="NAME" x="205.232" y="150.876" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="205.232" y="153.035" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="OUT_LED_R1" gate="G$1" x="185.42" y="147.32" smashed="yes" rot="R180">
+<attribute name="NAME" x="189.23" y="145.8214" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="189.23" y="150.622" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CONN03" gate="G$1" x="121.92" y="53.34" smashed="yes">
+<attribute name="NAME" x="116.848509375" y="61.72753125" size="1.27213125" layer="95"/>
+<attribute name="VALUE" x="116.846659375" y="40.62" size="1.271659375" layer="96"/>
+</instance>
+<instance part="CONN01" gate="G$1" x="121.92" y="25.4" smashed="yes">
+<attribute name="NAME" x="116.848509375" y="33.78753125" size="1.27213125" layer="95"/>
+<attribute name="VALUE" x="116.846659375" y="12.68" size="1.271659375" layer="96"/>
+</instance>
+<instance part="U$2" gate="G$1" x="43.18" y="40.64" smashed="yes">
+<attribute name="NAME" x="37.592" y="74.93" size="1.27" layer="95" font="vector" ratio="15"/>
+<attribute name="VALUE" x="40.386" y="2.54" size="1.27" layer="96" font="vector" ratio="15"/>
+</instance>
+<instance part="J1" gate="G$1" x="373.38" y="124.46" smashed="yes" rot="R180">
+<attribute name="VALUE" x="378.46" y="134.366" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="378.46" y="113.792" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+<instance part="J6" gate="G$1" x="294.64" y="127" smashed="yes" rot="R180">
+<attribute name="VALUE" x="299.72" y="136.906" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="299.72" y="116.332" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </instances>
 <busses>
 </busses>
 <nets>
+<<<<<<< HEAD
+=======
+<net name="CAN_TX" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="3"/>
+<wire x1="368.3" y1="124.46" x2="360.68" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <net name="GND_MCU" class="0">
 <segment>
 <pinref part="S1" gate="G$1" pin="S2"/>
@@ -4740,6 +4876,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="U$2" gate="G$1" pin="GND"/>
 <wire x1="66.04" y1="63.5" x2="71.12" y2="63.5" width="0.1524" layer="91"/>
 <label x="71.12" y="63.5" size="1.016" layer="95" xref="yes"/>
+<<<<<<< HEAD
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
@@ -4808,6 +4945,8 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="OUT_LED_3" gate="G$1" pin="C"/>
 <wire x1="381" y1="137.16" x2="386.08" y2="137.16" width="0.1524" layer="91"/>
 <label x="386.08" y="137.16" size="1.016" layer="95" xref="yes"/>
+=======
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </segment>
 <segment>
 <pinref part="OUT_LED_4" gate="G$1" pin="C"/>
@@ -5183,6 +5322,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <wire x1="66.04" y1="33.02" x2="73.66" y2="33.02" width="0.1524" layer="91"/>
 <label x="73.66" y="33.02" size="1.016" layer="95" xref="yes"/>
 </segment>
+<<<<<<< HEAD
 <segment>
 <pinref part="MCP2562FD" gate="G$1" pin="RXD"/>
 <wire x1="233.68" y1="38.1" x2="228.6" y2="38.1" width="0.1524" layer="91"/>
@@ -5228,6 +5368,14 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="U$2" gate="G$1" pin="5"/>
 <wire x1="20.32" y1="55.88" x2="15.24" y2="55.88" width="0.1524" layer="91"/>
 <label x="15.24" y="55.88" size="1.016" layer="95" rot="R180" xref="yes"/>
+=======
+</net>
+<net name="CAN_RX3" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="30/CRX3"/>
+<wire x1="66.04" y1="33.02" x2="73.66" y2="33.02" width="0.1524" layer="91"/>
+<label x="73.66" y="33.02" size="1.016" layer="95" xref="yes"/>
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </segment>
 </net>
 <net name="CAN_TX2" class="0">
@@ -5237,6 +5385,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <label x="15.24" y="66.04" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
+<<<<<<< HEAD
 <pinref part="MCP2562" gate="G$1" pin="TXD"/>
 <wire x1="513.08" y1="50.8" x2="508" y2="50.8" width="0.1524" layer="91"/>
 <label x="508" y="50.8" size="1.016" layer="95" rot="R180" xref="yes"/>
@@ -5352,6 +5501,14 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="C10" gate="G$1" pin="1"/>
 <label x="482.6" y="48.26" size="1.016" layer="95" rot="R90" xref="yes"/>
 </segment>
+=======
+<pinref part="U$2" gate="G$1" pin="31/CTX3"/>
+<wire x1="66.04" y1="30.48" x2="73.66" y2="30.48" width="0.1524" layer="91"/>
+<label x="73.66" y="30.48" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <segment>
 <pinref part="U$2" gate="G$1" pin="VIN"/>
 <wire x1="66.04" y1="68.58" x2="71.12" y2="68.58" width="0.1524" layer="91"/>
@@ -5486,6 +5643,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 </sheets>
 <errors>
 <approved hash="204,1,66.04,55.88,U$2,VBAT,,,,"/>
+<<<<<<< HEAD
 <approved hash="106,1,20.32,30.48,GPIO_09,,,,,"/>
 <approved hash="106,1,20.32,17.78,GPIO_12,,,,,"/>
 <approved hash="106,1,20.32,15.24,GPIO_13,,,,,"/>
@@ -5494,6 +5652,19 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <approved hash="110,1,375.92,38.1,CAN_H,CAN_L,,,,"/>
 <approved hash="110,1,655.32,35.56,CAN_H1,CAN_L1,,,,"/>
 <approved hash="110,1,655.32,35.56,CAN_H1,CAN_L1,,,,"/>
+=======
+<approved hash="106,1,289.56,121.92,CAN_H2,,,,,"/>
+<approved hash="106,1,289.56,119.38,CAN_L2,,,,,"/>
+<approved hash="106,1,459.74,40.64,CAN_RX,,,,,"/>
+<approved hash="106,1,459.74,38.1,CAN_STB,,,,,"/>
+<approved hash="106,1,66.04,38.1,GPIO_19,,,,,"/>
+<approved hash="106,1,368.3,116.84,SWITCH_01,,,,,"/>
+<approved hash="108,1,248.92,50.8,3.3V,,,,,"/>
+<approved hash="110,1,401.32,35.56,CAN_H1,CAN_L1,,,,"/>
+<approved hash="110,1,401.32,35.56,CAN_H1,CAN_L1,,,,"/>
+<approved hash="110,1,335.28,35.56,CAN_L1,N$14,,,,"/>
+<approved hash="111,1,335.28,35.56,CAN_L1,,,,,"/>
+>>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </errors>
 </schematic>
 </drawing>
