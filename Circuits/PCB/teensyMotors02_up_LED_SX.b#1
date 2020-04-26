@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -183,7 +183,6 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYmFkZWI5" projecturn="a.cGVyc29uYWw6dWUyYmFkZWI5IzIwMTkwNzI5MjA1OTgzMzU2" f3durn="urn:adsk.wipprod:dm.lineage:7toYrt_ITcaoZfLJM-Xm8g" pcbguid="cb2d058b-e858-4bb7-9ed9-797f10fb0abf" lastpulledtime="" lastsyncedchangeguid="16d9960c-4b7c-5a14-48a9-f09feaa70253"/>
 <plain>
 <wire x1="74.093309375" y1="153.094390625" x2="74.093309375" y2="3.094390625" width="0.01" layer="20"/>
 <wire x1="74.093309375" y1="3.094390625" x2="2.093309375" y2="3.094390625" width="0.01" layer="20"/>
@@ -1590,294 +1589,148 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="MOTOR_01" library="STSPIN220" package="DRV8880" value="DRV8880" x="61.955" y="40.663" smashed="yes" rot="MR270">
-<attribute name="NAME" x="51.795" y="45.743" size="1.27" layer="26" rot="MR270"/>
-<attribute name="VALUE" x="73.385" y="45.743" size="1.27" layer="28" rot="MR270"/>
-</element>
-<element name="MOTOR_02" library="STSPIN220" package="DRV8880" value="DRV8880" x="14.8315" y="40.663" smashed="yes" rot="MR270">
-<attribute name="NAME" x="4.6715" y="45.743" size="1.27" layer="26" rot="MR270"/>
-<attribute name="VALUE" x="26.2615" y="45.743" size="1.27" layer="28" rot="MR270"/>
-</element>
-<element name="MOTOR_03" library="STSPIN220" package="DRV8880" value="DRV8880" x="38.188" y="36.037" smashed="yes" rot="MR270">
-<attribute name="NAME" x="28.028" y="41.117" size="1.27" layer="26" rot="MR270"/>
-<attribute name="VALUE" x="49.618" y="41.117" size="1.27" layer="28" rot="MR270"/>
-</element>
-<element name="MOTOR_04" library="STSPIN220" package="DRV8880" value="DRV8880" x="38.3095" y="61.985" smashed="yes" rot="MR270">
-<attribute name="NAME" x="28.1495" y="67.065" size="1.27" layer="26" rot="MR270"/>
-<attribute name="VALUE" x="49.7395" y="67.065" size="1.27" layer="28" rot="MR270"/>
-</element>
-<element name="MOTOR_05" library="STSPIN220" package="DRV8880" value="DRV8880" x="61.926" y="117.776" smashed="yes" rot="MR90">
-<attribute name="NAME" x="72.086" y="112.696" size="1.27" layer="26" rot="MR90"/>
-<attribute name="VALUE" x="50.496" y="112.696" size="1.27" layer="28" rot="MR90"/>
-</element>
-<element name="MOTOR_06" library="STSPIN220" package="DRV8880" value="DRV8880" x="14.115" y="117.522" smashed="yes" rot="MR90">
-<attribute name="NAME" x="24.275" y="112.442" size="1.27" layer="26" rot="MR90"/>
-<attribute name="VALUE" x="2.685" y="112.442" size="1.27" layer="28" rot="MR90"/>
-</element>
-<element name="MOTOR_07" library="STSPIN220" package="DRV8880" value="DRV8880" x="38.084" y="126.63" smashed="yes" rot="MR90">
-<attribute name="NAME" x="48.244" y="121.55" size="1.27" layer="26" rot="MR90"/>
-<attribute name="VALUE" x="26.654" y="121.55" size="1.27" layer="28" rot="MR90"/>
-</element>
-<element name="MOTOR_08" library="STSPIN220" package="DRV8880" value="DRV8880" x="42.726" y="102.586" smashed="yes" rot="MR0">
-<attribute name="NAME" x="47.806" y="112.746" size="1.27" layer="26" rot="MR0"/>
-<attribute name="VALUE" x="47.806" y="91.156" size="1.27" layer="28" rot="MR0"/>
-</element>
-<element name="CAN_INPUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="JST-2-SMD" package3d_urn="urn:adsk.eagle:package:38042/1" value="" x="6.626" y="68.8775" smashed="yes" rot="R90">
-<attribute name="NAME" x="4.848" y="67.4805" size="0.6096" layer="25" font="vector" ratio="20" rot="R90"/>
+<element name="MOTOR_01" library="STSPIN220" package="DRV8880" value="DRV8880" x="61.955" y="40.663" rot="MR270"/>
+<element name="MOTOR_02" library="STSPIN220" package="DRV8880" value="DRV8880" x="14.8315" y="40.663" rot="MR270"/>
+<element name="MOTOR_03" library="STSPIN220" package="DRV8880" value="DRV8880" x="38.188" y="36.037" rot="MR270"/>
+<element name="MOTOR_04" library="STSPIN220" package="DRV8880" value="DRV8880" x="38.3095" y="61.985" rot="MR270"/>
+<element name="MOTOR_05" library="STSPIN220" package="DRV8880" value="DRV8880" x="61.926" y="117.776" rot="MR90"/>
+<element name="MOTOR_06" library="STSPIN220" package="DRV8880" value="DRV8880" x="14.115" y="117.522" rot="MR90"/>
+<element name="MOTOR_07" library="STSPIN220" package="DRV8880" value="DRV8880" x="38.084" y="126.63" rot="MR90"/>
+<element name="MOTOR_08" library="STSPIN220" package="DRV8880" value="DRV8880" x="42.726" y="102.586" rot="MR0"/>
+<element name="CAN_INPUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="JST-2-SMD" package3d_urn="urn:adsk.eagle:package:38042/1" value="" x="6.626" y="68.8775" rot="R90">
 <attribute name="PROD_ID" value="CONN-11443" x="6.626" y="68.8775" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="5.991" y="67.2265" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
 </element>
-<element name="STATUS_LED" library="fab" package="LED1206FAB" value="LEDFAB1206" x="69.066" y="60.249" smashed="yes" rot="R180">
-<attribute name="NAME" x="70.844" y="58.979" size="1.016" layer="25" ratio="15" rot="R180"/>
-<attribute name="VALUE" x="70.844" y="62.535" size="1.016" layer="27" ratio="15" rot="R180"/>
-</element>
-<element name="I2C" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="2X6_SMD" package3d_urn="urn:adsk.eagle:package:38276/1" value="" x="9.144" y="119.507" smashed="yes" rot="R270">
-<attribute name="NAME" x="13.335" y="126.619" size="0.6096" layer="25" font="vector" ratio="20" rot="R270"/>
-<attribute name="VALUE" x="4.445" y="126.365" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
-</element>
-<element name="CM_01" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="61.976" y="27.94" smashed="yes" rot="R180">
-<attribute name="NAME" x="64.5922" y="26.1112" size="1.27" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="64.516" y="31.115" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="CM_02" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="14.732" y="27.94" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.3482" y="26.1112" size="1.27" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="17.272" y="31.115" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="CM_03" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="38.481" y="12.954" smashed="yes" rot="R180">
-<attribute name="NAME" x="41.0972" y="11.1252" size="1.27" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="41.021" y="16.129" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="CM_04" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="38.227" y="49.276" smashed="yes" rot="R180">
-<attribute name="NAME" x="40.8432" y="47.4472" size="1.27" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="40.767" y="52.451" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="CM_05" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="61.976" y="130.048" smashed="yes">
-<attribute name="NAME" x="59.3598" y="131.8768" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="59.436" y="126.873" size="1.27" layer="27"/>
-</element>
-<element name="CM_06" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="14.224" y="130.81" smashed="yes">
-<attribute name="NAME" x="11.6078" y="132.6388" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="11.684" y="127.635" size="1.27" layer="27"/>
-</element>
-<element name="CM_07" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="38.0039" y="145.515" smashed="yes">
-<attribute name="NAME" x="35.3877" y="147.3438" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="35.4639" y="142.34" size="1.27" layer="27"/>
-</element>
-<element name="CM_08" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="26.357" y="101.6009" smashed="yes" rot="R90">
-<attribute name="NAME" x="24.5282" y="98.9847" size="1.27" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="29.532" y="99.0609" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="MC1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="47.429" y="17.544" smashed="yes" rot="MR0">
-<attribute name="NAME" x="47.429" y="20.973" size="0.6096" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
+<element name="STATUS_LED" library="fab" package="LED1206FAB" value="LEDFAB1206" x="69.066" y="60.249" rot="R180"/>
+<element name="I2C" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="2X6_SMD" package3d_urn="urn:adsk.eagle:package:38276/1" value="" x="9.144" y="119.507" rot="R270"/>
+<element name="CM_01" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="61.976" y="27.94" rot="R180"/>
+<element name="CM_02" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="14.732" y="27.94" rot="R180"/>
+<element name="CM_03" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="38.481" y="12.954" rot="R180"/>
+<element name="CM_04" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="38.227" y="49.276" rot="R180"/>
+<element name="CM_05" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="61.976" y="130.048"/>
+<element name="CM_06" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="14.224" y="130.81"/>
+<element name="CM_07" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="38.0039" y="145.515"/>
+<element name="CM_08" library="adafruit" package="1X04-CLEANBIG" value="1X04_STRAIGHT" x="26.357" y="101.6009" rot="R90"/>
+<element name="MC1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="47.429" y="17.544" rot="MR0">
 <attribute name="PROD_ID" value="CAP-12547" x="47.429" y="17.544" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="47.429" y="14.115" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
-<element name="MC2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="7.11" y="17.635" smashed="yes" rot="MR0">
-<attribute name="NAME" x="7.11" y="21.064" size="0.6096" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
+<element name="MC2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="7.11" y="17.635" rot="MR0">
 <attribute name="PROD_ID" value="CAP-12547" x="7.11" y="17.635" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="7.11" y="14.206" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
-<element name="MC3" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="28.893" y="17.608" smashed="yes" rot="MR0">
-<attribute name="NAME" x="28.893" y="21.037" size="0.6096" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
+<element name="MC3" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="28.893" y="17.608" rot="MR0">
 <attribute name="PROD_ID" value="CAP-12547" x="28.893" y="17.608" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="28.893" y="14.179" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
-<element name="MC4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="23.193" y="69.199" smashed="yes" rot="MR0">
-<attribute name="NAME" x="23.193" y="72.628" size="0.6096" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
+<element name="MC4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="23.193" y="69.199" rot="MR0">
 <attribute name="PROD_ID" value="CAP-12547" x="23.193" y="69.199" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="23.193" y="65.77" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
-<element name="MC5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="68.909" y="141.563" smashed="yes" rot="MR180">
-<attribute name="NAME" x="68.909" y="138.134" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<element name="MC5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="68.909" y="141.563" rot="MR180">
 <attribute name="PROD_ID" value="CAP-12547" x="68.909" y="141.563" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="68.909" y="144.992" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
 </element>
-<element name="MC6" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="27.84" y="141.761" smashed="yes" rot="MR180">
-<attribute name="NAME" x="27.84" y="138.332" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<element name="MC6" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="27.84" y="141.761" rot="MR180">
 <attribute name="PROD_ID" value="CAP-12547" x="27.84" y="141.761" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="27.84" y="145.19" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
 </element>
-<element name="MC7" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="48.212" y="141.597" smashed="yes" rot="MR180">
-<attribute name="NAME" x="48.212" y="138.168" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<element name="MC7" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="48.212" y="141.597" rot="MR180">
 <attribute name="PROD_ID" value="CAP-12547" x="48.212" y="141.597" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="48.212" y="145.026" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
 </element>
-<element name="MC8" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="68.865" y="100.274" smashed="yes" rot="MR180">
-<attribute name="NAME" x="68.865" y="96.845" size="0.6096" layer="26" font="vector" ratio="20" rot="MR180" align="bottom-center"/>
+<element name="MC8" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="PANASONIC_D" package3d_urn="urn:adsk.eagle:package:37420/1" value="100uF" x="68.865" y="100.274" rot="MR180">
 <attribute name="PROD_ID" value="CAP-12547" x="68.865" y="100.274" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="68.865" y="103.703" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
 </element>
-<element name="SMAT70A" library="s2x_10" package="DO214AA" value="S2M" x="20.418" y="87.436" smashed="yes" rot="R90">
+<element name="SMAT70A" library="s2x_10" package="DO214AA" value="S2M" x="20.418" y="87.436" rot="R90">
 <attribute name="MF" value="Fairchild" x="20.418" y="87.436" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="S2M" x="20.418" y="87.436" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="18.218" y="85.336" size="1.27" layer="25" rot="R90"/>
 <attribute name="OC_FARNELL" value="9843876" x="20.418" y="87.436" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="58K9553" x="20.418" y="87.436" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="23.918" y="85.336" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="SMAJ24A" library="s2x_10" package="DO214AA" value="S2M" x="24.65" y="87.462" smashed="yes" rot="R90">
+<element name="SMAJ24A" library="s2x_10" package="DO214AA" value="S2M" x="24.65" y="87.462" rot="R90">
 <attribute name="MF" value="Fairchild" x="24.65" y="87.462" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="S2M" x="24.65" y="87.462" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="22.45" y="85.362" size="1.27" layer="25" rot="R90"/>
 <attribute name="OC_FARNELL" value="9843876" x="24.65" y="87.462" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="58K9553" x="24.65" y="87.462" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="28.15" y="85.362" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" package="SWITCH_DPDT_SMD_AYZ0202" package3d_urn="urn:adsk.eagle:package:40160/1" value="" x="6.719" y="55.91" smashed="yes" rot="R270">
-<attribute name="NAME" x="6.719" y="59.72" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<element name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" package="SWITCH_DPDT_SMD_AYZ0202" package3d_urn="urn:adsk.eagle:package:40160/1" value="" x="6.719" y="55.91" rot="R270">
 <attribute name="PROD_ID" value="SWCH-08179" x="6.719" y="55.91" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SF_SKU" value="COM-00597" x="6.719" y="55.91" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SPICEPREFIX" value="X" x="6.719" y="55.91" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="6.719" y="52.1" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="POWER_M" library="con-JST VH" package="B2P-VH" value="B2P-VH" x="42.164" y="77.47" smashed="yes" rot="MR180">
-<attribute name="NAME" x="37.644" y="78.105" size="1.27" layer="26" rot="MR270" align="bottom-center"/>
-<attribute name="VALUE" x="40.184" y="80.645" size="1.27" layer="28" rot="MR180"/>
-</element>
-<element name="POWER_MCU" library="con-JST VH" package="B2P-VH" value="B2P-VH" x="34.036" y="77.47" smashed="yes" rot="MR180">
-<attribute name="NAME" x="29.516" y="78.105" size="1.27" layer="26" rot="MR270" align="bottom-center"/>
-<attribute name="VALUE" x="32.056" y="80.645" size="1.27" layer="28" rot="MR180"/>
-</element>
-<element name="U$3" library="Teensy4" package="TEENSY_4.0_WITH_SMD_HEADER_PINS" value="TEENSY_4.0_WITH_SMD_HEADER_PINS" x="38.24" y="100.262" smashed="yes">
-<attribute name="NAME" x="35.7" y="114.232" size="1.27" layer="25" font="vector"/>
-<attribute name="VALUE" x="34.43" y="86.292" size="1.27" layer="27" font="vector"/>
-</element>
-<element name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603-RES" value="120Ohms" x="67.818" y="85.852" smashed="yes" rot="R270">
-<attribute name="NAME" x="68.58" y="86.741" size="0.4064" layer="25" font="vector" rot="R270"/>
+<element name="POWER_M" library="con-JST VH" package="B2P-VH" value="B2P-VH" x="42.164" y="77.47" rot="MR180"/>
+<element name="POWER_MCU" library="con-JST VH" package="B2P-VH" value="B2P-VH" x="34.036" y="77.47" rot="MR180"/>
+<element name="U$3" library="Teensy4" package="TEENSY_4.0_WITH_SMD_HEADER_PINS" value="TEENSY_4.0_WITH_SMD_HEADER_PINS" x="38.24" y="100.262"/>
+<element name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603-RES" value="120Ohms" x="67.818" y="85.852" rot="R270">
 <attribute name="PROD_ID" value="RES-00824" x="67.818" y="85.852" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="66.675" y="86.868" size="0.4064" layer="27" font="vector" rot="R270"/>
 </element>
-<element name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOT23" package3d_urn="urn:adsk.eagle:package:43389/2" value="PESD1CAN" x="56.388" y="70.358" smashed="yes">
-<attribute name="NAME" x="54.483" y="72.263" size="1.27" layer="25"/>
+<element name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOT23" package3d_urn="urn:adsk.eagle:package:43389/2" value="PESD1CAN" x="56.388" y="70.358">
 <attribute name="POPULARITY" value="0" x="56.388" y="70.358" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="54.483" y="67.183" size="1.27" layer="27"/>
 </element>
-<element name="C6" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="65.278" y="85.852" smashed="yes" rot="R90">
-<attribute name="NAME" x="64.516" y="84.963" size="0.4064" layer="25" font="vector" rot="R90"/>
+<element name="C6" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="65.278" y="85.852" rot="R90">
 <attribute name="PROD_ID" value="CAP-00810" x="65.278" y="85.852" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="66.421" y="84.836" size="0.4064" layer="27" font="vector" rot="R90"/>
 </element>
-<element name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603-RES" value="500" x="69.088" y="55.372" smashed="yes" rot="R180">
-<attribute name="NAME" x="69.977" y="54.61" size="0.4064" layer="25" font="vector" rot="R180"/>
+<element name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603-RES" value="500" x="69.088" y="55.372" rot="R180">
 <attribute name="PROD_ID" value="RES-00824" x="69.088" y="55.372" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="70.104" y="56.515" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
-<element name="C7" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="18.288" y="74.93" smashed="yes" rot="R270">
-<attribute name="NAME" x="19.05" y="75.819" size="0.4064" layer="25" font="vector" rot="R270"/>
+<element name="C7" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="18.288" y="74.93" rot="R270">
 <attribute name="PROD_ID" value="CAP-00810" x="18.288" y="74.93" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="17.145" y="75.946" size="0.4064" layer="27" font="vector" rot="R270"/>
 </element>
-<element name="C8" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="15.494" y="74.93" smashed="yes" rot="R90">
-<attribute name="NAME" x="14.732" y="74.041" size="0.4064" layer="25" font="vector" rot="R90"/>
+<element name="C8" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="15.494" y="74.93" rot="R90">
 <attribute name="PROD_ID" value="CAP-00810" x="15.494" y="74.93" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="16.637" y="73.914" size="0.4064" layer="27" font="vector" rot="R90"/>
 </element>
-<element name="CAN_INPUT1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="JST-2-SMD" package3d_urn="urn:adsk.eagle:package:38042/1" value="" x="69.85" y="68.8775" smashed="yes" rot="R270">
-<attribute name="NAME" x="71.628" y="70.2745" size="0.6096" layer="25" font="vector" ratio="20" rot="R270"/>
+<element name="CAN_INPUT1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="JST-2-SMD" package3d_urn="urn:adsk.eagle:package:38042/1" value="" x="69.85" y="68.8775" rot="R270">
 <attribute name="PROD_ID" value="CONN-11443" x="69.85" y="68.8775" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="70.485" y="70.5285" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
 </element>
-<element name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X02" package3d_urn="urn:adsk.eagle:package:38039/1" value="" x="67.056" y="80.01" smashed="yes" rot="R180">
-<attribute name="NAME" x="68.326" y="78.613" size="0.6096" layer="25" font="vector" ratio="20" rot="R180"/>
-<attribute name="VALUE" x="68.326" y="82.042" size="0.6096" layer="27" font="vector" ratio="20" rot="R180"/>
-</element>
-<element name="NOE_PIXELS" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="2X6_SMD" package3d_urn="urn:adsk.eagle:package:38276/1" value="" x="67.056" y="119.507" smashed="yes" rot="R270">
-<attribute name="NAME" x="71.247" y="126.619" size="0.6096" layer="25" font="vector" ratio="20" rot="R270"/>
-<attribute name="VALUE" x="62.357" y="126.365" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
-</element>
-<element name="JP3_TX7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_TRACE_NO-SILK" package3d_urn="urn:adsk.eagle:package:39287/1" value="JUMPER-SMT_3_1-NC_TRACE_NO-SILK" x="36.576" y="104.394" smashed="yes">
-<attribute name="NAME" x="36.576" y="105.537" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="VALUE" x="36.576" y="103.251" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
-</element>
-<element name="JP4_RX7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_TRACE_NO-SILK" package3d_urn="urn:adsk.eagle:package:39287/1" value="JUMPER-SMT_3_1-NC_TRACE_NO-SILK" x="40.386" y="104.394" smashed="yes">
-<attribute name="NAME" x="40.386" y="105.537" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="VALUE" x="40.386" y="103.251" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
-</element>
-<element name="U$5" library="SX1509_s" package="SX1509" value="SX1509" x="36.83" y="38.1" smashed="yes" rot="R90"/>
-<element name="U$1" library="MCP2562" package="MCP2562" value="MCP2562" x="54.356" y="86.106" smashed="yes">
-<attribute name="NAME" x="42.814" y="89.0064" size="3.500090625" layer="25"/>
-<attribute name="VALUE" x="43.2004" y="79.3713" size="3.357890625" layer="27"/>
-</element>
-<element name="C4" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="62.484" y="85.852" smashed="yes" rot="R270">
-<attribute name="NAME" x="63.246" y="86.741" size="0.4064" layer="25" font="vector" rot="R270"/>
+<element name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X02" package3d_urn="urn:adsk.eagle:package:38039/1" value="" x="67.056" y="80.01" rot="R180"/>
+<element name="NOE_PIXELS" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="2X6_SMD" package3d_urn="urn:adsk.eagle:package:38276/1" value="" x="67.056" y="119.507" rot="R270"/>
+<element name="JP3_TX7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_TRACE_NO-SILK" package3d_urn="urn:adsk.eagle:package:39287/1" value="JUMPER-SMT_3_1-NC_TRACE_NO-SILK" x="36.576" y="104.394"/>
+<element name="JP4_RX7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_TRACE_NO-SILK" package3d_urn="urn:adsk.eagle:package:39287/1" value="JUMPER-SMT_3_1-NC_TRACE_NO-SILK" x="40.386" y="104.394"/>
+<element name="U$5" library="SX1509_s" package="SX1509" value="SX1509" x="36.83" y="38.1" rot="R90"/>
+<element name="U$1" library="MCP2562" package="MCP2562" value="MCP2562" x="54.356" y="86.106"/>
+<element name="C4" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="62.484" y="85.852" rot="R270">
 <attribute name="PROD_ID" value="CAP-00810" x="62.484" y="85.852" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="61.341" y="86.868" size="0.4064" layer="27" font="vector" rot="R270"/>
 </element>
-<element name="CAN_INPUT4" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="JST-2-SMD" package3d_urn="urn:adsk.eagle:package:38042/1" value="" x="54.356" y="8.636" smashed="yes" rot="R270">
-<attribute name="NAME" x="56.134" y="10.033" size="0.6096" layer="25" font="vector" ratio="20" rot="R270"/>
+<element name="CAN_INPUT4" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="JST-2-SMD" package3d_urn="urn:adsk.eagle:package:38042/1" value="" x="54.356" y="8.636" rot="R270">
 <attribute name="PROD_ID" value="CONN-11443" x="64.008" y="41.402" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="54.991" y="10.287" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
 </element>
-<element name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603-RES" value="120Ohms" x="43.434" y="60.452" smashed="yes" rot="R270">
-<attribute name="NAME" x="44.196" y="61.341" size="0.4064" layer="25" font="vector" rot="R270"/>
+<element name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603-RES" value="120Ohms" x="43.434" y="60.452" rot="R270">
 <attribute name="PROD_ID" value="RES-00824" x="81.026" y="100.33" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="42.291" y="61.468" size="0.4064" layer="27" font="vector" rot="R270"/>
 </element>
-<element name="D5" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOT23" package3d_urn="urn:adsk.eagle:package:43389/2" value="PESD1CAN" x="47.752" y="60.452" smashed="yes">
-<attribute name="NAME" x="45.847" y="62.357" size="1.27" layer="25"/>
+<element name="D5" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOT23" package3d_urn="urn:adsk.eagle:package:43389/2" value="PESD1CAN" x="47.752" y="60.452">
 <attribute name="POPULARITY" value="0" x="30.48" y="94.742" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="45.847" y="57.277" size="1.27" layer="27"/>
 </element>
-<element name="C5" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="31.496" y="60.96" smashed="yes" rot="R90">
-<attribute name="NAME" x="30.734" y="60.071" size="0.4064" layer="25" font="vector" rot="R90"/>
+<element name="C5" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="31.496" y="60.96" rot="R90">
 <attribute name="PROD_ID" value="CAP-00810" x="4.572" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="32.639" y="59.944" size="0.4064" layer="27" font="vector" rot="R90"/>
 </element>
-<element name="CAN_INPUT5" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="JST-2-SMD" package3d_urn="urn:adsk.eagle:package:38042/1" value="" x="21.336" y="8.382" smashed="yes" rot="R90">
-<attribute name="NAME" x="19.558" y="6.985" size="0.6096" layer="25" font="vector" ratio="20" rot="R90"/>
+<element name="CAN_INPUT5" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="JST-2-SMD" package3d_urn="urn:adsk.eagle:package:38042/1" value="" x="21.336" y="8.382" rot="R90">
 <attribute name="PROD_ID" value="CONN-11443" x="-11.938" y="-8.89" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="20.701" y="6.731" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
 </element>
-<element name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X02" package3d_urn="urn:adsk.eagle:package:38039/1" value="" x="36.576" y="5.588" smashed="yes" rot="R90">
-<attribute name="NAME" x="35.179" y="4.318" size="0.6096" layer="25" font="vector" ratio="20" rot="R90"/>
-<attribute name="VALUE" x="38.608" y="4.318" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
-</element>
-<element name="U$6" library="MCP2562" package="MCP2562" value="MCP2562" x="37.592" y="60.706" smashed="yes">
-<attribute name="NAME" x="26.05" y="63.6064" size="3.500090625" layer="25"/>
-<attribute name="VALUE" x="26.4364" y="53.9713" size="3.357890625" layer="27"/>
-</element>
-<element name="C10" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="28.956" y="60.96" smashed="yes" rot="R90">
-<attribute name="NAME" x="28.194" y="60.071" size="0.4064" layer="25" font="vector" rot="R90"/>
+<element name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X02" package3d_urn="urn:adsk.eagle:package:38039/1" value="" x="36.576" y="5.588" rot="R90"/>
+<element name="U$6" library="MCP2562" package="MCP2562" value="MCP2562" x="37.592" y="60.706"/>
+<element name="C10" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uf" x="28.956" y="60.96" rot="R90">
 <attribute name="PROD_ID" value="CAP-00810" x="8.89" y="-5.842" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="30.099" y="59.944" size="0.4064" layer="27" font="vector" rot="R90"/>
 </element>
-<element name="U1" library="LTC4359CMS8PBF" package="MSOP-8_MS" value="LTC4359CMS8PBF" x="23.368" y="75.184" smashed="yes">
+<element name="U1" library="LTC4359CMS8PBF" package="MSOP-8_MS" value="LTC4359CMS8PBF" x="23.368" y="75.184">
 <attribute name="AVAILABILITY" value="Unavailable" x="23.368" y="75.184" size="1.778" layer="27" display="off"/>
 <attribute name="DESCRIPTION" value=" OR Controller N+1 ORing Controller N-Channel N:1 8-MSOP " x="23.368" y="75.184" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="Linear Technology" x="23.368" y="75.184" size="1.778" layer="27" display="off"/>
 <attribute name="MP" value="LTC4359CMS8#PBF" x="23.368" y="75.184" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="20.4597" y="77.0749" size="0.4" layer="25"/>
 <attribute name="PACKAGE" value="MSOP-8 Linear Technology" x="23.368" y="75.184" size="1.778" layer="27" display="off"/>
 <attribute name="PRICE" value="None" x="23.368" y="75.184" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="20.4597" y="73.2931" size="0.4" layer="27" align="top-left"/>
 </element>
-<element name="Z3120V" library="s2x_10" package="DO214AA" value="S2M" x="16.256" y="87.376" smashed="yes" rot="R90">
+<element name="Z3120V" library="s2x_10" package="DO214AA" value="S2M" x="16.256" y="87.376" rot="R90">
 <attribute name="MF" value="Fairchild" x="16.256" y="87.376" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="S2M" x="16.256" y="87.376" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="14.056" y="85.276" size="1.27" layer="25" rot="R90"/>
 <attribute name="OC_FARNELL" value="9843876" x="16.256" y="87.376" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="58K9553" x="16.256" y="87.376" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="19.756" y="85.276" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="C1" library="SparkFun-Capacitors" package="0603-CAP" value="1.5uf" x="23.876" y="78.74" smashed="yes" rot="R180">
-<attribute name="NAME" x="24.765" y="77.978" size="0.4064" layer="25" font="vector" rot="R180"/>
+<element name="C1" library="SparkFun-Capacitors" package="0603-CAP" value="1.5uf" x="23.876" y="78.74" rot="R180">
 <attribute name="PROD_ID" value="CAP-00810" x="23.876" y="78.74" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="24.892" y="79.883" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603-RES" value="1K" x="23.876" y="81.534" smashed="yes" rot="R180">
-<attribute name="NAME" x="24.765" y="80.772" size="0.4064" layer="25" font="vector" rot="R180"/>
+<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="0603-RES" value="1K" x="23.876" y="81.534" rot="R180">
 <attribute name="PROD_ID" value="RES-00824" x="23.876" y="81.534" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="24.892" y="82.677" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
-<element name="D1" library="BSC010NE2LSI" package="SOFL127P515X615X110-9N" value="BSC010NE2LSI" x="8.382" y="88.138" smashed="yes" rot="R270">
+<element name="D1" library="BSC010NE2LSI" package="SOFL127P515X615X110-9N" value="BSC010NE2LSI" x="8.382" y="88.138" rot="R270">
 <attribute name="DESCRIPTION" value=" N-Channel 25V 38A _Ta_, 100A _Tc_ 2.5W _Ta_, 96W _Tc_ Surface Mount PG-TDSON-8-7 " x="8.382" y="88.138" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIGI-KEY_PART_NUMBER" value="BSC010NE2LSIATMA1CT-ND" x="8.382" y="88.138" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/infineon-technologies/BSC010NE2LSIATMA1/BSC010NE2LSIATMA1CT-ND/3196614?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol" x="8.382" y="88.138" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="Infineon" x="8.382" y="88.138" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MP" value="BSC010NE2LSI" x="8.382" y="88.138" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="11.200790625" y="91.88136875" size="0.30499375" layer="25" rot="R270"/>
 <attribute name="PACKAGE" value="PG-TDSON-8 Infineon" x="8.382" y="88.138" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="5.18573125" y="91.862140625" size="0.305303125" layer="27" rot="R270"/>
 </element>
 </elements>
 <signals>
@@ -6370,11 +6223,6 @@ design rules under a new name.</description>
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
 with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports Fusion synchronisation.
-This feature will not be available in this version and saving
-the document will break the link to the Fusion PCB feature.
 </note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library

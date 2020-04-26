@@ -186,15 +186,15 @@
 <libraries>
 <library name="SparkFun-Connectors" urn="urn:adsk.eagle:library:513">
 <description>&lt;h3&gt;SparkFun Connectors&lt;/h3&gt;
-This library contains electrically-functional connectors. 
+This library contains electrically-functional connectors.
 &lt;br&gt;
 &lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application.
 &lt;br&gt;
 &lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
 &lt;br&gt;
 &lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/
 &lt;br&gt;
 &lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
@@ -232,7 +232,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="6.985" y1="1.27" x2="6.35" y2="0.635" width="0.2032" layer="21"/>
 <wire x1="6.35" y1="-0.635" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
 <wire x1="8.255" y1="-1.27" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
-<<<<<<< HEAD
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
 <wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
 <wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
@@ -294,7 +293,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 <package name="MOLEX-1X6-RA" urn="urn:adsk.eagle:footprint:37739/1" library_version="1">
 <description>&lt;h3&gt;Molex 6-Pin Plated Through-Hole Right Angle&lt;/h3&gt;
-tPlace shows angle of connector. 
+tPlace shows angle of connector.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count:6&lt;/li&gt;
 &lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
@@ -465,7 +464,7 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 </package>
 <package name="MOLEX-1X6_LOCK" urn="urn:adsk.eagle:footprint:37741/1" library_version="1">
 <description>&lt;h3&gt;Molex 6-Pin Plated Through-Hole Locking Footprint&lt;/h3&gt;
-Holes are offset 0.005" from center to hold pins in place during soldering.  
+Holes are offset 0.005" from center to hold pins in place during soldering.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count:6&lt;/li&gt;
 &lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
@@ -502,7 +501,7 @@ Holes are offset 0.005" from center to hold pins in place during soldering.
 </package>
 <package name="MOLEX_1X6_RA_LOCK" urn="urn:adsk.eagle:footprint:37590/1" library_version="1">
 <description>&lt;h3&gt;Molex 6-Pin Plated Through-Hole Right Angle Locking Footprint&lt;/h3&gt;
-Holes are offset 0.005" from center to hold pins in place during soldering.  
+Holes are offset 0.005" from center to hold pins in place during soldering.
 tPlace shows location of connector.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count:6&lt;/li&gt;
@@ -956,8 +955,6 @@ Alternate pin configuration
 &lt;p&gt;Example device(s):
 &lt;ul&gt;&lt;li&gt;CONN_02&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;</description>
-=======
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
 <wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
 <wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
@@ -1136,7 +1133,7 @@ Alternate pin configuration
 </package>
 <package name="1X02_LOCK" urn="urn:adsk.eagle:footprint:37661/1" library_version="1">
 <description>&lt;h3&gt;Plated Through Hole - Locking Footprint&lt;/h3&gt;
-Holes are staggered by 0.005" from center to hold pins while soldering. 
+Holes are staggered by 0.005" from center to hold pins while soldering.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count:2&lt;/li&gt;
 &lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
@@ -1167,7 +1164,7 @@ Holes are staggered by 0.005" from center to hold pins while soldering.
 </package>
 <package name="MOLEX-1X2_LOCK" urn="urn:adsk.eagle:footprint:37662/1" library_version="1">
 <description>&lt;h3&gt;Molex 2-Pin Plated Through-Hole Locking Footprint&lt;/h3&gt;
-Holes are offset from center by 0.005" to hold pins in place during soldering. 
+Holes are offset from center by 0.005" to hold pins in place during soldering.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count:2&lt;/li&gt;
 &lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
@@ -1194,7 +1191,7 @@ Holes are offset from center by 0.005" to hold pins in place during soldering.
 </package>
 <package name="1X02_LOCK_LONGPADS" urn="urn:adsk.eagle:footprint:37663/1" library_version="1">
 <description>&lt;h3&gt;Plated Through Hole - Long Pads with Locking Footprint&lt;/h3&gt;
-Pins are staggered by 0.005" from center to hold pins in place while soldering. 
+Pins are staggered by 0.005" from center to hold pins in place while soldering.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count:2&lt;/li&gt;
 &lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
@@ -1222,7 +1219,7 @@ Pins are staggered by 0.005" from center to hold pins in place while soldering.
 </package>
 <package name="SCREWTERMINAL-3.5MM-2_LOCK" urn="urn:adsk.eagle:footprint:37664/1" library_version="1">
 <description>&lt;h3&gt;Screw Terminal  3.5mm Pitch - 2 Pin PTH Locking&lt;/h3&gt;
-Holes are offset from center 0.005" to hold pins in place during soldering. 
+Holes are offset from center 0.005" to hold pins in place during soldering.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count: 2&lt;/li&gt;
 &lt;li&gt;Pin pitch: 3.5mm/138mil&lt;/li&gt;
@@ -1284,7 +1281,7 @@ Holes are offset from center 0.005" to hold pins in place during soldering.
 </package>
 <package name="JST-2-PTH" urn="urn:adsk.eagle:footprint:37667/1" library_version="1">
 <description>&lt;h3&gt;JST 2 Pin Right Angle Plated Through  Hole&lt;/h3&gt;
-tDocu indicate polarity for connections that match SparkFun LiPo battery terminations. 
+tDocu indicate polarity for connections that match SparkFun LiPo battery terminations.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count: 2&lt;/li&gt;
 &lt;li&gt;Pin pitch:2mm&lt;/li&gt;
@@ -1374,8 +1371,8 @@ tDocu indicate polarity for connections that match SparkFun LiPo battery termina
 </package>
 <package name="JST-2-PTH-NS" urn="urn:adsk.eagle:footprint:37671/1" library_version="1">
 <description>&lt;h3&gt;JST 2 Pin Right Angle Plated Through  Hole- No Silk&lt;/h3&gt;
-tDocu indicate polarity for connections that match SparkFun LiPo battery terminations. 
-&lt;br&gt; No silk outline of connector. 
+tDocu indicate polarity for connections that match SparkFun LiPo battery terminations.
+&lt;br&gt; No silk outline of connector.
 &lt;p&gt;Specifications:
 &lt;ul&gt;&lt;li&gt;Pin count: 2&lt;/li&gt;
 &lt;li&gt;Pin pitch:2mm&lt;/li&gt;
@@ -1400,7 +1397,7 @@ tDocu indicate polarity for connections that match SparkFun LiPo battery termina
 </package>
 <package name="JST-2-PTH-KIT" urn="urn:adsk.eagle:footprint:37672/1" library_version="1">
 <description>&lt;h3&gt;JST 2 Pin Right Angle Plated Through  Hole - KIT&lt;/h3&gt;
-tDocu indicate polarity for connections that match SparkFun LiPo battery terminations. 
+tDocu indicate polarity for connections that match SparkFun LiPo battery terminations.
 &lt;br&gt; This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad.
 &lt;br&gt; This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.
 &lt;p&gt;Specifications:
@@ -1696,7 +1693,7 @@ CONN_06
 </package3d>
 <package3d name="MOLEX-1X6-RA" urn="urn:adsk.eagle:package:38118/1" type="box" library_version="1">
 <description>Molex 6-Pin Plated Through-Hole Right Angle
-tPlace shows angle of connector. 
+tPlace shows angle of connector.
 Specifications:
 Pin count:6
 Pin pitch:0.1"
@@ -1753,7 +1750,7 @@ CONN_06
 </package3d>
 <package3d name="MOLEX-1X6_LOCK" urn="urn:adsk.eagle:package:38123/1" type="box" library_version="1">
 <description>Molex 6-Pin Plated Through-Hole Locking Footprint
-Holes are offset 0.005" from center to hold pins in place during soldering.  
+Holes are offset 0.005" from center to hold pins in place during soldering.
 Specifications:
 Pin count:6
 Pin pitch:0.1"
@@ -1768,7 +1765,7 @@ CONN_06
 </package3d>
 <package3d name="MOLEX_1X6_RA_LOCK" urn="urn:adsk.eagle:package:37992/1" type="box" library_version="1">
 <description>Molex 6-Pin Plated Through-Hole Right Angle Locking Footprint
-Holes are offset 0.005" from center to hold pins in place during soldering.  
+Holes are offset 0.005" from center to hold pins in place during soldering.
 tPlace shows location of connector.
 Specifications:
 Pin count:6
@@ -1780,7 +1777,6 @@ CONN_06
 </description>
 <packageinstances>
 <packageinstance name="MOLEX_1X6_RA_LOCK"/>
-<<<<<<< HEAD
 </packageinstances>
 </package3d>
 <package3d name="1X06_FEMALE_LOCK.010" urn="urn:adsk.eagle:package:38124/1" type="box" library_version="1">
@@ -2023,7 +2019,7 @@ CONN_02
 </packageinstances>
 </package3d>
 <package3d name="JST-2-SMD-VERT" urn="urn:adsk.eagle:package:38052/1" type="box" library_version="1">
-<description>JST-Vertical Male Header SMT 
+<description>JST-Vertical Male Header SMT
 Specifications:
 Pin count: 2
 Pin pitch: 2mm
@@ -2052,7 +2048,7 @@ CONN_02
 </package3d>
 <package3d name="1X02_LOCK" urn="urn:adsk.eagle:package:38045/1" type="box" library_version="1">
 <description>Plated Through Hole - Locking Footprint
-Holes are staggered by 0.005" from center to hold pins while soldering. 
+Holes are staggered by 0.005" from center to hold pins while soldering.
 Specifications:
 Pin count:2
 Pin pitch:0.1"
@@ -2066,7 +2062,7 @@ CONN_02
 </package3d>
 <package3d name="MOLEX-1X2_LOCK" urn="urn:adsk.eagle:package:38046/1" type="box" library_version="1">
 <description>Molex 2-Pin Plated Through-Hole Locking Footprint
-Holes are offset from center by 0.005" to hold pins in place during soldering. 
+Holes are offset from center by 0.005" to hold pins in place during soldering.
 Specifications:
 Pin count:2
 Pin pitch:0.1"
@@ -2081,7 +2077,7 @@ CONN_02
 </package3d>
 <package3d name="1X02_LOCK_LONGPADS" urn="urn:adsk.eagle:package:38047/1" type="box" library_version="1">
 <description>Plated Through Hole - Long Pads with Locking Footprint
-Pins are staggered by 0.005" from center to hold pins in place while soldering. 
+Pins are staggered by 0.005" from center to hold pins in place while soldering.
 Specifications:
 Pin count:2
 Pin pitch:0.1"
@@ -2095,7 +2091,7 @@ CONN_02
 </package3d>
 <package3d name="SCREWTERMINAL-3.5MM-2_LOCK" urn="urn:adsk.eagle:package:38049/1" type="box" library_version="1">
 <description>Screw Terminal  3.5mm Pitch - 2 Pin PTH Locking
-Holes are offset from center 0.005" to hold pins in place during soldering. 
+Holes are offset from center 0.005" to hold pins in place during soldering.
 Specifications:
 Pin count: 2
 Pin pitch: 3.5mm/138mil
@@ -2106,8 +2102,6 @@ CONN_02
 </description>
 <packageinstances>
 <packageinstance name="SCREWTERMINAL-3.5MM-2_LOCK"/>
-=======
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </packageinstances>
 </package3d>
 <package3d name="1X02_LONGPADS" urn="urn:adsk.eagle:package:38048/1" type="box" library_version="1">
@@ -2138,7 +2132,7 @@ CONN_02
 </package3d>
 <package3d name="JST-2-PTH" urn="urn:adsk.eagle:package:38053/1" type="box" library_version="1">
 <description>JST 2 Pin Right Angle Plated Through  Hole
-tDocu indicate polarity for connections that match SparkFun LiPo battery terminations. 
+tDocu indicate polarity for connections that match SparkFun LiPo battery terminations.
 Specifications:
 Pin count: 2
 Pin pitch:2mm
@@ -2193,8 +2187,8 @@ CONN_02
 </package3d>
 <package3d name="JST-2-PTH-NS" urn="urn:adsk.eagle:package:38056/1" type="box" library_version="1">
 <description>JST 2 Pin Right Angle Plated Through  Hole- No Silk
-tDocu indicate polarity for connections that match SparkFun LiPo battery terminations. 
- No silk outline of connector. 
+tDocu indicate polarity for connections that match SparkFun LiPo battery terminations.
+ No silk outline of connector.
 Specifications:
 Pin count: 2
 Pin pitch:2mm
@@ -2209,7 +2203,7 @@ CONN_02
 </package3d>
 <package3d name="JST-2-PTH-KIT" urn="urn:adsk.eagle:package:38057/1" type="box" library_version="1">
 <description>JST 2 Pin Right Angle Plated Through  Hole - KIT
-tDocu indicate polarity for connections that match SparkFun LiPo battery terminations. 
+tDocu indicate polarity for connections that match SparkFun LiPo battery terminations.
  This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad.
  This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.
 Specifications:
@@ -2246,7 +2240,6 @@ Pin count:2
 Pin pitch:0.1"
 
 Example device(s):
-<<<<<<< HEAD
 CONN_02
 </description>
 <packageinstances>
@@ -2290,39 +2283,6 @@ CONN_06x2
 </description>
 <packageinstances>
 <packageinstance name="2X6_SMD"/>
-=======
-CONN_06
-EM-406
-</description>
-<packageinstances>
-<packageinstance name="1X06-1MM"/>
-</packageinstances>
-</package3d>
-<package3d name="1X06_NO_SILK" urn="urn:adsk.eagle:package:38130/1" type="box" library_version="1">
-<description>Plated Through Hole - 6 Pin No Silk Outline
-Specifications:
-Pin count:6
-Pin pitch:0.1"
-
-Example device(s):
-CONN_06
-</description>
-<packageinstances>
-<packageinstance name="1X06_NO_SILK"/>
-</packageinstances>
-</package3d>
-<package3d name="1X06_1.27MM" urn="urn:adsk.eagle:package:38131/1" type="box" library_version="1">
-<description>Plated Through Hole - 6 Pin
-Specifications:
-Pin count:6
-Pin pitch:1.27mm
-
-Example device(s):
-CONN_06
-</description>
-<packageinstances>
-<packageinstance name="1X06_1.27MM"/>
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </packageinstances>
 </package3d>
 </packages3d>
@@ -2348,7 +2308,6 @@ CONN_06
 <pin name="5" x="5.08" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="6" x="5.08" y="7.62" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 </symbol>
-<<<<<<< HEAD
 <symbol name="CONN_02" urn="urn:adsk.eagle:symbol:37653/1" library_version="1">
 <description>&lt;h3&gt;2 Pin Connection&lt;/h3&gt;</description>
 <wire x1="3.81" y1="-2.54" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
@@ -2791,11 +2750,6 @@ CONN_06
 </devices>
 </deviceset>
 <deviceset name="CONN_02" urn="urn:adsk.eagle:component:38323/1" prefix="J" uservalue="yes" library_version="1">
-=======
-</symbols>
-<devicesets>
-<deviceset name="CONN_06" urn="urn:adsk.eagle:component:38332/1" prefix="J" uservalue="yes" library_version="1">
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <description>&lt;h3&gt;Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections&lt;/h3&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -3106,7 +3060,6 @@ CONN_06
 <technology name=""/>
 </technologies>
 </device>
-<<<<<<< HEAD
 <device name="SMALL_POKEHOME" package="1X02_POKEHOME">
 <connects>
 <connect gate="G$1" pin="1" pad="P1 P3"/>
@@ -3200,8 +3153,6 @@ CONN_06
 </technology>
 </technologies>
 </device>
-=======
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </devices>
 </deviceset>
 </devicesets>
@@ -4059,37 +4010,42 @@ chip</description>
 <wire x1="-8.89" y1="-17.78" x2="-8.89" y2="17.78" width="0.127" layer="51"/>
 <wire x1="-1.27" y1="16.51" x2="1.27" y2="16.51" width="0.2032" layer="21"/>
 <wire x1="1.27" y1="16.51" x2="1.27" y2="17.78" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="17.78" x2="8.89" y2="17.78" width="0.2032" layer="21"/>
+<wire x1="8.89" y1="17.78" x2="8.89" y2="-17.78" width="0.2032" layer="21"/>
+<wire x1="8.89" y1="-17.78" x2="-8.89" y2="-17.78" width="0.2032" layer="21"/>
+<wire x1="-8.89" y1="-17.78" x2="-8.89" y2="17.78" width="0.2032" layer="21"/>
+<wire x1="-8.89" y1="17.78" x2="-1.27" y2="17.78" width="0.2032" layer="21"/>
 <wire x1="-1.27" y1="17.78" x2="-1.27" y2="16.51" width="0.2032" layer="21"/>
 <text x="-2.54" y="13.97" size="1.27" layer="25" font="vector">&gt;NAME</text>
 <text x="-3.175" y="-5.08" size="1.27" layer="27" font="vector">&gt;VALUE</text>
-<smd name="GND" x="-9.525" y="16.51" dx="2.794" dy="0.889" layer="1"/>
-<smd name="0" x="-9.525" y="13.97" dx="2.794" dy="0.889" layer="1"/>
-<smd name="1" x="-9.525" y="11.43" dx="2.794" dy="0.889" layer="1"/>
-<smd name="3" x="-9.525" y="6.35" dx="2.794" dy="0.889" layer="1"/>
-<smd name="4" x="-9.525" y="3.81" dx="2.794" dy="0.889" layer="1"/>
-<smd name="5" x="-9.525" y="1.27" dx="2.794" dy="0.889" layer="1"/>
-<smd name="6" x="-9.525" y="-1.27" dx="2.794" dy="0.889" layer="1"/>
-<smd name="7" x="-9.525" y="-3.81" dx="2.794" dy="0.889" layer="1"/>
-<smd name="8" x="-9.525" y="-6.35" dx="2.794" dy="0.889" layer="1"/>
-<smd name="2" x="-9.525" y="8.89" dx="2.794" dy="0.889" layer="1"/>
-<smd name="9" x="-9.525" y="-8.89" dx="2.794" dy="0.889" layer="1"/>
-<smd name="10" x="-9.525" y="-11.43" dx="2.794" dy="0.889" layer="1"/>
-<smd name="11" x="-9.525" y="-13.97" dx="2.794" dy="0.889" layer="1"/>
-<smd name="12" x="-9.525" y="-16.51" dx="2.794" dy="0.889" layer="1"/>
-<smd name="13" x="9.525" y="-16.51" dx="2.794" dy="0.889" layer="1"/>
-<smd name="14/A0" x="9.525" y="-13.97" dx="2.794" dy="0.889" layer="1"/>
-<smd name="15/A1" x="9.525" y="-11.43" dx="2.794" dy="0.889" layer="1"/>
-<smd name="16/A2" x="9.525" y="-8.89" dx="2.794" dy="0.889" layer="1"/>
-<smd name="17/A3" x="9.525" y="-6.35" dx="2.794" dy="0.889" layer="1"/>
-<smd name="18/A4" x="9.525" y="-3.81" dx="2.794" dy="0.889" layer="1"/>
-<smd name="19/A5" x="9.525" y="-1.27" dx="2.794" dy="0.889" layer="1"/>
-<smd name="20/A6" x="9.525" y="1.27" dx="2.794" dy="0.889" layer="1"/>
-<smd name="21/A7" x="9.525" y="3.81" dx="2.794" dy="0.889" layer="1"/>
-<smd name="22/A8" x="9.525" y="6.35" dx="2.794" dy="0.889" layer="1"/>
-<smd name="23/A9" x="9.525" y="8.89" dx="2.794" dy="0.889" layer="1"/>
-<smd name="3.3V" x="9.525" y="11.43" dx="2.794" dy="0.889" layer="1"/>
-<smd name="GND2" x="9.525" y="13.97" dx="2.794" dy="0.889" layer="1"/>
-<smd name="VIN" x="9.525" y="16.51" dx="2.794" dy="0.889" layer="1"/>
+<smd name="GND" x="-8.255" y="16.51" dx="2.794" dy="0.889" layer="1"/>
+<smd name="0" x="-8.255" y="13.97" dx="2.794" dy="0.889" layer="1"/>
+<smd name="1" x="-8.255" y="11.43" dx="2.794" dy="0.889" layer="1"/>
+<smd name="3" x="-8.255" y="6.35" dx="2.794" dy="0.889" layer="1"/>
+<smd name="4" x="-8.255" y="3.81" dx="2.794" dy="0.889" layer="1"/>
+<smd name="5" x="-8.255" y="1.27" dx="2.794" dy="0.889" layer="1"/>
+<smd name="6" x="-8.255" y="-1.27" dx="2.794" dy="0.889" layer="1"/>
+<smd name="7" x="-8.255" y="-3.81" dx="2.794" dy="0.889" layer="1"/>
+<smd name="8" x="-8.255" y="-6.35" dx="2.794" dy="0.889" layer="1"/>
+<smd name="2" x="-8.255" y="8.89" dx="2.794" dy="0.889" layer="1"/>
+<smd name="9" x="-8.255" y="-8.89" dx="2.794" dy="0.889" layer="1"/>
+<smd name="10" x="-8.255" y="-11.43" dx="2.794" dy="0.889" layer="1"/>
+<smd name="11" x="-8.255" y="-13.97" dx="2.794" dy="0.889" layer="1"/>
+<smd name="12" x="-8.255" y="-16.51" dx="2.794" dy="0.889" layer="1"/>
+<smd name="13" x="8.255" y="-16.51" dx="2.794" dy="0.889" layer="1"/>
+<smd name="14/A0" x="8.255" y="-13.97" dx="2.794" dy="0.889" layer="1"/>
+<smd name="15/A1" x="8.255" y="-11.43" dx="2.794" dy="0.889" layer="1"/>
+<smd name="16/A2" x="8.255" y="-8.89" dx="2.794" dy="0.889" layer="1"/>
+<smd name="17/A3" x="8.255" y="-6.35" dx="2.794" dy="0.889" layer="1"/>
+<smd name="18/A4" x="8.255" y="-3.81" dx="2.794" dy="0.889" layer="1"/>
+<smd name="19/A5" x="8.255" y="-1.27" dx="2.794" dy="0.889" layer="1"/>
+<smd name="20/A6" x="8.255" y="1.27" dx="2.794" dy="0.889" layer="1"/>
+<smd name="21/A7" x="8.255" y="3.81" dx="2.794" dy="0.889" layer="1"/>
+<smd name="22/A8" x="8.255" y="6.35" dx="2.794" dy="0.889" layer="1"/>
+<smd name="23/A9" x="8.255" y="8.89" dx="2.794" dy="0.889" layer="1"/>
+<smd name="3.3V" x="8.255" y="11.43" dx="2.794" dy="0.889" layer="1"/>
+<smd name="GND2" x="8.255" y="13.97" dx="2.794" dy="0.889" layer="1"/>
+<smd name="VIN" x="8.255" y="16.51" dx="2.794" dy="0.889" layer="1"/>
 <smd name="33" x="-5.08" y="-8.255" dx="2.794" dy="0.889" layer="1" rot="R90"/>
 <smd name="31" x="-2.54" y="-8.255" dx="2.794" dy="0.889" layer="1" rot="R90"/>
 <smd name="29" x="0" y="-8.255" dx="2.794" dy="0.889" layer="1" rot="R90"/>
@@ -4262,13 +4218,12 @@ chip</description>
 </deviceset>
 </devicesets>
 </library>
-<<<<<<< HEAD
 <library name="SparkFun-Resistors" urn="urn:adsk.eagle:library:532">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find resistors, capacitors, inductors, test points, jumper pads, etc.&lt;br&gt;&lt;br&gt;
 We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
 &lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/
 &lt;br&gt;&lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
@@ -4329,12 +4284,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-Capacitors" urn="urn:adsk.eagle:library:510">
+<library name="SparkFun-Capacitors">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find resistors, capacitors, inductors, test points, jumper pads, etc.&lt;br&gt;&lt;br&gt;
 We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
 &lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/
 &lt;br&gt;&lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
@@ -4498,8 +4453,8 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <library name="MCP2562">
 <packages>
 <package name="MCP2562">
-<text x="-2.2656" y="-4.1947" size="0.8128" layer="27">&gt;VALUE</text>
-<text x="-2.652" y="2.9004" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-11.1556" y="-6.7347" size="3.357890625" layer="27">&gt;VALUE</text>
+<text x="-11.542" y="2.9004" size="3.500090625" layer="25">&gt;NAME</text>
 <smd name="TXD" x="-2.625" y="1.905" dx="1.27" dy="0.635" layer="1" rot="R180"/>
 <smd name="VSS" x="-2.625" y="0.635" dx="1.27" dy="0.635" layer="1" rot="R180"/>
 <smd name="VDD" x="-2.625" y="-0.635" dx="1.27" dy="0.635" layer="1" rot="R180"/>
@@ -4626,8 +4581,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-=======
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </libraries>
 <attributes>
 </attributes>
@@ -4660,31 +4613,27 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <part name="CONN01" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_06X2" device="PTH_FEMALE" package3d_urn="urn:adsk.eagle:package:38277/1" value="2X6 FEMALE"/>
 <part name="U$2" library="Teensy4" deviceset="TEENSY_4.0_WITH_SMD_HEADER_PINS" device=""/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_06" device="SMD-1MM" package3d_urn="urn:adsk.eagle:package:38023/1"/>
-<<<<<<< HEAD
 <part name="CAN_FD_O" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="-JST-2MM-SMT" package3d_urn="urn:adsk.eagle:package:38042/1"/>
 <part name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="120Ohms FD"/>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="PESD1CAN" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
-<part name="C6" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uf"/>
+<part name="C6" library="SparkFun-Capacitors" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uf"/>
 <part name="CAN_FD_I" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="-JST-2MM-SMT" package3d_urn="urn:adsk.eagle:package:38042/1"/>
 <part name="J2_FD" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="MCP2562FD" library="MCP2562" deviceset="MCP2562" device=""/>
-<part name="C4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uf"/>
+<part name="C4" library="SparkFun-Capacitors" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uf"/>
 <part name="CAN_2_O" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="-JST-2MM-SMT" package3d_urn="urn:adsk.eagle:package:38042/1"/>
 <part name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="120Ohms"/>
 <part name="D5" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="PESD1CAN" device="" package3d_urn="urn:adsk.eagle:package:43389/2"/>
-<part name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uf"/>
+<part name="C5" library="SparkFun-Capacitors" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uf"/>
 <part name="CAN_2_I" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="-JST-2MM-SMT" package3d_urn="urn:adsk.eagle:package:38042/1"/>
 <part name="J3_2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="MCP2562" library="MCP2562" deviceset="MCP2562" device=""/>
-<part name="C10" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uf"/>
+<part name="C10" library="SparkFun-Capacitors" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uf"/>
 <part name="OUT_LED_3" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="OUT_LED_R3" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 <part name="OUT_LED_4" library="fab" deviceset="LED" device="FAB1206"/>
 <part name="OUT_LED_R4" library="fab" deviceset="RES-US" device="1206FAB" value="500"/>
 <part name="J4" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_06" device="SMD-1MM" package3d_urn="urn:adsk.eagle:package:38023/1"/>
-=======
-<part name="J6" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_06" device="NO_SILK_NO_POP" package3d_urn="urn:adsk.eagle:package:38130/1"/>
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </parts>
 <sheets>
 <sheet>
@@ -4718,55 +4667,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <wire x1="482.6" y1="83.82" x2="708.66" y2="83.82" width="0.1524" layer="97"/>
 </plain>
 <instances>
-<<<<<<< HEAD
-<instance part="S1" gate="G$1" x="53.34" y="149.86"/>
-<instance part="S2" gate="G$1" x="121.92" y="149.86"/>
-<instance part="S3" gate="G$1" x="53.34" y="121.92"/>
-<instance part="S4" gate="G$1" x="121.92" y="121.92"/>
-<instance part="R1" gate="G$1" x="35.56" y="160.02" rot="R90"/>
-<instance part="R2" gate="G$1" x="104.14" y="160.02" rot="R90"/>
-<instance part="R4" gate="G$1" x="104.14" y="132.08" rot="R90"/>
-<instance part="R3" gate="G$1" x="35.56" y="132.08" rot="R90"/>
-<instance part="CONN03" gate="G$1" x="121.92" y="45.72"/>
-<instance part="CONN01" gate="G$1" x="121.92" y="17.78"/>
-<instance part="U$2" gate="G$1" x="43.18" y="40.64"/>
-<instance part="J1" gate="G$1" x="274.32" y="144.78" rot="R180"/>
-<instance part="CAN_FD_O" gate="G$1" x="393.7" y="53.34" rot="R180"/>
-<instance part="R8" gate="G$1" x="325.12" y="55.88" smashed="yes" rot="R90">
-<attribute name="NAME" x="328.4474" y="52.07" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="323.342" y="54.61" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="D3" gate="G$1" x="345.44" y="22.86" rot="R270"/>
-<instance part="C6" gate="G$1" x="266.7" y="27.94"/>
-<instance part="CAN_FD_I" gate="G$1" x="393.7" y="38.1" rot="R180"/>
-<instance part="J2_FD" gate="G$1" x="330.2" y="71.12" rot="R270"/>
-<instance part="MCP2562FD" gate="G$1" x="246.38" y="45.72"/>
-<instance part="C4" gate="G$1" x="203.2" y="30.48"/>
-<instance part="CAN_2_O" gate="G$1" x="673.1" y="50.8" rot="R180"/>
-<instance part="R5" gate="G$1" x="604.52" y="53.34" smashed="yes" rot="R90">
-<attribute name="NAME" x="607.8474" y="49.53" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="602.742" y="52.07" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="D5" gate="G$1" x="624.84" y="20.32" rot="R270"/>
-<instance part="C5" gate="G$1" x="546.1" y="25.4"/>
-<instance part="CAN_2_I" gate="G$1" x="673.1" y="35.56" rot="R180"/>
-<instance part="J3_2" gate="G$1" x="609.6" y="68.58" rot="R270"/>
-<instance part="MCP2562" gate="G$1" x="525.78" y="43.18"/>
-<instance part="C10" gate="G$1" x="482.6" y="27.94"/>
-<instance part="OUT_LED_3" gate="G$1" x="378.46" y="137.16" rot="R90"/>
-<instance part="OUT_LED_R3" gate="G$1" x="360.68" y="137.16" rot="R180"/>
-<instance part="OUT_LED_4" gate="G$1" x="378.46" y="152.4" rot="R90"/>
-<instance part="OUT_LED_R4" gate="G$1" x="360.68" y="152.4" rot="R180"/>
-<instance part="J4" gate="G$1" x="223.52" y="144.78" rot="R180"/>
-=======
-<instance part="OUT_LED_2" gate="G$1" x="203.2" y="132.08" smashed="yes" rot="R90">
-<attribute name="NAME" x="205.232" y="135.636" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="205.232" y="137.795" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="OUT_LED_R2" gate="G$1" x="185.42" y="132.08" smashed="yes" rot="R180">
-<attribute name="NAME" x="189.23" y="130.5814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="189.23" y="135.382" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="S1" gate="G$1" x="53.34" y="149.86" smashed="yes">
 <attribute name="NAME" x="53.34" y="155.194" size="1.778" layer="95" align="bottom-center"/>
 <attribute name="VALUE" x="53.34" y="144.526" size="1.778" layer="96" align="top-center"/>
@@ -4799,48 +4699,104 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <attribute name="NAME" x="33.528" y="129.54" size="1.27" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="38.735" y="129.54" size="1.27" layer="96" font="vector" rot="R90"/>
 </instance>
-<instance part="OUT_LED_1" gate="G$1" x="203.2" y="147.32" smashed="yes" rot="R90">
-<attribute name="NAME" x="205.232" y="150.876" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="205.232" y="153.035" size="1.778" layer="96" rot="R180"/>
+<instance part="CONN03" gate="G$1" x="121.92" y="45.72" smashed="yes">
+<attribute name="VALUE" x="120.65" y="40.894" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="120.65" y="61.468" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="OUT_LED_R1" gate="G$1" x="185.42" y="147.32" smashed="yes" rot="R180">
-<attribute name="NAME" x="189.23" y="145.8214" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="189.23" y="150.622" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CONN03" gate="G$1" x="121.92" y="53.34" smashed="yes">
-<attribute name="NAME" x="116.848509375" y="61.72753125" size="1.27213125" layer="95"/>
-<attribute name="VALUE" x="116.846659375" y="40.62" size="1.271659375" layer="96"/>
-</instance>
-<instance part="CONN01" gate="G$1" x="121.92" y="25.4" smashed="yes">
-<attribute name="NAME" x="116.848509375" y="33.78753125" size="1.27213125" layer="95"/>
-<attribute name="VALUE" x="116.846659375" y="12.68" size="1.271659375" layer="96"/>
+<instance part="CONN01" gate="G$1" x="121.92" y="17.78" smashed="yes">
+<attribute name="VALUE" x="120.65" y="12.954" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="120.65" y="33.528" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="U$2" gate="G$1" x="43.18" y="40.64" smashed="yes">
 <attribute name="NAME" x="37.592" y="74.93" size="1.27" layer="95" font="vector" ratio="15"/>
 <attribute name="VALUE" x="40.386" y="2.54" size="1.27" layer="96" font="vector" ratio="15"/>
 </instance>
-<instance part="J1" gate="G$1" x="373.38" y="124.46" smashed="yes" rot="R180">
-<attribute name="VALUE" x="378.46" y="134.366" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="378.46" y="113.792" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="J1" gate="G$1" x="274.32" y="144.78" smashed="yes" rot="R180">
+<attribute name="VALUE" x="279.4" y="154.686" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="279.4" y="134.112" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="J6" gate="G$1" x="294.64" y="127" smashed="yes" rot="R180">
-<attribute name="VALUE" x="299.72" y="136.906" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="299.72" y="116.332" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="CAN_FD_O" gate="G$1" x="393.7" y="53.34" smashed="yes" rot="R180">
+<attribute name="VALUE" x="396.24" y="58.166" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="396.24" y="47.752" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
+<instance part="R8" gate="G$1" x="325.12" y="55.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="328.4474" y="52.07" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="323.342" y="54.61" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="D3" gate="G$1" x="345.44" y="22.86" smashed="yes" rot="R270">
+<attribute name="NAME" x="350.52" y="27.94" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="337.82" y="27.94" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="C6" gate="G$1" x="266.7" y="27.94" smashed="yes">
+<attribute name="NAME" x="268.224" y="30.861" size="1.778" layer="95"/>
+<attribute name="VALUE" x="268.224" y="25.781" size="1.778" layer="96"/>
+</instance>
+<instance part="CAN_FD_I" gate="G$1" x="393.7" y="38.1" smashed="yes" rot="R180">
+<attribute name="VALUE" x="396.24" y="42.926" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="396.24" y="32.512" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+<instance part="J2_FD" gate="G$1" x="330.2" y="71.12" smashed="yes" rot="R270">
+<attribute name="VALUE" x="325.374" y="73.66" size="1.778" layer="96" font="vector" rot="R270"/>
+<attribute name="NAME" x="335.788" y="73.66" size="1.778" layer="95" font="vector" rot="R270"/>
+</instance>
+<instance part="MCP2562FD" gate="G$1" x="246.38" y="45.72" smashed="yes"/>
+<instance part="C4" gate="G$1" x="203.2" y="30.48" smashed="yes">
+<attribute name="NAME" x="204.724" y="33.401" size="1.778" layer="95"/>
+<attribute name="VALUE" x="204.724" y="28.321" size="1.778" layer="96"/>
+</instance>
+<instance part="CAN_2_O" gate="G$1" x="673.1" y="50.8" smashed="yes" rot="R180">
+<attribute name="VALUE" x="675.64" y="55.626" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="675.64" y="45.212" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+<instance part="R5" gate="G$1" x="604.52" y="53.34" smashed="yes" rot="R90">
+<attribute name="NAME" x="607.8474" y="49.53" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="602.742" y="52.07" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="D5" gate="G$1" x="624.84" y="20.32" smashed="yes" rot="R270">
+<attribute name="NAME" x="629.92" y="25.4" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="617.22" y="25.4" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="C5" gate="G$1" x="546.1" y="25.4" smashed="yes">
+<attribute name="NAME" x="547.624" y="28.321" size="1.778" layer="95"/>
+<attribute name="VALUE" x="547.624" y="23.241" size="1.778" layer="96"/>
+</instance>
+<instance part="CAN_2_I" gate="G$1" x="673.1" y="35.56" smashed="yes" rot="R180">
+<attribute name="VALUE" x="675.64" y="40.386" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="675.64" y="29.972" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+<instance part="J3_2" gate="G$1" x="609.6" y="68.58" smashed="yes" rot="R270">
+<attribute name="VALUE" x="604.774" y="71.12" size="1.778" layer="96" font="vector" rot="R270"/>
+<attribute name="NAME" x="615.188" y="71.12" size="1.778" layer="95" font="vector" rot="R270"/>
+</instance>
+<instance part="MCP2562" gate="G$1" x="525.78" y="43.18" smashed="yes"/>
+<instance part="C10" gate="G$1" x="482.6" y="27.94" smashed="yes">
+<attribute name="NAME" x="484.124" y="30.861" size="1.778" layer="95"/>
+<attribute name="VALUE" x="484.124" y="25.781" size="1.778" layer="96"/>
+</instance>
+<instance part="OUT_LED_3" gate="G$1" x="378.46" y="137.16" smashed="yes" rot="R90">
+<attribute name="NAME" x="380.492" y="140.716" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="380.492" y="142.875" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="OUT_LED_R3" gate="G$1" x="360.68" y="137.16" smashed="yes" rot="R180">
+<attribute name="NAME" x="364.49" y="135.6614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="364.49" y="140.462" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="OUT_LED_4" gate="G$1" x="378.46" y="152.4" smashed="yes" rot="R90">
+<attribute name="NAME" x="380.492" y="155.956" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="380.492" y="158.115" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="OUT_LED_R4" gate="G$1" x="360.68" y="152.4" smashed="yes" rot="R180">
+<attribute name="NAME" x="364.49" y="150.9014" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="364.49" y="155.702" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="J4" gate="G$1" x="223.52" y="144.78" smashed="yes" rot="R180">
+<attribute name="VALUE" x="228.6" y="154.686" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="228.6" y="134.112" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<<<<<<< HEAD
-=======
-<net name="CAN_TX" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="3"/>
-<wire x1="368.3" y1="124.46" x2="360.68" y2="124.46" width="0.1524" layer="91"/>
-</segment>
-</net>
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <net name="GND_MCU" class="0">
 <segment>
 <pinref part="S1" gate="G$1" pin="S2"/>
@@ -4876,7 +4832,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="U$2" gate="G$1" pin="GND"/>
 <wire x1="66.04" y1="63.5" x2="71.12" y2="63.5" width="0.1524" layer="91"/>
 <label x="71.12" y="63.5" size="1.016" layer="95" xref="yes"/>
-<<<<<<< HEAD
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
@@ -4945,8 +4900,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="OUT_LED_3" gate="G$1" pin="C"/>
 <wire x1="381" y1="137.16" x2="386.08" y2="137.16" width="0.1524" layer="91"/>
 <label x="386.08" y="137.16" size="1.016" layer="95" xref="yes"/>
-=======
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </segment>
 <segment>
 <pinref part="OUT_LED_4" gate="G$1" pin="C"/>
@@ -5164,6 +5117,11 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <wire x1="116.84" y1="25.4" x2="106.68" y2="25.4" width="0.1524" layer="91"/>
 <label x="106.68" y="25.4" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="10/CS"/>
+<wire x1="20.32" y1="43.18" x2="15.24" y2="43.18" width="0.1524" layer="91"/>
+<label x="15.24" y="43.18" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="GPIO_05" class="0">
 <segment>
@@ -5175,6 +5133,11 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="CONN01" gate="G$1" pin="6"/>
 <wire x1="132.08" y1="25.4" x2="139.7" y2="25.4" width="0.1524" layer="91"/>
 <label x="139.7" y="25.4" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="11/MOSI"/>
+<wire x1="20.32" y1="40.64" x2="15.24" y2="40.64" width="0.1524" layer="91"/>
+<label x="15.24" y="40.64" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GPIO_06" class="0">
@@ -5188,6 +5151,11 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <wire x1="106.68" y1="22.86" x2="116.84" y2="22.86" width="0.1524" layer="91"/>
 <label x="106.68" y="22.86" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="12/MISO"/>
+<wire x1="20.32" y1="38.1" x2="15.24" y2="38.1" width="0.1524" layer="91"/>
+<label x="15.24" y="38.1" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="GPIO_07" class="0">
 <segment>
@@ -5199,6 +5167,10 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="CONN03" gate="G$1" pin="8"/>
 <wire x1="132.08" y1="50.8" x2="139.7" y2="50.8" width="0.1524" layer="91"/>
 <label x="139.7" y="50.8" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="14/A0/TX3"/>
+<wire x1="20.32" y1="33.02" x2="15.24" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO_08" class="0">
@@ -5224,12 +5196,21 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <wire x1="269.24" y1="144.78" x2="261.62" y2="144.78" width="0.1524" layer="91"/>
 <label x="261.62" y="144.78" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="20/A6/TX5"/>
+<wire x1="20.32" y1="17.78" x2="15.24" y2="17.78" width="0.1524" layer="91"/>
+<label x="15.24" y="17.78" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="GPIO_09" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="15/A1/RX3"/>
 <wire x1="20.32" y1="30.48" x2="15.24" y2="30.48" width="0.1524" layer="91"/>
 <label x="15.24" y="30.48" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="17/A3/SDA1"/>
+<wire x1="20.32" y1="25.4" x2="15.24" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO_10" class="0">
@@ -5242,6 +5223,11 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="CONN03" gate="G$1" pin="1"/>
 <wire x1="116.84" y1="58.42" x2="106.68" y2="58.42" width="0.1524" layer="91"/>
 <label x="106.68" y="58.42" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="26/A12/MOSI1"/>
+<wire x1="66.04" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
+<label x="73.66" y="43.18" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GPIO_11" class="0">
@@ -5278,6 +5264,10 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="CONN03" gate="G$1" pin="7"/>
 <wire x1="116.84" y1="50.8" x2="106.68" y2="50.8" width="0.1524" layer="91"/>
 <label x="106.68" y="50.8" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="32"/>
+<wire x1="66.04" y1="27.94" x2="73.66" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO_16" class="0">
@@ -5322,7 +5312,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <wire x1="66.04" y1="33.02" x2="73.66" y2="33.02" width="0.1524" layer="91"/>
 <label x="73.66" y="33.02" size="1.016" layer="95" xref="yes"/>
 </segment>
-<<<<<<< HEAD
 <segment>
 <pinref part="MCP2562FD" gate="G$1" pin="RXD"/>
 <wire x1="233.68" y1="38.1" x2="228.6" y2="38.1" width="0.1524" layer="91"/>
@@ -5368,14 +5357,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="U$2" gate="G$1" pin="5"/>
 <wire x1="20.32" y1="55.88" x2="15.24" y2="55.88" width="0.1524" layer="91"/>
 <label x="15.24" y="55.88" size="1.016" layer="95" rot="R180" xref="yes"/>
-=======
-</net>
-<net name="CAN_RX3" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="30/CRX3"/>
-<wire x1="66.04" y1="33.02" x2="73.66" y2="33.02" width="0.1524" layer="91"/>
-<label x="73.66" y="33.02" size="1.016" layer="95" xref="yes"/>
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </segment>
 </net>
 <net name="CAN_TX2" class="0">
@@ -5385,7 +5366,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <label x="15.24" y="66.04" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<<<<<<< HEAD
 <pinref part="MCP2562" gate="G$1" pin="TXD"/>
 <wire x1="513.08" y1="50.8" x2="508" y2="50.8" width="0.1524" layer="91"/>
 <label x="508" y="50.8" size="1.016" layer="95" rot="R180" xref="yes"/>
@@ -5501,14 +5481,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="C10" gate="G$1" pin="1"/>
 <label x="482.6" y="48.26" size="1.016" layer="95" rot="R90" xref="yes"/>
 </segment>
-=======
-<pinref part="U$2" gate="G$1" pin="31/CTX3"/>
-<wire x1="66.04" y1="30.48" x2="73.66" y2="30.48" width="0.1524" layer="91"/>
-<label x="73.66" y="30.48" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$3" class="0">
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 <segment>
 <pinref part="U$2" gate="G$1" pin="VIN"/>
 <wire x1="66.04" y1="68.58" x2="71.12" y2="68.58" width="0.1524" layer="91"/>
@@ -5611,7 +5583,6 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <segment>
 <pinref part="U$2" gate="G$1" pin="26/A12/MOSI1"/>
 <wire x1="66.04" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
-<label x="73.66" y="43.18" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="3"/>
@@ -5623,7 +5594,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <segment>
 <pinref part="U$2" gate="G$1" pin="32"/>
 <wire x1="66.04" y1="27.94" x2="73.66" y2="27.94" width="0.1524" layer="91"/>
-<label x="73.66" y="27.94" size="1.016" layer="95" xref="yes"/>
+<label x="83.82" y="27.94" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GPIO_20" class="0">
@@ -5643,28 +5614,11 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 </sheets>
 <errors>
 <approved hash="204,1,66.04,55.88,U$2,VBAT,,,,"/>
-<<<<<<< HEAD
-<approved hash="106,1,20.32,30.48,GPIO_09,,,,,"/>
-<approved hash="106,1,20.32,17.78,GPIO_12,,,,,"/>
-<approved hash="106,1,20.32,15.24,GPIO_13,,,,,"/>
 <approved hash="106,1,66.04,27.94,GPIO_19,,,,,"/>
 <approved hash="110,1,375.92,38.1,CAN_H,CAN_L,,,,"/>
 <approved hash="110,1,375.92,38.1,CAN_H,CAN_L,,,,"/>
 <approved hash="110,1,655.32,35.56,CAN_H1,CAN_L1,,,,"/>
 <approved hash="110,1,655.32,35.56,CAN_H1,CAN_L1,,,,"/>
-=======
-<approved hash="106,1,289.56,121.92,CAN_H2,,,,,"/>
-<approved hash="106,1,289.56,119.38,CAN_L2,,,,,"/>
-<approved hash="106,1,459.74,40.64,CAN_RX,,,,,"/>
-<approved hash="106,1,459.74,38.1,CAN_STB,,,,,"/>
-<approved hash="106,1,66.04,38.1,GPIO_19,,,,,"/>
-<approved hash="106,1,368.3,116.84,SWITCH_01,,,,,"/>
-<approved hash="108,1,248.92,50.8,3.3V,,,,,"/>
-<approved hash="110,1,401.32,35.56,CAN_H1,CAN_L1,,,,"/>
-<approved hash="110,1,401.32,35.56,CAN_H1,CAN_L1,,,,"/>
-<approved hash="110,1,335.28,35.56,CAN_L1,N$14,,,,"/>
-<approved hash="111,1,335.28,35.56,CAN_L1,,,,,"/>
->>>>>>> 4dc1633aa20851dd90c0f3445fcbffd23e84aa01
 </errors>
 </schematic>
 </drawing>
