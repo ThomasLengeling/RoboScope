@@ -1,39 +1,14 @@
+# Source
 
-# Protocol
+Source code for each one of the following components:
 
-Protocol bidirectional communication between server (USB CAN Bus) and client (Motor Controllers).
+- Interface App
 
+  Interface Apps are the applications that act as an interpreter between the physical table and the digital platform. The applications have two versions: a standalone WebApp and a local application in Processing or openFrameworks.
 
-## Server Protocol
+- Hardware
 
- USB Sender
- Motor information
-
- - Message includes dir, step of Motor
-
-## Client Protocol
-
-- Process motor control information
-- feedback from sensors, send back to USB
+  Code that runs on the physical hardware such as motor control modules, server can bus module, and test code to test hardware.
 
 
-## Nodes
-
-Each node is a motor control device which includes:
-
-  - 8 or more motor drivers
-  - Unique id
-
-The last node must include 120ohms between CAN HIGH and CAN LOW
-
-
-
-### 32 Messages
-
-Message 0 Motor Control
-Message 1 LED, Switch, sensors
-
-[0, 1] Motor 0
-[2, 3] Motor 1
-..
-[30, 31] Motor 15
+  
