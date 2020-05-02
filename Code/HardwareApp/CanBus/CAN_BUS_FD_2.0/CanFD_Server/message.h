@@ -1,8 +1,5 @@
 #pragma once
 
-#include "arduino.h"
-#include <FlexCAN_T4.h>
-
 /*
  * 
  * 
@@ -26,13 +23,18 @@
  *          6
  *          7
  */
-class Message {
-  public:
  
-    Message(int board_des);
+#include "arduino.h"
+#include <FlexCAN_T4.h>
+
+
+class CANMotorMessage {
+  public:
+    //board id, can bus type
+    CANMotorMessage(int panel_id, int msg_size = 8);
 
     //add motor message
-    void addMotorMessage(int des, uint8_t color[], uint8_t steps, uint8_t interaction);
+    void addMessage(int des, uint8_t color[], uint8_t steps, uint8_t interaction);
     CANFD_message_t returnCANmessage();
 
     // create interaction byte msg
@@ -46,5 +48,12 @@ class Message {
     
   private:
     int msg_count = 0;
-     CANFD_message_t msg;
+
+    //panel id that we are sending the msg
+    int panelId;
+
+    //size of the msg, fd is 8 data packages, can bus is 2 packages
+    int msgSize;
+    
+    CANFD_message_t msg;
 };

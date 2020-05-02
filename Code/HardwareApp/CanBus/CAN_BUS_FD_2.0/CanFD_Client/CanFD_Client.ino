@@ -9,18 +9,27 @@
 FlexCAN_T4FD<CAN3, RX_SIZE_256, TX_SIZE_64>   FD;   // fd port
 
 //CAN BUS 1
-FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16>     canBus1;  // can1 port
+FlexCAN_T4<CAN2, RX_SIZE_256, TX_SIZE_16>     canBus1;  // can1 port
 
 int local_name = 0;
 int msg_array[8] = {1, 2, 3, 4, 32, 6, 7, 8};
 int state;
 uint32_t timer;
 
+//Key pins
+const int KEY_PIN_01 = 6;
+const int KEY_PIN_02 = 7;
+const int KEY_PIN_03 = 8;
+const int KEY_PIN_04 = 9;
+
+const int LED_15 = 22;
+const int LED_16 = 23;
+
 //----------------------------------------------------------------
 void setup(void) {
   Serial.begin(115200);
   delay(500);
-  Serial.print("Client CAN Bus FD and CAN BUS 1");
+  Serial.println("Client CAN Bus FD and CAN BUS 1");
 
   //setup CAN 0 BUS
   canBus1.begin();
@@ -43,10 +52,22 @@ void setup(void) {
   FD.setBaudRate(config);
   FD.mailboxStatus();
 
-  pinMode(13, OUTPUT);
-  state = HIGH;
+  pinMode(KEY_PIN_01, INPUT);
+  pinMode(KEY_PIN_02, INPUT);
+  pinMode(KEY_PIN_03, INPUT);
+  pinMode(KEY_PIN_04, INPUT);
 
-  digitalWrite(13, state);
+  pinMode(LED_15, OUTPUT);
+  pinMode(LED_16, OUTPUT);
+
+  digitalWrite(LED_15, HIGH);
+  digitalWrite(LED_16, HIGH);
+  delay(500);
+
+  digitalWrite(LED_15, LOW);
+  digitalWrite(LED_16, LOW);
+  
+  state = HIGH;
   timer = millis();
 
   Serial.println("Init client done");
@@ -62,7 +83,7 @@ void loop() {
 }
 
 //----------------------------------------------------------------
-void canSniff(const CAN_message_t &msg) { // global callback
+void canBusSniff(const CAN_message_t &msg) { // global callback
   Serial.print("T4: ");
   Serial.print("MB "); Serial.print(msg.mb);
   Serial.print(" OVERRUN: "); Serial.print(msg.flags.overrun);
@@ -104,4 +125,5 @@ void reading(CANFD_message_t msg) {
     digitalWrite(13, state);
     timer = millis();
   }
+  
 }
