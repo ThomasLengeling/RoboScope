@@ -82,7 +82,7 @@ class Block {
   void animateBlock() {
     bHeight = midHeight + (finalHeight - midHeight)*(animCounter);
 
-    animCounter+=0.0075;
+    animCounter+=0.0025;
     if (animCounter>= 1.0) {
       animCounter =1.0;
     }

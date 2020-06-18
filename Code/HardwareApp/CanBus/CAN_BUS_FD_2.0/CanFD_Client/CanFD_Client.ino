@@ -4,6 +4,9 @@
    Sending Can TD 0
 */
 #include <FlexCAN_T4.h>
+#include "SendMsg.h"
+#include "message.h"
+
 
 //CAN BUS FD
 FlexCAN_T4FD<CAN3, RX_SIZE_256, TX_SIZE_64>   FD;   // fd port
@@ -52,17 +55,19 @@ void setup(void) {
   FD.setBaudRate(config);
   FD.mailboxStatus();
 
+  //Key values
   pinMode(KEY_PIN_01, INPUT);
   pinMode(KEY_PIN_02, INPUT);
   pinMode(KEY_PIN_03, INPUT);
   pinMode(KEY_PIN_04, INPUT);
 
+  //turn on LEDs
   pinMode(LED_15, OUTPUT);
   pinMode(LED_16, OUTPUT);
 
-  digitalWrite(LED_15, HIGH);
-  digitalWrite(LED_16, HIGH);
-  delay(500);
+  digitalWrite(LED_15, HIGH); //CAN Bus FD
+  digitalWrite(LED_16, HIGH); //CAN Bus 2.0
+  delay(1000);
 
   digitalWrite(LED_15, LOW);
   digitalWrite(LED_16, LOW);
@@ -84,6 +89,8 @@ void loop() {
 
 //----------------------------------------------------------------
 void canBusSniff(const CAN_message_t &msg) { // global callback
+  digitalWrite(LED_15, HIGH); 
+  
   Serial.print("T4: ");
   Serial.print("MB "); Serial.print(msg.mb);
   Serial.print(" OVERRUN: "); Serial.print(msg.flags.overrun);
@@ -99,12 +106,19 @@ void canBusSniff(const CAN_message_t &msg) { // global callback
   for ( uint8_t i = 0; i < msg.len; i++ ) {
     Serial.print(msg.buf[i], HEX); Serial.print(" ");
   } Serial.println();
+
+  digitalWrite(LED_15, LOW); //CAN Bus FD
   
 }
 
 //----------------------------------------------------------------
 void reading(CANFD_message_t msg) {
   if (msg.id <= local_name && msg.id + 16 > local_name) {
+
+    //turn on LED
+    digitalWrite(LED_15, HIGH);
+    
+    //print CAN BUS data
     Serial.print("  LEN: ");
     Serial.print(msg.len);
     Serial.print(" DATA: ");
@@ -116,14 +130,10 @@ void reading(CANFD_message_t msg) {
     Serial.print("  TS: "); 
     Serial.println(msg.timestamp);
 
-    if (state == HIGH) {
-      state = LOW;
-    } else {
-      state = HIGH;
-    }
+    //turn off LED
+    digitalWrite(LED_15, LOW);
     
-    digitalWrite(13, state);
-    timer = millis();
   }
-  
 }
+
+void send

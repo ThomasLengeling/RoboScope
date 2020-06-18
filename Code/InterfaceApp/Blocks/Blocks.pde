@@ -21,6 +21,9 @@ CameraState state;
 
 PGraphics pg;
 
+//orientation
+boolean drawOrientation = false;
+PImage imgOrientation;
 
 //background color
 int bkgColor = 50;
@@ -71,10 +74,12 @@ Map map;
 void setup() {
   size(1920, 1080, P3D);
   smooth(8);
-  
+
+  imgOrientation = loadImage("orientation.png");
+
   //picking 3d objects
- picker3d = new Picker(this);
- 
+  picker3d = new Picker(this);
+
   //camera 
   cam = new PeasyCam(this, 500);
   state = cam.getState();
@@ -189,7 +194,7 @@ void setup() {
 
 void draw() {
   picker3d.stop();
-  
+
   background(bkgColor); //190
 
   pushMatrix();
@@ -199,24 +204,25 @@ void draw() {
   // pointLight(255, 255, 255, 0, 0, 200);
 
   translate(-650, -350, 0);
-  
+  // 
+
   //draw table
   drawTable();
   drawBase();
-  
+
   //draw grid and rods
   tableGrid.draw();
   //tableGrid.drawContour();
-  
+
   Block currBl = null;
   tableGrid.updatePicker(picker3d);
   int idPicker = picker3d.get(mouseX, mouseY);
   println(idPicker);
-  if(idPicker >= 0 && idPicker < gridX * gridY){
+  if (idPicker >= 0 && idPicker < gridX * gridY) {
     currBl = tableGrid.getBlock(idPicker);
-   tableGrid.updateCurrentBlock(currBl);
+    tableGrid.updateCurrentBlock(currBl);
   }
-  
+
   picker3d.stop();
   popMatrix();
 
@@ -269,8 +275,18 @@ void drawGUI() {
   fill(0);
   text(frameRate, 10, 10);
 
+  if (drawOrientation) {
+    pushStyle();
+    tint(255, 50);
+    image(imgOrientation, 0, 0, width, height);
+    popStyle();
+  }
+
   cp5.draw();
   cam.endHUD();
+
+
+
   hint(ENABLE_DEPTH_TEST);
 }
 
@@ -296,7 +312,7 @@ void mousePressed() {
   }
 
   if (Map == 1) {
-    tableGrid.setGridColors(map.getImgDensity(), map.getImgColor());
+    tableGrid.setGridColors(map.getImgDensity(), map.getImgDensity());//map.getImgColor());
   }
 
   //grouping, create group
@@ -341,6 +357,10 @@ void keyPressed() {
 
   if ( key == 'p') {
     saveFrame("line-######.png");
+  }
+
+  if (key == 'o') {
+    drawOrientation = !drawOrientation;
   }
 }
 

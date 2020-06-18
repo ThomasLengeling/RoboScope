@@ -57,9 +57,6 @@ void sendHeights(){
   
 }
 
-void updateInteractions(){
-  
-}
 
 void sendColors(){
   

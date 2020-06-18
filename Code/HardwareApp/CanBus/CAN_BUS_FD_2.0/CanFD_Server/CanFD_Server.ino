@@ -1,5 +1,5 @@
 /*
-
+  Server code for CAN BUS FD and CAN BUS 2.0
 
 */
 #include <FlexCAN_T4.h>
@@ -12,8 +12,13 @@
 #define DOWN 1
 #define UP 2
 
+//https://github.com/tonton81/FlexCAN_T4
+
 //FD CAN BUS
-FlexCAN_T4FD<CAN3, RX_SIZE_256, TX_SIZE_64>     canBusFD;
+//TX_SIZE_8
+//TX_SIZE_16
+//TX_SIZE_32
+FlexCAN_T4FD<CAN3, RX_SIZE_256, TX_SIZE_32>     canBusFD;
 
 //CAN BUS
 FlexCAN_T4<CAN2, RX_SIZE_256, TX_SIZE_16>       canBus;  // can1 port
@@ -36,15 +41,16 @@ const int LED_16 = 23;
 //MOTOR ID
 const int MOTOR_ID = 0;
 
-uint8_t msg_array[64] = {2, 0, 3, 4, 5, 6, 7, 8, 7, 8, 9, 9, 1, 1, 5, 12, 31, 14, 19, 20, 24};
+uint8_t msg_array[64]    = {2, 0, 3, 4, 5, 6, 7, 8, 7, 8, 9, 9, 1, 1, 5, 12, 31, 14, 19, 20, 24};
 
 const int BUTTON_TIMEOUT = 500;
 
 //----------------------------------------------------------------
 void setup(void) {
+
+  //Start Serial
   Serial.begin(115200);
   delay(500);
-
 
   Serial.println("Initializing CAN BUS Server");
 
@@ -126,37 +132,4 @@ void canSniff(const CAN_message_t &msg) { // global callback
     Serial.print(msg.buf[i], HEX); Serial.print(" ");
   } Serial.println();
 
-}
-
-//----------------------------------------------------------------
-void sendCanBusMsg(uint8_t input) {
-  if (input == HIGH) {
-    Serial.print("Writing CAN FD: ");
-    CANMotorMessage msg = CANMotorMessage(MOTOR_ID);
-    Serial.println(MOTOR_ID);
-    Serial.print(" ");
-    uint8_t colors[3] = {0, 255, 255};
-    msg.addMessage(0, colors, 01111000, 01100011);
-    msg.addMessage(2, colors, 01000000, 00001011);
-    msg.addMessage(5, colors, 01111110, 01111111);
-    msg.addMessage(6, colors, 01111110, 01111111);
-    canBus.write(msg.returnCANmessage());
-    Serial.println();
-  }
-}
-//----------------------------------------------------------------
-void sendFDMsg(uint8_t input) {
-  if (input == HIGH) {
-    Serial.print("Writing CAN FD: ");
-    CANMotorMessage msg = CANMotorMessage(MOTOR_ID);
-    Serial.println(MOTOR_ID);
-    Serial.print(" ");
-    uint8_t colors[3] = {0, 255, 255};
-    msg.addMessage(0, colors, 01111000, 01100011);
-    msg.addMessage(2, colors, 01000000, 00001011);
-    msg.addMessage(5, colors, 01111110, 01111111);
-    msg.addMessage(6, colors, 01111110, 01111111);
-    canBusFD.write(msg.returnCANmessage());
-    Serial.println();
-  }
 }
