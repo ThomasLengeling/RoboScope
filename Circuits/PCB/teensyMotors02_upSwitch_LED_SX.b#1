@@ -4351,7 +4351,7 @@ design rules under a new name.</description>
 <contactref element="SW1" pad="20"/>
 <contactref element="R15" pad="1"/>
 <contactref element="U$3" pad="5"/>
-<wire x1="48.2853875" y1="47.4481" x2="48.5286" y2="31.3922" width="0" layer="19" extent="1-1"/>
+<wire x1="48.5286" y1="31.3922" x2="48.2853875" y2="47.4481" width="0" layer="19" extent="1-1"/>
 <wire x1="30.5054" y1="43.2054" x2="48.2853875" y2="47.4481" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="6_SX3">
@@ -4407,7 +4407,7 @@ design rules under a new name.</description>
 <contactref element="SW1" pad="12"/>
 <contactref element="R36" pad="1"/>
 <contactref element="U$3" pad="13"/>
-<wire x1="27.8524875" y1="47.4481" x2="28.2086" y2="31.3922" width="0" layer="19" extent="1-1"/>
+<wire x1="28.2086" y1="31.3922" x2="27.8524875" y2="47.4481" width="0" layer="19" extent="1-1"/>
 <wire x1="40.6654" y1="27.9654" x2="28.2086" y2="31.3922" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="14_SX3">
