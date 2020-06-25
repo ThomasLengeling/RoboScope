@@ -1,34 +1,11 @@
 /*************************************************************
-  digitalWrite.ino
-  SparkFun SX1509 I/O Expander Example: digital out (digitalWrite)
-  Jim Lindblom @ SparkFun Electronics
-  Original Creation Date: September 21, 2015
-  https://github.com/sparkfun/SparkFun_SX1509_Arduino_Library
+Interaction Test
 
-  This simple example demonstrates the SX1509's digital output
-  functionality. Attach an LED to SX1509 IO 15, or just look at
-  it with a multimeter. We're gonna blink it!
-
-  Hardware Hookup:
-	SX1509 Breakout ------ Arduino -------- Breadboard
-	      GND -------------- GND
-	      3V3 -------------- 3.3V
-		  SDA ------------ SDA (A4)
-		  SCL ------------ SCL (A5)
-		  15 -------------------------------- LED+
-		                                 LED- -/\/\/\- GND
-                                                330
-
-  Development environment specifics:
-	IDE: Arduino 1.6.5
-	Hardware Platform: Arduino Uno
-	SX1509 Breakout Version: v2.0
-
-  This code is beerware; if you see me (or any other SparkFun
-  employee) at the local, and you've found our code helpful,
-  please buy us a round!
-
-  Distributed as-is; no warranty is given.
+Code Test the Interaction Board
+  BUTTONS
+  SWITCHES
+  LEDS
+  MULTIPLEXERS
 *************************************************************/
 
 #include <Wire.h> // Include the I2C library (required)
@@ -106,20 +83,23 @@ const  byte NEO_PIN_06 = 24;
 const  byte NEO_PIN_07 = 25;
 const  byte NEO_PIN_08 = 13;
 
+//NEO PIXELS PINS
 const byte NEO_PIN[8] = {NEO_PIN_01, NEO_PIN_02, NEO_PIN_03, NEO_PIN_04,
                          NEO_PIN_05, NEO_PIN_06, NEO_PIN_07, NEO_PIN_08
                         };
 
 //NUM PIXELS
 boolean colorChange = false;
+
 int colorId = -1;
+
+//Maximun number of pixels per board
 const byte NUMPIXELS = 4;
 
 //Pixels
 Adafruit_NeoPixel * pixels[8];
 
 // SX1509 I2C address (set by ADDR1 and ADDR0 (00 by default):
-
 const byte SX1509_ADDRESS_00 = 0x3E;  // SX1509 I2C address
 SX1509 sx00;
 
@@ -132,6 +112,7 @@ SX1509 sx02;
 const byte SX1509_ADDRESS_11 = 0x70;
 SX1509 sx03;
 
+//INIT
 void setup()
 {
 
@@ -234,12 +215,14 @@ void setup()
   sx03.pinMode(STATUS_PIN_SX03, OUTPUT);
 
 
+  //reset and init the neopixels
   for (int i = 0; i < 8; i++) {
     pixels[i] = new Adafruit_NeoPixel(NUMPIXELS, NEO_PIN[i], NEO_GRBW + NEO_KHZ800);
     pixels[i]->begin();
     pixels[i]->clear();
   }
 
+  //set pixels to different colors
   for (int j = 0; j < NUMPIXELS; j++) {
     pixels[0]->setPixelColor(j, pixels[0]->Color(255, 0, 0)); // Moderately bright green color.
   }
@@ -286,9 +269,9 @@ void setup()
   sx03.digitalWrite(STATUS_PIN_SX03, LOW);
 }
 
+
+//main interaction test loop
 void loop() {
-
-
 
 
   //SX 01
